@@ -1,0 +1,85 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="3.5 Handler消息传递机制"/>
+<meta name="date" content="20140429" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	p.code {
+		margin-left: 2em;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	.main h1 a {
+		margin-left: 20px;
+	}
+	.main .point {
+		padding-left: 5px;
+		margin: 5px 0 5px 2em;
+		background-color: #f8f8f8;
+	}
+	.main h2 {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 2em;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.main ol {
+		margin: 0;
+		margin-left: 2em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>3.5.1 Handler类简介(P180)</h1>
+		<h2>Handler类的主要作用</h2>
+		<ol>
+			<li>在新启动的线程中发送消息;</li>
+			<li>在主线程中获取、处理消息.</li>
+		</ol>
+		<h1>3.5.2 Handler使用案例(P181)<a class="code" href="../../code/chap3/3.4/P178_ConfigurationChangeTest.java">代码</a></h1>
+		<p class="point">
+			设置屏幕方向: P178_ConfigurationChangeTest.this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		</p>
+		<p class="point">
+			监听屏幕方向改变: (Activity)public void onConfigurationChanged(Configuration config);
+		</p>
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="第5章 使用Intent和IntentFilter进行通信(P210)"/>
+<meta name="date" content="20140504" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	p.code {
+		margin-left: 2em;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+	}
+	.main h1 a {
+		margin-left: 20px;
+	}
+	.main .point {
+		padding-left: 5px;
+		margin: 5px 0 5px 2em;
+		background-color: #f8f8f8;
+	}
+	.main .point3 {
+		padding-left: 5px;
+		margin: 5px 0 5px 4em;
+		background-color: #f8f8f8;
+	}
+	.main .em {
+		text-decoration: underline;
+	}
+	.main h2 {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 2em;
+		font-size: 12px;
+	}
+	.main h3 {
+		font-size: 12px;
+		font-weight: normal;
+		margin: 10px 0 0 3em;
+	}
+	.main ol {
+		margin: 0;
+		margin-left: 2em;
+	}
+	.main ol.h3 {
+		margin: 0;
+		font-size: 12px;
+		margin-left: 4em;
+	}
+	h4 {
+		margin: 0;
+		text-indent: 5em;
+		font-weight: normal;
+	}
+	table {
+		border-collapse: collapse;
+		margin-left: 5em;
+	}
+	table td,table th {
+		border: solid 1px #ccc;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>第5章 使用Intent和IntentFilter进行通信(P210)</h1>
+		<h2>本章要点</h2>
+		<ol>
+			<li>理解Intent对于Android应用的作用;</li>
+			<li>使用Intent启动系统组件;</li>
+			<li>Intent的Component属性的作用;</li>
+			<li>Intent的Action属性的作用;</li>
+			<li>Intent的Category属性的作用;</li>
+			<li>为指定Action、Category的Intent配置对应的intent-filter;</li>
+			<li>Intent的Data属性;</li>
+			<li>Intent的Type属性;</li>
+			<li>Intent的Extra属性;</li>
+			<li>使用Intent创建Tab页面.</li>
+		</ol>
+		<h2>5.1 Intent对象详解(P211)</h2>
+		<h3>5.1.1 使用Intent启动系统组件(P211)</h3>
+		<p class="point3 em">
+			Android应用程序包含的重要组件: Activity、Service、BroadcastReceiver
+		</p>
+		<table cellpadding="0" cellspacing="0">
+			<caption>使用Intent启动不同组件的方法</caption>
+			<tr><th>组件类型</th><th>启动方法</th></tr>
+			<tr>
+				<td>Activity</td>
+				<td>startActivity(Intent intent);<br>startActivityForResult(Intent, int)</td>
+			</tr>
+			<tr>
+				<td>Service</td>
+				<td>ComponentName startService(Intent service);<br>boolean bindService(Intent service, ServiceConnection conn, int flags);</td>
+			</tr>
+			<tr>
+				<td>BroadcastReceiver</td>
+				<td>sendBroadcast(Intent intent);<br>sendBroadcast(Intent intent, String receiverPermission);<br>sendOrderedBroadcast(Intent intent, String receiverPermission, BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData, Bundle initialExtras);<br>sendOrderedBroadcast(Intent intent, String receiverPermission);<br>sendStickyBroadcast(Intent intent);<br>sendStickyOrderedBroadcas(Intent intent, BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData, Bundle initialExtras);</td>
+			</tr>
+		</table>
+		<h2>5.2 Intent的属性及intent-filter配置(P212)</h2>
+		<h3>5.2.1 Component属性(P212)</h3>
+		<h4>Intent的Component属性接受的ComponentName对象的构造方法:</h4>
+		<ol class="h3">
+			<li>ComponentName(String pkg, String cls): 创建pkg所在包下的cls类所对应的组件;</li>
+			<li>ComponentName(Context pkg, String cls): 创建pkg所对应的包下的cls类所对应的组件;</li>
+			<li>ComponentName(Context pkg, Class&lt;?> cls): 创建pkg所对应的包下的cls类所对应的组件.</li>
+		</ol>
+		<h3>5.2.2 Action、Category属性与intent-filter配置(P214)</h3>
+		<p class="point2 em">
+			Intent的Action、Category属性都是一个普通的字符串, Action代表Intent所要完成的一个抽象动作, Category属性用于为Action增加额外的附加信息.
+		</p>
+		<h3>5.2.3 指定Action、Category调用系统Activity(P218)========================</h3>
+		<table cellpadding="0" cellspacing="0">
+			<caption>启动Activity的标准Action</caption>
+			<tr><th>Action常量</th><th>对应字符串</th><th>简单说明</th></tr>
+			<tr>
+				<td>ACTION_MAIN</td>
+				<td>android.intent.action.MAIN</td>
+				<td>应用程序入口</td>
+			</tr>
+			<tr>
+				<td>ACTION_VIEW</td>
+				<td>android.intent.action.VIEW</td>
+				<td>显示指定数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_ATTACH_DATA</td>
+				<td>android.intent.action.ATTACH_DATA</td>
+				<td>指定某块数据将被附加到其他地方</td>
+			</tr>
+			<tr>
+				<td>ACTION_EDIT</td>
+				<td>android.intent.action.EDIT</td>
+				<td>编辑指定数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_PICK</td>
+				<td>android.intent.action.PICK</td>
+				<td>从列表中选择某项并返回所选的数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_CHOOSER</td>
+				<td>android.intent.action.CHOOSER</td>
+				<td>显示一个Activity选择器</td>
+			</tr>
+			<tr>
+				<td>ACTION_GET_CONTENT</td>
+				<td>android.intent.action.GET_CONTENT</td>
+				<td>让用户选择数据, 并返回所选数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_DIAL</td>
+				<td>android.intent.action.DIAL</td>
+				<td>显示拨号面板</td>
+			</tr>
+			<tr>
+				<td>ACTION_CALL</td>
+				<td>android.intent.action.CALL</td>
+				<td>直接向指定用户打电话</td>
+			</tr>
+			<tr>
+				<td>ACTION_SEND</td>
+				<td>android.intent.action.SEND</td>
+				<td>向其他人发送数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_SENDTO</td>
+				<td>android.intent.action.SENDTO</td>
+				<td>向其他人发送短信</td>
+			</tr>
+			<tr>
+				<td>ACTION_ANSWER</td>
+				<td>android.intent.action.ANSWER</td>
+				<td>应答电话</td>
+			</tr>
+			<tr>
+				<td>ACTION_INSERT</td>
+				<td>android.intent.action.INSERT</td>
+				<td>插入数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_DELETE</td>
+				<td>android.intent.action.DELETE</td>
+				<td>删除数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_RUN</td>
+				<td>android.intent.action.RUN</td>
+				<td>运行数据</td>
+			</tr>
+			<tr>
+				<td>ACTION_SYNC</td>
+				<td>android.intent.action.SYNC</td>
+				<td>执行数据同步</td>
+			</tr>
+			<tr>
+				<td>ACTION_PICK_ACTIVITY</td>
+				<td>android.intent.action.PICK_ACTIVITY</td>
+				<td>用于选择Activity</td>
+			</tr>
+			<tr>
+				<td>ACTION_SEARCH</td>
+				<td>android.intent.action.SEARCH</td>
+				<td>执行搜索</td>
+			</tr>
+			<tr>
+				<td>ACTION_WEB_SEARCH</td>
+				<td>android.intent.action.WEB_SEARCH</td>
+				<td>执行Web搜索</td>
+			</tr>
+			<tr>
+				<td>ACTION_FACTORY_TEST</td>
+				<td>android.intent.action.FACTORY_TEST</td>
+				<td>工厂测试的入口点</td>
+			</tr>
+		</table>
+		<h3>5.2.4 Data、Type属性与intent-filter(P223)</h3>
+		<p class="point3">
+			Uri对象格式: 类似"content://com.android.contacts/contacts/1"的字符串, 冒号前的是数据的类型, 冒号后面的是数据;<br>
+			Data属性接受一个Uri对象, 用于向Action属性提供操作的数据.
+		</p>
+		<h3>5.2.5 Extra属性(P223)</h3>
+		<p class="point3">
+			Intent的Extra属性通常用于在多个Action之间进行数据交换, Intent的Extra属性值应该是一个Bundle对象, Bundle对象类似Map对象, 可以存入多组key-value对.
+		</p>
+		<h2>5.3 使用Intent创建Tab页面(P225)</h2>
+		<h2>5.4 本章小结(P226)</h2>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>

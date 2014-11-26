@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var currentMoveObj = null;    //当前拖动对象
+var relLeft;    //鼠标按下位置相对对象位置
+var relTop;
+function f_mdown(obj, e)
+{
+	e = e || window.event;
+    currentMoveObj = obj;        //当对象被按下时，记录该对象
+    currentMoveObj.style.position = "absolute";
+    relLeft = e.pageX - currentMoveObj.style.left;
+    relTop = e.pageY - currentMoveObj.style.top;
+	console.log(relLeft+"  " + relTop);
+}
+window.document.onmouseup = function()
+{
+    currentMoveObj = null;    //当鼠标释放时同时释放拖动对象
+}
+function f_move(obj, e)
+{
+	e = e || window.event;
+    if(currentMoveObj != null)
+    {
+        currentMoveObj.style.left=e.pageX-relLeft;
+        currentMoveObj.style.top=e.pageY-relTop;
+    }
+}
+
+//-->
+</SCRIPT>
+</head>
+<BODY>
+<TABLE width="100" border=1 onselectstart="return false" style="position:absolute;left:50;top:50" onmousedown="f_mdown(this, event)" onmousemove="f_move(this,event)">
+<TR>
+    <TD bgcolor="#CCCCCC" align="center" style="cursor:move">title1</TD>
+</TR>
+<TR>
+    <TD align="center" height="60">content</TD>
+</TR>
+</TABLE>
+<TABLE width="100" border=1 onselectstart="return false" style="position:absolute;left:350;top:250" onmousedown="f_mdown(this, event)" onmousemove="f_move(this, event)">
+<TR>
+    <TD bgcolor="#CCCCCC" align="center" style="cursor:move">title2</TD>
+</body>
+</html>

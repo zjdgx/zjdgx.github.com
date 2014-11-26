@@ -1,0 +1,71 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="android: x-dpi与x-vga"/>
+<meta name="date" content="20140416" />
+<title>android: x-dpi与x-vga</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	ol li h1 {
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<ol>
+			<li>
+				<h1>drawable-(hdpi,mdpi,ldpi)的区别</h1>
+				dpi是“dot per inch”的缩写，每英寸像素数。<br>
+				四种密度分类: ldpi (low), mdpi (medium), hdpi (high), and xhdpi (extra high)<br>
+				一般情况下的普通屏幕：ldpi是120，mdpi是160，hdpi是240，xhdpi是320。
+			</li>
+			<li>
+				<h1>WVGA,HVGA,QVGA的区别</h1>
+				VGA是"Video Graphics Array"，显示标准为640*480。<br>
+				WVGA(Wide VGA)分辨率为480*800<br>
+				HVGA(Half VGA)即VGA的一半分辨率为320*480<br>
+				QVGA(Quarter VGA)即VGA非四分之一分辨率为240*320。
+			</li>
+			<li>
+				<h1>drawable-(hdpi,mdpi,ldpi)和WVGA,HVGA,QVGA的联系</h1>
+				hdpi里面主要放高分辨率的图片,如WVGA (480x800),FWVGA (480x854)<br>
+				mdpi里面主要放中等分辨率的图片,如HVGA (320x480)<br>
+				ldpi里面主要放低分辨率的图片,如QVGA (240x320)<br>
+				系统会根据机器的分辨率来分别到这几个文件夹里面去找对应的图片.
+			</li>
+		</ol>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

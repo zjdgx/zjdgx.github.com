@@ -1,0 +1,111 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="android创建快捷方式"/>
+<meta name="date" content="20140514" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	p.code {
+		margin-left: 2em;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>1. AndroidManifest.xml中添加配置:</h1>
+		<p>
+			&lt;uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /><br/>
+			&lt;uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /><br/>
+			&lt;uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+		</p>
+		<h1>2. MainActivity中添加代码:</h1>
+		<pre class="code">
+protected boolean isShortCutExists() {
+	Cursor c = null;
+	try {
+		ContentResolver cr = this.getContentResolver();
+		String AUTHORITY;
+		if (Build.VERSION.SDK_INT > 8) {
+			AUTHORITY = "com.android.launcher2.settings";
+		} else {
+			AUTHORITY = "com.android.launcher.settings";
+		}
+		Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY
+				+ "/favorites?notify=true");
+		c = cr.query(CONTENT_URI, null, "title = '"
+				+ getString(R.string.main_app) + "'", null, null);
+		return (c != null && c.getCount() > 0);
+	} finally {
+		if (c != null) {
+			c.close();
+		}
+	}
+}
+
+/**
+ * 为程序创建桌面快捷方式
+ */
+protected boolean addShortcut() {
+	try {
+		if (!isShortCutExists()) {
+			Intent shortcut = new Intent();
+
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
+					getString(R.string.main_app));
+			shortcut.putExtra("duplicate", false); // 不允许重复创建
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT,
+					getIntentShortcut());
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE,
+					Intent.ShortcutIconResource.fromContext(this,
+							R.drawable.zjdgx_icon));
+			shortcut.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+			sendOrderedBroadcast(shortcut, null);
+			return true;
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+	return false;
+}
+
+protected Intent getIntentShortcut() {
+	Intent i = new Intent(Intent.ACTION_MAIN);
+	i.setComponent(getComponentName());
+	i.addCategory(Intent.CATEGORY_LAUNCHER);
+	i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	i.addFlags(Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+
+	return i;
+}
+		</pre>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>

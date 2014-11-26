@@ -1,0 +1,97 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="Java集合类"/>
+<meta name="date" content="20131205" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'courier new','microsoft yahei',times new roman;
+	}
+	.main h1{
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+	}
+	table{
+		width: 100%;
+	}
+	table thead{
+		background-color: #e5e5e5;
+	}
+	table td {
+		padding: 0 10px;
+		text-align: center;
+		width: 200px;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>java集合</h1>
+		<p>集合中的结构和几个实现类</p>
+		<table cellpadding="0" cellspacing="0" border="1" bordercolor="#CCCCCC">
+			<thead>
+				<tr>
+					<th colspan="2">类型</th>
+					<th>是否有序</th>
+					<th>是否允许元素重复</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2">Collection</td>
+					<td>否</td>
+					<td>是</td>
+				</tr>
+				<tr>
+					<td colspan="2">List</td>
+					<td>是</td>
+					<td>是</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Set</td>
+					<td>AbstractSet</td>
+					<td rowspan="2">否</td>
+					<td rowspan="3">否</td>
+				</tr>
+				<tr>
+					<td>HashSet</td>
+				</tr>
+				<tr>
+					<td>TreeSet</td>
+					<td>是(用二叉树排序)</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Map</td>
+					<td>AbstractMap</td>
+					<td rowspan="2">否</td>
+					<td rowspan="3">使用key-value来映射和存储数据,key必须唯一, value可以重复</td>
+				</tr>
+				<tr>
+					<td>HashMap</td>
+				</tr>
+				<tr>
+					<td>TreeMap</td>
+					<td>是(用二叉树排序)</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

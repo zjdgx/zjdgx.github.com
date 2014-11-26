@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="description" content="GET与POST的区别"/>
+<meta name="date" content="20131130" />
+<meta name="author" content="zjdgx" />
+<title>GET与POST的区别</title>
+<link rel="stylesheet" type="text/css" href="../common/style/pages.css" />
+<link rel="stylesheet" type="text/css" href="../style/interview.css" />
+<style type="text/css">
+	.main ul{
+		margin: 20px;
+		overflow: hidden;
+	}
+	
+	.main ul li{
+		float: left;
+		cursor: pointer;
+		overflow: hidden;
+	}	
+		
+	.main ul li.nf{
+		margin-left: -13px;
+	}
+	
+	.main ul li span, .main ul li b{
+		float: left;
+		display: block;
+		background-color: #ccc;
+	}
+	
+	.main ul li span{
+		color: #848484;
+		padding: 4px 13px;
+	}
+	
+	.main ul li.nf span{
+		padding-left: 0;
+	}
+	
+	.main ul li b.ra{
+		border-color: #fff #fff #fff #ccc;
+		border-width: 13px;
+		border-style: solid;
+	}
+	
+	.main ul li b.la{
+		border-color: #ccc #ccc #ccc #fff;
+		border-width: 13px;
+		border-style: solid;
+	}
+	
+	.main ul li.cur span{
+		color: #fff;
+		background-color: #007AD0;
+	}
+	
+	.main ul li.cur b.la{
+		border-color:  #007AD0 #007AD0 #007AD0 #fff;
+	}
+	
+	.main ul li.cur b.ra{
+		border-color: #fff #fff #fff #007AD0;
+	}
+</style>
+</head>
+<body id="interview">
+	<div class="header">
+		<div class="logo">ZJDGX</div>
+		<ul class="nav">
+			<li><a href="../css.html">CSS3</a></li>
+			<li class="cur"><a href="../interview_b.html">Interview</a></li>
+			<li><a href="../study.html">Study</a></li>
+			<li><a href="../javascript.html">Javascript</a></li>
+			<li><a href="../Memo.html">Source</a></li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="fixHeight">
+			<div class="content">
+				<h1>GET与POST的区别<a href="../interview_b.html">返回</a></h1>
+				<p>1.使用Get请求时,参数在URL中显示,而使用Post方式,则不会显示出来;<br/>
+				2.使用Get请求发送数据量小,Post请求发送数据量大;<br/>
+				区别:<br/>
+				&nbsp;&nbsp;1.get请求需注意缓存问题,post请求不需担心这个问题;<br/>
+				&nbsp;&nbsp;2.post请求必须设置Content-Type值为application/x-form-www-urlencoded;<br/>
+				&nbsp;&nbsp;3.发送请求时,因为get请求的参数都在url里,所以send函数发送的参数为null,而post请求在使用send方法时,却需赋予其参数.<br/>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
+	</div>
+</body>
+</html>

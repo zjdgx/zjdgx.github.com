@@ -1,0 +1,6 @@
+p139: 使用ProgressDialog创建进度对话框
+	例子第二次点击按钮时没弹出进度对话框
+p152: 2.7.3 创建复选菜单项和单选菜单项
+	CheckableMenu: 复选框只能选一个????
+p317: 退出时报错 nullpointer
+p325: package路径

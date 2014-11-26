@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/zjdgx.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="前端学习网站"/>
+<meta name="keywords" content="ZJDGX前端学习,CSS,HTML5,JAVASCRIPT" />
+<!-- InstanceBeginEditable name="createDate" -->
+<meta name="date" content="20130922" />
+<!-- InstanceEndEditable -->
+<meta name="author" content="zjdgx" />
+<title>zjdgx前端学习</title>
+<!-- InstanceBeginEditable name="stylesheets" -->
+<link rel="stylesheet" type="text/css" href="common/style/pages.css" />
+<style type="text/css">
+	#javascript .fixHeight .content ul li h1{
+		margin: 5px 0;
+		font-size: 16px;
+	    font-weight: bold;
+		border-bottom: 1px solid #ccc;
+	}
+	#javascript .fixHeight .content ul li h1 span{
+		float: right;
+		font-size: 12px;
+	}
+	#javascript .fixHeight .content ul li .article {
+		display: none;
+	}
+	#javascript .fixHeight .content ul li.cur .article {
+		display: block;
+	}
+	#javascript .fixHeight .content ul li h1 span.slideUp{
+		display: none;
+	}
+	#javascript .fixHeight .content ul li h1 span.slideDown{
+		display: block;
+	}
+	#javascript .fixHeight .content ul li.cur h1 span.slideUp{
+		display: block;
+	}
+	#javascript .fixHeight .content ul li.cur h1 span.slideDown{
+		display: none;
+	}
+	#javascript .fixHeight .content ul li h1 span b{
+		width: 16px;
+		height: 9px;
+		float: left;
+		display: block;
+		cursor: pointer;
+		margin-top: 4px;
+		font-size: 14px;
+		line-height: 7px;
+		margin-right: 3px;
+		text-align: center;
+		border: 1px solid #CCCCCC;
+	}
+	
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<!-- InstanceBeginEditable name="typeClass" -->
+<body id="javascript">
+<!-- InstanceEndEditable -->
+	<div class="header">
+		<div class="logo">ZJDGX</div>
+		<ul class="nav">
+	        <!-- InstanceBeginEditable name="nav" -->
+			<li><a href="study.html">Study</a></li>
+			<li><a href="css.html">CSS</a></li>
+			<li class="cur"><a href="javascript.html">Javascript</a></li>
+			<li title="Android"><a href="android.html">Android</a></li>
+			<li title="Java"><a href="java.html">Java</a></li>
+			<li title="MySQL"><a href="MySQL.html">MySQL</a></li>
+            <li title="杂记"><a href="notes.html">Notes</a></li>
+			<li><a href="interview.html">Interview</a></li>
+			<li title="学习网站"><a href="address.html">Address</a></li>
+			<li title="学习资源"><a href="source.html">Source</a></li>
+			<li title="备忘录"><a href="Memo.html">Memo</a></li>
+            <!-- InstanceEndEditable -->
+		</ul>
+		<div class="clock">
+			<label class="year"><span></span>年</label>
+			<label class="month"><span></span>月</label>
+			<label class="day"><span></span>日</label>
+			<label class="hour"><span></span>点</label>
+			<label class="minute"><span></span>分</label>
+			<label class="second"><span></span>秒</label>
+		</div>
+	</div>
+	<div class="main">
+		<div class="fixHeight">
+			<div class="content">
+            <!-- InstanceBeginEditable name="content" -->
+				<ul>
+					<li class="cur">
+						<h1><a href="javascript/ajax_jsonp.html">1. AJAX JSONP(2013-12-02)</a><span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
+						<div class="article">
+						前端代码:<br />
+				<pre>
+	function cc(dd){
+		var json = eval("("+dd+")");
+		console.log(json.records)
+	}
+	$.ajax({
+		 type: "POST",
+		 url:'http://pim.test.lenovomm.cn/sms/callhistory/portal/list',
+		 data:{start: 0, number: 50, jsonpcallhack: 'cc' },
+		 dataType:"jsonp",
+		 jsonp:"jsonpcallback",
+		 success:function(data){
+			 
+		 }
+	}); 
+				</pre>
+				后端代码:<br />
+				<pre>
+	String jsonp = request.getParameter("jsonpcallhack");
+	if(StringUtils.isNotBlank(jsonp)){
+		response.getWriter().append(jsonp+"('"+JSONObject.fromObject(result)+"')");
+	}
+				</pre>
+						</div>
+					</li>
+					<li>
+						<h1>2. JavaScript拖拽(2013-12-18)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
+						<div class="article">
+						<pre>
+function Drag(id) {
+	var $ = function (flag) {
+		return document.getElementById(flag);
+	}
+	$(id).onmousedown = function (e) {
+		var d = document, dv = this;
+		var page = {
+			event: function (evt) {
+				var ev = evt || window.event;
+				return ev;
+			},
+			pageX: function (evt) {
+				var e = this.event(evt);
+				return e.pageX || (e.clientX + document.body.scrollLeft - document.body.clientLeft);
+			},
+			pageY: function (evt) {
+				var e = this.event(evt);
+				return e.pageY || (e.clientY + document.body.scrollTop - document.body.clientTop);
+
+			},
+			layerX: function (evt) {
+				var e = this.event(evt);
+				return e.layerX || e.offsetX;
+			},
+			layerY: function (evt) {
+				var e = this.event(evt);
+				return e.layerY || e.offsetY;
+			}
+		}             
+		var x = page.layerX(e);
+		var y = page.layerY(e);        
+		if (dv.setCapture) {
+			dv.setCapture();
+		}
+		else if (window.captureEvents) {
+			window.captureEvents(Event.MOUSEMOVE | Event.MOUSEUP);
+		}
+		d.onmousemove = function (e) {                    
+			var tx = page.pageX(e) - x;
+			var ty = page.pageY(e) - y;
+			dv.style.left = tx + "px";
+			dv.style.top = ty + "px";
+		}
+		d.onmouseup = function () {
+			if (dv.releaseCapture) {
+				dv.releaseCapture();
+			}
+			else if (window.releaseEvents) {
+				window.releaseEvents(Event.MOUSEMOVE | Event.MOUSEUP);
+			}
+			d.onmousemove = null;
+			d.onmouseup = null;
+		}
+	}
+}
+						</pre>
+						</div>
+					</li>
+					<li>
+						<h1>3. JavaScript十进制转十六进制(2014-03-27)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
+						<div class="article">
+							<pre>
+function dec2hex( num ){
+    if( typeof num !== 'undefined' ){
+        return Number(num).toString( 16 );
+    }
+}
+							</pre>
+						</div>
+					</li>
+					<li>
+					<h1>4. 删除数组重复元素(2014-07-02)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
+						<div class="article">
+							<pre>
+// 删除数组中包含指定值的元素
+var t = [1,2,3,4,3,2,5,2,4], count = 0;
+for(var i=0,len=t.length; i&lt;len; i++) {
+	if(t[i-count] == 2) {
+		t.splice(i-count,1);
+		count++;
+	}
+}
+							</pre>
+						</div>
+					</li>
+				</ul>
+            <!-- InstanceEndEditable -->
+            </div>
+	    </div>
+    </div>
+    <div class="footer">
+    	<!-- InstanceBeginEditable name="footer" -->
+		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
+        <!-- InstanceEndEditable -->
+	</div>
+	<!-- InstanceBeginEditable name="hidecode" -->
+	<div class="hidecode">
+		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="common/script/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#javascript .fixHeight .content ul li h1 span b").bind("click",function(){
+					var t = $(this).parent(), li = t.parents("li"),
+						cur = li.hasClass("cur"), du = t.hasClass("slideDown");
+					if(du ){
+						li.find(".slideDown").hide();
+						li.addClass(cur?"":"cur").find(".article,.slideUp").show();
+					} else {
+						li.addClass(cur?"":"cur").find(".article,.slideUp").hide();
+						li.find(".slideDown").show();
+					}
+				});
+			});
+		</script>
+		<!-- 百度统计代码 -->
+		<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F51d4c44eb3ae5dac5f72685b8b50e23f' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<!-- google 统计代码 -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-43440970-2', 'scymhj.com');
+		  ga('send', 'pageview');
+		</script>
+	</div>
+	<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="模拟select"/>
+<meta name="date" content="20131203" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.select {
+		width: 100px;
+		position: relative;
+	}
+	.select .selected {
+		width: 100px;
+		height: 20px;
+		line-height: 20px;
+		border: 1px solid #ccc;
+	}
+	.select .selected .value{
+		width: 73px;
+		float: left;
+		height: 20px;
+		padding: 0 5px;
+		font-size: 12px;
+		cursor: default;
+		overflow: hidden;
+		line-height: 20px;
+		display: inline-block;
+		text-overflow: ellipsis;
+	}
+	
+	.select .selected b{
+		margin-top: 7px;
+		cursor: default;
+		border-width: 6px;
+		margin-bottom: -3px;
+		border-style: solid;
+		display: inline-block;
+		border-color: #999 transparent transparent transparent;
+	}
+	
+	.select ul.options{
+		margin: 0px;
+		padding: 0px;
+		width: 140px;
+		height: 200px;
+		display: none;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: absolute;
+		border: 1px solid #ccc;
+	}
+	
+	.select ul.options li{
+		cursor: default;
+	}
+	
+	.select ul.options li.select_option_hover{
+		color: #fff;
+		background-color: #316AC5;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>模拟select</h1>
+		<select>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option><option>dafsdaf</option>
+			<option>dafsdaf</option>
+			<option>fdsafsadgagdsfhgjgfghsdfsafsdgdsfafsdafdsfasadfsdf</option>
+			<option>dafsdaf</option>
+			<option>dafsdaf</option>
+		</select>
+		<div class="select">
+			<div class="selected"><span class="value">打法的施工方啊刚是大法官的时光隧道</span><b></b></div>
+			<ul class="options">
+				<li>abc</li>
+				<li>ddd</li>
+				<li>sss</li>
+				<li>ccc</li>
+				<li>eee</li>
+				<li>yyy</li>
+				<li>ggg</li>
+				<li>bbbbbbb</li>
+				<li>uhgjg</li>
+				<li>vbngf</li>
+				<li>bvcn</li>
+				<li>gfshfg</li>
+				<li>费时光隧道个很反感</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".select .selected").click(function(){
+					$(".select .options").show().find("li:first").addClass("select_option_hover");;
+				});
+				$(".select .options li").hover(function(){
+					$(this).addClass("select_option_hover");
+				},function(){
+					$(this).removeClass("select_option_hover");
+				}).click(function(){
+					var value = $(this).html();
+					$(".select .selected .value").html(value);
+					$(".select .options").hide();
+				});
+			});
+		</script>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

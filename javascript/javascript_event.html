@@ -1,0 +1,101 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="内容标题"/>
+<meta name="date" content="20131203" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol{
+		margin: 0;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	p,h1 {
+		margin: 0;
+		padding: 0;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>javascript事件模型</h1>
+		<ol>
+			<li>DOM0级事件处理程序:
+				<p>(1). 添加的事件在事件冒泡阶段处理; <br>
+				   (2). 添加element.on+eventType = function()....<br>
+				   (3). 添加的事件处理程序在元素的作用域中运行(this === element)</p>
+			</li>
+			<li>DOM2级事件处理程序:
+				<p>(1). addEventListener, removeEventListener<br>
+				   (2). element.addEventListener(type,function()...,false)<br>
+				   (3). 参数: (需要处理的事件名, 事件处理函数, 调用处理程序的阶段(true: 捕获阶段, false: 冒泡阶段))<br>
+				   (4). 主要好处: 可以同时添加多个事件处理程序(如多个onclick...), 并按添加<b style="color:red;">顺序</b>触发事件<br>
+				</p>
+			</li>
+			<li>IE事件处理程序:
+				<p>(1). attachEvent, detachEvent<br>
+				   (2). 添加element.attachEvent("on"+type,function()...)<br>
+				   (3). attachEvent的事件处理程序在全局作用域中运行(this === window)<br>
+				   (4). 可以同时添加多个事件处理程序, 按添加顺序<b style="color: red;">相反的顺序执行</b>
+				</p>
+			</li>
+		</ol>
+		<h1>跨浏览器的事件处理程序</h1>
+		<pre class="code">
+var EventUtil = {
+	addHandler: function( element, type, handler ) {
+		if ( element.addEventListener ) {
+			// this === element
+			element.addEventListener(type, handler, false);//冒泡阶段处理
+		} else if ( element.attachEvent ) {
+			// this === window
+			element.attachEvent("on"+type, handler);
+		} else {
+			element["on"+type] = handler;
+		}
+	},
+	removeHandler: function( element, type, handler ) {
+		if ( element.removeEventListener ) {
+			// this === element
+			element.removeEventListener(type, handler, false);//冒泡阶段处理
+		} else if ( element.detachEvent ) {
+			// this === window
+			element.detachEvent("on"+type, handler);
+		} else {
+			element["on"+type] = null;
+		}
+	}
+}
+		</pre>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

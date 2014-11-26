@@ -1,0 +1,218 @@
+#test .item{
+	width: 220px;
+	height: 120px;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+#test .item h1 {
+    background-color: #777777;
+    color: #FFFFFF;
+    padding: 3px 10px;
+    text-align: left;
+}
+#test .clicked{
+	background-color: #fff !important;
+}
+
+#test .clicked h1{
+	display: none !important;
+}
+
+#test .clicked .content{
+	display: block !important;
+}
+
+.hidecode{
+	display: none;
+}
+
+/* CSS
+--------------------------*/
+#progressbar{
+	text-align: left;
+	padding: 10px;
+}
+#progressbar .back{
+	background-color: #CCCCCC;
+	border-radius: 10px 10px 10px 10px;
+	height: 10px;
+	padding: 0;
+	margin-top: 35px;
+	position: relative;
+	width: 180px;
+}
+#progressbar .used{
+	background-color: #69C327;
+	border-radius: 10px 10px 10px 10px;
+	display: inline-block;
+	height: 10px;
+	position: absolute;
+	width: 82px;
+}
+#progressbar .circle{
+	background-color: #69C327;
+	border-radius: 20px 20px 20px 20px;
+	display: inline-block;
+	height: 20px;
+	left: 80px;
+	position: absolute;
+	top: -5px;
+	width: 20px;
+}
+
+/* CSS3圆
+-------------------------------*/
+#CSS3Circle {
+    background: radial-gradient(circle, #131313, #F3F3F3) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.6), 0 -5px 5px rgba(0, 0, 0, 0.6), 0 5px 5px rgba(0, 0, 0, 0.6), 5px 0 5px rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Microsoft Yahei;
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+    margin: 10px auto;
+    outline: medium none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+
+/* 颜色转换
+-------------------------------*/
+#test .none #colorChange{
+	padding: 0;
+	margin-top: 7px;
+}
+
+#colorChange label, #colorChange input[type=button]{
+	display: block;
+}
+
+#colorChange input[type=text]{
+	width: 155px;
+}
+
+#colorChange label{
+	padding: 5px 0;
+}
+
+#colorChange input[type=button]{
+	background: none repeat scroll 0 0 #E1E1E1;
+	border: 1px solid #d4d4d4;
+	font-size: 12px;
+	margin: 0 auto;
+}
+
+/* css3 logo
+----------------------------*/
+.main .fixHeight #css3Brackets{
+	padding: 5px;
+}
+
+#css3Brackets .brackets {
+   	background: -moz-linear-gradient(center top , #07ADE1 0%, #07A6DC 70%, #0676BB) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -webkit-gradient(linear, center top, center bottom, color-stop(0, #07ADE1), color-stop(1, #0676BB)) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 8px 0 #035D90;
+    height: 60px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    width: 60px;
+}
+#css3Brackets .white {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+     
+#css3Brackets .left_scope,
+#css3Brackets .right_scope {
+    background: none repeat scroll 0 0 #4D4D4D;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    width: 13px;
+    z-index: 10;
+}
+     
+#css3Brackets .left_scope { left: 6px; }
+#css3Brackets .right_scope { right: 6px; }
+     
+#css3Brackets .left_scope::after,
+#css3Brackets .right_scope::after {
+   	background: none repeat scroll 0 0 #4D4D4D;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 40px;
+    width: 22px;
+}
+     
+#css3Brackets .left_scope::after {left: 0;}
+     
+#css3Brackets .right_scope::after {right: 0;}
+     
+#css3Brackets .left_scope::before,
+#css3Brackets .right_scope::before {
+    background: none repeat scroll 0 0 #4D4D4D;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    content: "";
+    display: block;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 22px;
+    z-index: -1;
+}
+
+#css3Brackets .right_scope::before {
+	left: -9px;
+}
+
+/* 搜索框(2013-12-26)
+-----------------------------------------*/
+.search {
+    border: 1px solid #CCCCCC;
+    overflow: hidden;
+    width: 160px;
+}
+
+.search input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: none;
+    width: 120px;
+    float: left;
+}
+
+.search label {
+    background-color: #444444;
+    padding: 0 5px;
+    color: #FFFFFF;
+    float: right;
+}
+
+/* 按钮样式(2014-10-24)
+ * href: http://gucong3000.github.io/css-book/
+---------------------------------------------*/
+.g-btn{overflow:visible;border-radius:3px;cursor:pointer;}
+.g-btn-sure,.g-btn-copy{height:31px;padding:3px 20px;color:#fff;font-size:14px;text-shadow:1px 1px 1px rgba(0,0,0,.3);}
+.g-btn-sure{border:1px solid #0382AD;background-color:#45B5DA;background:-webkit-linear-gradient(#45B5DA,#0382AD);background:linear-gradient(#45B5DA,#0382AD);}
+.g-btn-sure:hover{background-color:#4bc4ec;background:-webkit-linear-gradient(#4bc4ec,#0494c5);background:linear-gradient(#4bc4ec,#0494c5);}
+.g-btn-sure:active{background-color:#45B5DA;background:-webkit-linear-gradient(#0382AD,#45B5DA);background:linear-gradient(#0382AD,#45B5DA);}
+.g-btn-copy{margin-left:20px;border:1px solid #4aa005;background-color:#6fb934;background:-webkit-linear-gradient(#6fb934,#458611);background:linear-gradient(#6fb934,#458611);}
+.g-btn-copy.hover,
+.g-btn-copy:hover{background-color:#5fa924;background:-webkit-linear-gradient(#67b727,#5fa924);background:linear-gradient(#67b727,#5fa924);}
+.g-btn-copy:active{background-color:#548d27;background:-webkit-linear-gradient(#548d27,#6fb934);background:linear-gradient(#548d27,#6fb934);

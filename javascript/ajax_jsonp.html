@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="前端javascript学习"/>
+<meta name="date" content="20131202" />
+<meta name="author" content="zjdgx" />
+<title>zjdgx前端学习</title>
+<link rel="stylesheet" type="text/css" href="../common/style/pages.css" />
+</head>
+<body id="javascript" class="subpage">
+	<div class="header">
+		<div class="logo">ZJDGX</div>
+		<ul class="nav">
+			<li><a href="../css.html">CSS3</a></li>
+			<li><a href="../interview_b.html">Interview</a></li>
+			<li><a href="../study.html">Study</a></li>
+			<li class="cur"><a href="../javascript.html">Javascript</a></li>
+			<li><a href="../Memo.html">Source</a></li>
+			<li><a href="../address.html">Address</a></li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="fixHeight">
+			<div class="content">
+				<h1>Ajax jsonp<a href="../javascript.html">返回</a></h1>
+				前端代码:<br />
+				<pre>
+	function cc(dd){
+		var json = eval("("+dd+")");
+		console.log(json.records)
+	}
+	$.ajax({
+		 type: "POST",
+		 url:'http://pim.test.lenovomm.cn/sms/callhistory/portal/list',
+		 data:{start: 0, number: 50, jsonpcallhack: 'cc' },
+		 dataType:"jsonp",
+		 jsonp:"jsonpcallback",
+		 success:function(data){
+			 
+		 }
+	}); 
+				</pre>
+				后端代码:<br />
+				<pre>
+	String jsonp = request.getParameter("jsonpcallhack");
+	if(StringUtils.isNotBlank(jsonp)){
+		response.getWriter().append(jsonp+"('"+JSONObject.fromObject(result)+"')");
+	}
+				</pre>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
+	</div>
+</body>
+</html>

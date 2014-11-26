@@ -1,0 +1,113 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="内容标题"/>
+<meta name="date" content="20131203" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.title {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+	}
+	.catelog {
+		width: 120px;
+		margin-left: 20px;
+	}
+	.chap {
+		width: 120px;
+		margin-left: 20px;
+	}
+	.section {
+		width:200px;
+		margin-left: 20px;
+	}
+	.detailFrame {
+		left: 0px;
+		top: 30px;
+		width: 100%;
+		bottom: 0px;
+		height: auto;
+		position: fixed;
+	}
+	#chapterIntent {
+		height: 100%;
+		width: 100%;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<span class="title">Android疯狂讲义</span>
+		<select class="catelog"></select>
+		<select class="chap"></select>
+		<select class="section"></select>
+		<div class="detailFrame">
+				<iframe id="chapterIntent" src="android/chap2_2.4.12_p121_gallery.html" allowtransparency="true" frameborder="0"></iframe>
+			</div>
+		<script type="text/javascript" src="../../../common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="script/catelog.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				// 设置默认值
+				creazyAndroidCatelog.setCatelog($(".catelog")[0], "catelog");
+				creazyAndroidCatelog.setCatelog($(".chap")[0], $(".catelog option:first").val());
+				creazyAndroidCatelog.setCatelog($(".section")[0], $(".chap option:first").val());
+				$("#chapterIntent").attr("src",$(".section option:first").val());
+				// 绑定事件
+				$(".catelog").change(function(){
+					var t = $(this), val = t.val();
+					$(".chap")[0].options.length = 0;
+					$(".section")[0].options.length = 0;
+					creazyAndroidCatelog.setCatelog($(".chap")[0], val);
+					creazyAndroidCatelog.setCatelog($(".section")[0], $(".chap option:first").val());
+					$("#chapterIntent").attr("src",$(".section option:first").val());
+				});
+				
+				$(".chap").change(function(e) {
+					var t = $(this), val = t.val();
+					$(".section")[0].options.length = 0;
+					creazyAndroidCatelog.setCatelog($(".section")[0], val);
+					$("#chapterIntent").attr("src",$(".section option:first").val());
+				});
+				
+				$(".section").change(function(e) {
+					var t = $(this), val = t.val();
+					$("#chapterIntent").attr("src",val);
+				});
+			});
+		</script>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

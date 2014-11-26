@@ -1,0 +1,62 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="去掉a标签虚线框"/>
+<meta name="date" content="20131129" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	#study{
+		margin-bottom: 10px;
+	}
+	#study p{
+		text-indent: 1em;
+		line-height: 1.5em;
+	}
+	#study pre{
+		text-indent: 2em;
+		line-height: 1.5em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>去掉链接虚线框</h1>
+		<p>在 Firefox 里可以用 -moz-outline:none; 或者 outline:none; 来将其去掉。所以我们可以这样写：</p>
+		<pre>
+a:focus {
+	 outline:none;
+	 -moz-outline:none;
+   }
+		</pre>
+		<p>如果想去掉输入框在chrome和safari下的阴影效果也可以用 outline 属性。</p>
+		<pre>
+input,textarea {
+	outline:none;
+   }
+		</pre>
+		<p>
+		IE。首先比较遗憾，还没有找到通过 CSS 去掉 IE 链接虚线框比较好的解决办法。所以只能用一个替代的办法，就是 a 标签的 hidefocus 属性(这个属性是 IE 独有的)。<br>
+		注意：JS 脚本对应的属性名是：hideFocus。对应的 JS 代码应该是：<br>
+			xxx.hideFocus ="true";<br>
+		还有一种不推荐的办法。就是让链接得到焦点的时候失去焦点。<br>
+		</p>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body,html{
+		height:100%; width: 100%;
+	} 
+	body{
+		font-size: 100%;
+		background-color: #ddd;
+		color: #524d46;
+		text-align: center;
+	}
+	
+	.circlegraph {
+		display: block;
+		width: 12em;
+		height: 12em;
+		border-radius: 50%;
+		box-shadow: .30em .375em .625em rgba(0,0,0,.25) inset, 0em 0em 1.25em rgba(0,0,0,.2) inset;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -6em;
+		margin-top: -6em;
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.2) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(255,255,255,0.2))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0.2) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0.2) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0.2) 100%); /* IE10+ */
+		background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0.2) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#33ffffff',GradientType=0 ); /* IE6-9 */
+	}
+	
+	.circlegraph:after {
+		display: block;
+		content: "";
+		width: 8em;
+		height: 8em;
+		background-color: #f9f8f4;
+		border-radius: 50%;
+		position: absolute;
+		left: 2em;
+		top: 2em;
+		box-shadow: 0 0 1em rgba(0,0,0,.25);
+	}
+	
+	.white {
+		margin-left:-500px;
+	}
+	.blue {
+		background-color: #26b7ff;
+		margin-left:-250px;
+	}
+	.orange{
+		background-color: #ff9300;
+		margin-left:0px;
+	}
+	.red {
+		background-color: #DE6040;
+		margin-left:250px;
+	}
+	.above:after {
+		display: block;
+		content: "";
+		width: 4em;
+		height: 4em;
+		background-color: #fff;
+		border-radius: 50%;
+		position: absolute;
+		left: 4em;
+		top: 4em;
+		box-shadow: 0.1em 0.4em 0.5em rgba(0,0,0,.25);
+		z-index: 1;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<div class="circlegraph white"></div>
+		<div class="circlegraph orange"></div>
+		<div class="circlegraph blue"></div>
+		<div class="circlegraph red"><div class="above"></div></div>
+	</div>
+</body>
+</html>

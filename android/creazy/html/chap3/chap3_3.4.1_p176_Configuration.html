@@ -1,0 +1,99 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="3.4.1	Configuration类简介"/>
+<meta name="date" content="20140428" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	p.code {
+		margin-left: 2em;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	.main h1 a {
+		margin-left: 20px;
+	}
+	.main .point {
+		padding-left: 5px;
+		margin: 5px 0 5px 2em;
+		background-color: #f8f8f8;
+	}
+	.main h2 {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 2em;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.main ol {
+		margin: 0;
+		margin-left: 2em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>3.4.1 Configuration类简介(P176)</h1>
+        <p class="point">
+        	Activity获取系统Configuration对象的方法： Configuration cfg = getResources().getConfigureation();
+        </p>
+		<h2>Android为View组件提供的事件处理方法:</h2>
+		<ol>
+			<li>boolean onKeyDown(int keyCode, KeyEvent event);</li>
+			<li>boolean onKeyLongPress(int keyCode, KeyEvent event);</li>
+			<li>boolean onKeyShortCut(int keyCode, KeyEvent event);</li>
+			<li>boolean onKeyUp(int keyCode, KeyEvent event);</li>
+			<li>boolean onTouchEvent(MotionEvent event);</li>
+			<li>boolean onTrackballEvent(MotionEvent event): 当用户在该组件上触发轨迹球事件时触发.</li>
+		</ol>
+		<p class="point">
+			基于回调的事件处理机制要通过实现自定义View来实现.
+		</p>
+		<h1>3.3.2 基于回调的事件传播(P172)<a class="code" href="../../code/chap3/3.3/P172_EventBroadcast.java">代码</a></h1>
+		<p class="point">
+			基于回调的事件处理方法都有一个boolean类型的返回值, 该返回值用于标识该处理方法是否能完全处理该事件:(true: 事件不传播, false: 事件继续传播)
+		</p>
+		<h1>3.3.3 重写onTouchEvent方法响应触摸屏事件<a class="code" href="../../code/chap3/3.2/P166_SmsSendListener.java">代码</a></h1>
+		<h2>基于监听的事件处理模型的优势:</h2>
+		<ol>
+			<li>基于监听的事件模型分工更明确, 事件源、事件监听两个类分开实现, 具有更好的维护性;</li>
+			<li>Android的事件处理机制保证基于监听的事件监听器会被优先触发.</li>
+		</ol>
+  		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>

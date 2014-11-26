@@ -1,0 +1,99 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="2.5.1 AlertDialog"/>
+<meta name="date" content="20140418" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	.main h1 a {
+		margin-left: 20px;
+	}
+	.main .point {
+		height: 24px;
+		line-height: 24px;
+		padding-left: 5px;
+		margin: 5px 0 5px 2em;
+		background-color: #f8f8f8;
+	}
+	.main table {
+		margin-left: 2em;
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+	.main table th,.main table td{
+		height: 24px;
+		padding: 0 10px;
+		line-height: 24px;
+		border: 1px solid #ccc;
+	}
+	.main h2 {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 2em;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.main ol {
+		margin: 0;
+		margin-left: 2em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>2.5.1 使用AlertDialog创建简单对话框(P124)<a class="code" href="../../code/chap2/2.5/P125_AlertDialogActivity.java" target="_blank" onClick="return false;">代码</a></h1>
+		<h2>生成预定义对话框的4种方法:</h2>
+		<ol>
+			<li>带消息、带N个按钮的提示对话框</li>
+			<li>带消息、带N个按钮的列表对话框</li>
+			<li>带多个单选列表项、带N个按钮的对话框</li>
+			<li>带多个多选列表项、带N个按钮的对话框</li>
+		</ol>
+		<h2>使用AlertDialog创建自定义对话框步骤:</h2>
+		<ol>
+			<li>创建AlertDialog.Builder对象, 该对象是AlertDialog的创建器</li>
+			<li>调用AlertDialog.Builder的方法为对话框设置图标、标题、内容等</li>
+			<li>调用AlertDialog.Builder的create()方法创建AlertDialog对话框</li>
+			<li>调用AlertDialog的show()方法显示对话框</li>
+		</ol>
+		<p class="point">1. 设置确定按钮: builder.setPositiveButton("确定", new DialogInterface.OnClickListener(){...})</p>
+		<p class="point">2. 设置取消按钮: builder.setNegativeButton("取消", new DialogInterface.OnClickListener(){...})</p>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

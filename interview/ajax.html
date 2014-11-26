@@ -1,0 +1,105 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="经典的13道Ajax面试题"/>
+<meta name="date" content="20131217" />
+<title>zjdgx interview</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	h1{
+		font-size: 16px;
+	}
+	.main p{
+		margin-left: 2em;
+	}
+	p,h1{
+		margin: 0;
+	}
+	.indent2 {
+		text-indent: 2em;
+	}
+	.indent4 {
+		text-indent: 4em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>1、什么是Ajax, 为什么要使用Ajax?</h1>
+		<p class="indent2">什么是Ajax：</p>
+		<p class="indent2">Ajax是“Asynchronous JavaScript and XML”的缩写。他是指一种创建交互式网页应用的网页开发技术。</p>
+		<p class="indent2">Ajax包含下列技术：</p>
+		<p class="indent4">基于web标准（standards-basedpresentation）XHTML+CSS的表示；</p>
+		<p class="indent4">使用 DOM（Document ObjectModel）进行动态显示及交互；</p>
+		<p class="indent4">使用 XML 和 XSLT 进行数据交换及相关操作；</p>
+		<p class="indent4">使用 XMLHttpRequest 进行异步数据查询、检索；</p>
+		<p class="indent4">使用 JavaScript 将所有的东西绑定在一起。</p>
+		<h1>2、为什么要用Ajax?</h1>
+		<p class="indent2">Ajax应用程序的优势在于：</p>
+		<p class="indent4">1. 通过异步模式，提升了用户体验;</p>
+		<p class="indent4">2. 优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用;</p>
+		<p class="indent4">3. Ajax引擎在客户端运行，承担了一部分本来由服务器承担的工作，从而减少了大用户量下的服务器负载。</p>
+		<h1>3、Ajax最大的特点是什么?</h1>
+		<p class="indent2">Ajax可以实现动态不刷新(局部刷新): 就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变过的信息。</p>
+		<h1>4、请介绍一下XMLhttprequest对象</h1>
+		<p class="indent2">Ajax的核心是JavaScript对象XmlHttpRequest。该对象在Internet Explorer 5中首次引入，它是一种支持异步请求的技术。简而言之，XmlHttpRequest使您可以使用JavaScript向服务器提出请求并处理响应，而不阻塞用户。通过XMLHttpRequest对象，Web开发人员可以在页面加载以后进行页面的局部更新。</p>
+		<h1>5、Ajax技术体系的组成部分有哪些?</h1>
+		<p class="indent2">HTML，css，dom，xml，xmlHttpRequest，javascript</p>
+		<h1>6、AJAX应用和传统Web应用有什么不同?</h1>
+		<p class="indent2">在传统的Javascript编程中，如果想得到服务器端数据库或文件上的信息，或者发送客户端信息到服务器，需要建立一个HTML form然后GET或者POST数据到服务器端。用户需要点击”Submit”按钮来发送或者接受数据信息，然后等待服务器响应请求，页面重新加载。</p>
+		<p class="indent2">因为服务器每次都会返回一个新的页面， 所以传统的web应用有可能很慢而且用户交互不友好。</p>
+		<p class="indent2">使用AJAX技术， 就可以使Javascript通过XMLHttpRequest对象直接与服务器进行交互。</p>
+		<p class="indent2">通过HTTP Request， 一个web页面可以发送一个请求到web服务器并且接受web服务器返回的信息(不用重新加载页面)，展示给用户的还是通一个页面，用户感觉页面刷新，也看不到到Javascript后台进行的发送请求和接受响应。</p>
+		<h1>7、AJAX请求总共有多少种CALLBACK?</h1>
+		<p class="indent2">Ajax请求总共有八种Callback: onSuccess, onFailure, onUninitialized, onLoading, onLoaded, onInteractive, onComplete, onException。</p>
+		<h1>8、Ajax和javascript的区别?</h1>
+		<p class="indent2">javascript是一种在浏览器端执行的脚本语言，Ajax是一种创建交互式网页应用的开发技术 ，它是利用了一系列相关的技术其中就包括javascript。</p>
+		<p class="indent2">Javascript是由网景公司开发的一种脚本语言，它和sun公司的java语言是没有任何关系的，它们相似的名称只是一种行销策略。</p>
+		<p class="indent2">在一般的web开发中，javascript是在浏览器端执行的，我们可以用javascript控制浏览器的行为和内容。</p>
+		<p class="indent2">在 Ajax应用中信息是如何在浏览器和服务器之间传递的通过XML数据或者字符串</p>
+		<h1>9、在浏览器端如何得到服务器端响应的XML数据?</h1>
+		<p class="indent2">XMLHttpRequest对象的responseXMl属性</p>
+		<h1>10、XMLHttpRequest对象在IE和Firefox中创建方式有没有不同?</h1>
+		<p class="indent2">有，IE中通过new ActiveXObject()得到，Firefox中通过newXMLHttpRequest()得到</p>
+		<h1>11、介绍一下XMLHttpRequest对象的常用方法和属性?</h1>
+		<p class="indent2">open(“method”,”URL”) 建立对服务器的调用，第一个参数是HTTP请求    方式可以为GET，POST或任何服务器所支持的您想调用的方式。</p>
+		<p class="indent2">第二个参数是请求页面的URL。</p>
+		<p class="indent2">send(): 发送具体请求</p>
+		<p class="indent2">abort(): 停止当前请求</p>
+		<p class="indent2">readyState属性: 请求的状态, 有5个可取值0=未初始化, 1=正在加载, 2=以加载, 3=交互中, 4=完成</p>
+		<p class="indent2">responseText属性: 服务器的响应, 表示为一个串</p>
+		<p class="indent2">reponseXML属性: 服务器的响应, 表示为XML</p>
+		<p class="indent2">status: 服务器的HTTP状态码, 200对应ok, 400对应not found</p>
+		<h1>12、XML的解析方式</h1>
+		<p class="indent2">常用的用dom解析和sax解析。dom解析是一次性读取xml文件并将其构造为DOM对象供程序使用，优点是操作方便，但是比较耗内存。Sax是按事件驱动的方式解析的，占用内存少，但是编程复杂</p>
+		<h1>13、AJAX都有哪些优点和缺点?</h1>
+		<p class="indent2">优点:</p>
+		<p class="indent4">1、最大的一点是页面无刷新，用户的体验非常好;</p>
+		<p class="indent4">2、使用异步方式与服务器通信，具有更加迅速的响应能力;</p>
+		<p class="indent4">3、可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担;</p>
+		<p class="indent4">4、基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</p>
+		<p class="indent2">缺点: </p>
+		<p class="indent4">1、ajax不支持浏览器back按钮;</p>
+		<p class="indent4">2、安全问题 AJAX暴露了与服务器交互的细节;</p>
+		<p class="indent4">3、对搜索引擎的支持比较弱;</p>
+		<p class="indent4">4、破坏了程序的异常机制;</p>
+		<p class="indent4">5、不容易调试。</p>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

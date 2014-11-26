@@ -1,0 +1,62 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="Java IO"/>
+<meta name="date" content="20131205" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<base target="_blank">
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.main .dataStream{
+		 text-align: center;
+	}
+	.main p{
+		margin: 0;
+	}
+	.main .indent2 {
+		text-indent: 2em;
+		text-align: left;
+	}
+	.main .indent4 {
+		margin-left: 4em;
+	    text-indent: 0;
+	}
+	.main b{
+		text-decoration: underline;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<div class="dataStream">
+			<h1>数据流中的API结构和对象继承关系信息</h1>
+			<img src="../img/java_io.gif"/>
+			<div class="indent2 history">
+				<h2>1. 字符流的由来</h2>
+				<p>因为文件编码的不同，而有了对字符进行高效操作的字符流对象。</p>
+				<p>原理：其实就是基于字节流读取字节时，去查了指定的码表。</p>
+				<p>字节流和字符流的区别：</p>
+				<p class="indent4">(1). 字节流读取的时候, 读到一个字节就返回一个字节. 字符流使用了字节流读到一个或多个字节(中文对应的字节数是两个, UTF-8码表中是3个字节)时. 先去查指定的编码表, 将查到的字符返回.</p>
+				<p class="indent4">(2). 字节流可以处理所有类型数据, 如图片, mp3, avi. 而字符流只能处理字符数据.</p>
+				<p><b>结论</b>: 只要是处理纯文本数据，就要优先考虑使用字符流。除此之外都用节流。</p>
+			</div>
+		</div>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>

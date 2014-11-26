@@ -1,0 +1,164 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="第4章 深入理解Activity(P183)"/>
+<meta name="date" content="20140429" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	p.code {
+		margin-left: 2em;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	.main h1{
+		margin: 0;
+		font-size: 14px;
+	}
+	.main h1 a {
+		margin-left: 20px;
+	}
+	.main .point {
+		padding-left: 5px;
+		margin: 5px 0 5px 2em;
+		background-color: #f8f8f8;
+	}
+	.main .point3 {
+		padding-left: 5px;
+		margin: 5px 0 5px 4em;
+		background-color: #f8f8f8;
+	}
+	.main .em {
+		text-decoration: underline;
+	}
+	.main h2 {
+		margin: 0;
+		margin-top: 10px;
+		margin-left: 2em;
+		font-size: 12px;
+	}
+	.main h3 {
+		font-size: 12px;
+		font-weight: normal;
+		margin: 10px 0 0 3em;
+	}
+	.main ol {
+		margin: 0;
+		margin-left: 2em;
+	}
+	.main ol.h3 {
+		margin: 0;
+		font-size: 12px;
+		margin-left: 4em;
+	}
+	h4 {
+		margin: 0;
+		text-indent: 5em;
+		font-weight: normal;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>第4章 深入理解Activity(P183)</h1>
+		<h2>本章要点</h2>
+		<ol>
+			<li>理解Activity的功能与作用;</li>
+			<li>开发普通的Activity;</li>
+			<li>在AndroidManifest.xml中配置Activity;</li>
+			<li>特殊Activity的功能与用法;</li>
+			<li>在程序中启动Activty;</li>
+			<li>关闭Activity;</li>
+			<li>使用Bandle在不同Activity之间交换数据;</li>
+			<li>启动其他Activity并返回结果;</li>
+			<li>Activity的回调机制;</li>
+			<li>Activity的生命周期.</li>
+		</ol>
+		<p class="point">
+			Android应用的重要组成单元: Activity, Service, BroadcastReceiver, ContentProvider.
+		</p>
+		<h2>4.1 建立、配置和使用Activity(P184)</h2>
+		<h3>4.1.1 建立Activity(P184)</h3>
+		<h3>4.1.2 配置Activity(P191)</h3>	
+		<h3>4.1.3 启动、关闭Activity(P193)</h3>
+		<h4>Activity启动其他Activity的方法:</h4>
+		<ol class="h3">
+			<li>startActivity(Intent intent): 启动其他Activity;</li>
+			<li>startActivityForResult(Intent intent, int requestCode): 以指定请求码(requestCode)启动Activity, 而且程序将会等到新启动Activity的结果.</li>
+		</ol>
+		<h4>Activity关闭Activity的方法:</h4>
+		<ol class="h3">
+			<li>finish(): 结束当前Activity;</li>
+			<li>finish(int requestCode): 结束以startActivityForResult(Intent intent, int requestCode)方法启动的Activity.</li>
+		</ol>
+		<h3>4.1.4 使用Bandle在Activity之间交换数据(P195)</h3>
+		<h4>Activity之间通过Intent交换数据, Intent保存数据的方法:</h4>
+		<ol class="h3">
+			<li>putExtras(Bundle data): 向Intent中放入需要携带的数据;</li>
+			<li>putXxx(String key, Xxx data): 向Bundle放入Int、Long等各种类型的数据;</li>
+			<li>putSerializable(String key, Serializable data): 向Bundle中放入一个可序列化的对象.</li>
+		</ol>
+		<h4>取出Bundle中数据的方法:</h4>
+		<ol class="h3">
+			<li>getXxx(String key): 从Bundle取出Int、Long等各种类型的数据;</li>
+			<li>getSerializable(String key): 从Bundle中取出一个可序列化的对象.</li>
+		</ol>
+		<h3>4.1.5 启动其他Activity并返回结果(P199)</h3>
+		<h2>4.2 Activity的回调机制(P203)</h2>
+		<h2>4.3 Activity的生命周期(P204)</h2>
+		<h3>4.3.1 Activity的生命周期演示</h3>
+		<p class="point3 em">
+			Activity顺序: onCreate, onStart, onResume, onPause, onStop, onDestroy
+		</p>
+		<img src="img/activity_lifecycle.png" />
+		<h4>Activity的四个状态</h4>
+		<ol class="h3">
+			<li>活动状态: 当前Activity位于前台, 用户可见, 可以获得焦点;</li>
+			<li>暂停状态: 其他Activity位于前台, 该Activity依然可见, 只是不能获得焦点;</li>
+			<li>停止状态: 该Activity不可见, 失去焦点;</li>
+			<li>销毁状态: 该Activity结束, 或Activity所在的Dalvik进程被结束.</li>
+		</ol>
+		<h3>4.3.2 Activity与Servlet的相似性与区别(P208)</h3>
+		<h4>Activity与Servlet的相似之处:</h4>
+		<ol class="h3">
+			<li>Activity、Servlet的职责都是向用户呈现界面;</li>
+			<li>开发者开发Activity、Servlet都继承系统的基类;</li>
+			<li>Activity、Servlet开发出来之后都需要进行配置;</li>
+			<li>Activity运行于Android系统中, Servlet运行于Web应用中;</li>
+			<li>开发者无需创建Activity、Servlet实例, 无需调用它们的方法. Activity、Servlet的方法都是由系统以回调的方式调用.</li>
+			<li>Activity、Servlet都有各自的生命周期, 它们的生命周期都由外部负责管理;</li>
+			<li>Activity、Servlet都不会直接相互调用, 因此都不会直接进行数据交换. Servlet之间的数据交换需要借助于Web应用提供的requestScope、sessionScope等, Activity之间的数据交换需要借助于Bundle;</li>
+		</ol>
+		<h2>4.4 本章小结(P209)</h2>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>

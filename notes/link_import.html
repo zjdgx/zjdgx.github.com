@@ -1,0 +1,48 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="link与@import的区别"/>
+<meta name="date" content="20131204" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.main ul, .main h1{
+		margin: 0;
+		padding: 0;
+	}
+	.main h1{
+		font-size: 16px;
+	}
+	.main ul li{
+		list-style: none;
+		text-indent: 2em;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>link与@import的区别:</h1>
+		<ul>
+			<li>1. link属于XHTML标签, 而@import完全是CSS提供的一种方式;</li>
+			<li>2. link标签除了可以加载CSS外, 还可以做很多其它的事情, 比如定义RSS, 定义rel连接属性等, @import就只能加载CSS了;</li>
+			<li>3. link引用的CSS会同时被加载, 而@import引用的CSS会等到页面全部被下载完再被加载;</li>
+			<li>4. @import只有在IE5以上的才能识别, 而link标签无此问题;</li>
+			<li>5. 当使用javascript控制dom去改变样式的时候, 只能使用link标签, 因为@import不是dom可以控制的;</li>
+			<li>6. @import可以在css中再次引入其他样式表, 比如可以创建一个主样式表, 在主样式表中再引入其他的样式表.</li>
+		</ul>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>
