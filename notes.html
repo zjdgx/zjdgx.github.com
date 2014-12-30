@@ -25,80 +25,6 @@
 		overflow: hidden;
 		position: relative;
 	}
-	.nav_page {
-		height: 240px;
-		position: relative;
-		margin: 10px 20px;
-		text-align: center;
-	}
-	.nav_page .nav {
-		border-bottom: 1px solid #CCCCCC;
-	}
-	.nav_page .nav a {
-		color: #000;
-		width: 80px;
-		padding: 10px 0;
-		margin-bottom: -1px;
-		*margin-bottom: -5px;
-		display: inline-block;
-
-		text-decoration: none;
-		border: 1px solid #CCCCCC;
-	}
-	
-	.nav_page .nav .cur {
-		color: #CCCCCC;
-		font-weight: bold;
-		border: solid 1px #CCC;
-		border-bottom-color: white;
-	}
-	
-	#notes .nav_page .page_content{
-		left: 0;
-		top: 39px;
-		clear: both;
-		width: 100%;
-		bottom: 10px;
-		text-align: left;
-		position: absolute;
-		border: 1px solid #CCCCCC;
-		border-top: none;
-	}
-	
-	.nav_page .page_content div{
-		height: 78.7%;
-		overflow: auto;
-		padding: 20px;
-		display: none;
-	}
-	
-	.nav_page .page_content div.cur{
-		display: block;
-	}
-
-	.nav_page .page_content li{
-		width: 22.9%;
-		float: left;
-		margin: 3px;
-		padding: 5px;
-		border: 1px solid #CCCCCC;
-	}
-	
-	.nav_page .page_content a{
-		width: 100%;
-		height: 20px;
-		color: #000000;
-		display: block;
-		overflow: hidden;
-		line-height: 20px;
-		white-space: nowrap;
-		text-decoration: none;
-		text-overflow: ellipsis;
-	}
-	.nav_page .page_content a:hover{
-		text-decoration: underline;
-	}
-	
 	#notes .content .detailFrame {
 		top: 250px;
 		width: 938px;
@@ -158,7 +84,7 @@
             <!-- InstanceBeginEditable name="content" -->
 			<div class="nav_page">
 				<div class="nav">
-					<a href="#" onclick="return false;" name="browser" class="cur">浏览器</a>
+					<a class='first cur' href="#" onclick="return false;" name="browser">浏览器</a>
 					<a href="#" onclick="return false;" name="css">CSS</a>
 					<a href="#" onclick="return false;" name="html">HTML</a>
 					<a href="#" onclick="return false;" name="javascript">JavaScript</a>
@@ -211,6 +137,7 @@
 						</ul>
 					</div>
 				</div>
+				
 			</div>
 			<div class="detailFrame">
 				<iframe id="detailFrame" src="notes/expression.html" allowtransparency="true" frameborder="0"></iframe>
@@ -230,7 +157,7 @@
 		<script type="text/javascript" src="common/script/common.js"></script>
 		<script type="text/javascript">
 			$(function(){
-				$(".nav_page .nav a").hover(function(){
+				$(".nav_page .nav a").click(function(){
 					var t = $(this), type = t.attr("name");
 					if( !t.hasClass("cur") ){
 						t.addClass("cur").siblings().removeClass("cur");
