@@ -226,3 +226,68 @@ a:focus{
 	font-family: "Courier New", Courier, monospace;
 	background-color:#99CCCC;
 }
+
+.nav_page {
+	overflow: hidden;
+	margin: 10px 20px;
+	text-align: center;
+}
+.nav_page .nav {
+	float: left;
+	width: 90px;
+	height: 230px;
+	background-color: #f1f1f1;
+}
+.nav_page .nav a {
+	height: 24px;
+	display: block;
+	line-height: 24px;
+	padding: 3px 10px;
+	text-align: center;
+	border-bottom: none;
+	text-decoration: none;
+}
+.nav_page .nav a:hover {
+	text-decoration: underline;
+}
+.nav_page .nav .cur {
+	background-color: #d1d1d1;
+}
+.nav_page .page_content{
+	float: left;
+	width: 830px;
+	height: 228px;
+	text-align: left;
+	margin-left: 16px;
+	border: 1px solid #CCCCCC;
+}
+.nav_page .page_content div{
+	height: 78.7%;
+	overflow: auto;
+	padding: 20px;
+	display: none;
+}
+.nav_page .page_content div.cur{
+	display: block;
+}
+.nav_page .page_content li{
+	width: 22.9%;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+}
+.nav_page .page_content a{
+	width: 100%;
+	height: 20px;
+	color: #000000;
+	display: block;
+	overflow: hidden;
+	line-height: 20px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-overflow: ellipsis;
+}
+.nav_page .page_content a:hover{
+	text-decoration: underline;
+}
