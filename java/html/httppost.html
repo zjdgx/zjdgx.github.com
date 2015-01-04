@@ -1,0 +1,79 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="Java HttpPost"/>
+<meta name="date" content="20130922" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<base target="_blank">
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.main h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+	}
+	.main .dataStream{
+		 text-align: left;
+	}
+	.main p{
+		margin: 0;
+	}
+	.main .indent2 {
+		text-indent: 2em;
+		text-align: left;
+	}
+	.main .indent4 {
+		margin-left: 4em;
+	    text-indent: 0;
+	}
+	.main b{
+		text-decoration: underline;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+		background-color: #e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<div class="dataStream">
+			<h1>HttpPost</h1>
+			<pre class="code">
+	// HTTPPOST, MultipartEntity
+	HttpPost post = new HttpPost(SystemConfig.getValue("calendar.birthday.headIconUrl"));
+	post.addHeader("Cookie", request.getHeader("Cookie"));
+	MultipartEntity entry = new MultipartEntity();
+	FormBodyPart part = new FormBodyPart(name, new FileBody(new File(photoPath,headIcon)));
+	part.addField("name", name);
+	entry.addPart(part);
+	post.setEntity(entry);
+	HttpClient client = new DefaultHttpClient();
+	HttpResponse resp = client.execute(post);
+	String ret = StreamUtil.read(resp.getEntity().getContent());
+	HashMap<String, Object> result = getJson(ret, HashMap.class);
+			</pre>
+		</div>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd -->
+</html>
