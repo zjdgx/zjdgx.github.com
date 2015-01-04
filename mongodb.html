@@ -14,6 +14,22 @@
 <title>zjdgx前端学习</title>
 <!-- InstanceBeginEditable name="stylesheets" -->
 <link rel="stylesheet" type="text/css" href="common/style/pages.css" />
+<style type="text/css">
+	.code {
+		margin-left: 2em;
+		padding: 5px 10px;
+	}
+	#mongodb .content ul li {
+		margin-top: 10px;
+	}
+	.importantIssue h2 {
+		color: #f00;
+		font-weight: bold;
+	}
+	.startMongoDB {
+		margin-left: 2em;
+	}
+</style>
 <!-- InstanceEndEditable -->
 </head>
 <!-- InstanceBeginEditable name="typeClass" -->
@@ -49,23 +65,39 @@
 		<div class="fixHeight">
 			<div class="content">
             <!-- InstanceBeginEditable name="content" -->
+			<div class="importantIssue">
+				<h2>注意事项</h2>
+				1. MongoDB数据库名字区分大小写<br/>
+				2. aggregate中的$group的_id必须有<br/>
+				3. MongoDB配置:<br date='2015/01/04'/>
+				<p class='startMongoDB'>(1).启动mongodb服务<br/>
+				&nbsp;&nbsp;&nbsp;mongod --dbpath E:\zjdgx\MongoDB\data --logpath=E:\zjdgx\MongoDB\logs\mongodb.log --logappend --directoryperdb --serviceName MongoDB --install<br/>
+				&nbsp;&nbsp;&nbsp;net start mongodb<br/>
+				(2).命令行(cmd)创建collection<br/>
+				&nbsp;&nbsp;&nbsp;use collectionName--->db.addUser('name','password')<br/>
+				(3).Robomongo创建连接<br/>
+				&nbsp;&nbsp;&nbsp;在Authentication中输入collectionName, userName and password
+				</p>
+			</div>
 			<ul>
 				<li>
-					<h2>1. HTTPPOST</h2>
+					<h2>1. 显示数据表</h2>
 					<pre class="code">
-	// HTTPPOST, MultipartEntity
-	HttpPost post = new HttpPost(SystemConfig.getValue("calendar.birthday.headIconUrl"));
-	post.addHeader("Cookie", request.getHeader("Cookie"));
-	MultipartEntity entry = new MultipartEntity();
-	FormBodyPart part = new FormBodyPart(name, new FileBody(new File(photoPath,headIcon)));
-	part.addField("name", name);
-	entry.addPart(part);
-	post.setEntity(entry);
-	HttpClient client = new DefaultHttpClient();
-	HttpResponse resp = client.execute(post);
-	String ret = StreamUtil.read(resp.getEntity().getContent());
-	HashMap<String, Object> result = getJson(ret, HashMap.class);
-					</pre>
+show collections</pre>
+				</li>
+				<li>
+					<h2>2. count</h2>
+					<pre class='code'>
+db['***'].count({datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}})
+db['***'].find({datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}}).count()
+__in shared collection__:
+	db['***'].aggregate([
+		{ $group: { _id: null, count: { $sum: 1 } } }
+	])
+	db['***'].aggregate([
+		{ $match: {datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}} },
+		{ $group: { _id: null, count: { $sum: 1 } } }
+	])</pre>
 				</li>
 			</ul>
             <!-- InstanceEndEditable -->
