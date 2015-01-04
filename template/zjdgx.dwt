@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="前端学习网站"/>
+<!-- TemplateBeginEditable name="createDate" -->
+<meta name="date" content="20130922" />
+<!-- TemplateEndEditable -->
+<meta name="author" content="zjdgx" />
+<title>zjdgx前端学习</title>
+<!-- TemplateBeginEditable name="stylesheets" -->
+<link rel="stylesheet" type="text/css" href="common/style/pages.css" />
+<!-- TemplateEndEditable -->
+</head>
+<!-- TemplateBeginEditable name="typeClass" -->
+<body>
+<!-- TemplateEndEditable -->
+	<div class="header">
+		<div class="logo">ZJDGX</div>
+		<ul class="nav">
+	        <!-- TemplateBeginEditable name="nav" -->
+			<li><a href="study.html">Study</a></li>
+			<li><a href="css.html">CSS</a></li>
+			<li><a href="javascript.html">Javascript</a></li>
+            <li title="Java"><a href="java.html">Java</a></li>
+            <li title="杂记"><a href="notes.html">Notes</a></li>
+			<li><a href="interview.html">Interview</a></li>
+			<li class="cur" title="学习网站"><a href="address.html">Address</a></li>
+			<li><a href="source.html">Source</a></li>
+            <!-- TemplateEndEditable -->
+		</ul>
+		<div class="clock">
+			<label class="year"><span></span>年</label>
+			<label class="month"><span></span>月</label>
+			<label class="day"><span></span>日</label>
+			<label class="hour"><span></span>点</label>
+			<label class="minute"><span></span>分</label>
+			<label class="second"><span></span>秒</label>
+		</div>
+	</div>
+	<div class="main">
+		<div class="fixHeight">
+			<div class="content">
+            <!-- TemplateBeginEditable name="content" -->
+            <!-- TemplateEndEditable -->
+            </div>
+	    </div>
+    </div>
+    <div class="footer">
+    	<!-- TemplateBeginEditable name="footer" -->
+		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
+        <!-- TemplateEndEditable -->
+	</div>
+	<!-- TemplateBeginEditable name="hidecode" -->
+	<div class="hidecode">
+		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../html/CSS3&HTML5/common/script/common.js"></script>
+	</div>
+	<!-- TemplateEndEditable -->
+</body>
+</html>
