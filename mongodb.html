@@ -29,6 +29,9 @@
 	.startMongoDB {
 		margin-left: 2em;
 	}
+	.indent2 {
+		margin-left: 2em;
+	}
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -98,6 +101,12 @@ __in shared collection__:
 		{ $match: {datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}} },
 		{ $group: { _id: null, count: { $sum: 1 } } }
 	])</pre>
+				</li>
+				<li>
+					<h2>3. collection.insert安全模式</h2>
+					<pre class="code">
+{safe: true}</pre>
+					<span class='indent2'>在查询语句中声明{safe:true}表明你想让数据库操作在执行回调之前完成. 可用{}关闭安全模式</span>
 				</li>
 			</ul>
             <!-- InstanceEndEditable -->
