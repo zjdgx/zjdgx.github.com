@@ -1,0 +1,89 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="zjdgx" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="获取数组排序前的索引"/>
+<meta name="date" content="20150107" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+	html,body{
+		background-color: #fff;
+	}
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	.code {
+		margin: 0;
+		padding: 5px 10px;
+		background-color:#e8e8e8;
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre.code {
+		margin: 0.5em 0;
+		line-height: 150%;
+		padding: 0.4em 0.6em;
+	}
+	ol{
+		margin: 0;
+	}
+	ol li {
+		list-style: decimal;
+	}
+	p,h1 {
+		margin: 0;
+		padding: 0;
+	}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="main">
+		<!-- InstanceBeginEditable name="content" -->
+		<h1>获取数组排序前的索引</h1>
+		<pre class="code">
+Array.prototype.indexes = function(type) {
+	if (type !== 'desc' && type != 'asc') {
+		throw new Error('type is not included.');
+		return;
+	}
+	var tmp = null,
+		curData = {value: null, index: null},
+		curIndex = -1,
+		newIndexes = [],
+		newData = this.slice(0),
+		length = newData.length;
+	
+	newData.sort(function(a,b){
+		if ('asc' === type) {
+			return a &gt; b;
+		} else {
+			return a &lt; b;
+		}
+	});
+
+	for(var i=0; i&lt;length; i++) {
+		if (curData.value == newData[i]) {
+			curIndex = curData.index + this.slice(curData.index+1).indexOf(newData[i]) + 1;
+			curData.index  = curIndex;
+		} else {
+			curIndex = this.indexOf(newData[i]);
+			curData.value = newData[i];
+			curData.index = curIndex;
+		}
+		console.log('value: '+newData[i]+', index: '+curIndex);
+		newIndexes.push(curIndex);
+	}
+	return newIndexes;
+}
+new Array(1,5,2,7,7,7,6).indexes('desc');</pre>
+		<!-- InstanceEndEditable -->
+	</div>
+</body>
+<!-- InstanceEnd --></html>
