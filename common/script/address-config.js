@@ -1,4 +1,4 @@
-var CSS = [
+var Front = [
 		{'name':'CSS字体栈', 'date': '2015-01-04', 'url':'http://cssfontstack.com/'},
 		{'name':'配色器', 'date': '2015-01-04', 'url':'http://colorschemedesigner.com/'},
 		{'name':'特殊符号', 'date': '2015-01-04', 'url':'http://cn.piliapp.com/symbol/'},
@@ -8,14 +8,10 @@ var CSS = [
 		{'name':'canIuse', 'date': '2015-01-04', 'url':'http://caniuse.com'},
 		{'name':'UI设计', 'date': '2015-01-04', 'url':'http://www.uifuns.com/'},
 		{'name':'30个jQuery Lightbox插件', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/lhb25/archive/2011/04/11/2005330.html'},
-		{'name':'自适应网页设计', 'date': '2015-01-04', 'url':'http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html'}
-	],
-	HTML5 = [
+		{'name':'自适应网页设计', 'date': '2015-01-04', 'url':'http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html'},
 		{'name':'mobileTech', 'date': '2015-01-04', 'url':'https://github.com/jtyjty99999/mobileTech'},
 		{'name':'屏幕大小', 'date': '2015-01-04', 'url':'http://screensiz.es/phone'},
-		{'name':'HTML5多图片预览上传', 'date': '2015-01-04', 'url':'http://www.css119.com/archives/1481'}
-	],
-	JavaScript = [
+		{'name':'HTML5多图片预览上传', 'date': '2015-01-04', 'url':'http://www.css119.com/archives/1481'},
 		{'name':'免费学习', 'date': '2015-01-04', 'url':'http://www.jscode.cn/web/v76959'},
 		{'name':'JS调优', 'date': '2015-01-04', 'url':'http://developer.51cto.com/art/200906/128404.htm'},
 		{'name':'HTML5 Cavas画图', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/tim-li/archive/2012/08/06/2580252.html#8'},
@@ -50,15 +46,13 @@ var CSS = [
 	];
 	
 function getMaxLength() {
-	var cssLen = CSS.length,
-		jsLen = JavaScript.length,
+	var frontLen = Front.length,
 		javaLength = Java.length,
-		mobileLength = HTML5.length,
 		androidLength = Android.length,
 		toolLength = Tool.length,
 		blogLength = Blog.length;
 
-	return Math.max(cssLen, jsLen, javaLength, mobileLength, androidLength, toolLength, blogLength);
+	return Math.max(frontLen, javaLength, androidLength, toolLength, blogLength);
 }
 
 function getItemValue(data) {
@@ -72,13 +66,11 @@ function getItemValue(data) {
 function showAddressTable() {
 	var len = address.length,
 		maxLength = getMaxLength(),
-		table = ['<table cellpadding="0" cellspacing="0" border="1" bordercolor="#CCCCCC"><thead><tr><th>CSS</th><th>HTML5</th><th>JavaScript</th><th>Java</th><th>Android</th><th>Tool</th><th>Blog</th></tr></thead><tbody>'];
+		table = ['<table cellpadding="0" cellspacing="0" border="1" bordercolor="#CCCCCC"><thead><tr><th>Front</th><th>Java</th><th>Android</th><th>Tool</th><th>Blog</th></tr></thead><tbody>'];
 	
 	for(var j=0; j<maxLength; j++) {
 		table.push('<tr>');
-		table.push(getItemValue(CSS[j]));
-		table.push(getItemValue(HTML5[j]));
-		table.push(getItemValue(JavaScript[j]));
+		table.push(getItemValue(Front[j]));
 		table.push(getItemValue(Java[j]));
 		table.push(getItemValue(Android[j]));
 		table.push(getItemValue(Tool[j]));
