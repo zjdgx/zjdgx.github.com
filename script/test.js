@@ -73,7 +73,11 @@ String.prototype.toHexString = function(){
 		result = colorChange.changIntToHex(left)+result;
 		value = Math.floor(value / 16);
 	}
-	return colorChange.changIntToHex(value)+result;
+	if (value < 15) {
+		return colorChange.changIntToHex(value)+"0";
+	} else {
+		return colorChange.changIntToHex(value)+result;
+	}
 }
 
 colorChange.changIntToHex = function(value){
