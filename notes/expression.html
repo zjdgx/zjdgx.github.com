@@ -73,6 +73,7 @@ function IP2V(ip) {
 			<li>限制只能输入数字和英文:<p class="code">onkeyup="value=value.replace(/[\W]/g,'')<br/> "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"</li>
 			<li>匹配国内电话号码:<p class="code">d{3}-d{8}|d{4}-d{7}<br/>匹配形式如 0511-4405222 或 021-87888822</p></li>
 			<li>匹配帐号是否合法:<p class="code">^[a-zA-Z][a-zA-Z0-9_]{4,15}$<br/>字母开头，允许5-16字节，允许字母数字下划线</p></li>
+			<li>正则替换:<p class='code'>^#(\d+) --&gt; [YOBI-\1]<br/>结果为: #98 --&gt; [YOBI-98] </p></p></li>
 		</ol>
 		<table border="1" cellpadding="0" cellspacing="0">
 			<caption>常用正则表达式</caption>
