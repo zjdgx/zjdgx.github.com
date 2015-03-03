@@ -55,7 +55,7 @@ function getMaxLength() {
 		javaLength = Java.length,
 		androidLength = Android.length,
 		toolLength = Tool.length,
-		blogLength = Blog.length，
+		blogLength = Blog.length,
 		newtechLength = newTechnique.length;
 
 	return Math.max(frontLen, javaLength, androidLength, toolLength, blogLength, newtechLength);
