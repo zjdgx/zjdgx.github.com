@@ -39,7 +39,8 @@ var Front = [
 		{'name':'长途汽车查询(IE)', 'date': '2015-01-04', 'url':'http://www.cdjt.gov.cn/bus.jsp'},
 		{'name':'前端收藏夹', 'date': '2015-01-04', 'url':'http://www.w3cplus.com/front-end-bookmarks'},
 		{'name':'sublime Emmet', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/bjmumu/p/3356868.html'},
-		{'name':'网站访问统计系统', 'date': '2015-01-04', 'url':'http://www.oschina.net/news/49411/piwik-2-1-0?from=20140309'}
+		{'name':'网站访问统计系统', 'date': '2015-01-04', 'url':'http://www.oschina.net/news/49411/piwik-2-1-0?from=20140309'},
+		{'name':'ZEEF', 'url': 'https://zeef.com/'}
 	],
 	Blog = [
 		{'name':'博客园(javascript)', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/cate/javascript/'},
