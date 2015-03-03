@@ -72,7 +72,7 @@ function getItemValue(data) {
 function showAddressTable() {
 	var len = address.length,
 		maxLength = getMaxLength(),
-		table = ['<table cellpadding="0" cellspacing="0" border="1" bordercolor="#CCCCCC"><thead><tr><th>Front</th><th>Java</th><th>Android</th><th>Tool</th><th>Blog</th></tr></thead><tbody>'];
+		table = ['<table cellpadding="0" cellspacing="0" border="1" bordercolor="#CCCCCC"><thead><tr><th>Front</th><th>Java</th><th>Android</th><th>Tool</th><th>Blog</th><th>NewTech</th></tr></thead><tbody>'];
 	
 	for(var j=0; j<maxLength; j++) {
 		table.push('<tr>');
