@@ -45,6 +45,9 @@ var Front = [
 	Blog = [
 		{'name':'博客园(javascript)', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/cate/javascript/'},
 		{'name':'聂微东博客', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/Darren_code/'}
+	],
+	newTechnique = [
+		{'name':'Nodejs学习路线图', 'url':'http://www.nodejs.net/a/20141016/232139.html'}
 	];
 	
 function getMaxLength() {
@@ -52,9 +55,10 @@ function getMaxLength() {
 		javaLength = Java.length,
 		androidLength = Android.length,
 		toolLength = Tool.length,
-		blogLength = Blog.length;
+		blogLength = Blog.length，
+		newtechLength = newTechnique.length;
 
-	return Math.max(frontLen, javaLength, androidLength, toolLength, blogLength);
+	return Math.max(frontLen, javaLength, androidLength, toolLength, blogLength, newtechLength);
 }
 
 function getItemValue(data) {
@@ -77,6 +81,7 @@ function showAddressTable() {
 		table.push(getItemValue(Android[j]));
 		table.push(getItemValue(Tool[j]));
 		table.push(getItemValue(Blog[j]));
+		table.push(getItemValue(newTechnique[j]));
 		table.push('</tr>')
 	}
 	
