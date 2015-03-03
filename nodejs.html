@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/zjdgx.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="前端学习网站"/>
+    <!-- InstanceBeginEditable name="createDate" -->
+    <meta name="date" content="20130922"/>
+    <!-- InstanceEndEditable -->
+    <meta name="author" content="zjdgx"/>
+    <title>zjdgx前端学习</title>
+    <link rel="stylesheet" href="common/style/pages.css">
+    <link rel="stylesheet" href="style/nodejs.css">
+    <link rel="stylesheet" href="common/style/coolcode.css">
+</HEAD>
+<BODY charset="UTF-8">
+<div class="header">
+    <div class="logo">ZJDGX</div>
+    <ul class="nav">
+        <!-- InstanceBeginEditable name="nav" -->
+        <li><a href="study.html">Study</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="javascript.html">Javascript</a></li>
+        <li title="Android"><a href="android.html">Android</a></li>
+        <li title="MongoDB"><a href="mongodb.html">MongoDB</a></li>
+        <li class="cur"><a href="nodejs.html">Nodejs</a></li>
+        <li title="MySQL"><a href="MySQL.html">MySQL</a></li>
+        <li title="杂记"><a href="notes.html">Notes</a></li>
+        <li title="学习网站"><a href="address.html">Address</a></li>
+        <li title="学习资源"><a href="source.html">Source</a></li>
+        <li title="备忘录"><a href="Memo.html">Memo</a></li>
+        <!-- InstanceEndEditable -->
+    </ul>
+    <div class="clock">
+        <label class="year"><span></span>年</label>
+        <label class="month"><span></span>月</label>
+        <label class="day"><span></span>日</label>
+        <label class="hour"><span></span>点</label>
+        <label class="minute"><span></span>分</label>
+        <label class="second"><span></span>秒</label>
+    </div>
+</div>
+<div class="main">
+    <div class="fixHeight">
+        <div class="content">
+			<h1>高性能Node.JS : 来自LinkedIn Mobile的10条优化建议</h1>
+            <div class="entry">
+                <p class="summary"><strong>摘要</strong>:
+                    一、避免使用同步代码(Avoid synchronous code)
+
+                    Node.js是单线程的。为了使单线程可以处理多个并发请求，我们不应该让线程来等待一个阻塞的、同步的或是长时间运行的操作。Node.js的一个突出的特性就是它被完全地设计并实现为异步的....</p>
+                <div class="entrycontent">
+                    <!-- SingleAd begin -->
+                    <!-- SingleAd end -->
+                    <h3>一、避免使用同步代码(Avoid synchronous code)</h3>
+                    <p></p>
+                    <p>
+                        Node.js是单线程的。为了使单线程可以处理多个并发请求，我们不应该让线程来等待一个阻塞的、同步的或是长时间运行的操作。Node.js的一个突出的特性就是它被完全地设计并实现为异步的。这使得其可以非常好地适用于事件驱动的程序。</p>
+                    <p>遗憾的是，我们仍然有可能使用到同步/阻塞的调用。例如，很多对文件系统的操作都提供了同步和异步的两个版本，就像<a
+                            href="http://cnodejs.org/cman/fs.html#fs.writeFile" target="_blank">writeFile</a>和<a
+                            href="http://cnodejs.org/cman/fs.html#fs.writeFileSync" target="_blank">writeFileSync</a>。有时即使我们没有在自己的代码中使用同步的方法，但仍然有可能在无意中使用了包含阻塞调用的某个外部库。当您使用到同步/阻塞调用时，对性能的影响是巨大的。
+                    </p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span
+                                    style="color: #ffa500;">// Good: write files asynchronously</span></li>
+                            <li><span style="color: Blue;">fs</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">writeFile</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">message.txt</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Gray;">, </span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">Hello Node</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Gray;">, </span><span
+                                    style="color: Green;">function</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Olive;">(</span><span style="color: Blue;">err</span><span
+                                    style="color: Olive;">)</span><span style="color: Gray;"> </span><span
+                                    style="color: Olive;">{</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Blue;">console</span><span
+                                    style="color: Gray;">.</span><span style="color: Blue;">log</span><span
+                                    style="color: Olive;">(</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">It’s saved and the server remains responsive!</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                            <li><span style="color: Olive;">})</span><span style="color: Gray;">;</span></li>
+                            <li><span style="color: Gray;">&nbsp;</span></li>
+                            <li><span style="color: #ffa500;">// BAD: write files synchronously</span></li>
+                            <li><span style="color: Blue;">fs</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">writeFileSync</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">message.txt</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Gray;">, </span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">Hello Node</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                            <li><span style="color: Blue;">console</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">log</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">It’s saved, but you just blocked ALL requests!</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                        </ol>
+                    </div>
+                    <p>
+                        我们最初的日志系统的实现中，不慎使用了一个写磁盘的同步调用。直到我们做性能测试之前这个情况一直没有被我们注意到。当我们在开发环境中对一个单实例的Node.js程序作基准测试的时候，这个同步调用使得吞吐率(requests
+                        per second)从几千一下子下降到了几十！</p>
+
+                    <p>
+                    </p>
+
+                    <h3>二、关闭socket池(Turn off socket pooling)</h3>
+
+                    <p></p>
+
+                    <p>Node.js的<a href="http://cnodejs.org/cman/http.html#http.request" target="_blank">http client</a>自动使用socket池：在默认情况下，<a
+                            href="http://cnodejs.org/cman/http.html#agent.maxSockets" target="_blank">主机能同时并发打开的socket数量被限制为5个</a>。虽然socket的重用也许能控制资源消耗的增长，但当我们需要处理多个从同一主机获取数据的并发请求时，这将是一个严重的瓶颈。在这些情况下，好的解决方案是增加maxSockets或者完全禁用socket池：
+                    </p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span style="color: #ffa500;">// Disable socket pooling</span></li>
+                            <li><span style="color: Gray;">&nbsp;</span></li>
+                            <li><span style="color: Green;">var</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Blue;">http</span><span style="color: Gray;"> = </span><span
+                                    style="color: Blue;">require</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">http</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                            <li><span style="color: Green;">var</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Blue;">options</span><span style="color: Gray;"> = </span><span
+                                    style="color: Olive;">{</span><span style="color: Gray;">…..</span><span
+                                    style="color: Olive;">}</span><span style="color: Gray;">;</span></li>
+                            <li><span style="color: Blue;">options</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">agent</span><span style="color: Gray;"> = </span><span
+                                    style="color: Green;">false</span><span style="color: Gray;">;</span></li>
+                            <li><span style="color: Green;">var</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Blue;">req</span><span style="color: Gray;"> = </span><span
+                                    style="color: Blue;">http</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">request</span><span style="color: Olive;">(</span><span
+                                    style="color: Blue;">options</span><span style="color: Olive;">)</span></li>
+                        </ol>
+                    </div>
+                    <p>
+                    </p>
+
+                    <h3>三、不要用Node.js处理静态文件(Don’t use Node.js for static assets)</h3>
+
+                    <p></p>
+
+                    <p>对于静态文件，例如CSS和图片，建议使用标准的webserver来处理而非Node.js。例如LinkedIn mobiles使用的是<a href="http://nginx.org/"
+                                                                                             target="_blank">nginx</a>。并且我们使用CDN，将静态文件复制到遍布于全世界的各个节点。以上这些将带来两个好处：1、可以减轻Node.js服务器的负载；2、借助于CDN使得静态文件可以从离用户更近的节点传输予之，从而降低时延。
+                    </p>
+
+                    <p>
+                    </p>
+
+                    <h3>四、将渲染放到客户端做(Render on the client-side)</h3>
+
+                    <p></p>
+
+                    <p>让我们来简单地对在服务器端和在客户端渲染一个页面进行一个比较。如果我们使用Node.js在服务器端进行渲染，在每次请求中我们将返回以下的HTML页面：</p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span style="color: #ffa500;">&lt;!– An example of a simple webpage rendered entirely server side –&gt;</span>
+                            </li>
+                            <li><span style="color: Gray;">&nbsp;</span></li>
+                            <li><span style="color: Olive;">&lt;</span><span style="color: Gray;">!</span><span
+                                    style="color: #00008b;">DOCTYPE</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: #00008b;">html</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Olive;">&lt;</span><span style="color: Green;">html</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;</span><span
+                                    style="color: Green;">head</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">title</span><span
+                                    style="color: Olive;">&gt;</span><span
+                                    style="color: Gray;">LinkedIn Mobile</span><span
+                                    style="color: Olive;">&lt;/</span><span style="color: Green;">title</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">head</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;</span><span
+                                    style="color: Green;">body</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">div</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">class</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">header</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">img</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">src</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">http://mobile-cdn.linkedin.com/images/linkedin.png</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Gray;"> </span><span
+                                    style="color: #00008b;">alt</span><span style="color: Gray;">=</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">LinkedIn</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">/&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">div</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">div</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">class</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">body</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; &nbsp; Hello John!</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">div</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">body</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Olive;">&lt;/</span><span style="color: Green;">html</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                        </ol>
+                    </div>
+                    <p>
+                        请注意到这个页面上除了用户的名称之外的所有东西都是静态的：也就是说，这些对于每个用户以及每次页面重载都是相同的。因此，一个更高效的做法是让Node.js以JSON格式只返回页面所需要的动态数据：</p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span style="color: Olive;">{</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">name</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Gray;">: </span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">John</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">}</span></li>
+                        </ol>
+                    </div>
+                    <p>页面的其余部分-——所有的静态HTML标记-——可以放入一个JavaScript模板(譬如一个<a
+                            href="http://documentcloud.github.com/underscore/#template"
+                            target="_blank">underscore.js模板</a>)：</p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span style="color: #ffa500;">&lt;!– An example of a JavaScript template that can be rendered client side –&gt;</span>
+                            </li>
+                            <li><span style="color: Gray;">&nbsp;</span></li>
+                            <li><span style="color: Olive;">&lt;</span><span style="color: Gray;">!</span><span
+                                    style="color: #00008b;">DOCTYPE</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: #00008b;">html</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Olive;">&lt;</span><span style="color: Green;">html</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;</span><span
+                                    style="color: Green;">head</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">title</span><span
+                                    style="color: Olive;">&gt;</span><span
+                                    style="color: Gray;">LinkedIn Mobile</span><span
+                                    style="color: Olive;">&lt;/</span><span style="color: Green;">title</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">head</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;</span><span
+                                    style="color: Green;">body</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">div</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">class</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">header</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">img</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">src</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">http://mobile-cdn.linkedin.com/images/linkedin.png</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Gray;"> </span><span
+                                    style="color: #00008b;">alt</span><span style="color: Gray;">=</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">LinkedIn</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">/&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">div</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Green;">div</span><span
+                                    style="color: Gray;">&nbsp;</span><span style="color: #00008b;">class</span><span
+                                    style="color: Gray;">=</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Red;">body</span><span style="color: #8b0000;">"</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; &nbsp; Hello </span><span
+                                    style="color: Olive;">&lt;</span><span style="color: Gray;">%= </span><span
+                                    style="color: #00008b;">name</span><span style="color: Gray;"> %</span><span
+                                    style="color: Olive;">&gt;</span><span style="color: Gray;">!</span></li>
+                            <li><span style="color: Gray;">&nbsp; &nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">div</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Gray;">&nbsp; </span><span style="color: Olive;">&lt;/</span><span
+                                    style="color: Green;">body</span><span style="color: Olive;">&gt;</span></li>
+                            <li><span style="color: Olive;">&lt;/</span><span style="color: Green;">html</span><span
+                                    style="color: Olive;">&gt;</span></li>
+                        </ol>
+                    </div>
+                    <p>
+                        这样做的性能提升来自前述的第三条建议，静态的JavaScript模板可以用我们的webserver(譬如nginx)来处理，甚至是使用CDN就更好了。此外，JavaScript模板可以被浏览器缓存或者保存在LocalStorage中。这样一来在页面第一次被加载后，需要发送给客户端的数据就只有动态的JSON了，极大地提升了效率。这个方法大大降低了Node.js的CPU、I/O消耗和负载。</p>
+
+                    <p>
+                    </p>
+
+                    <h3>五、使用gzip(Use gzip)</h3>
+
+                    <p></p>
+
+                    <p>大多数的服务器和客户端程序都支持用<a href="http://www.gzip.org/" target="_blank">gzip</a>来压缩请求和响应。请确保无论是在发送响应到客户端还是向远程服务器发送请求时，您都充分地利用到了它。
+                    </p>
+
+                    <p><img src="http://www.nodejs.net/upload_files/as_images/2013/01/141639o5p.png" alt="" width="539"
+                            height="412"></p>
+
+                    <p>
+                    </p>
+
+                    <h3>六、并行化(Go parallel)</h3>
+
+                    <p></p>
+
+                    <p>
+                        尝试着将类似请求远程服务器、调用数据库和访问文件系统等将会引致阻塞的操作并行地执行。这样做的好处是，可以将完成一系列阻塞操作的总时延减小到其中最慢的某项操作所需要的时间，否则其总时延将会是完成操作序列中所有操作需要等待的时间总和。为了保持回调和错误处理函数的结构明晰，我们使用了<a
+                            href="https://github.com/creationix/step" target="_blank">Step</a>来做flow control。</p>
+
+                    <p><img src="http://www.nodejs.net/upload_files/as_images/2013/01/141640GH7.png" alt="" width="522"
+                            height="324"></p>
+
+                    <p>
+                    </p>
+
+                    <h3>七、去session化(Go session-free)</h3>
+
+                    <p></p>
+
+                    <p>LinkedIn mobile使用<a href="http://expressjs.com/" target="_blank">Express框架</a>来处理请求/响应周期(request/response
+                        cycle)。大多数express的示例代码中包括了以下的配置：</p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span style="color: Blue;">app</span><span
+                                    style="color: Gray;">.</span><span style="color: Blue;">use</span><span
+                                    style="color: Olive;">(</span><span style="color: Blue;">express</span><span
+                                    style="color: Gray;">.</span><span style="color: Blue;">session</span><span
+                                    style="color: Olive;">({</span><span style="color: Gray;"> </span><span
+                                    style="color: Blue;">secret</span><span style="color: Gray;">: </span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">keyboard cat</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Gray;"> </span><span
+                                    style="color: Olive;">}))</span><span style="color: Gray;">;</span></li>
+                        </ol>
+                    </div>
+                    <p>在默认情况下<a href="http://expressjs.com/guide.html#session-support"
+                                target="_blank">session数据存储在内存中</a>，在用户数量增加的时候这会显著地增加服务器的开销。我们可以转而使用一个外部的session存储方案，例如MongoDB或Redis，但此时每个请求将增加远程调用获取session数据带来的额外开销。有可能的话，最好的选择是完全不在服务器端存储状态信息。不进行上述的express配置，不保存session，这样可以获得更好的性能。
+                    </p>
+
+                    <p>
+                    </p>
+
+                    <h3>八、使用二进制的模块(Use binary modules)</h3>
+
+                    <p></p>
+
+                    <p>
+                        请尽可能地使用编译后的二进制模块而非用JavaScript编写的模块。举个例子，当我们从一个用JavaScript编写的SHA模块切换到Node.js内置的编译版本后，我们看到了巨大的性能提升：</p>
+
+                    <div class="hl-surround">
+                        <ol class="hl-main ln-show" title="Double click to hide line number."
+                            ondblclick="linenumber(this)">
+                            <li class="hl-firstline"><span
+                                    style="color: #ffa500;">// Use built in or binary modules</span></li>
+                            <li><span style="color: Green;">var</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Blue;">crypto</span><span style="color: Gray;"> = </span><span
+                                    style="color: Blue;">require</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Red;">crypto</span><span
+                                    style="color: #8b0000;">‘</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                            <li><span style="color: Green;">var</span><span style="color: Gray;">&nbsp;</span><span
+                                    style="color: Blue;">hash</span><span style="color: Gray;"> = </span><span
+                                    style="color: Blue;">crypto</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">createHmac</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">sha1</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Gray;">,</span><span
+                                    style="color: Blue;">key</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">.</span><span style="color: Blue;">update</span><span
+                                    style="color: Olive;">(</span><span style="color: Blue;">signatureBase</span><span
+                                    style="color: Olive;">)</span><span style="color: Gray;">.</span><span
+                                    style="color: Blue;">digest</span><span style="color: Olive;">(</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Red;">base64</span><span
+                                    style="color: #8b0000;">"</span><span style="color: Olive;">)</span><span
+                                    style="color: Gray;">;</span></li>
+                        </ol>
+                    </div>
+                    <p>
+                    </p>
+
+                    <h3>九、使用标准的V8 JavaScript而非客户端的库(Use standard V8 JavaScript instead of client-side libraries)</h3>
+
+                    <p></p>
+
+                    <p>
+                        JavaScript的版本不统一，而大部分JavaScript库是提供给web浏览器使用的：例如一款浏览器或许支持类似forEach、map和reduce这样的函数，但其他浏览器并不支持。其结果是，客户端的库常常要用很多低效的代码来掩盖浏览器间的差异。另一方面，在使用Node.js时你确切地知道哪些JavaScript函数是可用的：驱动Node.js的<a
+                            href="http://code.google.com/p/v8/" target="_blank">V8 JavaScript引擎</a>实现的是ECMAScript的<a
+                            href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf"
+                            target="_blank">ECMA-262，第五版</a>。通过直接使用标准的V8函数，而不是客户端的库，您将会再一次体验到显著的性能提升。</p>
+
+                    <p>
+                    </p>
+
+                    <h3>十、保持代码精简、轻量(Keep your code small and light)</h3>
+
+                    <p></p>
+
+                    <p>
+                        面向移动设备进行开发时，设备的速度更慢而且时延更高，这迫使我们保持代码精简、轻量。您同样也应该把这种思想带到服务器端代码的开发中。时不时地进行自省，并且问自己：“我们是否真的需要这个模块？”，“为什么我们要使用这个框架？它带来的开销是值得的吗？”，“我们能否用一种更简单的方法来实现？”。更精简，更轻量的代码通常也是更高效，更快的。</p>
+
+                    <p>原文：<a
+                            href="http://engineering.linkedin.com/nodejs/blazing-fast-nodejs-10-performance-tips-linkedin-mobile"
+                            target="_blank">http://engineering.linkedin.com/nodejs/blazing-fast-nodejs-10-performance-tips-linkedin-mobile</a>
+                    </p>
+                    <!-- SingleAd begin -->
+                    <!-- SingleAd end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    	<!-- InstanceBeginEditable name="footer" -->
+		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
+        <!-- InstanceEndEditable -->
+	</div>
+	<!-- InstanceBeginEditable name="hidecode" -->
+	<div class="hidecode">
+		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="common/script/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#javascript .fixHeight .content ul li h1 span b").bind("click",function(){
+					var t = $(this).parent(), li = t.parents("li"),
+						cur = li.hasClass("cur"), du = t.hasClass("slideDown");
+					if(du ){
+						li.find(".slideDown").hide();
+						li.addClass(cur?"":"cur").find(".article,.slideUp").show();
+					} else {
+						li.addClass(cur?"":"cur").find(".article,.slideUp").hide();
+						li.find(".slideDown").show();
+					}
+				});
+			});
+		</script>
+		<!-- 百度统计代码 -->
+		<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F51d4c44eb3ae5dac5f72685b8b50e23f' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<!-- google 统计代码 -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-43440970-2', 'scymhj.com');
+		  ga('send', 'pageview');
+		</script>
+	</div>
+</BODY>
+</HTML>
