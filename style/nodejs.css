@@ -42,7 +42,7 @@ a.underline:hover{ color:#B00; text-decoration:underline;}
 #rememberlb{ padding:0px 8px 0px 5px; height:20px; line-height:20px;}
 #rememberme{ margin-top:0; vertical-align:middle;}
 
-.main {margin-top: 20px;margin-bottom: 20px;}
+.main {padding: 20px;}
 .main .fixHeight {border-width: 1px;}
 
 /* Wrapper */

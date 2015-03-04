@@ -64,9 +64,10 @@ a:focus{
 }
 
 .header .clock{
-	float: left;
+	float: right;
 	overflow: hidden;
 	padding-left: 20px;
+	margin-right: 20px;
 }
 .header .clock label{
 	float: left;
