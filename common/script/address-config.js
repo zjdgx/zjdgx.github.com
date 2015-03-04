@@ -47,7 +47,8 @@ var Front = [
 		{'name':'聂微东博客', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/Darren_code/'}
 	],
 	newTechnique = [
-		{'name':'Nodejs学习路线图', 'url':'http://www.nodejs.net/a/20141016/232139.html'}
+		{'name':'Nodejs学习路线图', 'url':'http://www.nodejs.net/a/20141016/232139.html'},
+		{'name':'Gulp教程', 'url':'http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/'}
 	];
 	
 function getMaxLength() {
