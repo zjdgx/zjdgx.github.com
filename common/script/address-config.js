@@ -48,7 +48,8 @@ var Front = [
 	],
 	newTechnique = [
 		{'name':'Nodejs学习路线图', 'url':'http://www.nodejs.net/a/20141016/232139.html'},
-		{'name':'Gulp教程', 'url':'http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/'}
+		{'name':'Gulp教程', 'url':'http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/'},
+		{'name':'DozerJS', 'url':'http://dozerjs.com/'}
 	];
 	
 function getMaxLength() {
