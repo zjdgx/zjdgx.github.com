@@ -1,0 +1,28 @@
+html, body {
+	background-color: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+.main {
+	font: 12px/1.8 'microsoft yahei', courier new, times new roman;
+}
+
+.code {
+	margin: 0;
+	padding: 5px 10px;
+	background-color: #99CCCC;
+	font-family: "Courier New", Courier, monospace;
+}
+
+pre.code {
+	margin: 0.5em 0;
+	line-height: 150%;
+	padding: 0.4em 0.6em;
+}
+
+ol li {
+	list-style: decimal;
+}
