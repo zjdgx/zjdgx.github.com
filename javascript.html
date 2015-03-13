@@ -13,6 +13,7 @@
 <title>zjdgx前端学习</title>
 <!-- InstanceBeginEditable name="stylesheets" -->
 <link rel="stylesheet" type="text/css" href="common/style/pages.css" />
+<link rel="stylesheet" type="text/css" href="common/style/prettify.css" />
 <style type="text/css">
 	#javascript .fixHeight .content ul li h1{
 		margin: 5px 0;
@@ -97,35 +98,33 @@
 						<h1><a href="javascript/ajax_jsonp.html">1. AJAX JSONP(2013-12-02)</a><span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
 						<div class="article">
 						前端代码:<br />
-				<pre>
-	function cc(dd){
-		var json = eval("("+dd+")");
-		console.log(json.records)
-	}
-	$.ajax({
-		 type: "POST",
-		 url:'http://pim.test.lenovomm.cn/sms/callhistory/portal/list',
-		 data:{start: 0, number: 50, jsonpcallhack: 'cc' },
-		 dataType:"jsonp",
-		 jsonp:"jsonpcallback",
-		 success:function(data){
-			 
-		 }
-	}); 
-				</pre>
+				<pre class='prettyprint'>
+function cc(dd){
+	var json = eval("("+dd+")");
+	console.log(json.records)
+}
+$.ajax({
+	 type: "POST",
+	 url:'http://pim.test.lenovomm.cn/sms/callhistory/portal/list',
+	 data:{start: 0, number: 50, jsonpcallhack: 'cc' },
+	 dataType:"jsonp",
+	 jsonp:"jsonpcallback",
+	 success:function(data){
+		 
+	 }
+}); </pre>
 				后端代码:<br />
-				<pre>
-	String jsonp = request.getParameter("jsonpcallhack");
-	if(StringUtils.isNotBlank(jsonp)){
-		response.getWriter().append(jsonp+"('"+JSONObject.fromObject(result)+"')");
-	}
-				</pre>
+				<pre class='prettyprint'>
+String jsonp = request.getParameter("jsonpcallhack");
+if(StringUtils.isNotBlank(jsonp)){
+	response.getWriter().append(jsonp+"('"+JSONObject.fromObject(result)+"')");
+}</pre>
 						</div>
 					</li>
 					<li>
 						<h1>2. JavaScript拖拽(2013-12-18)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
 						<div class="article">
-						<pre>
+						<pre class='prettyprint'>
 function Drag(id) {
 	var $ = function (flag) {
 		return document.getElementById(flag);
@@ -180,26 +179,24 @@ function Drag(id) {
 			d.onmouseup = null;
 		}
 	}
-}
-						</pre>
+}</pre>
 						</div>
 					</li>
 					<li>
 						<h1>3. JavaScript十进制转十六进制(2014-03-27)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
 						<div class="article">
-							<pre>
+							<pre class='prettyprint'>
 function dec2hex( num ){
     if( typeof num !== 'undefined' ){
         return Number(num).toString( 16 );
     }
-}
-							</pre>
+}</pre>
 						</div>
 					</li>
 					<li>
 					<h1>4. 删除数组重复元素(2014-07-02)<span class="slideUp"><b>-</b>收起</span><span class="slideDown"><b>+</b>展开</span></h1>
 						<div class="article">
-							<pre>
+							<pre class='prettyprint'>
 // 删除数组中包含指定值的元素
 var t = [1,2,3,4,3,2,5,2,4], count = 0;
 for(var i=0,len=t.length; i&lt;len; i++) {
@@ -207,8 +204,7 @@ for(var i=0,len=t.length; i&lt;len; i++) {
 		t.splice(i-count,1);
 		count++;
 	}
-}
-							</pre>
+}</pre>
 						</div>
 					</li>
 				</ul>
@@ -225,6 +221,7 @@ for(var i=0,len=t.length; i&lt;len; i++) {
 	<div class="hidecode">
 		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="common/script/common.js"></script>
+		<script type="text/javascript" src="common/script/run_prettify.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				$("#javascript .fixHeight .content ul li h1 span b").bind("click",function(){
