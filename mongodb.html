@@ -13,6 +13,7 @@
 <title>zjdgx前端学习</title>
 <!-- InstanceBeginEditable name="stylesheets" -->
 <link rel="stylesheet" type="text/css" href="common/style/pages.css" />
+<link rel="stylesheet" type="text/css" href="common/style/prettify.css" />
 <style type="text/css">
 	.code {
 		margin-left: 2em;
@@ -84,12 +85,12 @@
 			<ul>
 				<li>
 					<h2>1. 显示数据表</h2>
-					<pre class="code">
+					<pre class='prettyprint'>
 show collections</pre>
 				</li>
 				<li>
 					<h2>2. count</h2>
-					<pre class='code'>
+					<pre class='prettyprint'>
 db['***'].count({datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}})
 db['***'].find({datetime:{"$gte":ISODate("2014-11-15T01:23:36.072Z")}}).count()
 __in shared collection__:
@@ -103,13 +104,13 @@ __in shared collection__:
 				</li>
 				<li>
 					<h2>3. collection.insert安全模式</h2>
-					<pre class="code">
+					<pre class='prettyprint'>
 {safe: true}</pre>
 					<span class='indent2'>在查询语句中声明{safe:true}表明你想让数据库操作在执行回调之前完成. 可用{}关闭安全模式</span>
 				</li>
 				<li>
 					<h2>4. MongoDB connection url style</h2>
-					<pre class="code">mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/database]?property1=value&property2=value</pre>
+					<pre class='prettyprint'>mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/database]?property1=value&property2=value</pre>
 				</li>
 			</ul>
             <!-- InstanceEndEditable -->
@@ -125,6 +126,7 @@ __in shared collection__:
 	<div class="hidecode">
 		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="common/script/common.js"></script>
+		<script type="text/javascript" src="common/script/run_prettify.js"></script>
 		<!-- 百度统计代码 -->
 		<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
