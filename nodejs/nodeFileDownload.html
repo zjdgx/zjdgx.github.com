@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="description" content="nodejs redis."/>
+    <meta name="date" content="20150323"/>
+    <title>nodejs redis</title>
+	<link rel="stylesheet" href="../common/style/prettify.css">
+    <style type="text/css">
+        html, body {
+            background-color: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .main {
+            font: 12px/1.8 'microsoft yahei', courier new, times new roman;
+        }
+
+        .code {
+            margin: 0;
+            padding: 5px 10px;
+            background-color: #99CCCC;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        pre.code {
+            margin: 0.5em 0;
+            line-height: 150%;
+            padding: 0.4em 0.6em;
+        }
+
+        ol li {
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+	<pre class="prettyprint">
+/**
+ * nodejs file download
+ * date: 2015-03-20
+ * author: zjdgx
+ */
+var fs = require('fs'),
+	path = require('path'),
+	http = require('http'),
+	contentUrl = process.argv[2] || 'http://www.cnblogs.com/skins/UnlimitedSunlight/images/banner.jpg';
+
+http.get(contentUrl, function(res) {
+	//如果不初始化，下载的图片将报错
+	var data = '';
+	
+	console.log("Download started: " + contentUrl);
+	res.setEncoding("binary");
+	res.on('data', function(d) {
+		data += d;
+	});
+	res.on('end', function() {
+		fs.writeFile('./zjdgx.jpg', data, 'binary', function(err) {
+			console.log('write file finished...');
+		});
+		console.log('Download finished...');
+	});
+});</pre>
+	<script type='text/javascript' src='../common/script/jquery-1.10.2.min.js'></script>
+	<script type='text/javascript' src='../common/script/run_prettify.js'></script>
+</div>
+</body>
+</html>
