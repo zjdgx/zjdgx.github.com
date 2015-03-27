@@ -1,0 +1,94 @@
+html, body {
+	height: 100%;
+	font: 12px/1.5 'Microsoft Yahei', 'Times new roman';
+}
+html, body, p, h1, h2, h3, ul, ol, li, pre {
+	margin: 0;
+	padding: 0;
+}
+ul, ol, li {
+	list-style: none;
+}
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	overflow: hidden;
+	line-height: 60px;
+	text-align: center;
+	box-sizing: border-box;
+	background: rgba(0,0,0,0.4);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+header .logo {
+	color: #fff;
+	width: 41%;
+	float: left;
+	font-size: 40px;
+	text-decoration: none;
+}
+header .clock {
+  float: right;
+  margin-right: 5px;
+}
+section.main {
+	left: 0;
+	top: 60px;
+	height: auto;
+	bottom: 42px;
+	position: absolute;
+}
+section.main article {
+	height: 100%;
+	padding: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+footer {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3em;
+	position: fixed;
+	line-height: 3em;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(123,132,123,0.5);
+}
+footer li ul.sub2 {
+	left: 0;
+	width: 100%;
+	bottom: 3em;
+	display: none;
+	background: #000;
+	position: absolute;
+	box-shadow: 0 0 2em #ccc;
+}
+footer li ul.sub2 li {
+	width: 100%;
+	cursor:pointer;
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #333;
+	background: rgba(255,255,255,0.3);
+}
+footer li ul.sub2 li a {
+	color: #fff;
+	text-decoration: none;
+}
+footer ul.nav li {
+	width: 19%;
+	position: relative;
+	display: inline-block;
+}
+footer ul.nav li.about a {
+	color: #000;
+	font-size: 0.5em;
+	text-decoration: none;
+}
+footer ul.nav li h1 {
+	font-size: 0.5em;
+	font-weight: normal;
+}
