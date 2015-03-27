@@ -20,29 +20,32 @@ header {
 	text-align: center;
 	box-sizing: border-box;
 	background: rgba(0,0,0,0.4);
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 }
 header .logo {
-	color: #fff;
 	width: 41%;
+	color: #fff;
 	float: left;
 	font-size: 40px;
 	text-decoration: none;
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 }
 header .clock {
-  float: right;
-  margin-right: 5px;
+	color: #fff;
+	float: right;
+	margin-right: 5px;
 }
 section.main {
 	left: 0;
-	top: 60px;
+	top: 61px;
 	height: auto;
 	bottom: 42px;
 	position: absolute;
 }
 section.main article {
 	height: 100%;
-	padding: 20px;
+	padding: 0 1em;
+	margin: 0 auto;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -86,7 +89,6 @@ footer li ul.sub2 {
 	width: 100%;
 	bottom: 3em;
 	display: none;
-	background: #000;
 	position: absolute;
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
@@ -94,16 +96,17 @@ footer li ul.sub2 li {
 	width: 100%;
 	cursor:pointer;
 	display: block;
-	padding: 5px 0;
-	border-bottom: 1px solid #333;
-	background: rgba(255,255,255,0.3);
+	background: rgba(0,0,0,0.8);
+	border-bottom: 1px solid #666;
 }
 footer li ul.sub2 li a {
 	color: #fff;
 	text-decoration: none;
 }
-footer ul.nav li {
+footer ul.nav>li {
 	width: 19%;
+	height: 36px;
+	line-height: 36px;
 	position: relative;
 	display: inline-block;
 }
@@ -115,4 +118,8 @@ footer ul.nav li.about a {
 footer ul.nav li h1 {
 	font-size: 0.5em;
 	font-weight: normal;
+}
+footer ul.nav li.cur h1 {
+	color: #fff;
+	background: rgba(0,0,0,0.6);
 }
