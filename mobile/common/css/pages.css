@@ -46,6 +46,27 @@ section.main article {
 	overflow-y: auto;
 	overflow-x: hidden;
 }
+section.main article table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+}
+section.main article table td {
+	border: 1px solid #ccc;
+}
+section.main article table td:first-child {
+	width: 40%;
+	text-align: right;
+}
+section.main article table td:last-child {
+	padding-left: 5px;
+}
+section.main article table a {
+	color: #000;
+}
+section.main article .right-aside h1 {
+	text-align: center;
+	margin: 10px 0;
+}
 footer {
 	left: 0;
 	bottom: 0;
@@ -57,6 +78,9 @@ footer {
 	background-color: #fff;
 	box-shadow: 0 0 5px rgba(123,132,123,0.5);
 }
+footer li.cur {
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 footer li ul.sub2 {
 	left: 0;
 	width: 100%;
@@ -64,7 +88,7 @@ footer li ul.sub2 {
 	display: none;
 	background: #000;
 	position: absolute;
-	box-shadow: 0 0 2em #ccc;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 footer li ul.sub2 li {
 	width: 100%;
