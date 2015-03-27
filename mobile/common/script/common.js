@@ -22,6 +22,7 @@ $(function(){
 		var t = $(this);
 		
 		if (t.find('.sub2')) {
+			t.addClass('cur').siblings().removeClass('cur');
 			t.find('.sub2').show();
 			t.siblings().find('.sub2').hide();
 		}
