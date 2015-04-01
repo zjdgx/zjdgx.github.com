@@ -215,4 +215,11 @@
 .g-btn-copy{margin-left:20px;border:1px solid #4aa005;background-color:#6fb934;background:-webkit-linear-gradient(#6fb934,#458611);background:linear-gradient(#6fb934,#458611);}
 .g-btn-copy.hover,
 .g-btn-copy:hover{background-color:#5fa924;background:-webkit-linear-gradient(#67b727,#5fa924);background:linear-gradient(#67b727,#5fa924);}
-.g-btn-copy:active{background-color:#548d27;background:-webkit-linear-gradient(#548d27,#6fb934);background:linear-gradient(#548d27,#6fb934);
+.g-btn-copy:active{background-color:#548d27;background:-webkit-linear-gradient(#548d27,#6fb934);background:linear-gradient(#548d27,#6fb934);}
+/** css3 背景渐变
+-------------------------------*/
+#cssBackground {
+	height: 40px;
+	margin-top: 10px;
+	background: -webkit-linear-gradient(top, #000 1%, #ffffff 2%, #f6f6f6 20%,#f1f1f1 30%, #efefef 40%, #eeeeee 52%, #f4f4f4 70%, #ffffff 99%, #000 100%);
+}
