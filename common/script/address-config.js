@@ -17,6 +17,7 @@ var Front = [
 		{'name':'免费学习', 'date': '2015-01-04', 'url':'http://www.jscode.cn/web/v76959'},
 		{'name':'JS调优', 'date': '2015-01-04', 'url':'http://developer.51cto.com/art/200906/128404.htm'},
 		{'name':'HTML5 Cavas画图', 'date': '2015-01-04', 'url':'http://www.cnblogs.com/tim-li/archive/2012/08/06/2580252.html#8'},
+		{'name':'16素材网', 'date': '2015-04-03', 'url':'http://www.16sucai.com/'},
 		{'name':'懒人之家', 'date': '2015-01-04', 'url':'http://www.lanrenzhijia.com/'},
 		{'name':'JavaScript 键盘事件', 'date': '2015-01-04', 'url':'http://www.oschina.net/news/49432/20-javascript-libraries-to-handle?from=20140309'}
 	],
