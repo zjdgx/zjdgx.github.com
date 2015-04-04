@@ -81,45 +81,38 @@ footer {
 	background-color: #fff;
 	box-shadow: 0 0 5px rgba(123,132,123,0.5);
 }
+footer a {
+	text-decoration: none;
+}
+footer a.arrow {
+	width: 20px;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	display: inline-block;
+}
+footer .nav {
+	width: 100%;
+	float: left;
+	margin: 0 -25px;
+	overflow: hidden;
+	display: inline-block;
+	box-sizing: border-box;
+}
 footer li.cur {
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-footer li ul.sub2 {
-	left: 0;
-	width: 100%;
-	bottom: 3em;
-	display: none;
-	position: absolute;
-	box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-footer li ul.sub2 li {
-	width: 100%;
-	cursor:pointer;
-	display: block;
-	background: rgba(0,0,0,0.8);
-	border-bottom: 1px solid #666;
-}
-footer li ul.sub2 li a {
-	color: #fff;
-	text-decoration: none;
-}
 footer ul.nav>li {
-	width: 19%;
+	width: 20%;
 	height: 36px;
 	line-height: 36px;
-	position: relative;
 	display: inline-block;
 }
-footer ul.nav li.about a {
-	color: #000;
-	font-size: 1em;
-	text-decoration: none;
+
+footer .nav a.arrow:hover svg {
+	background-color: #f00;
 }
-footer ul.nav li h1 {
-	font-size: 0.5em;
-	font-weight: normal;
-}
-footer ul.nav li.cur h1 {
-	color: #fff;
-	background: rgba(0,0,0,0.6);
+
+#myLogo {
+	margin: 20px;
 }
