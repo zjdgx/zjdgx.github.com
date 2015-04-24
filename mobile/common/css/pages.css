@@ -38,16 +38,22 @@ header .clock {
 section.main {
 	left: 0;
 	top: 61px;
+	width: 100%;
 	height: auto;
 	bottom: 42px;
+	margin: 10px 0;
+	overflow: hidden;
 	position: absolute;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
 }
 section.main article {
 	height: 100%;
-	padding: 0 1em;
+	padding: 1em;
 	margin: 0 auto;
 	overflow-y: auto;
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 section.main article table {
 	border: 1px solid #ccc;
