@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="description" content="nodejs redis."/>
+    <meta name="date" content="20150410"/>
+	<meta name="url" content="http://www.cnblogs.com/lori/p/3435483.html"/>
+    <title>nodejs redis</title>
+	<link rel="stylesheet" href="../common/style/notes.css">
+	<link rel="stylesheet" href="../common/style/prettify.css">
+</head>
+<body>
+<div class="main">
+	<section class='intro'>
+		<p>redis是一个key-value存储系统。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(链表)、set(集合)、zset(sorted set --有序集合)和hashs（哈希类型）。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，redis支持各种不同方式的排序。与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。<br/>
+		Redis是一个高性能的key-value数据库。redis的出现，很大程度补偿了memcached这类key/value存储的不足，在部分场合可以对关系数据库起到很好的补充作用。它提供了Python，Ruby，Erlang，PHP客户端，使用很方便。
+		</p>
+		<p>redis存储在服务器的内存或者文件中，它不是session，不是cookies，它只是个更安全，更稳定，更可扩展，更有性能的key-value存储系统。</p>
+		<p>下载地址: <a href="http://code.google.com/p/servicestack/wiki/RedisWindowsDownload">http://code.google.com/p/servicestack/wiki/RedisWindowsDownload</a></p>
+		<div>
+			<h3>Redis文件夹有以下几个文件</h3>
+			<ul>
+				<li>redis-server.exe：服务程序</li>
+				<li>redis-check-dump.exe：本地数据库检查</li>
+				<li>redis-check-aof.exe：更新日志检查</li>
+				<li>redis-benchmark.exe：性能测试，用以模拟同时由N个客户端发送M个 SETs/GETs 查询 (类似于 Apache 的ab 工具).目前只用了redis-server.exe,它是启动redis服务的，它在服务器上执行就可以了，我们可以写个BAT文件让它去执行autorunRedis.bat </li>
+			</ul>
+		</div>
+	</section>
+	<script type='text/javascript' src='../common/script/jquery-1.10.2.min.js'></script>
+	<script type='text/javascript' src='../common/script/run_prettify.js'></script>
+</div>
+</body>
+</html>

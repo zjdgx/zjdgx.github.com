@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="速滴打车,宝坻微商家" /> 
+<meta name="description" content="速滴打车,宝坻微商" />
+<title>仿宝坻LIFE触屏版自适应响应式html5手机wap网站模板下载-懒人模板【http://www.lanrenmb.com/HTML5/】</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+<!--script src="js/jquery-1.11.0.min.js"></script-->
+<!--幻灯片代码-->
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function () {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	});
+}
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+
+</head>
+<body class="allbg">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tanchu.js"></script>
+<script type="text/javascript">
+var playbox = (function(){
+	//author:eric_wu
+	var _playbox = function(){
+		var that = this;
+		that.box = null;
+		that.player = null;
+		that.src = null;
+		that.on = false;
+		//
+		that.autoPlayFix = {
+			on: true,
+			//evtName: ("ontouchstart" in window)?"touchend":"click"
+			evtName: ("ontouchstart" in window)?"touchstart":"mouseover"
+			
+		}
+
+	}
+	_playbox.prototype = {
+		init: function(box_ele){
+			this.box = "string" === typeof(box_ele)?document.getElementById(box_ele):box_ele;
+			this.player = this.box.querySelectorAll("audio")[0];
+			this.src = this.player.src;
+			this.init = function(){return this;}
+			this.autoPlayEvt(true);
+			return this;
+		},
+		play: function(){
+			if(this.autoPlayFix.on){
+				this.autoPlayFix.on = false;
+				this.autoPlayEvt(false);
+			}
+			this.on = !this.on;
+			if(true == this.on){
+				this.player.src = this.src;
+				this.player.play();
+			}else{
+				this.player.pause();
+				this.player.src = null;
+			}
+			if("function" == typeof(this.play_fn)){
+				this.play_fn.call(this);
+			}
+		},
+		handleEvent: function(evt){
+			this.play();
+		},
+		autoPlayEvt: function(important){
+			if(important || this.autoPlayFix.on){
+				document.body.addEventListener(this.autoPlayFix.evtName, this, false);
+			}else{
+				document.body.removeEventListener(this.autoPlayFix.evtName, this, false);
+			}
+		}
+	}
+	//
+	return new _playbox();
+})();
+
+playbox.play_fn = function(){
+	this.box.className = this.on?"btn_music on":"btn_music";
+}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	playbox.init("playbox");
+	/*
+	setTimeout(function() {
+		// IE
+		if(document.all) {
+			document.getElementById("playbox").click();
+		}
+		// 其它浏览器
+		else {
+			var e = document.createEvent("MouseEvents");
+			e.initEvent("click", true, true);
+			document.getElementById("playbox").dispatchEvent(e);
+		}
+	}, 2000);
+	*/
+});
+</script>
+<span id="playbox" class="btn_music" onclick="playbox.init(this).play();"><audio id="audio" loop src="images/4.mp3"></audio></span>
+<div class="banner">
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+				<li><p>速滴打车携手宝坻Life 祝您羊年心想事成！</p><a href="javascript:void(0)"><img src="images/1.jpg" /></a></li>
+				<li><p>扫描二维码速滴打车带您玩转宝坻</p><a href="javascript:void(0)"><img src="images/2.jpg" /></a></li>
+				<li><p>速滴打车带您吃遍宝坻，吃出健康</p><a href="javascript:void(0)"><img src="images/3.jpg" /></a></li>
+				<li><p>发现之旅，精彩连连</p><a href="javascript:void(0)"><img src="images/4.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="nav">
+		<ul id="indicator">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+<div class="sear">
+<div class="shopsearch">
+<div class="class-list">商家导航</div>
+<input name="ShopClass" type="hidden"  id="ShopClass">
+<ul class="shopbox">
+	<li>家装建材</li>
+	<li>餐饮美食</li>
+	<li>服装鞋帽</li>
+	<li>烟酒百货</li>
+	<li>电脑手机</li>
+	<li>汽车销售</li>
+	<li>美容美发</li>
+	<li>家政服务</li>
+	<li>文化办公</li>
+	<li>婚纱摄影</li>
+	<li>休闲娱乐</li>
+	<li>生活用品</li>
+	<li>旅游健身</li>
+	<li>酒店会馆</li>
+	<li>广告报刊</li>
+	<li>农副产品</li>
+	<li>药品医疗</li>
+	<li>金融投资</li>
+	<li>教育培训</li>
+</ul>
+  <div class="soso-box">
+    	
+      <input name="" type="text" class="input-box">
+  </div>
+        <div class="search"><img src="images/soso.png"></div>
+</div>
+</div>
+<div class="mainbox">
+	<div class="box ratio6_5 boxbg1">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_01.png" /><span>家装建材</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg2">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_02.png" /><span>餐饮美食</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg3">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_03.png" /><span>服装鞋帽</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg4">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_04.png" /><span>烟酒百货</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg5">
+        <div class="box-content"><a href="Register.html" class="logo" ><p><img src="images/logo.png" /></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg6">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_05.png" /><span>电脑手机</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg7">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_06.png" /><span>汽车销售</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg8">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_07.png" /><span>美容美发</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg9">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_08.png" /><span>家政服务</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg10">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_09.png" /><span>文化办公</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg11">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_10.png" /><span>婚纱摄影</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg12">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_11.png" /><span>休闲娱乐</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg13">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_12.png" /><span>生活用品</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg14">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_13.png" /><span>旅游健身</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg15">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_14.png" /><span>酒店会馆</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg16">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_15.png" /><span>广告报刊</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg17">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_16.png" /><span>农副产品</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg18">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_17.png" /><span>药品医疗</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg19">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_18.png" /><span>金融投资</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg20">
+        <div class="box-content"><a href="shopdetails.html" ><p><img src="images/class_19.png" /><span>教育培训</span></p></a></div>
+    </div>
+	<div class="box ratio6_5 boxbg21">
+        <div class="box-content"><a href="#" class="logo" ><p><img src="images/class_20.png" /></p></a></div>
+    </div>
+</div>
+
+<div class="copyright">CopyRight 2015  懒人模板，All rights reserved.</div>
+<div class="menwrap">
+	<div class="expan2"><a href="Index.html"></a></div>
+    <div class="btn3 clearfix">
+        <div class="menu">
+            <div class="bt-name">微官网</div>
+            <div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="Index.html">商家导航</a></li>
+                <li class="pipe1"><a href="#" >微场景</a></li>
+                <li class="pipe1"><a href="#" >刮刮卡</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px"></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <div class="bt-name">便民服务</div>
+            <div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="#">违章查询</a></li>
+                <li class="pipe1"><a href="check_xh.html" >限号查询</a></li>
+                <li class="pipe1"><a href="check_j.html" >酒后代驾</a></li>
+                <li class="pipe1"><a href="check_qcjy.html" >汽车救援</a></li>
+                <li class="pipe1"><a href="check_bxzx.html" >保险咨询</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px"></li>
+            </ul>
+        </div>
+        <div class="menu" >
+        	<div class="bt-name">速滴打车</div>
+        	<div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="#">一键叫车</a></li>
+                <li class="pipe1"><a href="#" >我要打车</a></li>
+                <li class="pipe1"><a href="register.html" >出租车登记</a></li>
+                <li class="pipe1"><a href="#" >价目表</a></li>
+                <li class="pipe1"><a href="suggestions.html" >投诉与建议</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px; text-align:center"></li>
+            </ul>
+        </div>
+	</div>
+</div>
+<script>
+$(".menu").click(function() {
+    if ($(this).hasClass("cura")) {
+        $(this).children(".new-sub").hide(); //当前菜单下的二级菜单隐藏
+        $(".menu").removeClass("cura"); //同一级的菜单项
+    } else {
+        $(".menu").removeClass("cura"); //移除所有的样式
+        $(this).addClass("cura"); //给当前菜单添加特定样式
+        $(".new-sub").hide(); //隐藏所有的二级菜单
+        $(this).children(".new-sub").show(); //展示当前的二级菜单
+    }
+});
+</script>
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+
+for(i=0;i<count;i++){
+ document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+ document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+}
+</script>
+
+</body>
+</html>

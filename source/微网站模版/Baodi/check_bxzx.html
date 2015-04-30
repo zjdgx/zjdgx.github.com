@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="速滴打车,宝坻微商家" /> 
+<meta name="description" content="速滴打车,宝坻微商" />
+<title>仿宝坻LIFE触屏版自适应响应式html5手机wap网站模板下载-懒人模板【http://www.lanrenmb.com/HTML5/】</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+<body>
+<div class="mainbg" style="background:#7ABDE9;"><img src="images/mainbg2.jpg" /></div>
+<div class="checkpage">
+	<div class="yijiantop"></div>
+    <div class="otherbox">
+    	<div class="yijiantitle">速滴保险代办，诚信天下，稳健一声，追求卓越，用心承诺，选择我们您就选择了高枕无忧！<br>
+保险咨询请拨打热线电话：<br><a href="tel_3A15620281155">15620281155</a>；<br>速滴车队客服为您服务！</div>
+    </div>
+	<div class="yijianbot"></div>
+</div>
+
+<div class="menwrap">
+	<div class="expan2"><a href="Index.html"></a></div>
+    <div class="btn3 clearfix">
+        <div class="menu">
+            <div class="bt-name">微官网</div>
+            <div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="Index.html">商家导航</a></li>
+                <li class="pipe1"><a href="#" >微场景</a></li>
+                <li class="pipe1"><a href="#" >刮刮卡</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px"></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <div class="bt-name">便民服务</div>
+            <div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="#">违章查询</a></li>
+                <li class="pipe1"><a href="check_xh.html" >限号查询</a></li>
+                <li class="pipe1"><a href="check_j.html" >酒后代驾</a></li>
+                <li class="pipe1"><a href="check_qcjy.html" >汽车救援</a></li>
+                <li class="pipe1"><a href="check_bxzx.html" >保险咨询</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px"></li>
+            </ul>
+        </div>
+        <div class="menu" >
+        	<div class="bt-name">速滴打车</div>
+        	<div class="sanjiao"></div>
+            <ul class="new-sub margin10">
+                <li class="pipe2"><a href="tel_3A022-29260000">一键叫车</a></li>
+                <li class="pipe1"><a href="Gotaxi.html" >我要打车</a></li>
+                <li class="pipe1"><a href="register.html" >出租车登记</a></li>
+                <li class="pipe1"><a href="#" >价目表</a></li>
+                <li class="pipe1"><a href="suggestions.html" >投诉与建议</a></li>
+                <li><img src="images/arrow-down.png" width="16" height="16" style="position:absolute; bottom:-16px; text-align:center"></li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+<!--页面高度自适应--> 
+<script src="njs/jquery-1.11.0.min.js"></script>
+<script src="njs/underscore.js"></script>
+<script src="njs/backbone-min.js"></script>
+<script type="text/javascript" src="njs/Page.App.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {	
+	windowResize();
+	$(window).resize(function () {
+    windowResize();
+	});	
+});
+</script>
+<script>
+$(".menu").click(function() {
+    if ($(this).hasClass("cura")) {
+        $(this).children(".new-sub").hide(); //当前菜单下的二级菜单隐藏
+        $(".menu").removeClass("cura"); //同一级的菜单项
+    } else {
+        $(".menu").removeClass("cura"); //移除所有的样式
+        $(this).addClass("cura"); //给当前菜单添加特定样式
+        $(".new-sub").hide(); //隐藏所有的二级菜单
+        $(this).children(".new-sub").show(); //展示当前的二级菜单
+    }
+});
+</script>
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+
+for(i=0;i<count;i++){
+ document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+ document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+}
+</script>
+
+</body>
+</html>
