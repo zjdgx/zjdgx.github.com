@@ -41,6 +41,7 @@ li {
 	margin-left: auto;
 	margin-right: auto;
 	width: 87.36%;
+	padding-top: 10px;
 	padding-left: 1.82%;
 	padding-right: 1.82%;
 }
@@ -65,10 +66,15 @@ li {
 	margin: auto;
 }
 }
+header {
+	text-align: center;
+	box-shadow: 1px 0 7px #555;
+	text-shadow: 5px 0px 1px #999;
+	font-size: 36px;
+	padding: 10px 0;
+}
 
-.gridContainer header h1{
-	height: 60px;
-  	line-height: 60px;
+header  h1{
 	text-align: center;
 }
 .gridContainer ul li {
@@ -85,7 +91,11 @@ li {
 .gridContainer table td {
 	padding: 4px 6px;
 	vertical-align: middle;
-	border: 1px solid #d1d1d1;
+	border: 1px solid #94F2EB;
+}
+
+.gridContainer table th {
+  background-color: #f4f4f4;
 }
 
 .gridContainer table th:nth-child(1),
