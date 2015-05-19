@@ -6,9 +6,9 @@ $(function(){
 	$(window).scroll(function() {
 		var top = $(window).scrollTop();
 		if(top > 0){
-			$(".backTop").fadeIn(100);
+			$(".backTop").show();
 		} else {
-			$(".backTop").fadeOut(100);
+			$(".backTop").hide();
 		}
 	});
 	

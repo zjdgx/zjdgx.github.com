@@ -23,9 +23,9 @@ header .logo {
 	width: 41%;
 	color: #fff;
 	float: left;
-	font-size: 40px;
+	font-size: 2.5em;
 	text-decoration: none;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+	text-shadow: 0px 0px 0.3125em rgba(0,0,0,0.6);
 }
 header .clock {
 	color: #fff;
@@ -115,6 +115,30 @@ div.section ol li a {
 	color: #555;
 	text-decoration: none;
 }
-#myLogo {
-	margin: 20px;
+footer .backTop {
+	width: 3em;
+	right: 1em;
+	bottom: 1em;
+	height: 3em;
+	display: block;
+	position: fixed;
+	background: #ccc;
+	border-radius: 50%;
+}
+i.backTop:before {
+	left: 0.5em;
+	top: -0.5em;
+	content: ' ';
+	position: absolute;
+	border: 1em solid #000;
+	border-color: transparent transparent #000;
+}
+i.backTop:after {
+	top: 1.5em;
+	left: 1.1em;
+	content: ' ';
+	width: 0.8em;
+	height: 0.8125em;
+	background: #000;
+	position: absolute;
 }
