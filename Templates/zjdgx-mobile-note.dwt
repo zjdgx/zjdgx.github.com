@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- TemplateEndEditable -->
+<link href="../mobile/common/css/pages.css" rel="stylesheet" />
+<link href="../mobile/common/css/notes.css" rel="stylesheet" />
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body class="mobile-note">
+	<header>
+    	<i class="back"></i>
+        <!-- TemplateBeginEditable name="title" -->
+		<h1>title</h1>
+        <!-- TemplateEndEditable -->
+    </header>
+    <section class="content">
+    	<!-- TemplateBeginEditable name="content" -->
+        <!-- TemplateEndEditable -->
+    </section>
+    <footer>
+    	<i class="backTop"></i>
+        <script src="../mobile/common/script/zepto.js"></script>
+        <script src="../mobile/common/script/common.js"></script>
+    </footer>
+</body>
+</html>

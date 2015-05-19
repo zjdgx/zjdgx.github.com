@@ -1,14 +1,14 @@
 // JavaScript Document
 $(function(){
-	$(".backToTop").click(function(){
+	$(".backTop").click(function(){
 		$(window).scrollTop(0);
 	});
 	$(window).scroll(function() {
 		var top = $(window).scrollTop();
 		if(top > 0){
-			$(".backToTop").fadeIn(100);
+			$(".backTop").fadeIn(100);
 		} else {
-			$(".backToTop").fadeOut(100);
+			$(".backTop").fadeOut(100);
 		}
 	});
 	
@@ -18,14 +18,12 @@ $(function(){
 	setInterval(function(){
 		setDateDisplay(new Date());
 	},1000);
-	$('.nav>li').click(function(){
-		var t = $(this);
-		
-		if (t.find('.sub2')) {
-			t.addClass('cur').siblings().removeClass('cur');
-			t.find('.sub2').show();
-			t.siblings().find('.sub2').hide();
-		}
+	$('div.section h1').click(function(){
+		$(this).parent().toggleClass('open').siblings().removeClass('open');
+	});
+	$('.mobile-note i.back').click(function() {
+		location.href = '../../index.html';
+		return false;
 	});
 });
 
