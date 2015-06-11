@@ -68,6 +68,9 @@ body {
 }
 
 @media screen and (min-width: 320px && max-width: 640px) {
+	body {
+		font-size: 56px;
+	}
 	/*target width: 1024px*/
 	.left-side {
 		height: 100%;
