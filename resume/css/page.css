@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-html, body, ul, li, p, h1, h2, h3{
+html, body, ul, ol, li, p, h1, h2, h3{
 	margin: 0;
 	padding: 0;
 }
@@ -10,6 +10,10 @@ body {
 }
 li {
 	list-style: none;
+}
+ol li {
+	list-style-type: disc; 
+	list-style-position: inside;
 }
 .main {
 	width: 100%;
