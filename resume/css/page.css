@@ -81,16 +81,25 @@ ol li {
 .right-side .item {
 	margin: 0 10px 10px 10px;
 }
-.right-side .item table {
-	width: 100%;
-	border: 1px solid #ddd;
-	border-collapse: collapse;
+.right-side .item > * {
+	margin-left: 2em;
 }
-.right-side .item table td {
-	width: 16.6%;
-	height: 1.875em;
-	text-align: center;
-	border: 1px solid #ddd;
+.right-side .item h2 {
+	margin-left: 0;
+}
+.right-side .work li {
+	padding: 10px 0;
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+}
+.right-side .work li:first-child {
+	padding-top: 0;
+}
+.right-side .work li:last-of-type {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.right-side .work li table td:first-child {
 }
 @media screen and (min-width: 320px) and (max-width: 639px) {
 	.left-side {

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="date" content="2015-06-16">
+	<title>Drag and Drop</title>
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		.dropConainer {
+			width: 200px;
+			height: 200px;
+			background-color: #333;
+		}
+		.dropConainer:first-child {
+			background-color: #bbb;
+		}
+	</style>
+</head>
+<body>
+	<header>Drag and Drop</header>
+	<div class="main">
+		<div class="dropConainer"></div>
+		<div class="dropConainer"></div>
+		<img src="img/compatible_chrome.gif">
+	</div>
+	<footer>
+		<script>
+			window.onload = function () {
+				var doc = document,
+						c1 = doc.getElementsByClassName('dropConainer')[0],
+						c2 = doc.getElementsByClassName('dropConainer')[1],
+						img = doc.getElementsByTagName('img')[0];
+				
+				c1.ondragover = function (e) {
+					e.preventDefault();
+				};
+				
+				c2.ondragover = function (e) {
+					e.preventDefault();
+				};
+				
+				img.ondragstart = function (e) {
+					//e.dataTransfer.setData('imgId', '
+					
+				};
+				
+				c1.ondrop = function (e) {
+					c1.appendChild(img);
+				};
+				
+				c2.ondrop = function (e) {
+					c2.appendChild(img);
+				};
+			}
+		</script>
+	</footer>
+</body>
+</html>
