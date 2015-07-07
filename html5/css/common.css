@@ -235,11 +235,16 @@ h1, h2, h3, ol, ul, li, p {
 ol li {
 	list-style-position: inside;
 }
+body {
+	font-size: 14px;
+    font-family: Courier New, Times New Roman, Microsoft YaHei;
+}
 header {
 	font-size: 36px;
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
+	background-color: #f0f0f0;
 	border-bottom: 1px solid #ddd;
 }
 .main {
@@ -252,6 +257,45 @@ header {
 	padding: 10px 20px;
 	border-bottom: 1px solid #ddd;
 }
-.main li:nth-child(odd) {
+.main li:nth-child(even) {
 	background-color: #f0f0f0;
+}
+.item {
+	min-height: 20px;
+	padding: 10px 20px;
+}
+.main li h2 {
+	height: 31px;
+	font-size: 20px;
+	line-height: 31px;
+    font-weight: normal;
+	display: inline-block;
+}
+.main li .browser {
+	display: inline-block;
+	vertical-align: middle;
+}
+.main li i {
+	width: 31px;
+	height: 30px;
+	margin-right: 5px;
+	display: inline-block;
+}
+.main li i.ie {
+	background: url(../img/compatible_ie.gif) no-repeat center center;
+}
+.main li i.ff {
+	background: url(../img/compatible_firefox.gif) no-repeat center center;
+}
+.main li i.chrome {
+	background: url(../img/compatible_chrome.gif) no-repeat center center;
+}
+.main li i.opera {
+	background: url(../img/compatible_opera.gif) no-repeat center center;
+}
+.main li i.safari {
+	background: url(../img/compatible_safari.gif) no-repeat center center;
+}
+.main li  p {
+	margin: 10px 0;
 }
