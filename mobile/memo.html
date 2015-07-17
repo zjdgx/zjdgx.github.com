@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>zjdgx study home page</title>
+    <link href="common/css/pages.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a class="logo" href="#">ZJDGX</a>
+		<div class="clock">
+			<label class="year"><span></span>年</label>
+			<label class="month"><span></span>月</label>
+			<label class="day"><span></span>日</label>
+			<label class="hour"><span></span>点</label>
+			<label class="minute"><span></span>分</label>
+			<label class="second"><span></span>秒</label>
+		</div>
+	</header>
+	<section class="main"><ul></ul></section>
+	<footer>
+		<i class="backTop"></i>
+        <script src="common/script/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="common/script/common.js"></script>
+		<script type="text/javascript" src="script/issues.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('section.main ul').loadIssues(zjdgxIssues.memo);
+			});
+		</script>
+	</footer>
+</body>
+</html>

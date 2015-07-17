@@ -46,3 +46,19 @@ function setDateDisplay( date ) {
 	$(".minute span").html(mi < 10 ? "0"+mi : mi);
 	$(".second span").html(s < 10 ? "0"+s : s);
 }
+
+;(function($, window, document, undefined){
+	$.fn.loadIssues = function(issues) {
+		var html = [];
+		
+		for (var i = 0; i < issues.length; i++) {
+			if (issues[i].href) {
+				html.push('<li date="' + issues[i].date + '"><a href="' + issues[i].href +'" target="_blank">' + issues[i].text + '</a></li>');
+			} else {
+				html.push('<li date="' + issues[i].date + '">' + issues[i].text + '</li>');
+			}
+		}
+		
+		this.append(html.join(''));
+	}
+})(jQuery, window, document)
