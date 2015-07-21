@@ -33,8 +33,8 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 .main .multiSelect label {display: block;width: 100px;border: 1px solid #ddd;text-align: center;margin: 0;height: 22px;line-height: 22px;}
 .main .multiSelect label i.icon-add {width: 22px;height: 22px;display: inline-block;background-position: 5px 6px;float: right;border-left: 1px solid #ddd;}
 .main .multiSelect ul {left: 0;top: 22px;width: 120px;display: none;position: absolute;border-radius: 2px;border: 1px solid #ddd;background-color: #fff;}
-.main .multiSelect.open ul {display: block;padding:0;}
-.main .multiSelect ul li {height: auto;width: auto;float: none;border: none;border-bottom: 1px solid #ddd;padding: 0 4px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.main .multiSelect.open ul {display: block;padding:0;background-color: #fff;}
+.main .multiSelect ul li {height: auto;width: auto;float: none;border: none;border-bottom: 1px solid #ddd;padding: 0 4px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden; background: none; margin: 0;display: block;text-align: left;}
 .main .multiSelect ul li:last-of-type {border-bottom: none;}
 .main .multiSelect ul li i {width: 12px;height: 12px;vertical-align: middle;background-position: 1px -18px;margin: 0;padding: 0 4px 0 0;}
 .main .multiSelect ul li:hover i {background-position: 1px -31px;}
