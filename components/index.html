@@ -25,13 +25,24 @@
 					</li>
 					<li>
 						<div class="dropdown">
-							<label>select</label>
-							<ul>
-								<li>item11</li>
-								<li>item12</li>
-								<li>item13</li>
-								<li>item14</li>
-							</ul>
+							<div class="css">
+								<label>css</label>
+								<ul>
+									<li>item11</li>
+									<li>item12</li>
+									<li>item13</li>
+									<li>item14</li>
+								</ul>
+							</div>
+							<div class="jQuery">
+								<label>jQuery</label>
+								<ul>
+									<li>item11</li>
+									<li>item12</li>
+									<li>item13</li>
+									<li>item14</li>
+								</ul>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -61,6 +72,11 @@
 				onChange: function (data) {
 					console.log('selected: ' + data);
 				}
+			});
+			$('.dropdown .jQuery').hover(function(){
+				$(this).find('ul').slideDown();
+			},function() {
+				$(this).find('ul').slideUp();
 			});
 		});
 	</script>

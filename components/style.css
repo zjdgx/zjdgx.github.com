@@ -69,7 +69,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 	-webkit-transform: scale(1, 1);
 }
 
-.main .content .dropdown li {
+.main .content .dropdown .css li {
   margin: 0;
   width: auto;
   border: none;
@@ -86,7 +86,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 	position: relative;
 	border: 1px solid #ccc;
 }
-.main .dropdown ul {
+.main .dropdown .css ul {
 	left: 0;
 	height: 0;
 	top: 1.5em;
@@ -99,6 +99,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 	transition: height 2s ease;
 	-webkit-transition: height 0.3s ease;
 }
-.dropdown:hover ul {
+.dropdown:hover .css ul {
 	height: 100px;
 }
+.main .dropdown .jQuery ul {display: none;}
