@@ -45,12 +45,18 @@
 							</div>
 						</div>
 					</li>
+					<li>
+						<div class="dialog">
+							<div class="demo">达到公司法士大夫</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="../common/script/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="multiSelect/multiSelect.js"></script>
+	<script type="text/javascript" src="dialog/zjdgxDialog.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			$('.zjdgxCheckbox').multiSelect({
@@ -78,6 +84,7 @@
 			},function() {
 				$(this).find('ul').slideUp();
 			});
+			$('.dialog .demo').dialog({className: 'demosss'});
 		});
 	</script>
 </body>
