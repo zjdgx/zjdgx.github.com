@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="date" content="2014/11/26">
+	<title>zjdgx github homepage</title>
+	<link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+	<div class='header'>
+		<h1>ZJDGX</h1>
+	</div>
+	<div class='main'>
+		<div class='content'>
+			<table>
+				<tr><td><a href='https://github.com/zjdgx/plyr'>plyr</a>:</td><td> HTML5播放器</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/jQuery-File-Upload'>jQuery-File-Upload</a>:</td><td> jQuery文件上传</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/nodeclub'>nodeclub</a>:</td><td> Node.js 和 MongoDB 开发的社区系统</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/PNGDrive'>PNGDrive</a>:</td><td> 将文件转换为图片</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/awesome'>awesome</a>:</td><td> 前后端资源</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/es6features'>es6features</a>:</td><td> ES6特性</td></tr>
+				<tr><td><a href='https://github.com/zjdgx/Front-end-Developer-Interview-Questions'>Front-Interview</a>:</td><td> 前端面试题</td></tr>
+				<tr date='2015-03-05'><td><a href='https://github.com/zjdgx/DozerJS'>DozerJS</a>:</td><td> NodeJS Web服务的基础框架</td></tr>
+				<tr date='2015-03-26'><td><a href='https://github.com/zjdgx/alertify.js'>alertify.js</a>:</td><td> 弹出框效果</td></tr>
+				<tr date='2015-03-31'><td><a href='https://github.com/zjdgx/amazeui'>amazeui</a>:</td><td> 跨屏前端框架</td></tr>
+				<tr date='2015-04-01'><td><a href='https://github.com/zjdgx/ResponsiveAeon-Cssgrid'>ResponsiveAeon</a>:</td><td> 响应式HTML5/CSS3的框架</td></tr>
+				<tr date='2015-04-01'><td><a href='https://github.com/zjdgx/zui'>zui</a>:</td><td> 跨屏UI框架</td></tr>
+				<tr date='2015-04-04'><td><a href='https://github.com/zjdgx/layer'>layer</a>:</td><td> web弹层组件</td></tr>
+				<tr date='2015-04-24'><td><a href='https://github.com/zjdgx/example-node'>example-node</a>:</td><td> 电商网站demo</td></tr>
+				<tr date='2015-04-30'><td><a href='http://www.alloyteam.com/2014/01/use-js-file-download/'>jsFileDownload</a>:</td><td> js监控文件下载进度</td></tr>
+				
+			</table>
+		</div>
+		<div class='right-aside'>
+			<h1>Web前端性能的十四条黄金法则</h1>
+			<ol>
+				<li>Make Fewer HTTP Requests（尽量减少HTTP请求）</li>
+				<li>Use a Content Delivery Network （使用内容分发网络（即CDN））</li>
+				<li>Add an Expires Header（添加Expires头）</li>
+				<li>Gzip Components （压缩组件）</li>
+				<li>Put Stylesheets at the Top（把CSS放在HTML最上面）</li>
+				<li>Put Scripts to the Bottom （把脚本（比如JavaScript）放到HTML最下面）</li>
+				<li>Avoid CSS Expressions（避免使用CSS表达式）</li>
+				<li>Make JavaScript and CSS External（使用外部的JavaScript和CSS）</li>
+				<li>Reduce DNS Lookups （减少DNS查询次数）</li>
+				<li>Minify JavaScript（精简JavaScript）</li>
+				<li>Avoid Redirects （避免重定向）</li>
+				<li>Remove Duplicate Scripts（删除重复代码）</li>
+				<li>Configure ETags （配置ETag）</li>
+				<li>Make Ajax Cacheable（使用Ajax缓存）</li>
+			</ol>
+		</div>
+	</div>
+	<script date="2015-04-07">
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	<script date="2015-04-07">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-43440970-3', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</body>
+</html>
