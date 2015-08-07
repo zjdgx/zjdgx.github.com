@@ -26,8 +26,8 @@ window.zjdgxIssues.issues = [
 		type: 'buildTool',
 		date: '2015-08-06',
 		text: 'gulp requirejs配置',
-		href: '/tool/gulp-require.html',
-		description: '本文主要演示requirejs在gulp中的配置，以及与grunt下的配置的区别, gulp采用gulp-replace来替换js文件中的一些参数....'
+		href: 'blog/tool/gulp-require.html',
+		description: '本文主要演示requirejs在gulp中的配置，以及与grunt下的配置的区别, gulp采用gulp-replace来替换js文件中的一些参数，然后用concat把配置文件和requirejs文件合并；grunt直接在从concat中配置require参数，然后合并....'
 	},
 	{
 		type: 'buildTool',
