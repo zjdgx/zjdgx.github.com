@@ -11,7 +11,11 @@
 	</div>
 	<div class='main'>
 		<ul class='content-list'></ul>
-		<div class='nav-list'>
+		<div class="detail-content hide shadow">
+			<h1><a href="/">返回</a><span></span></h1>
+			<iframe id="content-frame" src="" javascript="return false;" width="748" border="0"></iframe>
+		</div>
+		<div class='nav-list shadow'>
 			<ul class="title-list"></ul>
 			<ul class='type-list'></ul>
 		</div>
@@ -31,12 +35,21 @@
 			$('ul.type-list').append(typeHtml.join(''));
 			
 			$.each(zjdgxIssues.issues, function (k, v) {
-				contentList.push('<li><a href="#' + v.href +'">(' + v.date + ') ' + v.text + "</a><p>" + (v.description || '') +'</p></li>')
-				titleListHtml.push('<li><a href="#' + v.href +'">(' + v.date + ') ' + v.text + '</a></li>');
+				contentList.push('<li class="shadow"><a href="' + v.href +'">(' + v.date + ') ' + v.text + "</a><p>" + (v.description || '') +'</p></li>');
+				titleListHtml.push('<li><a href="' + v.href +'">(' + v.date + ') ' + v.text + '</a></li>');
 			});
 			
 			$('ul.title-list').append(titleListHtml.join(''));
 			$('ul.content-list').append(contentList.join(''));
+			$('ul.content-list li a, ul.title-list li a').click(function () {
+				var t = $(this),
+						contentheight = $('ul.content-list').height();
+
+				t.parents('ul').addClass('hide');
+				$('.detail-content').removeClass('hide').find('h1 span').html(t.html()).parent().next('#content-frame').height(contentheight).attr('src', t.attr('href'));
+
+				return false;
+			});
 		});
 	</script>
 	<!--script date="2015-04-07">

@@ -1,5 +1,5 @@
 /* Global CSS */
-body{ margin:0 auto; background-color:#FFF; color:#222; font:12px Verdana,Sans-Serif,Arial,'?????งา?';}
+body{ margin:0 auto; background:url(../common/img/jz.jpg) repeat center center; color:#222; font:12px Verdana,Sans-Serif,Arial;background-color: #f6f6f6;}
 div,form,ul,ol,li,span,p{margin:0 auto; padding:0; border:0;}
 img,a img{margin:0; padding:0; border:none;}
 ul,ol,li{list-style:none;}
@@ -20,14 +20,37 @@ a:link, a:visited{ color:#08c; text-decoration:none; outline-style:none;}
 a:active, a:hover{ color:#318528; text-decoration: underline; }
 a.underline:link, a.underline:visited{ color:#454545; text-decoration:underline;}
 a.underline:hover{ color:#B00; text-decoration:underline;}
+.hide {display: none;}
+.shadow {
+    background-color: #fff !important;
+    border-top: 1px solid #efefef !important;
+    box-shadow: 0 1px 3px rgba(0,0, 0, 0.2) !important;
+}
 
 .header h1 {text-align: center;font-family: Helvetica;font-size: 120px;letter-spacing: 30px; padding: 20px 0;}
 .main {width: 980px; margin: 0 auto;padding: 0 20px; overflow: hidden; font-family: Microsoft Yahei, couriewer new;}
-/*.main .content{padding-top: 20px; width: 48%;border-right: 1px solid #ccc;float: left;margin-left: -1px;margin-bottom: -9999px;padding-bottom: 9999px;}
-.content table {margin-bottom: 20px;}
-.content td {font-size: 14px; font-family: Microsoft Yahei; height: 28px; line-height: 28px;}
-.content td:first-child{text-align: right;}
-.content td:last-child{padding-left: 8px;}
-.main .right-aside{padding-top: 20px; float: right;margin-bottom: -9999px;padding-bottom: 9999px;}
-.right-aside ol {margin-bottom: 20px;}
-.right-aside li {margin-left: 30px;font-family: courier new;list-style-type: decimal;height: 28px; line-height: 28px;}*/
+ul.content-list,
+.detail-content{
+    float: left;
+    width: 748px;
+}
+ul.content-list li {
+    height: 80px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+ul.content-list li a {
+    font-size: 16px;
+}
+ul.content-list li p {
+    margin-top: 10px;
+}
+.nav-list {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    margin-left: 10px;
+}
+#content-frame {
+    border: none;
+}

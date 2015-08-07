@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gulp require</title>
+    <link rel="stylesheet" type="text/css" href="../../common/style/prettify.css" />
+</head>
+<body>
+    <div class="main">
+        <pre class="prettyprint">
+gulp.task('requirejs', function () {
+    gulp.src(['static/js/requireConfig.js', 'bower_components/requirejs/require.js'])
+        .pipe(replace(/<%=\s*(\w+)\s*%>/g, function(s, key) {
+            return {
+                baseUrl: 'js',
+                requireJSVersion: new Date().getTime()
+            }[key];
+        }))
+        .pipe(concat('require.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('static/js/common'));
+});
+        </pre>
+    </div>
+    <script type="text/javascript" src="../../common/script/run_prettify.js"></script>
+</body>
+</html>
