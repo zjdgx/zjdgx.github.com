@@ -1,10 +1,11 @@
 /* Global CSS */
-body{ margin:0 auto; background:url(../common/img/jz.jpg) repeat center center; color:#222; font:12px Verdana,Sans-Serif,Arial;background-color: #f6f6f6;}
+html, body, .main {height: 100%;}
+body{ margin:0 auto; color:#222; font:12px "Courier New","Microsoft Yahei",Arial;background-color: #f6f6f6;overflow-x: hidden}
 div,form,ul,ol,li,span,p{margin:0 auto; padding:0; border:0;}
 img,a img{margin:0; padding:0; border:none;}
 ul,ol,li{list-style:none;}
 table,td,input{ padding:0; font-size:12px;}
-h1,h2,h3,h4,h5,h6{ margin:0 auto;font-weight: bold;font-family: Microsoft yahei;}
+h1,h2,h3,h4,h5,h6{ margin:0 auto;font-weight: bold;}
 h1 {font-size:28px;}
 h2 {font-size:22px;}
 h3 {font-size:16px;}
@@ -12,7 +13,7 @@ h4 {font-size:14px;}
 h5 {font-size:14px;}
 h6 {font-size:14px;}
 
-.clear{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}
+.clear{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0 !important;*margin-top:-1px;line-height:0}
 .vmid{ margin:0 auto; width:980px;}
 
 /* Default Link */
@@ -24,33 +25,49 @@ a.underline:hover{ color:#B00; text-decoration:underline;}
 .shadow {
     background-color: #fff !important;
     border-top: 1px solid #efefef !important;
-    box-shadow: 0 1px 3px rgba(0,0, 0, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-.header h1 {text-align: center;font-family: Helvetica;font-size: 120px;letter-spacing: 30px; padding: 20px 0;}
-.main {width: 980px; margin: 0 auto;padding: 0 20px; overflow: hidden; font-family: Microsoft Yahei, couriewer new;}
-ul.content-list,
-.detail-content{
+h1.logo img {
+    display: block;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.nav {
     float: left;
-    width: 748px;
+    width: 300px;
+    margin-right: -300px;
 }
-ul.content-list li {
-    height: 80px;
-    padding: 5px 10px;
-    margin-bottom: 10px;
+.main {
+    overflow: hidden;
+    position: relative;
+    margin-left: 310px;
+    background-color: #fff;
+    box-shadow: 1px 0 0 rgba(0,0,0,0.1) inset !important;
 }
-ul.content-list li a {
-    font-size: 16px;
-}
-ul.content-list li p {
-    margin-top: 10px;
+ul.title-list {
+    margin-bottom: 20px;
 }
 .nav-list {
-    float: left;
-    width: 200px;
-    padding: 10px;
+    padding: 0 10px 10px;
     margin-left: 10px;
 }
+.nav h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+.nav-list li {
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    border-bottom: 1px solid #ececec;
+}
 #content-frame {
+    top: 0;
+    bottom: 0;
+    height: 100%;
     border: none;
+    position: absolute;
 }
