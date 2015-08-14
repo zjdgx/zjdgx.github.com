@@ -1,0 +1,19 @@
+@charset "utf-8";
+html, body {
+    height: 100%;
+    font: 1em/1.5 'Microsoft Yahei', 'Times new roman';
+}
+html, body, p, h1, h2, h3, ul, ol, li, pre {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+
+.main {
+    padding: 0 20px;
+}
+h1.title {
+    text-align: center;
+}

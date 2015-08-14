@@ -6,28 +6,25 @@
 	<link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-	<div class='header'>
-		<h1>ZJDGX</h1>
+	<div class='nav'>
+		<h1 class="logo"><img src="blog/img/jz.jpg" width="120" height="120"/>ZJDGX</h1>
+		<div class='nav-list'>
+			<ul class="title-list shadow"></ul>
+			<ul class='type-list shadow'></ul>
+		</div>
 	</div>
 	<div class='main'>
-		<ul class='content-list'></ul>
-		<div class="detail-content hide shadow">
-			<h1><a href="/">返回</a><span></span></h1>
-			<iframe id="content-frame" src="" javascript="return false;" width="748" border="0"></iframe>
-		</div>
-		<div class='nav-list shadow'>
-			<ul class="title-list"></ul>
-			<ul class='type-list'></ul>
-		</div>
+		<iframe id="content-frame" src="blog/default.html" javascript="return false;" width="100%" frameborder="0"></iframe>
 	</div>
 	<script type='text/javascript' src='common/script/jquery-1.10.2.min.js'></script>
 	<script type='text/javascript' src='common/script/content.js'></script>
+	<script type='text/javascript' src='common/script/jquery.browser.js'></script>
+	<script type='text/javascript' src='common/script/jquery-iframe-auto-height.js'></script>
 	<script type='text/javascript'>
 		$(function() {
 			var typeHtml = [],
-					titleListHtml = [],
-					contentList = [];
-			
+					titleListHtml = [];
+
 			$.each(zjdgxIssues.type, function (k, v) {
 				typeHtml.push('<li><a href="#'+ v +'">' + k + "</a></li>");
 			});
@@ -35,21 +32,20 @@
 			$('ul.type-list').append(typeHtml.join(''));
 			
 			$.each(zjdgxIssues.issues, function (k, v) {
-				contentList.push('<li class="shadow"><a href="' + v.href +'">(' + v.date + ') ' + v.text + "</a><p>" + (v.description || '') +'</p></li>');
 				titleListHtml.push('<li><a href="' + v.href +'">(' + v.date + ') ' + v.text + '</a></li>');
 			});
 			
 			$('ul.title-list').append(titleListHtml.join(''));
-			$('ul.content-list').append(contentList.join(''));
 			$('ul.content-list li a, ul.title-list li a').click(function () {
 				var t = $(this),
 						contentheight = $('ul.content-list').height();
 
-				t.parents('ul').addClass('hide');
-				$('.detail-content').removeClass('hide').find('h1 span').html(t.html()).parent().next('#content-frame').height(contentheight).attr('src', t.attr('href'));
+				$('.main #content-frame').attr('src', t.attr('href'));
 
 				return false;
 			});
+
+			//$('#content-frame').iframeAutoHeight();
 		});
 	</script>
 	<!--script date="2015-04-07">
