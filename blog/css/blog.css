@@ -17,3 +17,7 @@ ul, ol, li {
 h1.title {
     text-align: center;
 }
+
+body {
+    margin: 0 20px;
+}
