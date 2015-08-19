@@ -1,5 +1,5 @@
 /* Global CSS */
-html, body, .main {height: 100%;}
+html, body, .main {height: 100%;overflow: hidden}
 body{ margin:0 auto; color:#222; font:12px "Courier New","Microsoft Yahei",Arial;background-color: #f6f6f6;overflow-x: hidden}
 div,form,ul,ol,li,span,p{margin:0 auto; padding:0; border:0;}
 img,a img{margin:0; padding:0; border:none;}
@@ -61,7 +61,10 @@ ul.title-list {
 .nav-list li {
     height: 30px;
     padding: 0 10px;
+    overflow: hidden;
     line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     border-bottom: 1px solid #ececec;
 }
 #content-frame {
