@@ -28,6 +28,12 @@ a.underline:hover{ color:#B00; text-decoration:underline;}
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
+::selection {
+    color: #fff;
+    text-shadow: none;
+    background: #FF5E99;
+}
+
 h1.logo img {
     display: block;
     margin: 0 auto;
@@ -39,6 +45,7 @@ h1.logo img {
     float: left;
     width: 300px;
     margin-right: -300px;
+    height: 100%;position: relative;
 }
 .main {
     overflow: hidden;
@@ -47,16 +54,28 @@ h1.logo img {
     background-color: #fff;
     box-shadow: 1px 0 0 rgba(0,0,0,0.1) inset !important;
 }
-ul.title-list {
-    margin-bottom: 20px;
+ul.title-list,
+ul.type-list{
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 10px 20px 10px;
+    height: calc(50% - 15px);
 }
-.nav-list {
-    padding: 0 10px 10px;
-    margin-left: 10px;
+ul.type-list {
+    margin-bottom: 10px;
 }
 .nav h1 {
     margin: 20px 0;
     text-align: center;
+}
+.nav-list {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 191px;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
 }
 .nav-list li {
     height: 30px;
