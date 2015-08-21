@@ -24,6 +24,12 @@ window.zjdgxIssues.type = {
 window.zjdgxIssues.issues = [
 	{
 		type: 'notes',
+		date: '2015-08-21',
+		text: '使用tomcat和bat文件启动静态项目',
+		href: 'blog/notes/start-static-web-project-with-tomcat.html'
+	},
+	{
+		type: 'notes',
 		date: '2015-08-19',
 		text: '如何成为一名卓越的前端工程师',
 		href: 'blog/notes/how-to-become-a-greate-front-end-engineer.html',

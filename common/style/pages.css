@@ -7,6 +7,11 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6,p, blockquo
 	font-size: 100%;
 	vertical-align: baseline;
 }
+::selection {
+	color: #fff;
+	text-shadow: none;
+	background: #FF5E99;
+}
 a{
 	color: #000;
 	text-decoration: none;
