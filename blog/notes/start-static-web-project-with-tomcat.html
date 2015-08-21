@@ -23,9 +23,9 @@
 <body>
     <h1 class="title">使用tomcat和bat文件启动静态项目</h1>
     <h2>step 1: 安装tomcat service</h2>
-    <p>首先切换到tomcat目录, 如: <code class="prettyprint">E:\apache-tomcat-8.0.20\bin</code>;</p>
-    <p>然后运行命令: <code class="prettyprint">service install tomcat8</code>就可以把tomcat注册成系统服务了;</p>
-    <p>最后运行命令: <code class="prettyprint">net start tomcat8</code>就可以看到<blockquote>Apache Tomcat 8.0 tomcat8 服务已经启动成功。</blockquote></p>
+    <p>首先切换到tomcat目录, 如: <code>E:\apache-tomcat-8.0.20\bin</code>;</p>
+    <p>然后运行命令: <code>service install tomcat8</code>就可以把tomcat注册成系统服务了;</p>
+    <p>最后运行命令: <code>net start tomcat8</code>, 就可以看到<blockquote>Apache Tomcat 8.0 tomcat8 服务已经启动成功。</blockquote></p>
     <h2>step 2: 写批处理文件tomcatstart.bat</h2>
     <pre class="prettyprint indent2">
 @echo off
