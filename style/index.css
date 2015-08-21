@@ -50,7 +50,7 @@ h1.logo img {
 .main {
     overflow: hidden;
     position: relative;
-    margin-left: 310px;
+    margin-left: 300px;
     background-color: #fff;
     box-shadow: 1px 0 0 rgba(0,0,0,0.1) inset !important;
 }
