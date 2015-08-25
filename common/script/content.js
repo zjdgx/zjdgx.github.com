@@ -23,6 +23,12 @@ window.zjdgxIssues.type = {
 
 window.zjdgxIssues.issues = [
 	{
+		type: 'mobile',
+		date: '2015-08-25',
+		text: 'Mobile浏览器中事件的触发顺序',
+		href: 'blog/mobile/event-trigger-sequence-in-mobile.html'
+	},
+	{
 		type: 'notes',
 		date: '2015-08-21',
 		text: '使用tomcat和bat文件启动静态项目',
