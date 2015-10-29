@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     font: 1em/1.5 "Courier New", Courier, monospace;
 }
-html, body, p, h1, h2, h3, ul, ol, li, pre {
+html, body, p, h1, h2, h3, h4, h5, ul, ol, li, pre {
     margin: 0;
     padding: 0;
 }
