@@ -23,6 +23,13 @@ window.zjdgxIssues.type = {
 
 window.zjdgxIssues.issues = [
 	{
+		type: 'notes',
+		date: '2015-10-30',
+		text: '前端资源',
+		href: 'blog/notes/web-front-source.html',
+		description: '本文主要显示前端资源网站...'
+	},
+	{
 		type: 'mobile',
 		date: '2015-08-25',
 		text: 'Mobile浏览器中事件的触发顺序',
@@ -41,14 +48,6 @@ window.zjdgxIssues.issues = [
 		href: 'blog/notes/how-to-become-a-greate-front-end-engineer.html',
 		description: '看过之后非常有感触，很多观点都是自己长期非常坚持和认同的，所以翻译出来分享给更多的前端同学！'
 	},
-	{
-		type: 'buildTool',
-		date: '2015-08-06',
-		text: 'gulp requirejs配置',
-		href: 'blog/tool/gulp-require.html',
-		description: '本文主要演示requirejs在gulp中的配置，以及与grunt下的配置的区别, gulp采用gulp-replace来替换js文件中的一些参数，然后用concat把配置文件和requirejs文件合并；grunt直接在从concat中配置require参数，然后合并....'
-	},
-
 	{
 		type: 'javascript',
 		date: '2015-08-06',
