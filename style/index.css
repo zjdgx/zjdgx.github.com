@@ -35,26 +35,22 @@ a.underline:hover{ color:#B00; text-decoration:underline;}
 }
 
 img.logo {
-    top: 10px;
-    z-index: 1;
-    right: -60px;
     display: block;
-    margin: 0 auto;
-    position: absolute;
+    margin: 20px auto;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
 .nav {
     float: left;
-    width: 400px;
-    margin-right: -400px;
+    width: 300px;
+    margin-right: -300px;
     height: 100%;position: relative;
 }
 .main {
     overflow: hidden;
     position: relative;
-    margin-left: 400px;
+    margin-left: 300px;
     background-color: #fff;
     box-shadow: 1px 0 0 rgba(0,0,0,0.1) inset !important;
 }
@@ -62,7 +58,7 @@ ul.title-list,
 ul.type-list{
     overflow-y: auto;
     overflow-x: hidden;
-    margin: 0 65px 20px 10px;
+	margin: 0 15px 20px;
     height: calc(50% - 15px);
 }
 ul.type-list {
@@ -73,13 +69,7 @@ ul.type-list {
     text-align: center;
 }
 .nav-list {
-    left: 0;
-    right: 0;
-    top: 10px;
-    bottom: 0;
-    height: auto;
     overflow: hidden;
-    position: absolute;
 }
 .nav-list li {
     height: 30px;
@@ -96,4 +86,12 @@ ul.type-list {
     height: 100%;
     border: none;
     position: absolute;
+}
+@media (max-height: 700px) {
+	ul.title-list {
+		max-height: 200px;
+	}
+	ul.type-list {
+		max-height: 200px;
+	}
 }
