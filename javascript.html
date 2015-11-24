@@ -56,7 +56,7 @@
 		text-align: center;
 		border: 1px solid #CCCCCC;
 	}
-	
+
 </style>
 <!-- InstanceEndEditable -->
 </head>
@@ -64,7 +64,7 @@
 <body id="javascript">
 <!-- InstanceEndEditable -->
 	<div class="header">
-		<div class="logo">ZJDGX</div>
+		<a class="logo" href="/">ZJDGX</a>
 		<ul class="nav">
 	        <!-- InstanceBeginEditable name="nav" -->
 			<li><a href="study.html">Study</a></li>
@@ -110,7 +110,7 @@ $.ajax({
 	 dataType:"jsonp",
 	 jsonp:"jsonpcallback",
 	 success:function(data){
-		 
+
 	 }
 }); </pre>
 				后端代码:<br />
@@ -153,16 +153,16 @@ function Drag(id) {
 				var e = this.event(evt);
 				return e.layerY || e.offsetY;
 			}
-		}             
+		}
 		var x = page.layerX(e);
-		var y = page.layerY(e);        
+		var y = page.layerY(e);
 		if (dv.setCapture) {
 			dv.setCapture();
 		}
 		else if (window.captureEvents) {
 			window.captureEvents(Event.MOUSEMOVE | Event.MOUSEUP);
 		}
-		d.onmousemove = function (e) {                    
+		d.onmousemove = function (e) {
 			var tx = page.pageX(e) - x;
 			var ty = page.pageY(e) - y;
 			dv.style.left = tx + "px";
@@ -212,11 +212,6 @@ for(var i=0,len=t.length; i&lt;len; i++) {
             </div>
 	    </div>
     </div>
-    <div class="footer">
-    	<!-- InstanceBeginEditable name="footer" -->
-		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
-        <!-- InstanceEndEditable -->
-	</div>
 	<!-- InstanceBeginEditable name="hidecode" -->
 	<div class="hidecode">
 		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
@@ -243,7 +238,7 @@ for(var i=0,len=t.length; i&lt;len; i++) {
 		(function() {
 		  var hm = document.createElement("script");
 		  hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
-		  var s = document.getElementsByTagName("script")[0]; 
+		  var s = document.getElementsByTagName("script")[0];
 		  s.parentNode.insertBefore(hm, s);
 		})();
 		</script>

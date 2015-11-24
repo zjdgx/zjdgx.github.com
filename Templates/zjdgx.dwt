@@ -19,7 +19,7 @@
 <body>
 <!-- TemplateEndEditable -->
 	<div class="header">
-		<div class="logo">ZJDGX</div>
+		<a class="logo" href="/">ZJDGX</a>
 		<ul class="nav">
 	        <!-- TemplateBeginEditable name="nav" -->
 			<li><a href="study.html">Study</a></li>
@@ -49,11 +49,6 @@
             </div>
 	    </div>
     </div>
-    <div class="footer">
-    	<!-- TemplateBeginEditable name="footer" -->
-		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
-        <!-- TemplateEndEditable -->
-	</div>
 	<!-- TemplateBeginEditable name="hidecode" -->
 	<div class="hidecode">
 		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>

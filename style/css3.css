@@ -8,6 +8,9 @@
 	margin-bottom: 10px;
 	border: 1px solid #ccc;
 }
+#test .empty {
+	border-color: #fff;
+}
 #test .item h1 {
     background-color: #777777;
     color: #FFFFFF;
@@ -134,7 +137,7 @@
     border-radius: 10px;
     position: relative;
 }
-     
+
 #css3Brackets .left_scope,
 #css3Brackets .right_scope {
     background: none repeat scroll 0 0 #4D4D4D;
@@ -145,10 +148,10 @@
     width: 13px;
     z-index: 10;
 }
-     
+
 #css3Brackets .left_scope { left: 6px; }
 #css3Brackets .right_scope { right: 6px; }
-     
+
 #css3Brackets .left_scope::after,
 #css3Brackets .right_scope::after {
    	background: none repeat scroll 0 0 #4D4D4D;
@@ -160,11 +163,11 @@
     right: 40px;
     width: 22px;
 }
-     
+
 #css3Brackets .left_scope::after {left: 0;}
-     
+
 #css3Brackets .right_scope::after {right: 0;}
-     
+
 #css3Brackets .left_scope::before,
 #css3Brackets .right_scope::before {
     background: none repeat scroll 0 0 #4D4D4D;

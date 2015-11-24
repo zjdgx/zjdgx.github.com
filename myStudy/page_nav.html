@@ -1,33 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/zjdgx.dwt" codeOutsideHTMLIsLocked="false" -->
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/zjdgx-notes.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<meta http-equiv="imagetoolbar" content="no">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="description" content="前端学习网站"/>
-<!-- InstanceBeginEditable name="createDate" -->
-<meta name="date" content="20131129" />
-<!-- InstanceEndEditable -->
 <meta name="author" content="zjdgx" />
-<title>zjdgx前端学习</title>
-<!-- InstanceBeginEditable name="stylesheets" -->
-<link rel="stylesheet" type="text/css" href="../common/style/pages.css" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta name="description" content="通用事件绑定"/>
+<meta name="date" content="20131129" />
+<title>zjdgx notes</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
 <style type="text/css">
-	a:hover {
-		text-decoration: underline;
+	html,body{
+		background-color: #fff;
 	}
-	
-	.page {
+	li{
+		list-style: none;
+	}
+	.main{
+		font: 12px/1.8 'microsoft yahei',courier new,times new roman;
+	}
+	#study{
+		margin-bottom: 10px;
+	}
+	#study p{
+		text-indent: 1em;
+		line-height: 1.5em;
+	}
+	#study pre{
+		text-indent: 2em;
+		line-height: 1.5em;
+	}
+   .page {
 		width: 400px;
 		height: 200px;
 		text-align: center;
 	}
-	
+
 	.page .nav {
 		float: left;
 	}
-	
+
 	.page .nav div {
 		width: 80px;
 		padding: 10px 0;
@@ -35,7 +47,7 @@
 		display: inline-block;
 		border: 1px solid #CCCCCC;
 	}
-	
+
 	.page .nav .cur {
 		color: #F63;
 		font-weight: bold;
@@ -43,122 +55,58 @@
 		border-bottom-color: white;
 		margin-bottom: -1px;
 	}
-	
+
 	#study .page .content{
 		padding: 0 20px;
 		text-align: left;
 		clear: both;
 		border: 1px solid #CCCCCC;
 	}
-	
+
 	.page .content a{
 		display: block;
 	}
 </style>
 <!-- InstanceEndEditable -->
 </head>
-<!-- InstanceBeginEditable name="typeClass" -->
-<body id="study" class="subpage">
-<!-- InstanceEndEditable -->
-	<div class="header">
-		<div class="logo">ZJDGX</div>
-		<ul class="nav">
-	        <!-- InstanceBeginEditable name="nav" -->
-			<li class="cur"><a href="../study.html">Study</a></li>
-			<li><a href="../css.html">CSS</a></li>
-			<li><a href="../javascript.html">Javascript</a></li>
-			<li title="Java"><a href="../java.html">Java</a></li>
-            <li title="杂记"><a href="../notes.html">Notes</a></li>
-			<li><a href="../interview.html">Interview</a></li>
-			<li title="学习网站"><a href="../address.html">Address</a></li>
-			<li><a href="../Memo.html">Source</a></li>
-            <!-- InstanceEndEditable -->
-		</ul>
-		<div class="clock">
-			<label class="year"><span></span>年</label>
-			<label class="month"><span></span>月</label>
-			<label class="day"><span></span>日</label>
-			<label class="hour"><span></span>点</label>
-			<label class="minute"><span></span>分</label>
-			<label class="second"><span></span>秒</label>
-		</div>
-	</div>
+<body>
 	<div class="main">
-		<div class="fixHeight">
-			<div class="content">
-            <!-- InstanceBeginEditable name="content" -->
-				<h1>分页导航<a href="../study.html">返回</a></h1>
-				<div class="page">
-					<div class="nav">
-						<div class="a1 cur">测试1</div>
-						<div class="a2">测试2</div>
-						<div class="a3">测试3</div>
-					</div>
-					<div class="content">
-						<div class="c1">
-							<a href="#" class="n11">content 11</a>
-							<a href="#" class="n12">content 12</a>
-							<a href="#" class="n13">content 13</a>
-							<a href="#" class="n14">content 14</a>
-							<a href="#" class="n15">content 15</a>
-							<a href="#" class="n16">content 16</a>
-							<a href="#" class="n17">content 17</a>
-						</div>
-						<div class="c2" style="display:none;">
-							<a href="#" class="n21">content 21</a>
-							<a href="#" class="n22">content 22</a>
-							<a href="#" class="n23">content 23</a>
-							<a href="#" class="n24">content 24</a>
-							<a href="#" class="n25">content 25</a>
-							<a href="#" class="n26">content 26</a>
-							<a href="#" class="n27">content 27</a>
-						</div>
-						<div class="c3" style="display:none;">
-							<a href="#" class="n31">content 31</a>
-							<a href="#" class="n32">content 32</a>
-							<a href="#" class="n33">content 33</a>
-							<a href="#" class="n34">content 34</a>
-							<a href="#" class="n35">content 35</a>
-							<a href="#" class="n36">content 36</a>
-							<a href="#" class="n37">content 37</a>
-						</div>
-					</div>
-				</div>
-            <!-- InstanceEndEditable -->
-            </div>
-	    </div>
-    </div>
-    <div class="footer">
-    	<!-- InstanceBeginEditable name="footer" -->
-		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
-        <!-- InstanceEndEditable -->
+      <div class="page">
+         <div class="nav">
+           <div class="a1 cur">测试1</div>
+           <div class="a2">测试2</div>
+           <div class="a3">测试3</div>
+         </div>
+         <div class="content">
+           <div class="c1">
+              <a href="#" class="n11">content 11</a>
+              <a href="#" class="n12">content 12</a>
+              <a href="#" class="n13">content 13</a>
+              <a href="#" class="n14">content 14</a>
+              <a href="#" class="n15">content 15</a>
+              <a href="#" class="n16">content 16</a>
+              <a href="#" class="n17">content 17</a>
+           </div>
+           <div class="c2" style="display:none;">
+              <a href="#" class="n21">content 21</a>
+              <a href="#" class="n22">content 22</a>
+              <a href="#" class="n23">content 23</a>
+              <a href="#" class="n24">content 24</a>
+              <a href="#" class="n25">content 25</a>
+              <a href="#" class="n26">content 26</a>
+              <a href="#" class="n27">content 27</a>
+           </div>
+           <div class="c3" style="display:none;">
+              <a href="#" class="n31">content 31</a>
+              <a href="#" class="n32">content 32</a>
+              <a href="#" class="n33">content 33</a>
+              <a href="#" class="n34">content 34</a>
+              <a href="#" class="n35">content 35</a>
+              <a href="#" class="n36">content 36</a>
+              <a href="#" class="n37">content 37</a>
+           </div>
+         </div>
+      </div>
 	</div>
-	<!-- InstanceBeginEditable name="hidecode" -->
-	<div class="hidecode">
-		<script type="text/javascript" src='../common/script/jquery-1.10.2.min.js'></script>
-		<script type="text/javascript" src='../common/script/common.js'></script>
-		<script type="text/javascript">
-			function contentHover() {
-				$(".page .nav div").hover(
-					function(){
-						$(".page .nav .cur").removeClass("cur");
-						$(this).addClass("cur");
-						$(".page .content div").hide();
-						if( $(this).hasClass("a1") ) {
-							$(".page .content .c1").show();
-						} else if( $(this).hasClass("a2") ) {
-							$(".page .content .c2").show();
-						} else {
-							$(".page .content .c3").show();
-						}
-					}
-				);
-			}
-			$(document).ready(function(e) {
-				contentHover();
-			});
-		</script>
-	</div>
-	<!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+</html>

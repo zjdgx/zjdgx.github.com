@@ -49,10 +49,10 @@ a:focus{
 *****************************************/
 .header{
 	height: 60px;
-	color: #ffffff;
 	overflow: hidden;
+	background: #fff;
 	line-height: 60px;
-	background: #000000;
+	border-bottom: 1px solid #ddd;
 }
 
 .header .logo{
@@ -60,7 +60,7 @@ a:focus{
 	font-size: 36px;
 	padding: 0 20px;
 	font-weight: bold;
-	font-family: courier new;
+	font-family: 'Courier New';
 }
 
 .header .nav{
@@ -84,19 +84,16 @@ a:focus{
 	padding: 0 15px;
 }
 
-.header .nav li a{
-	height: 100%;
-	color: #ffffff;
-	display: block;
-	font-size: 16px;
-	font-weight: bold;
-	text-decoration: none;
-	font-family: "Times New Roman", Times, serif;
+.header .nav li.cur{
+	background-color: #f1f1f1;
 }
 
-.header .nav .cur a {
-    color: #91F171;
-    font-size: 18px;
+.header .nav li a{
+	color: #666;
+	height: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	font-family: "Times New Roman", Times, serif;
 }
 
 .header .nav li:hover{
@@ -121,7 +118,7 @@ a:focus{
 .backToTop a{
 	width: 40px;
 	color: #fff;
-	height: 40px;	
+	height: 40px;
 	display: block;
 	font-family: serif;
 	border-radius: 3px;
@@ -151,7 +148,7 @@ a:focus{
 	height: 2px;
 	margin: 0 16px;
 	display: block;
-	border: solid 4px #999;	
+	border: solid 4px #999;
 }
 
 
@@ -164,20 +161,19 @@ a:focus{
 }
 
 .main{
-	top: 61px;
+	top: 71px;
 	width: 100%;
-	bottom: 41px;
+	bottom: 10px;
 	position: fixed;
 }
 
 .main .fixHeight{
-	width: 980px;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 	overflow-y: auto;
 	*position: absolute;
-	border: 1px solid #e4e4e4;
-	border-width: 0 1px;
+	border: 1px solid #ddd;
 	*border: none;
 	*overflow-y: hidden;
 	*width: 100%;
@@ -189,10 +185,9 @@ a:focus{
 	*width: 980px;
 	*height: 100%;
 	*margin: 0 auto;
-	padding: 10px 20px;
-	*padding: 0 20px;
-	*border-width: 0 1px;
+	overflow: hidden;
 	*overflow-y: auto;
+	padding: 10px 15px;
 	*border: 1px solid #e4e4e4;
 	*border-width: 0 1px;
 	*background-color: #fff;
@@ -234,13 +229,13 @@ a:focus{
 }
 
 .nav_page {
+	margin: 10px 2%;
 	overflow: hidden;
-	margin: 10px 20px;
 	text-align: center;
 }
 .nav_page .nav {
 	float: left;
-	width: 90px;
+	width: 17.6%;
 	height: 230px;
 	background-color: #f1f1f1;
 }
@@ -260,11 +255,11 @@ a:focus{
 	background-color: #d1d1d1;
 }
 .nav_page .page_content{
+	width: 80%;
 	float: left;
-	width: 830px;
 	height: 228px;
+	margin-left: 2%;
 	text-align: left;
-	margin-left: 16px;
 	border: 1px solid #CCCCCC;
 }
 .nav_page .page_content div{
