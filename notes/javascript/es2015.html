@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/01/05">
+    <title>ES2015 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body>
+    <h1>Arrows and Lexical This</h1>
+    <pre>
+var bob = {
+   _name: "Bob",
+   _friends: [],
+   printFriends() {
+      this._friends.forEach(f =>
+       console.log(this._name + " knows " + f));
+   }
+};
+    </pre>
+</body>
+</html>

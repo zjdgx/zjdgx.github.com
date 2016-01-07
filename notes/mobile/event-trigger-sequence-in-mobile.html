@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2015/08/25" />
+    <title>移动开发中事件触发顺序</title>
+    <link rel="stylesheet" href="../../style/notes.css">
+</head>
+<body>
+    <h1 class="title">移动开发中事件触发顺序</h1>
+    <div class="content">
+        <p>代码如下:</p>
+        <pre class="prettyprint">
+var box = document.getElementById('zjdgx');
+
+box.addEventListener('touchstart', function (e) {
+    console.log('touchstart: ' + e.timeStamp);
+}, false);
+box.addEventListener('touchmove', function (e) {
+    console.log('touchmove: ' + e.timeStamp);
+}, false);
+box.addEventListener('touchend', function (e) {
+    console.log('touchend: ' + e.timeStamp);
+}, false);
+box.addEventListener('mouseover', function (e) {
+    console.log('mouseover: ' + e.timeStamp);
+}, false);
+box.addEventListener('mouseenter', function (e) {
+    console.log('mouseenter: ' + e.timeStamp);
+}, false);
+box.addEventListener('mousedown', function (e) {
+    console.log('mousedown: ' + e.timeStamp);
+}, false);
+box.addEventListener('click', function (e) {
+    console.log('click: ' + e.timeStamp);
+}, false);</pre>
+        <p>结果如下:</p>
+        <ul>
+            <li>touchstart: 1440470549836</li>
+            <li>touchend: 1440470549916</li>
+            <li>mouseover: 1440470550136</li>
+            <li>mouseenter: 1440470550137</li>
+            <li>mousedown: 1440470550137</li>
+            <li>click: 1440470550137</li>
+        </ul>
+        <p>结论如下:</p>
+        <p>&nbsp;&nbsp;tap事件比click事件快200多毫秒</p>
+        <p><strong>Notes</strong>: <br>
+            &nbsp;&nbsp;1. 在mobile中, 单击才能触发mouseover和mouseenter事件, 但不能触发touchmove事件;<br>
+            &nbsp;&nbsp;2. 在mobile中, 按钮单击并拖动才能触发touchmove事件, 此时可以触发touch的三个事件;
+        </p>
+    </div>
+</body>
+</html>

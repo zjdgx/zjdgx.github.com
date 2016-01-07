@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2013/12/02">
+    <title>Ajax JSONP跨域 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body>
+    <div class="content">
+        <h1>Ajax JSONP跨域</h1>
+        <h2>前端代码:</h2>
+        <pre class='prettyprint'>
+function cc(dd){
+   var json = eval("("+dd+")");
+   console.log(json.records)
+}
+$.ajax({
+    type: "POST",
+    url:'http://pim.test.lenovomm.cn/sms/callhistory/portal/list',
+    data:{start: 0, number: 50, jsonpcallhack: 'cc' },
+    dataType:"jsonp",
+    jsonp:"jsonpcallback",
+    success:function(data){
+
+    }
+}); </pre>
+    <h2>后端代码:</h2>
+    <pre class='prettyprint'>
+String jsonp = request.getParameter("jsonpcallhack");
+
+if(StringUtils.isNotBlank(jsonp)){
+   response.getWriter().append(jsonp+"('"+JSONObject.fromObject(result)+"')");
+}</pre>
+   </div>
+</body>
+</html>

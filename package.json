@@ -1,0 +1,28 @@
+{
+  "name": "github_home_page",
+  "version": "1.0.0",
+  "description": "zjdgx github home page developed with backbone and require",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zjdgx",
+    "study"
+  ],
+  "author": "zjdgx",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-handlebars": "^0.11.0",
+    "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-uglify": "^0.11.0"
+  },
+  "dependencies": {
+    "highlight.js": "^9.0.0"
+  }
+}

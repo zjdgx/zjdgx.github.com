@@ -1,0 +1,8 @@
+<div class="recommend">
+    <label>推荐阅读</label>
+    <ul class="arrowDown">
+        {{#each articles}}
+            <li title="{{this.title}}"><a href="{{this.url}}">({{this.date}}){{this.title}}</a></li>
+        {{/each}}
+    </ul>
+</div>

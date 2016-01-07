@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="author" content="zjdgx">
     <meta name="date" content="2016-01-06">
-    <title>MongoDB - ZJDGX</title>
+    <title>Redux - ZJDGX</title>
     <link rel="shortcut icon" href="./image/favicon.ico" />
     <link rel="stylesheet" href="./style/pageView.css" />
     <script type="text/javascript" src="javascript/lib/require.js"></script>
@@ -12,14 +12,14 @@
 <body id='css'>
 <div class="header"></div>
 <script type="text/javascript">
-    require(['jquery', 'javascript/pages/PageView', 'javascript/content/mongodb'], function ($, PageView, Collection) {
+    require(['jquery', 'javascript/pages/PageView', 'javascript/content/redux'], function ($, PageView, Collection) {
         var content = new Collection().content;
 
         new PageView().render({
             contentList: content,
             default: content.length ? content[0].url : '',
-            mongodb: true,
-            database: true
+            redux: true,
+            framework: true
         });
     });
 </script>

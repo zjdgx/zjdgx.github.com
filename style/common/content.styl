@@ -1,0 +1,94 @@
+html, body
+  width 100%
+  height 100%
+  overflow hidden
+  font 12px/1.5em 'Courier New', 'Microsoft Yahei'
+.arrowDown:before
+  left 0
+  content ''
+  width 100%
+  height 9px
+  bottom -10px
+  display block
+  position absolute
+  background-color #fff
+.arrowDown:after
+  left 9px
+  content ''
+  width 10px
+  height 10px
+  bottom -6px
+  display block
+  position absolute
+  background-color #fff
+  transform rotate(-45deg)
+  border 1px solid #23c778
+  border-width 0px 0px 1px 1px
+.nothing
+  color #fff
+  font-size 40px
+  margin-top 60px
+  text-align center
+  border-radius 50%
+  background #23c778
+  box-shadow 0 0 5px #074225
+.recommend
+  left 10px
+  bottom 0
+  position absolute
+  ul
+    margin 0
+    padding 0
+    display none
+  &:hover ul
+    left 0
+    bottom 24px
+    display block
+    position absolute
+    border 1px solid #23c778
+    a
+      color #000
+      display block
+      textOverflow()
+      max-width 200px
+      text-decoration none
+.sidebar
+  margin 0
+  float left
+  width 240px
+  padding 1em
+  height calc(100% - 24px)
+  border-right 1px solid #23c778
+  li
+    height 24px
+    list-style none
+    line-height 24px
+    &.nothing
+      height 160px
+      margin-top 120px
+      line-height 160px
+    a
+      color #000
+      height 24px
+      display block
+      font-size 14px
+      textOverflow()
+      line-height 24px
+      text-decoration none
+      &:hover
+        outline 0
+        color #23c778
+        transition color .3s
+      &:active, &:visited
+        outline 0
+.contentFrame
+  top 0
+  left 300px
+  height 100%
+  position absolute
+  width calc(100% - 300px)
+  &.nothing
+    left 40%
+    height 300px
+    line-height 300px
+    width calc(50% - 250px)

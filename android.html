@@ -1,110 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/zjdgx.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="imagetoolbar" content="no">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="description" content="前端学习网站"/>
-<!-- InstanceBeginEditable name="createDate" -->
-<meta name="date" content="20130922" />
-<!-- InstanceEndEditable -->
-<meta name="author" content="zjdgx" />
-<title>zjdgx前端学习</title>
-<link rel="stylesheet" type="text/css" href="common/style/pages.css" />
-<link rel="stylesheet" type="text/css" href="common/style/tbContent.css" />
+    <meta charset="utf-8">
+    <meta name="author" content="zjdgx">
+    <meta name="date" content="2016-01-06">
+    <title>Android - ZJDGX</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" />
+    <link rel="stylesheet" href="./style/pageView.css" />
+    <script type="text/javascript" src="javascript/lib/require.js"></script>
 </head>
-<body id="android"><!-- InstanceEndEditable -->
-	<div class="header">
-		<div class="logo">ZJDGX</div>
-		<ul class="nav">
-	        <!-- InstanceBeginEditable name="nav" -->
-			<li><a href="study.html">Study</a></li>
-			<li><a href="css.html">CSS</a></li>
-			<li><a href="javascript.html">Javascript</a></li>
-			<li class="cur" title="Android"><a href="android.html">Android</a></li>
-            <li title="MongoDB"><a href="mongodb.html">MongoDB</a></li>
-			<li title="MySQL"><a href="MySQL.xml">MySQL</a></li>
-            <li title="杂记"><a href="notes.html">Notes</a></li>
-			<li><a href="nodejs.html">Nodejs</a></li>
-			<li title="学习网站"><a href="address.html">Address</a></li>
-			<li title="学习资源"><a href="source.html">Source</a></li>
-			<li title="备忘录"><a href="Memo.html">Memo</a></li>
-            <!-- InstanceEndEditable -->
-		</ul>
-		<div class="clock">
-			<label class="year"><span></span>年</label>
-			<label class="month"><span></span>月</label>
-			<label class="day"><span></span>日</label>
-			<label class="hour"><span></span>点</label>
-			<label class="minute"><span></span>分</label>
-			<label class="second"><span></span>秒</label>
-		</div>
-	</div>
-	<div class="main">
-		<div class="fixHeight">
-			<div class="content">
-            <!-- InstanceBeginEditable name="content" -->
-			<div class="nav ul">
-				<span class="li"><a href="android/textview.html" onclick="return false;">TextView派生类结构图</a></span>
-				<span class="li"><a href="android/xdpi-xvga.html" onclick="return false;">xdpi与xvga</a></span>
-				<span class="li"><a href="android/createShortCut.html" onclick="return false;">Android创建快捷方式</a></span>
-				<span class="li"><a href="android/creazy/html/catelog.html" onclick="return false;">Android疯狂讲义</a></span>
-				<span class="li"><a href="android/creazy/html/chap4/chap4_p183_Activity.html" onclick="return false;">第4章 深入理解activity</a></span>
-				<span class="li"><a href="android/creazy/html/chap5/chap5_p210_Intent.html" onclick="return false;">第5章 使用Intent和IntentFilter进行通信</a></span>
-				<span class="li"><a href="android/creazy/html/chap6/chap6_p227_Resource.html" onclick="return false;">第6章 Android应用的资源</a></span>
-				<span class="li"><a href="android/creazy/html/chap7/chap7_p273_Image.html" onclick="return false;">第7章 图形与图像处理</a></span>
-				<span class="li"><a href="android/creazy/html/chap8/chap8_p320_data_io.html" onclick="return false;">第8章 Android的数据存储与IO(P320)</a></span>
-				<span class="li"><a href="android/creazy/html/chap9/chap9_p365_contentprovider.html" onclick="return false;">第9章 使用ContentProvider实现数据共享(P365)</a></span>
-			</div>
-			<div class="detailFrame">
-				<iframe id="detailFrame" src="android/creazy/html/chap6/chap6_p227_Resource.html" allowtransparency="true" frameborder="0"></iframe>
-			</div>
-            <!-- InstanceEndEditable -->
-            </div>
-	    </div>
-    </div>
-    <div class="footer">
-    	<!-- InstanceBeginEditable name="footer" -->
-		<a href="">首页</a>&nbsp;|&nbsp;<a herf="">学习网址</a>&nbsp;|&nbsp;<a herf="">作品展示</a>
-        <!-- InstanceEndEditable -->
-	</div>
-	<!-- InstanceBeginEditable name="hidecode" -->
-	<div class="hidecode">
-		<script type="text/javascript" src="common/script/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="common/script/common.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				$(".content .nav .li a").bind("click",function(){
-					var t = $(this), f = $("#detailFrame"), fScource = f.attr("src"),
-						href = t.attr("href");
-					if(href != fScource){
-						f.attr("src",href);
-					}
-				});
-			});
-		</script>
-		<!-- 百度统计代码 -->
-		<script date="2015-04-07">
-		var _hmt = _hmt || [];
-		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
-		})();
-		</script>
-		<!-- google 统计代码 -->
-		<script date="2015-04-07">
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<body id='css'>
+<div class="header"></div>
+<script type="text/javascript">
+    require(['jquery', 'javascript/pages/PageView', 'javascript/content/android'], function ($, PageView, Collection) {
+        var content = new Collection().content;
 
-		  ga('create', 'UA-43440970-3', 'auto');
-		  ga('send', 'pageview');
-		</script>
-	</div>
-	<!-- InstanceEndEditable -->
+        new PageView().render({
+            contentList: content,
+            default: content.length ? content[0].url : '',
+            android: true,
+            backend: true
+        });
+    });
+</script>
+<!-- 百度统计代码 -->
+<script date="2015-04-07">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<!-- google 统计代码 -->
+<script date="2015-04-07">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43440970-3', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
-<!-- InstanceEnd --></html>
+</html>

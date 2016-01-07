@@ -1,0 +1,32 @@
+{
+  "name": "github_home_page",
+  "authors": [
+    "zjdgx20131030@163.com"
+  ],
+  "description": "github home page",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "zjdgx",
+    "study"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.22",
+    "backbone": "~1.2.3",
+    "normalize-css": "normalize.css#~3.0.3",
+    "backbone.modelBinder": "Backbone.ModelBinder#~1.1.0",
+    "handlebars": "4.0.5",
+    "code-prettify": "*"
+  }
+}

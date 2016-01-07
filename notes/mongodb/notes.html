@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="20130922" />
+    <title>MongoDB开发Note</title>
+    <link rel="stylesheet" href="../../style/notes.css">
+</head>
+<body>
+    <h1>MongoDB开发Note</h1>
+<div class="content">
+    <div class="importantIssue">
+        <h2>注意事项</h2>
+        1. MongoDB数据库名字区分大小写<br>
+        2. aggregate中的$group的_id必须有<br>
+        3. MongoDB配置:<br date="2015/01/04">
+        <p class="startMongoDB">(1).启动mongodb服务<br>
+            &nbsp;&nbsp;&nbsp;mongod --dbpath E:\zjdgx\MongoDB\data --logpath=E:\zjdgx\MongoDB\logs\mongodb.log --logappend --directoryperdb --serviceName MongoDB --install<br>
+            &nbsp;&nbsp;&nbsp;net start mongodb<br>
+            (2).命令行(cmd)创建collection<br>
+            &nbsp;&nbsp;&nbsp;use collectionName---&gt;db.addUser('name','password')<br>
+            (3).Robomongo创建连接<br>
+            &nbsp;&nbsp;&nbsp;在Authentication中输入collectionName, userName and password
+        </p>
+    </div>
+    <ul>
+        <li>
+            <h2>1. 显示数据表</h2>
+            <pre class="prettyprint prettyprinted"><span class="pln">show collections</span></pre>
+        </li>
+        <li>
+            <h2>2. count</h2>
+					<pre class="prettyprint prettyprinted"><span class="pln">db</span><span class="pun">[</span><span class="str">'***'</span><span class="pun">].</span><span class="pln">count</span><span class="pun">({</span><span class="pln">datetime</span><span class="pun">:{</span><span class="str">"$gte"</span><span class="pun">:</span><span class="typ">ISODate</span><span class="pun">(</span><span class="str">"2014-11-15T01:23:36.072Z"</span><span class="pun">)}})</span><span class="pln">
+db</span><span class="pun">[</span><span class="str">'***'</span><span class="pun">].</span><span class="pln">find</span><span class="pun">({</span><span class="pln">datetime</span><span class="pun">:{</span><span class="str">"$gte"</span><span class="pun">:</span><span class="typ">ISODate</span><span class="pun">(</span><span class="str">"2014-11-15T01:23:36.072Z"</span><span class="pun">)}}).</span><span class="pln">count</span><span class="pun">()</span><span class="pln">
+__in shared collection__</span><span class="pun">:</span><span class="pln">
+	db</span><span class="pun">[</span><span class="str">'***'</span><span class="pun">].</span><span class="pln">aggregate</span><span class="pun">([</span><span class="pln">
+		</span><span class="pun">{</span><span class="pln"> $group</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> _id</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> count</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> $sum</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">])</span><span class="pln">
+	db</span><span class="pun">[</span><span class="str">'***'</span><span class="pun">].</span><span class="pln">aggregate</span><span class="pun">([</span><span class="pln">
+		</span><span class="pun">{</span><span class="pln"> $match</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">datetime</span><span class="pun">:{</span><span class="str">"$gte"</span><span class="pun">:</span><span class="typ">ISODate</span><span class="pun">(</span><span class="str">"2014-11-15T01:23:36.072Z"</span><span class="pun">)}}</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+		</span><span class="pun">{</span><span class="pln"> $group</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> _id</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln"> count</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> $sum</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">])</span></pre>
+        </li>
+        <li>
+            <h2>3. collection.insert安全模式</h2>
+            <pre class="prettyprint prettyprinted"><span class="pun">{</span><span class="pln">safe</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">}</span></pre>
+            <span class="indent2">在查询语句中声明{safe:true}表明你想让数据库操作在执行回调之前完成. 可用{}关闭安全模式</span>
+        </li>
+        <li>
+            <h2>4. MongoDB connection url style</h2>
+            <pre class="prettyprint prettyprinted"><span class="pln">mongodb</span><span class="pun">:</span><span class="com">//[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/database]?property1=value&amp;property2=value</span></pre>
+        </li>
+    </ul>
+    <!-- InstanceEndEditable -->
+</div>
+</body>
+</html>

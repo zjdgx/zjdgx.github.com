@@ -1,67 +1,40 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta name="date" content="2014/11/26">
-	<title>zjdgx github homepage</title>
-	<link rel="stylesheet" href="style/index.css">
-</head>
-<body>
-	<div class='nav'>
-		<img class="logo" src="blog/img/logo.jpg" width="120" height="120"/>
-		<div class='nav-list'>
-			<ul class="title-list shadow"></ul>
-			<ul class='type-list shadow'></ul>
-		</div>
-	</div>
-	<div class='main'>
-		<iframe id="content-frame" src="blog/default.html" javascript="return false;" width="100%" frameborder="0"></iframe>
-	</div>
-	<script type='text/javascript' src='common/script/jquery-1.10.2.min.js'></script>
-	<script type='text/javascript' src='common/script/content.js'></script>
-	<script type='text/javascript' src='common/script/jquery.browser.js'></script>
-	<script type='text/javascript'>
-		$(function() {
-			var typeHtml = [],
-					titleListHtml = [];
+   <head>
+      <meta charset="utf-8">
+      <meta name="author" content="zjdgx">
+      <meta name="date" content="2015-12-29">
+      <title>Home - ZJDGX</title>
+      <link rel="shortcut icon" href="./image/favicon.ico" />
+      <link rel="stylesheet" href="./style/home.css" />
+      <script type="text/javascript" src="javascript/lib/require.js"></script>
+   </head>
+   <body id='home'>
+      <div class="header"></div>
+      <script type="text/javascript">
+         require(['jquery', 'javascript/pages/index'], function ($, MainView) {
+            new MainView().render();
+         });
+      </script>
+      <!-- 百度统计代码 -->
+      <script date="2015-04-07">
+         var _hmt = _hmt || [];
+         (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+         })();
+      </script>
+      <!-- google 统计代码 -->
+      <script date="2015-04-07">
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			$.each(zjdgxIssues.type, function (k, v) {
-				typeHtml.push('<li><a href="#'+ v +'">' + k + "</a></li>");
-			});
-			
-			$('ul.type-list').append(typeHtml.join(''));
-			
-			$.each(zjdgxIssues.issues, function (k, v) {
-				titleListHtml.push('<li title="' + v.text + '"><a href="' + v.href +'">(' + v.date + ') ' + v.text + '</a></li>');
-			});
-			
-			$('ul.title-list').append(titleListHtml.join(''));
-			$('ul.content-list li a, ul.title-list li a').click(function () {
-				var t = $(this),
-						contentheight = $('ul.content-list').height();
-
-				$('.main #content-frame').attr('src', t.attr('href'));
-
-				return false;
-			});
-		});
-	</script>
-	<script date="2015-04-07">
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?cbffbdfe4272cee27c414968a3ebb186";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
-	<script date="2015-04-07">
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-43440970-3', 'auto');
-	  ga('send', 'pageview');
-	</script>
-</body>
+         ga('create', 'UA-43440970-3', 'auto');
+         ga('send', 'pageview');
+      </script>
+   </body>
 </html>
