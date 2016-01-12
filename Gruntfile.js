@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                 files: {
 					'./style/notes.css': './style/common/notes.styl',
 					'./style/home.css': './style/pages/home.styl',
-					'./style/pageView.css': './style/pages/pageView.styl'
+					'./style/pageView.css': './style/pages/pageView.styl',
+					'./style/daily.css': './style/pages/daily.styl'
                 }
             }
         },
@@ -75,6 +76,7 @@ module.exports = function (grunt) {
 					'./javascript/handlebar/home.js': './javascript/handlebar/home.hbs',
 					'./javascript/handlebar/PageView.js': './javascript/handlebar/PageView.hbs',
 					'./javascript/handlebar/header.js': './javascript/handlebar/HeaderViewTemplate.hbs',
+					'./javascript/handlebar/DailyView.js': './javascript/handlebar/DailyViewTemplate.hbs',
 					'./javascript/handlebar/recommendArticle.js': './javascript/handlebar/recommendArticle.hbs',
 					'./javascript/handlebar/contentListItemView.js': './javascript/handlebar/contentListItemViewTemplate.hbs'
 				}

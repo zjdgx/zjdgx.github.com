@@ -1,0 +1,17 @@
+{{#each daily}}
+    <li>
+        <h5>{{this.date}}</h5>
+        <label>Done:</label><br/>
+        <ol>
+            {{#each this.daily.does}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ol>
+        <label>Todo:</label><br/>
+        <ol>
+            {{#each this.daily.todo}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ol>
+    </li>
+{{/each}}
