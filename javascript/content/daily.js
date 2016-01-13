@@ -9,6 +9,20 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-13',
+				daily: {
+					does: [
+						'redux router',
+						'redux开发笔记',
+						'immutable sortBy'
+					],
+					todo: [
+						'redux router',
+						'redux fetch'
+					]
+				}
+			},
+			{
 				date: '2016-01-12',
 				daily: {
 					does: [
@@ -16,17 +30,6 @@ define(['Backbone'], function (Backbone) {
 					],
 					todo: [
 						'redux view'
-					]
-				}
-			},
-			{
-				date: '2016-01-11',
-				daily: {
-					does: [
-						'placeholder颜色成都'
-					],
-					todo: [
-						'redux 的说法'
 					]
 				}
 			}

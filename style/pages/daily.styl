@@ -13,14 +13,17 @@ h5
   margin 0
 
 .daily
-  margin 0 6%
+  overflow hidden
+  margin 10px 6% 0
+  padding 10px 0 0 10px
   border 1px solid #23c778
-  border-top none
   > li
+    float left
+    height 100px
     padding 10px 20px
-    border-bottom 1px solid #23c778
-    &:last-of-type
-      border none
+    margin 0 10px 10px 0
+    width calc(20% - 32px)
+    border 1px solid #23c778
     label
       text-indent 1em
       display inline-block

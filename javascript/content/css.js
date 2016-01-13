@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'placeholder颜色',
+				date: '2016-01-12',
+				url: 'notes/css/placeholder-color.html',
+				des: 'placeholder颜色'
+			},
+			{
 				title: '去掉链接虚线框',
 				date: '2016-01-05',
 				url: 'notes/css/clearDottedBox.html',
