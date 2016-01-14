@@ -9,6 +9,18 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-14',
+				daily: {
+					does: [
+						'redux component props action'
+					],
+					todo: [
+						'redux router',
+						'Shapes of CSS'
+					]
+				}
+			},
+			{
 				date: '2016-01-13',
 				daily: {
 					does: [
@@ -18,7 +30,7 @@ define(['Backbone'], function (Backbone) {
 					],
 					todo: [
 						'redux router',
-						'redux fetch'
+						'redux fetch: 通过bindActionCreators把Action绑定到component的props上'
 					]
 				}
 			},
