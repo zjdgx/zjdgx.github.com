@@ -15,8 +15,10 @@ define(['Backbone'], function (Backbone) {
 						'redux component props action'
 					],
 					todo: [
-						'redux router',
-						'Shapes of CSS'
+						{
+							content: 'Shapes of CSS',
+							finished: false
+						}
 					]
 				}
 			},
@@ -29,8 +31,14 @@ define(['Backbone'], function (Backbone) {
 						'immutable sortBy'
 					],
 					todo: [
-						'redux router',
-						'redux fetch: 通过bindActionCreators把Action绑定到component的props上'
+						{
+							content: 'redux router',
+							finished: false
+						},
+						{
+							content: 'redux fetch: 通过bindActionCreators把Action绑定到component的props上',
+							finished: true
+						}
 					]
 				}
 			},
@@ -41,7 +49,10 @@ define(['Backbone'], function (Backbone) {
 						'placeholder颜色'
 					],
 					todo: [
-						'redux view'
+						{
+							content: 'redux view',
+							finished: false
+						}
 					]
 				}
 			}

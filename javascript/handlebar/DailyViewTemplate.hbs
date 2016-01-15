@@ -10,7 +10,7 @@
         <label>Todo:</label><br/>
         <ol>
             {{#each this.daily.todo}}
-                <li>{{this}}</li>
+                <li {{#unless this.finished}}class="unfinished"{{/unless}}>{{this.content}}</li>
             {{/each}}
         </ol>
     </li>
