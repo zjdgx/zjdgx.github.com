@@ -9,6 +9,48 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-19',
+				daily: {
+					does: [
+						'两列布局: 左边固定',
+						'javascript: 数字转大写金额'
+					],
+					todo: [
+						{
+							content: 'grunt jade传参数',
+							finished: false
+						}
+					]
+				}
+			},
+			{
+				date: '2016-01-18',
+				daily: {
+					does: [
+						'react onclickoutside'
+					],
+					todo: [
+						{
+							content: 'Chrome最小像素',
+							finished: false
+						}
+					]
+				}
+			},
+			{
+				date: '2016-01-15',
+				daily: {
+					does: [
+					],
+					todo: [
+						{
+							content: '页面布局',
+							finished: false
+						}
+					]
+				}
+			},
+			{
 				date: '2016-01-14',
 				daily: {
 					does: [

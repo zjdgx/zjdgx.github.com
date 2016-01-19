@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: '用JavaScript将数字转换为大写金额',
+				date: '2016-01-19',
+				url: 'notes/javascript/number2moneyUppercase.html',
+				des: '用JavaScript将数字转换为大写金额'
+			},
+			{
 				title: 'ES2015',
 				date: '2016-01-05',
 				url: 'notes/javascript/es2015.html',

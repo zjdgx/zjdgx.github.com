@@ -13,16 +13,18 @@ h5
   margin 0
 
 .daily
+  display flex
+  flex-wrap wrap
   overflow hidden
   margin 10px 6% 0
   padding 10px 0 0 10px
   border 1px solid #23c778
   > li
-    float left
+    flex-grow 1
+    max-width 18%
     padding 10px 20px
     border-radius 4px
     margin 0 10px 10px 0
-    width calc(20% - 32px)
     box-shadow 0 0 2px #23c778
     label
       text-indent 1em

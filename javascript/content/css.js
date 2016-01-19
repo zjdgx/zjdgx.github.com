@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: '页面布局',
+				date: '2016-01-19',
+				url: 'notes/css/layout.html',
+				des: '页面布局'
+			},
+			{
 				title: 'placeholder颜色',
 				date: '2016-01-12',
 				url: 'notes/css/placeholder-color.html',
