@@ -43,7 +43,7 @@ this["template"]["HeaderViewTemplate"] = Handlebars.template({"1":function(conta
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.redux : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "><a href=\"redux.html\">Redux</a></li>\r\n</ul>\r\n</div>\r\n<div class=\"tools item"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.tools : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\">\r\n<label>Tools</label>\r\n<ul>\r\n<li "
+    + "\">\r\n<label><a href=\"tools.html\">Tools</a></label>\r\n<ul>\r\n<li "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.gulp : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "><a href=\"gulp.html\">Gulp</a></li>\r\n<li "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.grunt : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")

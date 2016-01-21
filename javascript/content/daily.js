@@ -9,6 +9,26 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-21',
+				daily: {
+					does: [
+						'nodejs文件重命名、复制、删除'
+					],
+					todo: [
+					]
+				}
+			},
+			{
+				date: '2016-01-20',
+				daily: {
+					does: [
+						'2015: 前端工具现状'
+					],
+					todo: [
+					]
+				}
+			},
+			{
 				date: '2016-01-19',
 				daily: {
 					does: [

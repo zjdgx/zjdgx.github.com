@@ -7,11 +7,13 @@
                 <li>{{this}}</li>
             {{/each}}
         </ol>
+		{{#if this.daily.todo.length}}
         <label>Todo:</label><br/>
         <ol>
             {{#each this.daily.todo}}
                 <li {{#unless this.finished}}class="unfinished"{{/unless}}>{{this.content}}</li>
             {{/each}}
         </ol>
+		{{/if}}
     </li>
 {{/each}}
