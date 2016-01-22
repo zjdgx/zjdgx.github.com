@@ -9,12 +9,37 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-22',
+				daily: {
+					does: [
+						'ES6 let',
+						'Chrome最小像素: scale(0.75)'
+					],
+					todo: [
+						{
+							content: 'OS.js',
+							finished: false,
+							href: 'https://github.com/os-js/OS.js'
+						},
+						{
+							content: 'ES6 const',
+							finished: false,
+							href: 'http://es6.ruanyifeng.com/#docs/let'
+						}
+					]
+				}
+			},
+			{
 				date: '2016-01-21',
 				daily: {
 					does: [
-						'nodejs文件重命名、复制、删除'
+						'Nodejs文件批量复制与重命名'
 					],
 					todo: [
+						{
+							content: 'redux',
+							finished: false
+						}
 					]
 				}
 			},
@@ -74,7 +99,8 @@ define(['Backbone'], function (Backbone) {
 				date: '2016-01-14',
 				daily: {
 					does: [
-						'redux component props action'
+						'redux component props action',
+						'redux fetch: 通过bindActionCreators把Action绑定到component的props上'
 					],
 					todo: [
 						{
@@ -96,10 +122,6 @@ define(['Backbone'], function (Backbone) {
 						{
 							content: 'redux router',
 							finished: false
-						},
-						{
-							content: 'redux fetch: 通过bindActionCreators把Action绑定到component的props上',
-							finished: true
 						}
 					]
 				}

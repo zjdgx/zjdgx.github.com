@@ -1,19 +1,27 @@
 {{#each daily}}
     <li>
         <h5>{{this.date}}</h5>
-        <label>Done:</label><br/>
-        <ol>
-            {{#each this.daily.does}}
-                <li>{{this}}</li>
-            {{/each}}
-        </ol>
+        {{#if this.daily.does.length}}
+            <label>Done:</label><br/>
+            <ol>
+                {{#each this.daily.does}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ol>
+        {{/if}}
 		{{#if this.daily.todo.length}}
-        <label>Todo:</label><br/>
-        <ol>
-            {{#each this.daily.todo}}
-                <li {{#unless this.finished}}class="unfinished"{{/unless}}>{{this.content}}</li>
-            {{/each}}
-        </ol>
+            <label>Todo:</label><br/>
+            <ol>
+                {{#each this.daily.todo}}
+					{{#if this.href}}
+						<li {{#unless this.finished}}class="unfinished"{{/unless}}>
+							<a href='{{this.href}}' target='_blank'>{{this.content}}</a>
+						</li>
+					{{else}}
+						<li {{#unless this.finished}}class="unfinished"{{/unless}}>{{this.content}}</li>
+					{{/if}}
+                {{/each}}
+            </ol>
 		{{/if}}
     </li>
 {{/each}}
