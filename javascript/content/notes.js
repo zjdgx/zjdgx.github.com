@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'windows问题及解决方法收集',
+				date: '2016-01-25',
+				url: 'notes/notes/windows-problems.html',
+				des: 'windows问题及解决方法收集'
+			},
+			{
 				title: '使用tomcat和bat文件启动静态项目',
 				date: '2015-08-21',
 				url: 'notes/notes/start-static-web-project-with-tomcat.html',

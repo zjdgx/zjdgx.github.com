@@ -9,6 +9,27 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-25',
+				daily: {
+					does: [
+						'',
+						'Chrome最小像素: scale(0.75)'
+					],
+					todo: [
+						{
+							content: 'purecss',
+							finished: false,
+							href: 'http://purecss.io/'
+						},
+						{
+							content: 'AmazeUI homepage',
+							finished: false,
+							href: 'http://amazeui.org/' 
+						}
+					]
+				}
+			},
+			{
 				date: '2016-01-22',
 				daily: {
 					does: [

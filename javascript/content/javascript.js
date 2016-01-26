@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'ES2015 Destructuring',
+				date: '2016-01-26',
+				url: 'notes/javascript/es2015_destructuring.html',
+				des: 'ES2015 Destructuring'
+			},
+			{
 				title: 'ES2015',
 				date: '2016-01-05',
 				url: 'notes/javascript/es2015.html',
