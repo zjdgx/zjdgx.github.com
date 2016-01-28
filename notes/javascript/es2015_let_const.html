@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/01/22">
+    <title>ES2015 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+	<style type='text/css'>
+		a.back {
+			float: right;
+			color: #30c67b;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+    <h1><a class='back' href='es2015.html'>返回</a>let and const</h1>
+	<div class='content'>
+		<h3>1. 块级作用域内有效</h3>
+		<pre>
+var a = [];
+for (var i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+console.log('i: ' + i + ', a[6]: ' + a[6]())//i: 10, a[6]: 10</pre>
+		<pre>
+var a = [];
+for (let i = 0; i &lt; 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+console.log('i: ' + i + ', a[6]: ' + a[6]())//i: undefined, a[6]: 6</pre>
+		<h3>2. 不存在变量提升</h3>
+		<pre>
+console.log(foo); // 输出undefined
+console.log(bar); // 报错ReferenceError
+
+var foo = 2;
+let bar = 2;</pre>
+		<h3>3. 暂时性死区</h3>
+		<pre>
+var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}</pre>
+		<p>ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些命令，就会报错。</p>
+		<pre>
+function bar(x = y, y = 2) {
+  return [x, y];
+}
+
+bar(); // 报错</pre>
+		<h3>4. 不允许重复声明</h3>
+		<pre>
+var a = 1;
+let a = 123;//报错
+</pre>
+	</div>
+    <h1>const</h1>
+    <div class='content'>
+		<h3>1. 对象冻结</h3>
+		<pre>
+const foo = Object.freeze({});
+
+// 常规模式时，下面一行不起作用；
+// 严格模式('use strict')时，该行会报错
+foo.prop = 123;</pre>
+		<h3>2. 彻底冻结对象的函数</h3>
+		<pre>
+var constantize = (obj) => {
+  Object.freeze(obj);
+  Object.keys(obj).forEach( (key, value) => {
+    if ( typeof obj[key] === 'object' ) {
+      constantize( obj[key] );
+    }
+  });
+};</pre>
+    </div>
+</body>
+</html>
