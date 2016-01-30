@@ -28,7 +28,8 @@ module.exports = function (grunt) {
 		copy: {
 			css: {
 				files: {
-					'./style/common/normalize.css': './bower_components/normalize-css/normalize.css'
+					'./style/common/normalize.css': './bower_components/normalize-css/normalize.css',
+					'./style/common/loader.css': './bower_components/loaders.css/loaders.min.css'
 				}
 			},
 			js: {
@@ -42,7 +43,8 @@ module.exports = function (grunt) {
 		},
 		cssmin: {
 			'./style/common/normalize.css': './style/common/normalize.css',
-			'./style/common/prettify.css': './style/common/prettify.css'
+			'./style/common/prettify.css': './style/common/prettify.css',
+			'./style/common/loader.css': './style/common/loader.css'
 		},
         stylus: {
             options: {
@@ -54,7 +56,8 @@ module.exports = function (grunt) {
 					'./style/notes.css': './style/common/notes.styl',
 					'./style/home.css': './style/pages/home.styl',
 					'./style/pageView.css': './style/pages/pageView.styl',
-					'./style/daily.css': './style/pages/daily.styl'
+					'./style/daily.css': './style/pages/daily.styl',
+					'./style/source.css': './style/pages/source.styl'
                 }
             }
         },
@@ -75,6 +78,7 @@ module.exports = function (grunt) {
 				files: {
 					'./javascript/handlebar/home.js': './javascript/handlebar/home.hbs',
 					'./javascript/handlebar/PageView.js': './javascript/handlebar/PageView.hbs',
+					'./javascript/handlebar/SourceView.js': './javascript/handlebar/SourceView.hbs',
 					'./javascript/handlebar/header.js': './javascript/handlebar/HeaderViewTemplate.hbs',
 					'./javascript/handlebar/DailyView.js': './javascript/handlebar/DailyViewTemplate.hbs',
 					'./javascript/handlebar/recommendArticle.js': './javascript/handlebar/recommendArticle.hbs',
@@ -86,9 +90,15 @@ module.exports = function (grunt) {
 			js: {
 				files: {
 					'./javascript/lib/require.js': './javascript/lib/require.js',
-					'./javascript/lib/backbone.js': './javascript/lib/backbone.js'/*,
-					'./javascript/handlebar/templates.js': './javascript/handlebar/templates.js'*/
+					'./javascript/lib/backbone.js': './javascript/lib/backbone.js'
 				}
+			},
+			module: {
+				files: [{
+					expand: true,
+					src: ['./javascript/handlebar/*.js'],
+					dest: './'
+				}]
 			}
 		}
     });

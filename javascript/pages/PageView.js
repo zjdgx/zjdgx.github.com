@@ -5,10 +5,11 @@
  * Description:
  */
 
-define(['jquery', 'Backbone', '../component/contentListView', '../component/header', '../handlebar/PageView', '../component/recommendArticle'],
-	function ($, Backbone, contentListView, HeaderView, PageView, RecommendView) {
+define(['jquery', 'Backbone', '../component/contentListView', '../component/header', '../handlebar/PageView' ],
+	function ($, Backbone, contentListView, HeaderView, PageView) {
 	return Backbone.View.extend({
 		el: 'body',
+		loaded: false,
 		template: PageView.PageView,
 		initialize: function () {
 		},
@@ -16,13 +17,19 @@ define(['jquery', 'Backbone', '../component/contentListView', '../component/head
 			new HeaderView().render(options);
 			this.$el.append(this.template({defaultContent: options.default}));
 
+			this.toggleLoading();
+
+			$.getJSON('', function (value) {
+				value.items.forEach(function (item) {
+
+				});
+			});
+
 			if (options.contentList.length) {
 				new contentListView(options.contentList).render();
 			} else {
 				this.$el.find('.sidebar').append('<li class="nothing">No Data.</li>');
 			}
-
-			new RecommendView().render();
 
 			return this;
 		}

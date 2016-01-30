@@ -27,6 +27,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "backbone.modelBinder": "Backbone.ModelBinder#~1.1.0",
     "handlebars": "4.0.5",
-    "code-prettify": "*"
+    "code-prettify": "*",
+    "loaders.css": "~0.1.2"
   }
 }

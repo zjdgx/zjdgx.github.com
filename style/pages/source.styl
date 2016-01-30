@@ -1,0 +1,132 @@
+@import '../common/header.styl'
+@import '../common/loader.css'
+
+html, body
+  width 100%
+  height 100%
+  overflow hidden
+  font 12px/1.5em 'Courier New', 'Microsoft Yahei'
+ul, ol, li, p
+  margin 0
+  padding 0
+li
+  list-style none
+h5
+  margin 0
+
+#source-page
+  top 62px
+  bottom 0
+  width 100%
+  overflow hidden
+  position absolute
+  background-color #fff
+ul.fav
+  width 80%
+  float left
+  height 98%
+  padding 1% 0
+  display flex
+  flex-wrap wrap
+  justify-content center
+  border-right 1px solid green-color
+  li
+    flex-grow 1
+    height 100px
+    max-width 15%
+    overflow hidden
+    margin 0 10px 10px 0
+    border 1px solid green-color
+    a.link
+      display block
+      text-align center
+      border-bottom 1px solid green-color
+    p.des
+      height 80px
+      padding 0 5px
+      text-indent 1em
+      overflow-x hidden
+      text-align justify
+      word-wrap break-word
+      word-break break-all
+  .nothing
+    width 100%
+    color #30c67b
+    font-size 36px
+    margin-top 100px
+    text-align center
+.search-git
+  padding 10px 20px
+  position relative
+  width calc(20% - 41px)
+  height calc(100% - 20px)
+  margin-left calc(80% + 1px)
+  .git-sources
+    top 40px
+    height auto
+    bottom 10px
+    position absolute
+    overflow-x hidden
+    width calc(100% - 42px)
+    border 1px solid green-color
+    li
+      padding 4px 10px
+      border-bottom 1px solid green-color
+      &:hover
+        background-color #eee
+
+.loading
+  top 50%
+  left 50%
+  display flex
+  position absolute
+  text-align center
+  align-items center
+  box-sizing border-box
+  justify-content center
+.ball-scale-multiple > div
+  background-color green-color
+.search-container
+  border 1px solid green-color
+  input
+    float left
+    border none
+    height 22px
+    outline none
+    padding 0 5px
+    line-height 24px
+    display inline-block
+    vertical-align middle
+    width calc(100% - 101px)
+  .dropdown
+    width 90px
+    height 24px
+    line-height 24px
+    position relative
+    display inline-block
+    vertical-align middle
+    border-left 1px solid green-color
+    label
+      width 100%
+      text-align center
+      display inline-block
+      &:after
+        content ''
+        margin-left 5px
+        display inline-block
+        vertical-align middle
+        border 5px solid #444b47
+        border-color #444b47 transparent transparent
+    ul
+      top 26px
+      z-index 3
+      width 100%
+      position absolute
+      border-radius 3px
+      background-color #fff
+      border 1px solid green-color
+      li
+        padding 0 5px
+        cursor pointer
+        &:hover
+          background-color green-color

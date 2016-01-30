@@ -1,6 +1,7 @@
 @import './normalize.css'
 header-height = 60px
 header-link-color = #808080
+green-color = #23c778
 
 textOverflow()
    overflow hidden
@@ -8,6 +9,8 @@ textOverflow()
    text-overflow ellipsis
    -o-text-overflow ellipsis
    -moz-binding url('./ellipsis.xml#ellipsis')
+.hide
+   display none !important
 
 .header
    height header-height
@@ -84,7 +87,7 @@ textOverflow()
    line-height 24px
    &.cur a
       color #fff
-      background-color #23c778
+      background-color green-color
    a
     color #000
     display block
@@ -94,7 +97,7 @@ textOverflow()
     &:hover
          color #fff
          transition color .3s
-         background-color #23c778
+         background-color green-color
    &:first-child
       z-index 9
       margin-top -3px

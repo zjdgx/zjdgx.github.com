@@ -9,6 +9,16 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-01-30',
+				daily: {
+					does: [
+						'source page'
+					],
+					todo: [
+					]
+				}
+			},
+			{
 				date: '2016-01-28',
 				daily: {
 					does: [

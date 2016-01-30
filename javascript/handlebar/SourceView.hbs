@@ -1,0 +1,30 @@
+<div id="source-page">
+    <ul class="fav">
+        {{#if sources.length}}
+            {{#each sources}}
+                <li>
+                    <a class="link" href="{{this.url}}" target="_blank">{{this.name}}({{this.date}})</a>
+                    <p class="des">{{this.des}}</p>
+                </li>
+            {{/each}}
+        {{else}}
+            <li class="nothing">Nothing.</li>
+        {{/if}}
+    </ul>
+    <div class="search-git">
+        <div class="loading{{#unless loading}} hide{{/unless}}"><div class="loader-inner ball-scale-multiple"><div></div><div></div><div></div></div></div>
+        <div class="search-container">
+            <input type="text" contentType="" />
+            <div class="dropdown">
+                <label>JavaScript</label>
+                <ul class="hide">
+                    <li>None</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+        <ul class="git-sources"></ul>
+    </div>
+</div>

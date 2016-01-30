@@ -12,10 +12,10 @@
 <body id='source'>
 <div class="header"></div>
 <script type="text/javascript">
-    require(['jquery', 'javascript/pages/PageView', 'javascript/content/source'], function ($, PageView, Collection) {
+    require(['jquery', 'javascript/pages/SourceView', 'javascript/content/source'], function ($, SourceView, Collection) {
         var content = new Collection().content;
 
-        new PageView().render({
+        new SourceView().render({
             contentList: content,
             default: content.length ? content[0].url : '',
             source: true

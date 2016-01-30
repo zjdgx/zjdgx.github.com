@@ -7,20 +7,13 @@
 
 define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
-		content: [],
-		initialize: function () {
-            var self = this;
-
-			$.getJSON('https://api.github.com/search/repositories?q=javascript&sort=stars', function (value) {
-                value.items.forEach(function (item) {
-                    self.content.push({
-                        name: item.name,
-                        forks: item.forks,
-                        url: item.html_url,
-                        stars: item.stargazers_count
-                    });
-                });
-			});
-		}
+		content: [
+			{
+				name: '简历模板',
+				date: '2016/01/29',
+				url: 'https://github.com/geekcompany/ResumeSample',
+				des: '包括PHP程序员简历模板、iOS程序员简历模板、Android程序员简历模板、Web前端程序员简历模板、Java程序员简历模板、C/C++程序员简历模板、NodeJS程序员简历模板、架构师简历模板以及通用程序员简历模板'
+			}
+		]
 	});
 });
