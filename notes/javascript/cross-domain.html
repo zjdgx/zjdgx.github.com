@@ -9,7 +9,7 @@
 <body>
     <h1>跨域请求资源的几种方式(<a href="http://www.cnblogs.com/dojo-lzz/p/4265637.html" target="_blank">原文</a>)</h1>
     <div class="content">
-        <p>
+        <p class='indent2'>
             由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域.
         </p>
         <img src="../../image/20160202-cross-domain.png" />
@@ -19,11 +19,11 @@
             <li>要确定jsonp的请求是否失败并不容易，大多数框架的实现都是结合超时时间来判定</li>
         </ol>
         <h2>Proxy代理</h2>
-        <p>这种方式首先将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。</p>
-        <p>需要注意的是如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。12306就提供了一个鲜活的例子。</p>
-        <p>还需要注意一点，对于同一请求浏览器通常会从缓存中读取数据，我们有时候不想从缓存中读取，所以会加一个preventCache参数，这个时候请求url变成：url?preventCache=12345567....;这本身没有什么问题，问题出在当使用某些前端框架（比如jquery）发送proxy代理请求时，请求url为proxy?url，同时设置preventCache：true，框架不能正确处理这个参数，结果发出去的请求变成proxy?url&preventCache=123456（正长应为proxy?url?preventCache=12356）;后端截取后发送的请求为url&preventCache=123456，根本没有这个地址，所以你得不到正确结果。</p>
+        <p class='indent2'>这种方式首先将请求发送给后台服务器，通过服务器来发送请求，然后将请求的结果传递给前端。</p>
+        <p class='indent2'>需要注意的是如果你代理的是https协议的请求，那么你的proxy首先需要信任该证书（尤其是自定义证书）或者忽略证书检查，否则你的请求无法成功。12306就提供了一个鲜活的例子。</p>
+        <p class='indent2'>还需要注意一点，对于同一请求浏览器通常会从缓存中读取数据，我们有时候不想从缓存中读取，所以会加一个preventCache参数，这个时候请求url变成：url?preventCache=12345567....;这本身没有什么问题，问题出在当使用某些前端框架（比如jquery）发送proxy代理请求时，请求url为proxy?url，同时设置preventCache：true，框架不能正确处理这个参数，结果发出去的请求变成proxy?url&preventCache=123456（正长应为proxy?url?preventCache=12356）;后端截取后发送的请求为url&preventCache=123456，根本没有这个地址，所以你得不到正确结果。</p>
         <h2>CORS</h2>
-        <p>当你使用XMLHttpRequest发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：<code>Access-Control-Allow-Origin</code>;浏览器判断该相应头中是否包含Origin的值，如果有则浏览器会处理响应，我们就可以拿到响应数据，如果不包含浏览器直接驳回，这时我们无法拿到响应数据。</p>
+        <p class='indent2'>当你使用XMLHttpRequest发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，后台进行一系列处理，如果确定接受请求则在返回结果中加入一个响应头：<code>Access-Control-Allow-Origin</code>;浏览器判断该相应头中是否包含Origin的值，如果有则浏览器会处理响应，我们就可以拿到响应数据，如果不包含浏览器直接驳回，这时我们无法拿到响应数据。</p>
         <p>前端代码:</p>
         <pre>
 var xhr = new XMLHttpRequest();
@@ -44,15 +44,15 @@ if (req.headers.origin) {
     res.write('cors');
     res.end();
 }</pre>
-        <p>需要注意的一点是Preflighted Request的透明服务器验证机制支持开发人员使用自定义的头部、GET或POST之外的方法，以及不同类型的主题内容。总结如下：</p>
+        <p class='indent2'>需要注意的一点是Preflighted Request的透明服务器验证机制支持开发人员使用自定义的头部、GET或POST之外的方法，以及不同类型的主题内容。总结如下：</p>
         <ol>
             <li>非GET 、POST请求</li>
             <li>POST请求的content-type不是常规的三个：application/x- www-form-urlencoded（使用 HTTP 的 POST 方法提交的表单）、multipart/form-data（同上，但主要用于表单提交时伴随文件上传的场合）、text/plain（纯文本）</li>
             <li>POST请求的payload为text/html</li>
             <li>设置自定义头部</li>
         </ol>
-        <p>OPTIONS请求头部中会包含以下头部：Origin、Access-Control-Request-Method、Access-Control-Request-Headers，发送这个请求后，服务器可以设置如下头部与浏览器沟通来判断是否允许这个请求。</p>
-        <p>Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers</p>
+        <p class='indent2'>OPTIONS请求头部中会包含以下头部：Origin、Access-Control-Request-Method、Access-Control-Request-Headers，发送这个请求后，服务器可以设置如下头部与浏览器沟通来判断是否允许这个请求。</p>
+        <p class='indent2'>Access-Control-Allow-Origin、Access-Control-Allow-Method、Access-Control-Allow-Headers</p>
         <p>前端代码:</p>
         <pre>
 var xhr = new XMLHttpRequest();
