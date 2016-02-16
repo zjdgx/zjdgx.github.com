@@ -17,14 +17,6 @@ define(['jquery', 'Backbone', '../component/contentListView', '../component/head
 			new HeaderView().render(options);
 			this.$el.append(this.template({defaultContent: options.default}));
 
-			this.toggleLoading();
-
-			$.getJSON('', function (value) {
-				value.items.forEach(function (item) {
-
-				});
-			});
-
 			if (options.contentList.length) {
 				new contentListView(options.contentList).render();
 			} else {

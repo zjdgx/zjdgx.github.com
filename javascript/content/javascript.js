@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'Cross Domain',
+				date: '2016-02-02',
+				url: 'notes/javascript/cross-domain.html',
+				des: 'Cross Domain'
+			},
+			{
 				title: 'ES2015',
 				date: '2016-01-05',
 				url: 'notes/javascript/es2015.html',
