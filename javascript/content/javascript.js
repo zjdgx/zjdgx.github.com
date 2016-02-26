@@ -9,6 +9,18 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'JavaScript 开发者年度调查报告',
+				date: '2016-02-18',
+				url: 'notes/javascript/javascript年度调查报告(2015).html',
+				des: 'JavaScript 开发者年度调查报告'
+			},
+			{
+				title: 'Promise基础',
+				date: '2016-02-18',
+				url: 'notes/javascript/promise.html',
+				des: 'Promise基础'
+			},
+			{
 				title: 'Cross Domain',
 				date: '2016-02-02',
 				url: 'notes/javascript/cross-domain.html',

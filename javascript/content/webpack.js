@@ -8,6 +8,12 @@
 define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
+			{
+				title: 'Webpack概述',
+				date: '2016-02-26',
+				url: 'notes/tools/webpack.html',
+				des: 'Webpack概述'
+			}
 		]
 	});
 });

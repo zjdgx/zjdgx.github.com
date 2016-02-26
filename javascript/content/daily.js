@@ -9,6 +9,27 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				date: '2016-02-18',
+				daily: {
+					does: [
+						'React Date Picker'
+					],
+					todo: [
+						{
+							content: 'Nodejs CEditor Demo',
+							href: 'http://ckeditor.com/'
+						},
+						{
+							content: 'Home Page Gulp'
+						},
+						{
+							content: 'AmazeUI Mobile Home Page',
+							href: 'http://amazeui.org/getting-started'
+						}
+					]
+				}
+			},
+			{
 				date: '2016-01-30',
 				daily: {
 					does: [

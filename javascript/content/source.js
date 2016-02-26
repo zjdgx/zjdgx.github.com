@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				name: 'React Webpack',
+				date: '2016/02/23',
+				url: 'https://fakefish.github.io/react-webpack-cookbook/index.html',
+				des: 'React + Webpack小书'
+			},
+			{
 				name: '简历模板',
 				date: '2016/01/29',
 				url: 'https://github.com/geekcompany/ResumeSample',
