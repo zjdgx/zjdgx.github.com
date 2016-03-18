@@ -6,8 +6,8 @@
     <title>Promise基础 - ZJDGX</title>
     <link rel="stylesheet" href="../../style/notes.css" />
 </head>
-<body>
-	<h1>Promise基础(<a href='' target='_blank'>原文</a>)</h1>
+<body class="red-style">
+	<h1 class='style-border'>Promise基础(<a href='' target='_blank'>原文</a>)</h1>
 	<div class="content">
 		<pre>
 var img1 = document.querySelector('.img-1');
@@ -25,14 +25,14 @@ if (img1.complete) {
 img1.addEventListener('error', function() {
   // 这里会出问题, 如果在添加监听函数之前图片加载发生错误，我们的监听函数还是白费，不幸的是 DOM 也没有为这个需求提供解决办法
 });</pre>
-		<h2>Promise状态</h2>
+		<h2 class='style-border'>Promise状态</h2>
 		<ul class='indent2'>
 			<li>肯定(fulfilled) 该 Promise 对应的操作成功了</li>
 			<li>否定(rejected) 该 Promise 对应的操作失败了</li>
 			<li>等待(pending) 还没有得到肯定或者否定结果，进行中</li>
 			<li>结束(settled) 已经肯定或者否定了</li>
 		</ul>
-		<h2>Promise标准解读</h2>
+		<h2 class='style-border'>Promise标准解读</h2>
 		<ol>
 			<li>只有一个then方法，没有catch，race，all等方法，甚至没有构造函数</li>
 			<li><em>then方法返回一个新的Promise</em></li>

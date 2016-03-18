@@ -2,46 +2,63 @@
 <div class="category">
     <div class="frontend item{{#if frontend}} cur{{/if}}">
         <label>Frontend</label>
-        <ul>
-            <li {{#if css}}class='cur'{{/if}}><a href="css.html">CSS</a></li>
-            <li {{#if html}}class='cur'{{/if}}><a href="html.html">HTML5</a></li>
-            <li {{#if mobile}}class='cur'{{/if}}><a href="mobile.html">Mobile</a></li>
-            <li {{#if javascript}}class='cur'{{/if}}><a href="javascript.html">Javascript</a></li>
+        <ul class="style-border">
+            <li class="arrow-up style-border"></li>
+            <li class='pr'{{#if css}} cur style-bg{{/if}}><a {{#if css}}class='style-bg'{{/if}} href="css.html">CSS</a></li>
+            <li {{#if html}}class='cur style-bg'{{/if}}><a {{#if html}}class='style-bg'{{/if}} href="html.html">HTML5</a></li>
+            <li {{#if mobile}}class='cur style-bg'{{/if}}><a {{#if mobile}}class='style-bg'{{/if}} href="mobile.html">Mobile</a></li>
+            <li {{#if javascript}}class='cur style-bg'{{/if}}><a {{#if javascript}}class='style-bg'{{/if}} href="javascript.html">Javascript</a></li>
         </ul>
     </div>
     <div class="backend item{{#if backend}} cur{{/if}}">
         <label>Backend</label>
-        <ul>
-            <li {{#if java}}class='cur'{{/if}}><a href="java.html">Java</a></li>
-            <li {{#if nodejs}}class='cur'{{/if}}><a href="nodejs.html">Nodejs</a></li>
-            <li {{#if android}}class='cur'{{/if}}><a href="android.html">Android</a></li>
+        <ul class="style-border">
+            <li class="arrow-up style-border"></li>
+            <li class='pr'{{#if java}} cur style-bg{{/if}}><a {{#if java}}class='style-bg'{{/if}} href="java.html">Java</a></li>
+            <li {{#if nodejs}}class='cur style-bg'{{/if}}><a {{#if nodejs}}class='style-bg'{{/if}} href="nodejs.html">Nodejs</a></li>
+            <li {{#if android}}class='cur style-bg'{{/if}}><a {{#if android}}class='style-bg'{{/if}} href="android.html">Android</a></li>
         </ul>
     </div>
     <div class="database item{{#if database}} cur{{/if}}">
         <label>Database</label>
-        <ul>
-            <li {{#if mysql}}class='cur'{{/if}}><a href="MySQL.html">MySQL</a></li>
-            <li {{#if mongodb}}class='cur'{{/if}}><a href="mongodb.html">MongoDB</a></li>
+        <ul class="style-border">
+            <li class="arrow-up style-border"></li>
+            <li class='pr'{{#if mysql}} cur style-bg{{/if}}><a {{#if mysql}}class='style-bg'{{/if}} href="MySQL.html">MySQL</a></li>
+            <li {{#if mongodb}}class='cur style-bg'{{/if}}><a {{#if mongodb}}class='style-bg'{{/if}} href="mongodb.html">MongoDB</a></li>
         </ul>
     </div>
     <div class="framework item{{#if framework}} cur{{/if}}">
         <label>Framework</label>
-        <ul>
-            <li {{#if backbone}}class='cur'{{/if}}><a href="backbone.html">Backbone</a></li>
-            <li {{#if react}}class='cur'{{/if}}><a href="react.html">React</a></li>
-            <li {{#if redux}}class='cur'{{/if}}><a href="redux.html">Redux</a></li>
+        <ul class="style-border">
+            <li class="arrow-up style-border"></li>
+            <li class='pr'{{#if backbone}} cur style-bg{{/if}}><a {{#if backbone}}class='style-bg'{{/if}} href="backbone.html">Backbone</a></li>
+            <li {{#if react}}class='cur style-bg'{{/if}}><a {{#if react}}class='style-bg'{{/if}} href="react.html">React</a></li>
+            <li {{#if redux}}class='cur style-bg'{{/if}}><a {{#if redux}}class='style-bg'{{/if}} href="redux.html">Redux</a></li>
         </ul>
     </div>
     <div class="tools item{{#if tools}} cur{{/if}}">
         <label><a href="tools.html">Tools</a></label>
-        <ul>
-            <li {{#if gulp}}class='cur'{{/if}}><a href="gulp.html">Gulp</a></li>
-            <li {{#if grunt}}class='cur'{{/if}}><a href="grunt.html">Grunt</a></li>
-            <li {{#if webpack}}class='cur'{{/if}}><a href="webpack.html">webpack</a></li>
+        <ul class="style-border">
+            <li class="arrow-up style-border"></li>
+            <li class='pr'{{#if gulp}} cur style-bg{{/if}}><a {{#if gulp}}class='style-bg'{{/if}} href="gulp.html">Gulp</a></li>
+            <li {{#if grunt}}class='cur style-bg'{{/if}}><a {{#if grunt}}class='style-bg'{{/if}} href="grunt.html">Grunt</a></li>
+            <li {{#if webpack}}class='cur style-bg'{{/if}}><a {{#if webpack}}class='style-bg'{{/if}} href="webpack.html">webpack</a></li>
         </ul>
     </div>
     <div class="notes item{{#if notes}} cur{{/if}}">
         <label><a href="notes.html">Notes</a></label>
     </div>
-	<div class="source item{{#if source}} cur{{/if}}"><label><a href="source.html">Source</a></label></div>
+	<div class="source item{{#if source}} cur{{/if}}"><label><a {{#if java}}class='style-bg'{{/if}} href="source.html">Source</a></label></div>
+</div>
+<div class='switch-style'>
+	<i class='ib gray'></i>
+	<i class='ib deep-green'></i>
+	<i class='ib deep-blue'></i>
+	<i class='ib red'></i>
+	<i class='ib sky-blue'></i>
+	<i class='ib magenta'></i>
+	<i class='ib yellow'></i>
+	<i class='ib purple'></i>
+	<i class='ib pink'></i>
+	<i class='ib light-green'></i>
 </div>

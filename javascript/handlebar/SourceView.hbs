@@ -1,21 +1,21 @@
 <div id="source-page">
-    <ul class="fav">
+    <ul class="fav style-border">
         {{#if sources.length}}
             {{#each sources}}
-                <li>
+                <li class='style-border>
                     <a class="link" href="{{this.url}}" target="_blank">{{this.name}}({{this.date}})</a>
                     <p class="des">{{this.des}}</p>
                 </li>
             {{/each}}
         {{else}}
-            <li class="nothing">Nothing.</li>
+            <li class="nothing style-bg">Nothing.</li>
         {{/if}}
     </ul>
     <div class="search-git">
         <div class="loading{{#unless loading}} hide{{/unless}}"><div class="loader-inner ball-scale-multiple"><div></div><div></div><div></div></div></div>
-        <div class="search-container">
+        <div class="search-container style-border">
             <input type="text" contentType="" />
-            <div class="dropdown">
+            <div class="dropdown style-border">
                 <label>JavaScript</label>
                 <ul class="hide">
                     <li>None</li>
@@ -25,6 +25,6 @@
                 </ul>
             </div>
         </div>
-        <ul class="git-sources"></ul>
+        <ul class="git-sources style-border"></ul>
     </div>
 </div>

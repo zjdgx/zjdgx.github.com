@@ -11,7 +11,19 @@ define(['jquery', 'Backbone', '../component/contentListView', '../component/head
 		el: 'body',
 		loaded: false,
 		template: PageView.PageView,
+		events: {
+			'onload .contentFrame': 'frameContentLoaded'
+		},
 		initialize: function () {
+			if (window.localStorage && localStorage['webStyle']) {
+				$('body').attr('class', localStorage['webStyle']);
+			}
+		},
+		frameContentLoaded: function () {
+			console.log('frame loaded');
+			if (window.localStorage && localStorage['webStyle']) {
+				$(".contentFrame").contents().find("body").attr('class', localStorage['webStyle']);
+			}
 		},
 		render: function (options) {
 			new HeaderView().render(options);
@@ -20,7 +32,7 @@ define(['jquery', 'Backbone', '../component/contentListView', '../component/head
 			if (options.contentList.length) {
 				new contentListView(options.contentList).render();
 			} else {
-				this.$el.find('.sidebar').append('<li class="nothing">No Data.</li>');
+				this.$el.find('.sidebar').append('<li class="nothing style-bg">No Data.</li>');
 			}
 
 			return this;

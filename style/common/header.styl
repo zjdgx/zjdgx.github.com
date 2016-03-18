@@ -1,4 +1,5 @@
 @import './normalize.css'
+@import './pagestyle.styl'
 header-height = 60px
 header-link-color = #808080
 green-color = #23c778
@@ -9,15 +10,22 @@ textOverflow()
    text-overflow ellipsis
    -o-text-overflow ellipsis
    -moz-binding url('./ellipsis.xml#ellipsis')
+.pr
+  z-index 8
+  position relative
 .hide
    display none !important
+.ib
+   *zoom 1
+   display inline
+   display inline-block
 
 .header
    height header-height
    font-family 'Courier New'
-   border-bottom 2px solid #23c778
    .logo
       width 10%
+      color #fff
       height 100%
       font-size 36px
       line-height 60px
@@ -25,7 +33,6 @@ textOverflow()
       display inline-block
       text-decoration none
       vertical-align middle
-      color header-link-color
    .category
       height header-height
       display inline-block
@@ -35,17 +42,18 @@ textOverflow()
       padding 0 2em
       position relative
       display inline-block
-      &.cur label, &.cur a
-         color #23C778
+      &.cur > label, &.cur > a
+         color #0f0
+         font-weight bold
       &:hover label
-         color #23C778
+         color #0f0
          transition color .3s
          background-color transparent
       label
+         color #fff
          font-size 20px
-         color header-link-color
          a
-            color #808080
+            color #FFF
             text-decoration none
       ul
          display none
@@ -57,37 +65,62 @@ textOverflow()
          z-index 4
          display block
          position absolute
-         border-radius 2px
          background-color #fff
+         box-shadow 0 0 2px rgba(0,0,0,0.9)
          border 1px solid header-link-color
-         &:before
+         .arrow-up
             width 6px
             z-index 2
             height 6px
             content ''
-            display block
             margin 0 auto
             margin-top -4px
             background #fff
             transform rotate(-45deg)
-            border 1px solid #808080
+            border 1px solid transparent
             border-width 1px 1px 0 0
          &:after
             left 0
-            top -5px
+            top -6px
             content ''
             width 100%
             height 5px
             display block
             position absolute
             background transparent
+    .switch-style
+        float right
+        .ib
+            width 30px
+            height 6px
+            display block
+            cursor pointer
+        .gray
+            background-color gray-bg
+        .deep-green
+            background-color deep-green-bg
+        .deep-blue
+            background-color deep-blue-bg
+        .red
+            background-color red-bg
+        .sky-blue
+            background-color sky-blue-bg
+        .magenta
+            background-color magenta-bg
+        .yellow
+            background-color yellow-bg
+        .purple
+            background-color purple-bg
+        .pink
+            background-color pink-bg
+        .light-green
+            background-color light-green-bg
 .header .item li
    height 24px
    list-style none
    line-height 24px
    &.cur a
       color #fff
-      background-color green-color
    a
     color #000
     display block
@@ -95,9 +128,7 @@ textOverflow()
     font-size 14px
     text-decoration none
     &:hover
-         color #fff
-         transition color .3s
-         background-color green-color
+        color #fff
    &:first-child
       z-index 9
       margin-top -3px

@@ -9,8 +9,23 @@ define(['jquery', 'Backbone', '../handlebar/header'], function ($, Backbone, tem
 	return Backbone.View.extend({
 		el: '.header',
 		template: template.HeaderViewTemplate,
+		events: {
+			'click .switch-style i': 'switchStyle',
+			'mouseover .item a': 'toggleStyle',
+			'mouseout .item a': 'toggleStyle'
+		},
 		initialize: function () {
 
+		},
+		switchStyle: function (e) {
+			var styleClass = e.target.className.replace(/ib /, '').concat('-style');
+
+			window.localStorage && localStorage.setItem('webStyle', styleClass);
+			$('body').attr('class', styleClass);
+			$(".contentFrame").contents().find("body").attr('class', styleClass);
+		},
+		toggleStyle: function (e) {
+			$(e.currentTarget)[e.type == 'mouseover' ? 'addClass' : 'removeClass']('style-bg');
 		},
 		render: function (options) {
 			this.$el.append(this.template(options));

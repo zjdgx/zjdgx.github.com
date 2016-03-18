@@ -13,10 +13,10 @@
 		}
 	</style>
 </head>
-<body>
-    <h1><a class='back' href='es2015.html'>返回</a>变量的解构赋值</h1>
+<body class="red-style">
+    <h1 class='style-border'><a class='back' href='es2015.html'>返回</a>变量的解构赋值</h1>
 	<div class='content'>
-		<h2>1. 数组的解构赋值</h2>
+		<h2 class='style-border'>1. 数组的解构赋值</h2>
 		<pre>
 let [foo, [[bar], baz]] = [1, [[2], 3]];// foo = 1, bar = 2, baz = 3
 
@@ -27,7 +27,7 @@ let [x, , y] = [1, 2, 3];// x = 1, y = 3
 let [head, ...tail] = [1, 2, 3, 4];// head = 1, tail = [2, 3, 4]
 
 let [x, y, ...z] = ['a'];// x = "a", y = undefined, z = []</pre>
-		<h2>2. 对象的解构赋值</h2>
+		<h2 class='style-border'>2. 对象的解构赋值</h2>
 		<pre>
 var obj = {
   p: [
@@ -42,7 +42,7 @@ var { p: [x, { y }] } = obj;// x = "Hello", y = "World"</pre>
 var {x = 3} = {x: undefined};// x = 3
 var {x = 3} = {x: null};// x = null</pre>
 		<p>默认值生效的条件是，对象的属性值严格等于undefined</p>
-		<h2>3. 字符串的解构赋值 </h2>
+		<h2 class='style-border'>3. 字符串的解构赋值 </h2>
 		<pre>const [a, b, c, d, e] = 'hello';// a = "h", b = "e", c = "l", d = "l", e = "o"</pre>
 	</div>
 </body>

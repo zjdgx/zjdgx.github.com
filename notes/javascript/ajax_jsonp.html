@@ -6,10 +6,10 @@
     <title>Ajax JSONP跨域 - ZJDGX</title>
     <link rel="stylesheet" href="../../style/notes.css" />
 </head>
-<body>
-	<h1>Ajax JSONP跨域</h1>
+<body class="red-style">
+	<h1 class='style-border'>Ajax JSONP跨域</h1>
     <div class="content">
-        <h2>前端代码:</h2>
+        <h2 class='style-border'>前端代码:</h2>
         <pre class='prettyprint'>
 function cc(dd){
    var json = eval("("+dd+")");
@@ -25,7 +25,7 @@ $.ajax({
 
     }
 }); </pre>
-    <h2>后端代码:</h2>
+    <h2 class='style-border'>后端代码:</h2>
     <pre class='prettyprint'>
 String jsonp = request.getParameter("jsonpcallhack");
 

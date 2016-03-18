@@ -9,6 +9,24 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				name: 'Promise',
+				date: '2016/03/04',
+				url: 'https://github.com/liubin/promises-book/',
+				des: 'promise迷你电子书'
+			},
+			{
+				name: 'AntDesign',
+				date: '2016/03/04',
+				url: 'https://github.com/ant-design/ant-design',
+				des: 'react ant design组件'
+			},
+			{
+				name: 'Slick',
+				date: '2016/03/03',
+				url: 'https://github.com/akiran/react-slick',
+				des: 'react轮播插件'
+			},
+			{
 				name: 'React Webpack',
 				date: '2016/02/23',
 				url: 'https://fakefish.github.io/react-webpack-cookbook/index.html',
