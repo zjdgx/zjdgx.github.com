@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/03/24">
+    <title>NodeJS WebSocket - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body class="red-style">
+	<h1 class='style-border'>NodeJS WebSocket</h1>
+	<div class='content'>
+		<h2>服务器端: (<a href='http://socket.io/' target='_blank'>socket.io</a>)</h2>
+		<pre>
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+server.listen(80);
+
+app.get('/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
+});
+
+io.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});</pre>
+		<h2>客户端: (<a href='https://github.com/socketio/socket.io-client' target='_blank'>socket.io-client</a>)</h2>
+		<pre>
+&lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var socket = io('http://localhost');
+  socket.on('connect', function(){});
+  socket.on('event', function(data){});
+  socket.on('disconnect', function(){});
+&lt;/script&gt;
+</pre>
+	</div>
+</body>
+</html>

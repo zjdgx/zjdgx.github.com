@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'Nodejs WebSocket',
+				date: '2016-03-24',
+				url: 'notes/javascript/websocket_node.html',
+				des: 'Nodejs WebSocket'
+			},
+			{
 				title: 'JavaScript 开发者年度调查报告',
 				date: '2016-02-18',
 				url: 'notes/javascript/javascript年度调查报告(2015).html',

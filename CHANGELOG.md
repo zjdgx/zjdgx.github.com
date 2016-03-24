@@ -1,13 +1,18 @@
+##2016/03/24
+
+- å¢žåŠ [node websocket](http://zjdgx.github.io/javascript.html)
+
 ##2016/03/21
 
--Ôö¼ÓCHANGELOG
+- å¢žåŠ CHANGELOG
+- å¢žåŠ CanvasæŠ½å¥–æ¸¸æˆ
 
 ##2016/03/18
--homepageÔö¼ÓÆ¤·ôÉèÖÃ
+- homepageå¢žåŠ çš®è‚¤è®¾ç½®
 
 ###problem
--iframeÀïÃæµÄÄÚÈÝchangeÊÂ¼þÃ»¼àÌýµ½, µ¼ÖÂÄÚÈÝiframeµÄÆ¤·ô²»ÄÜÍ¬²½¸üÐÂ
+- iframeé‡Œé¢çš„å†…å®¹changeäº‹ä»¶æ²¡ç›‘å¬åˆ°, å¯¼è‡´å†…å®¹iframeçš„çš®è‚¤ä¸èƒ½åŒæ­¥æ›´æ–°
 
-½â¾ö·½°¸: ÔÚÃ¿¸öÄÚÈÝÒ³ÃæÔö¼Ó¼ì²âlocalStorageµÄ½Å±¾, È»ºó¸üÐÂÆ¤·ô
+è§£å†³æ–¹æ¡ˆ: åœ¨æ¯ä¸ªå†…å®¹é¡µé¢å¢žåŠ æ£€æµ‹localStorageçš„è„šæœ¬, ç„¶åŽæ›´æ–°çš®è‚¤
 
--Í¨¹ýlocalStorage±£´æµÄÆ¤·ôÅäÖÃÔÚ¸üÐÂµ½Ò³ÃæÊ±»á¿´µ½Ò»¸öÆ¤·ô¸ü»»µÄ¹ý³Ì
+- é€šè¿‡localStorageä¿å­˜çš„çš®è‚¤é…ç½®åœ¨æ›´æ–°åˆ°é¡µé¢æ—¶ä¼šçœ‹åˆ°ä¸€ä¸ªçš®è‚¤æ›´æ¢çš„è¿‡ç¨‹
