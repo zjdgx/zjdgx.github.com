@@ -1,5 +1,6 @@
 @import '../common/header.styl'
 @import '../common/loader.css'
+@import 'nib/overflow'
 
 html, body
   width 100%
@@ -39,7 +40,10 @@ ul.fav
     border 1px solid green-color
     a.link
       display block
+      overflow hidden
       text-align center
+      white-space nowrap
+      text-overflow ellipsis
       border-bottom 1px solid green-color
     p.des
       height 80px

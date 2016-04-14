@@ -9,10 +9,10 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
-				title: 'Nodejs文件批量复制与重命名',
-				date: '2016-01-22',
-				url: 'notes/nodejs/nodeFileBatchMove.html',
-				des: 'Nodejs文件批量复制与重命名'
+				title: '删除node_modules文件夹',
+				date: '2016-03-30',
+				url: 'notes/nodejs/deleteNodeModules.html',
+				des: '删除node_modules文件夹'
 			},
 			{
 				title: 'Node Express开发步骤',

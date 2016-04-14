@@ -1,3 +1,7 @@
+##2016/03/30
+
+- 增加[删除node_modules文件夹代码](http://zjdgx.github.io/nodejs.html)
+
 ##2016/03/24
 
 - 增加[node websocket](http://zjdgx.github.io/javascript.html)
