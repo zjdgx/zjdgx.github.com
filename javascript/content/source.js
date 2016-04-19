@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				name: '数独',
+				date: '2016/04/18',
+				url: 'https://github.com/andreynering/sudoku',
+				des: '数独web版'
+			},
+			{
 				name: 'Promise',
 				date: '2016/03/04',
 				url: 'https://github.com/liubin/promises-book/',
