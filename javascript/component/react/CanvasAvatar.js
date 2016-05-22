@@ -19712,6 +19712,13 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	/**
+	 * React Canvas Avatar
+	 * Date: 2016-05-20
+	 * Author: ZJDGX
+	 */
+
+
 	__webpack_require__(251);
 
 	var zjdgxCanvasUpload = function (_React$Component) {
@@ -19840,7 +19847,7 @@
 				// the method to save canvas image: canvas.toDataUrl('image/png')
 				var w = window.open('about:blank', 'image from canvas');
 
-				w.document.write("<img src='" + this.canvas.toDataUrl('image/png') + "' alt='from canvas'/>");
+				w.document.write("<img src='" + this.canvas.toDataURL('image/png').replace("image/png", "image/octet-stream") + "' alt='from canvas'/>");
 			}
 		}, {
 			key: 'render',
