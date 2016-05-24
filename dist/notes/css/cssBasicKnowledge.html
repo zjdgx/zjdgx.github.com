@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2013/12/04">
+    <title>CSS基础知识</title>
+    <link rel="stylesheet" href="../../css/notes.css" />
+</head>
+<body class="red-style">
+    <h1 class='style-border'>CSS基础知识</h1>
+    <div class="content">
+        <h2 class='style-border'>CSS层叠样式表</h2>
+        <h4>层叠采用的重要度次序</h4>
+        <ul>
+            <li>1. 标有!important的作者样式;</li>
+            <li>2. 标有!important的用户样式;</li>
+            <li>3. 作者样式;</li>
+            <li>4. 用户样式;</li>
+            <li>5. 浏览器/用户代理应用的样式.</li>
+        </ul>
+        <h4>选择器的特殊性: a, b, c和d</h4>
+        <ul>
+            <li>1. 行内样式: a = 1;</li>
+            <li>2. ID选择器的总数: b;</li>
+            <li>3. 类, 伪类和属性选择器的总数: c;</li>
+            <li>4. 类型选择器和伪元素选择器的数量.</li>
+            <li>!important > [id > class > tag]</li>
+        </ul>
+        <p>CSS基本语句构成: 选择器, 属性和属性值</p>
+        <h2 class='style-border'>CSS盒子模型</h2>
+        <img alt="盒子模型" src="../../image/box.gif"/>
+        <h2 class='style-border'>link与@import的区别</h2>
+        <ul>
+            <li>1. link属于XHTML标签, 而@import完全是CSS提供的一种方式;</li>
+            <li>2. link标签除了可以加载CSS外, 还可以做很多其它的事情, 比如定义RSS, 定义rel连接属性等, @import就只能加载CSS了;</li>
+            <li>3. link引用的CSS会同时被加载, 而@import引用的CSS会等到页面全部被下载完再被加载;</li>
+            <li>4. @import只有在IE5以上的才能识别, 而link标签无此问题;</li>
+            <li>5. 当使用javascript控制dom去改变样式的时候, 只能使用link标签, 因为@import不是dom可以控制的;</li>
+            <li>6. @import可以在css中再次引入其他样式表, 比如可以创建一个主样式表, 在主样式表中再引入其他的样式表.</li>
+        </ul>
+    </div>
+</body>
+</html>

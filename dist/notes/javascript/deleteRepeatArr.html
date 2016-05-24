@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2014/07/02">
+    <title>删除数组重复元素 - ZJDGX</title>
+    <link rel="stylesheet" href="../../css/notes.css" />
+</head>
+<body class="red-style">
+    <h1 class='style-border'>删除数组重复元素</h1>
+	<div class="content">
+	<pre class='prettyprint'>
+// 删除数组中包含指定值的元素
+var t = [1,2,3,4,3,2,5,2,4], count = 0;
+
+for(var i=0,len=t.length; i&lt;len; i++) {
+   if(t[i-count] == 2) {
+      t.splice(i-count,1);
+      count++;
+   }
+}</pre>
+	</div>
+</body>
+</html>

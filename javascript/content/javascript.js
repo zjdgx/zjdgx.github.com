@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'LocalStorage, SessionStorage',
+				date: '2016-05-08',
+				url: 'notes/javascript/storage.html',
+				des: 'Nodejs WebSocket'
+			},
+			{
 				title: 'Nodejs WebSocket',
 				date: '2016-03-24',
 				url: 'notes/javascript/websocket_node.html',

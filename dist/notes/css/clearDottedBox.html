@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2013/11/29">
+    <title>去掉链接虚线框 - ZJDGX</title>
+    <link rel="stylesheet" href="../../css/notes.css" />
+</head>
+<body class="red-style">
+    <h1 class='style-border'>去掉链接虚线框</h1>
+    <div class="content">
+        <p>在 Firefox 里可以用 -moz-outline:none; 或者 outline:none; 来将其去掉。所以我们可以这样写：</p>
+		<pre>
+a:focus {
+    outline:none;
+    -moz-outline:none;
+}</pre>
+        <p>如果想去掉输入框在chrome和safari下的阴影效果也可以用 outline 属性。</p>
+		<pre>
+input,textarea {
+    outline:none;
+}</pre>
+        <p>
+            IE, 首先比较遗憾，还没有找到通过CSS去掉IE链接虚线框比较好的解决办法。所以只能用一个替代的办法，就是a标签的hidefocus属性(这个属性是IE独有的)。<br>
+            注意：JS脚本对应的属性名是：hideFocus。对应的JS代码应该是：<br>
+            xxx.hideFocus ="true";<br>
+            还有一种不推荐的办法。就是让链接得到焦点的时候失去焦点。<br>
+        </p>
+   </div>
+</body>
+</html>

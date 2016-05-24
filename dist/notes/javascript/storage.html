@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta name='author' content='zjdgx'>
+	<meta name='date' content='2016/05/08'>
+	<title>LocalStorage, SessionStorage, Cookie</title>
+	<link rel="stylesheet" type="text/css" href="../../css/notes.css"/>
+</head>
+<body>
+	<div id='page'></div>
+	<script type='text/javascript'>
+		var html = [];
+
+		/*localStorage.setItem('local-zjdgx1', '12345');
+		localStorage.setItem('local-zjdgx2', '23456');
+		localStorage.setItem('local-zjdgx3', '34567');
+
+		sessionStorage.setItem('session-zjdgx1', '12345');
+		sessionStorage.setItem('session-zjdgx2', '23456');
+		sessionStorage.setItem('session-zjdgx3', '34567');*/
+
+		html.push('<h1>localStorage</h1><ul>');
+
+		for (var i in localStorage) {
+			html.push('<li>' + i + ': ' + localStorage[i] + '</li>');
+		}
+
+		html.push('</ul><h1>sessionStorage</h1><ul>');
+
+		for (var i in sessionStorage) {
+			html.push('<li>' + i + ': ' + sessionStorage[i] + '</li>');
+		}
+
+		html.push('</ul>');
+
+		document.getElementById('page').innerHTML = html.join('');
+	</script>
+</body>
+</html>

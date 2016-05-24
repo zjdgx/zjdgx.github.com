@@ -8,6 +8,12 @@
 define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
+			{
+				title: 'React开发笔记',
+				date: '2016-04-14',
+				url: 'notes/tools/react_notes.html',
+				des: 'react开发笔记'
+			}
 		]
 	});
 });

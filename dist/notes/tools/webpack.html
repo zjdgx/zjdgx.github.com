@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/02/26"/>
+    <title>webpack</title>
+    <link rel="stylesheet" type="text/css" href="../../css/notes.css"/>
+    <style type="text/css">
+        table {
+            border: 1px solid #ccc;
+        }
+        td, th {
+            height: 24px;
+            padding: 0 30px;
+            line-height: 24px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body class="red-style">
+<h1 class='style-border'>Webpack基础(<a href="https://github.com/petehunt/webpack-howto#2-webpack-for-browserify-people" target="_blank">原文</a>)</h1>
+<div class="content">
+   <h2 class='style-border'>webpack功能特性</h2>
+   <ol>
+   	<li>支持CommonJs和AMD模块，意思也就是我们基本可以无痛迁移旧项目;</li>
+   	<li>支持模块加载器和插件机制，可对模块灵活定制。特别是我最爱的babel-loader，有效支持ES6;</li>
+   	<li>可以通过配置，打包成多个文件。有效利用浏览器的缓存功能提升性能;</li>
+   	<li>将样式文件和图片等静态资源也可视为模块进行打包。配合loader加载器，可以支持sass，less等CSS预处理器</li>
+   	<li>内置有source map，即使打包在一起依旧方便调试</li>
+   </ol>
+   <h2 class='style-border'>why webpack?</h2>
+   <ol>
+      <li>类似browserify, 还能将应用分成几个文件;</li>
+      <li>可以替代grunt和gulp</li>
+   </ol>
+   <h2 class='style-border'>webpack使用方法</h2>
+   <ol>
+      <li>webpack: 构建一次开发环境</li>
+      <li>webpack -p: 构建一次生产环境(压缩)</li>
+      <li>webpack --watch: 持续构建开发环境</li>
+      <li>webpack -d: 构建后包括source map</li>
+   </ol>
+   <h2 class='style-border'>Compile-to-JS languages</h2>
+   <p>webpack与browserify和RequireJS相同的地方在于加载器(loader)</p>
+   <pre>
+// webpack.config.js
+module.exports = {
+  entry: './main.js',
+  output: {
+    filename: 'bundle.js'
+  },
+  module: {
+    loaders: [
+      { test: /\.coffee$/, loader: 'coffee-loader' },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
+    ]
+  },
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.json', '.coffee']
+  }
+};</pre>
+   <h2 class='style-border'>Stylesheets and images</h2>
+   <p>(使用image加载器)When you require CSS (or less, etc), webpack inlines the CSS as a string inside the JS bundle and <code>require()</code> will insert a <code>&lt;style&gt;</code> tag into the page. When you require images, webpack inlines a URL to the image into the bundle and returns it from <code>require()</code>.</p>
+   <pre>
+// webpack.config.js
+module.exports = {
+entry: './main.js',
+output: {
+ path: './build', // This is where images AND js will go
+ publicPath: 'http://mycdn.com/', // This is used to generate URLs to e.g. images
+ filename: 'bundle.js'
+},
+module: {
+ loaders: [
+   { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' }, // use ! to chain loaders
+   { test: /\.css$/, loader: 'style-loader!css-loader' },
+   { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' } // inline base64 URLs for <=8k images, direct URLs for the rest
+ ]
+}
+};</pre>
+   <h2 class='style-border'>Feature flags</h2>
+</div>
+</body>
+</html>

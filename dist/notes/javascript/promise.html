@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/02/18">
+    <title>Promise基础 - ZJDGX</title>
+    <link rel="stylesheet" href="../../css/notes.css" />
+</head>
+<body class="red-style">
+	<h1 class='style-border'>Promise基础(<a href='' target='_blank'>原文</a>)</h1>
+	<div class="content">
+		<pre>
+var img1 = document.querySelector('.img-1');
+
+function loaded() {
+  // 啊哈图片加载完成
+}
+
+if (img1.complete) {
+  loaded();
+} else {
+  img1.addEventListener('load', loaded);
+}
+
+img1.addEventListener('error', function() {
+  // 这里会出问题, 如果在添加监听函数之前图片加载发生错误，我们的监听函数还是白费，不幸的是 DOM 也没有为这个需求提供解决办法
+});</pre>
+		<h2 class='style-border'>Promise状态</h2>
+		<ul class='indent2'>
+			<li>肯定(fulfilled) 该 Promise 对应的操作成功了</li>
+			<li>否定(rejected) 该 Promise 对应的操作失败了</li>
+			<li>等待(pending) 还没有得到肯定或者否定结果，进行中</li>
+			<li>结束(settled) 已经肯定或者否定了</li>
+		</ul>
+		<h2 class='style-border'>Promise标准解读</h2>
+		<ol>
+			<li>只有一个then方法，没有catch，race，all等方法，甚至没有构造函数</li>
+			<li><em>then方法返回一个新的Promise</em></li>
+			<li>不同Promise的实现需要可以相互调用(interoperable)</li>
+			<li>Promise的初始状态为pending，它可以由此状态转换为fulfilled（本文为了一致把此状态叫做resolved）或者rejected，一旦状态确定，就不可以再次转换为其它状态，状态确定的过程称为settle</li>
+			
+		</ol>
+	</div>
+</body>
+</html>

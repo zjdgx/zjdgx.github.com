@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/01/22"/>
+    <title>Nodejs文件批量复制与重命名</title>
+    <link rel="stylesheet" href="../../css/notes.css">
+</head>
+<body class="red-style">
+    <h1 class='style-border'>Nodejs文件批量复制与重命名</h1>
+    <div class="content">
+        <pre>
+var fs = require('fs');
+
+function FormatInteger(num, length) {
+   return (num / Math.pow(10, length)).toFixed(length).substr(2);
+}
+
+function renameFiles(path, target) {
+   fs.readdir(path, function (err, files) {
+      var len = files.length,
+            digitLen = len.toString().length;
+
+      files.forEach(function (file, index) {
+         fs.stat(path + file, function (err, stats) {
+            if (stats.isDirectory()) {
+               renameFiles(path + file + '/');
+            } else {
+               var fileName = path.match(/[\/(1)]\d{8}[\/{1}]$/)[0].replace(/\//g,'').replace(/(\d{4})(\d{2})(\d{2})/,'$1-$2-$3'),
+                       dest = target + fileName + '-' + FormatInteger(index + 1, digitLen) + file.substr(file.lastIndexOf('.'));
+
+               fs.rename(path + file, dest, function (err, data) {
+                  if (err) {
+                     console.error('文件 (' + (path + file) + ') 重命名出错, err: ' + JSON.stringify(err));
+                  }
+               });
+            }
+         });
+      });
+   });
+}
+
+renameFiles('E:/source/file/path(eg: 20150318)/', 'E:/dest/file/path/');
+</pre>
+    </div>
+</body>
+</html>

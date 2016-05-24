@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2015/03/09"/>
+    <title>nodejs express requirements</title>
+    <link rel="stylesheet" href="../../css/notes.css">
+</head>
+<body class="red-style">
+<div class="main">
+    <h1 class='style-border'>node express开发步骤</h1>
+    <ul class='content'>
+        <li>
+            <h2 class='style-border'>1. 设置模板引擎</h2>
+            <pre class='prettyprint'>app.set('view engine', 'jade');</pre>
+        </li>
+        <li>
+            <h2 class='style-border'>2. 设置视图目录</h2>
+            <pre class='prettyprint'>app.set('views', path.join(__dirname, 'views');</pre>
+        </li>
+        <li>
+            <h2 class='style-border'>3. 文件压缩</h2>
+			<pre class='prettyprint'>
+// express middleware: https://github.com/expressjs/compression
+app.use(compression());</pre>
+        </li>
+        <li>
+            <h2 class='style-border'>4. 设置静态文件目录</h2>
+            <pre class='prettyprint'>app.use(express.static(path.join(__dirname, 'static')));</pre>
+        </li>
+        <li>
+            <h2 class='style-border'>5. 设置route</h2>
+			<pre class='prettyprint'>app.get('/***', function(){*****);
+app.post('/***', function(){*****);
+......</pre>
+        </li>
+        <li>
+            <h2 class='style-border'>6. 设置应用启动端口</h2>
+			<pre class='prettyprint'>
+app.listen(myport, function() {
+   var server = app.address.host,
+      port = app.address.port;
+	
+   console.log('server started on http://%s:%s', server, port);
+});</pre>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

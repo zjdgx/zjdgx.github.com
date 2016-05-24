@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/02/26"/>
+    <title>webpack</title>
+    <link rel="stylesheet" type="text/css" href="../../css/notes.css"/>
+    <style type="text/css">
+        table {
+            border: 1px solid #ccc;
+        }
+        td, th {
+            height: 24px;
+            padding: 0 30px;
+            line-height: 24px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body class="red-style">
+	<h1 class='style-border'>Webpack介绍</h1>
+	<div class="content">
+		<h2 id="webpack-">webpack介绍</h2>
+		<h3 id="webpack-">webpack浏览器自动刷新</h3>
+		<pre><code>entry: [
+	&#39;webpack/hot/dev-server&#39;,
+    &#39;webpack-dev-server/client?http://localhost:8080&#39;,
+    path.resolve(__dirname, &#39;app/main.js&#39;)
+]
+</code></pre>
+		<h3 id="-">引入文件</h3>
+		<h4 id="-">模块</h4>
+		<ul>
+			<li>ES6模块: <code>import module from &#39;./module.js&#39;;</code></li>
+			<li>CommonJS: <code>var module = require(&#39;./module.js&#39;;</code></li>
+			<li>AMD: <code>define([&#39;./module.js&#39;], function (module) {});</code></li>
+		</ul>
+		<h4 id="-">理解文件路径</h4>
+		<p><em>相对路径是相对当前目录, 绝对路径是相对入口文件.</em></p>
+		<h2 id="react">React</h2>
+		<p>React的key属性可以保证DOM输出顺序</p>
+		<pre><code>&lt;ul&gt;
+{
+    todoItems.map((todoItem, i) =&gt;
+        &lt;li key={&#39;todoitem&#39; + i}&gt;&lt;TodoItem owner={todoItem.owner} task={todoItem.task} /&gt;&lt;/li&gt;
+    )
+}
+&lt;/ul&gt;
+</code></pre><p>如果不加key属性, React会给出警告</p>
+<p><em>React提供了ReactLink来支持双向数据绑定</em></p>
+<p>使用Mixin实现数据双向绑定</p>
+<pre><code>// ReactLink 是一个插件，所以我们需要把它引入。
+var React = require(&#39;react/addons&#39;);
+
+...
+
+module.exports = React.createClass({
+    mixins: [React.addons.LinkedStateMixin],
+
+    ...
+
+    render() {
+        var todoItems = this.state.todoItems;
+
+        return &lt;div&gt;
+            &lt;div className=&#39;ChangeOwner&#39;&gt;
+                &lt;input type=&#39;text&#39; valueLink={this.linkState(&#39;owner&#39;)} /&gt;// *此处不再需要onChange绑定了*
+            &lt;/div&gt;
+
+            &lt;div className=&#39;TodoItems&#39;&gt;
+                &lt;ul&gt;{todoItems.map((todoItem, i) =&gt;
+                    &lt;li key={&#39;todoitem&#39; + i}&gt;
+                        &lt;TodoItem owner={owner} task={todoItem.task} /&gt;
+                    &lt;/li&gt;
+                )}&lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;;
+    },
+});
+</code></pre><h3 id="-react">配置React</h3>
+<h4 id="-react">在代码中使用React</h4>
+<pre><code>import React from &#39;react&#39;;
+
+export default class Hello extends React.Component {
+  render() {
+    return &lt;h1&gt;Hello world&lt;/h1&gt;;
+  }
+}
+</code></pre><h3 id="-">优化重合并</h3>
+<h4 id="-">在开发环境中使用压缩文件</h4>
+<p>为了不让webpack去遍历react及其所有依赖, 你可以在开发中重写它的行为</p>
+<pre><code>var path = require(&#39;path&#39;);
+var node_modules = path.resolve(__dirname, &#39;node_modules&#39;);
+var pathToReact = path.resolve(node_modules, &#39;react/dist/react.min.js&#39;);
+
+config = {
+    entry: [&#39;webpack/hot/dev-server&#39;, path.resolve(__dirname, &#39;app/main.js&#39;)],
+    resolve: {
+        alias: {
+          &#39;react&#39;: pathToReact
+        }
+    },
+    output: {
+        path: path.resolve(__dirname, &#39;build&#39;),
+        filename: &#39;bundle.js&#39;,
+    },
+    module: {
+        loaders: [{
+            test: /\.jsx?$/,
+            loader: &#39;babel&#39;
+        }],
+        noParse: [pathToReact]
+    }
+};
+
+module.exports = config;
+</code></pre><h5 id="-">此配置做了两件事</h5>
+<ul>
+<li>每当react在代码中被引入, 它会使用压缩后的react文件, 而不是到node_modules中找;</li>
+<li>每当webpack尝试支解析那个压缩后的文件, 我们阻止它, 因为这不必要.</li>
+</ul>
+<h4 id="flow">Flow</h4>
+<h2 id="css-fonts-and-images">CSS Fonts and Images</h2>
+<h3 id="-css">加载CSS</h3>
+<h4 id="css-">CSS加载准备</h4>
+<ul>
+<li>安装加载器: <code>npm install css-loader style-loader --save-dev</code></li>
+<li>修改配置:</li>
+</ul>
+<pre><code>{// 增加css-loader
+    test: /\.css$/, // Only .css files
+    loader: &#39;style!css&#39; // Run both loaders
+}
+</code></pre><h4 id="-css-">加载CSS文件</h4>
+<p><code>import &#39;./style.css&#39;;</code></p>
+<p><em>在CommonJS和AMD中都可以用import加载CSS文件</em></p>
+<h4 id="css-">CSS加载策略</h4>
+<ul>
+<li>所有CSS代码合并成一个文件</li>
+<li>懒加载: 在每个入口点包含各自的CSS文件, 发挥多重入口文件的优势.</li>
+</ul>
+<h4 id="-css-">使用内联样式取代CSS文件</h4>
+<pre><code>import React from &#39;react&#39;;
+
+var style = {
+  backgroundColor: &#39;# EEE&#39;
+};
+
+export default React.createClass({
+  render: function () {
+    return (
+      &lt;div style={style}&gt;
+        &lt;h1&gt;Hello world&lt;/h1&gt;
+      &lt;/div&gt;
+    )
+  }
+});
+</code></pre><h3 id="-css">自动刷新CSS</h3>
+<h3 id="-less-sass">加载LESS和SASS</h3>
+<h3 id="-images">内联images</h3>
+<ul>
+<li>安装url-loader</li>
+<li>添加loader</li>
+</ul>
+<pre><code>{
+  test: /\.(png|jpg)$/,
+  loader: &#39;url?limit=25000&#39;
+}
+</code></pre><h3 id="-fonts">内联fonts</h3>
+<p>和内联images一样, 使用url-loader加载字体</p>
+<h2 id="-">部署策略</h2>
+<h3 id="-">发布配置</h3>
+<ul>
+<li>在package.json中创建运行脚本</li>
+</ul>
+<pre><code>&quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;webpack-dev-server --devtool eval --progress --colors --hot --content-base build&quot;,
+    &quot;deploy&quot;: &quot;NODE_ENV=production webpack -p --config webpack.production.config.js&quot;
+}
+</code></pre><ul>
+<li>创建生产配置</li>
+</ul>
+<pre><code>var path = require(&#39;path&#39;);
+var node_modules_dir = path.resolve(__dirname, &#39;node_modules&#39;);
+
+var config = {
+  entry: path.resolve(__dirname, &#39;app/main.js&#39;),
+  output: {
+    path: path.resolve(__dirname, &#39;dist&#39;),
+    filename: &#39;bundle.js&#39;
+  },
+  module: {
+    loaders: [{
+      test: /\.js$/,
+
+      // There is not need to run the loader through
+      // vendors
+      // 这里再也不需通过任何第三方来加载
+      exclude: [node_modules_dir],
+      loader: &#39;babel&#39;
+    }]
+  }
+};
+
+module.exports = config;
+</code></pre><ul>
+<li>运行项目
+<code>npm run dev</code></li>
+</ul>
+<h3 id="-">合并成单文件</h3>
+<h4 id="-">使用单入口模式的情况:</h4>
+<ul>
+<li>应用很小</li>
+<li>很少会更新应用</li>
+<li>你不太关心初始加载时间</li>
+</ul>
+<h3 id="-">分离应用和第三方</h3>
+<h4 id="-">分离依赖的情况:</h4>
+<ul>
+<li>当你的第三方的体积达到整个应用的 20% 或者更高的时候;</li>
+<li>更新应用的时候只会更新很小的一部分;</li>
+<li>你没有那么关注初始加载时间，不过关注优化那些回访用户在你更新应用之后的体验;</li>
+<li>有手机用户.</li>
+</ul>
+<pre><code>var path = require(&#39;path&#39;);
+var webpack = require(&#39;webpack&#39;);
+var node_modules_dir = path.resolve(__dirname, &#39;node_modules&#39;);
+
+var config = {
+  entry: {
+    app: path.resolve(__dirname, &#39;app/main.js&#39;),
+
+    // Since react is installed as a node module, node_modules/react,
+    // we can point to it directly, just like require(&#39;react&#39;);
+    // 当 React 作为一个 node 模块安装的时候，
+    // 我们可以直接指向它，就比如 require(&#39;react&#39;)
+    vendors: [&#39;react&#39;]
+  },
+  output: {
+    path: path.resolve(__dirname, &#39;dist&#39;),
+    filename: &#39;app.js&#39;
+  },
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: [node_modules_dir],
+      loader: &#39;babel&#39;
+    }]
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(&#39;vendors&#39;, &#39;vendors.js&#39;)
+  ]
+};
+
+module.exports = config;
+</code></pre><h3 id="-">多重入口</h3>
+<h4 id="-">使用多重入口情况:</h4>
+<ul>
+<li>你的应用有多种不同的用户体验，但是他们共享了很多代码;</li>
+<li>你有一个使用更少组件的手机版本;</li>
+<li>你的应用是典型的权限控制，你不想为普通用户加载所有管理用户的代码.</li>
+</ul>
+<pre><code>var path = require(&#39;path&#39;);
+var webpack = require(&#39;webpack&#39;);
+var node_modules_dir = path.resolve(__dirname, &#39;node_modules&#39;);
+
+var config = {
+  entry: {
+    app: path.resolve(__dirname, &#39;app/main.js&#39;),
+    mobile: path.resolve(__dirname, &#39;app/mobile.js&#39;),
+    vendors: [&#39;react&#39;] // 其他库
+  },
+  output: {
+    path: path.resolve(__dirname, &#39;dist&#39;),
+    filename: &#39;[name].js&#39; // 注意我们使用了变量
+  },
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: [node_modules_dir],
+      loader: &#39;babel&#39;
+    }]
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(&#39;vendors&#39;, &#39;vendors.js&#39;)
+  ]
+};
+
+module.exports = config;
+</code></pre><h3 id="-">懒加载入口文件</h3>
+<pre><code>import React from &#39;react&#39;;
+import Feed from &#39;./Feed.js&#39;;
+
+class App extends React.Component {
+  constructor() {
+    this.state = { currentComponent: Feed };
+  }
+  openProfile() {
+    require.ensure([], () =&gt; {
+      var Profile = require(&#39;./Profile.js&#39;);
+      this.setState({
+        currentComponent: Profile
+      });
+    });
+  }
+  render() {
+   return (
+      return &lt;div&gt;{this.state.currentComponent()}&lt;/div&gt;
+    );
+  }
+}
+React.render(&lt;App/&gt;, document.body);
+</code></pre><h3 id="-"><strong>同构渲染</strong></h3>
+<pre><code>var webpack = require(&#39;webpack&#39;);
+var path = require(&#39;path&#39;);
+var node_modules_dir = path.join(__dirname, &#39;node_modules&#39;);
+
+var deps = [
+  &#39;react/dist/react.min.js&#39;,
+  &#39;react-router/dist/react-router.min.js&#39;,
+  &#39;moment/min/moment.min.js&#39;,
+  &#39;underscore/underscore-min.js&#39;,
+];
+
+var config = {
+  entry: [&#39;webpack/hot/dev-server&#39;, &#39;./app/main.js&#39;],
+  output: {
+    path: path.resolve(__dirname, &#39;./build&#39;),
+    filename: &#39;bundle.js&#39;
+  },
+  resolve: {
+    alias: {}
+  },
+  module: {
+    noParse: [],
+    loaders: []
+  }
+};
+
+// Run through deps and extract the first part of the path,
+// as that is what you use to require the actual node modules
+// in your code. Then use the complete path to point to the correct
+// file and make sure webpack does not try to parse it
+// 通过在第一部分路径的依赖和解压
+// 就是你像引用 node 模块一样引入到你的代码中
+// 然后使用完整路径指向当前文件，然后确认 Webpack 不会尝试去解析它
+
+deps.forEach(function (dep) {
+  var depPath = path.resolve(node_modules_dir, dep);
+  config.resolve.alias[dep.split(path.sep)[0]] = depPath;
+  config.module.noParse.push(depPath);
+});
+
+module.exports = config;
+</code></pre>
+</div>
+</body>
+</html>
