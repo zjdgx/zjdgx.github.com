@@ -5,8 +5,8 @@
     <meta name="author" content="zjdgx"/>
     <meta name="date" content="2016/05/21"/>
     <title>React Canvas Avatar</title>
-    <link rel="stylesheet" href="../../style/notes.css">
-	<link rel="stylesheet" href="../../javascript/component/react/canvasAvatar.css">
+    <link rel="stylesheet" href="../../css/notes.css">
+	<link rel="stylesheet" href="../../javascript/react/canvasAvatar.css">
 </head>
 <body class="red-style">
     <h1 class='style-border'>React Canvas Avatar</h1>
@@ -123,16 +123,16 @@ export default class zjdgxCanvasUpload extends React.Component {
       this.context.clearRect(0, 0, cw, ch);
       this.context.drawImage(this.image, this.state.position.x, this.state.position.y, cw * scale, ch * scale, 0, 0, cw, ch);
    };
-   
+
    cancel () {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
    };
-   
+
    save () {
       // the method to save canvas image: canvas.toDataURL('image/png')
-      var w = window.open('about:blank','image from canvas');  
-      
-      w.document.write("&lt;img src='" + this.canvas.toDataURL('image/png').replace("image/png", "image/octet-stream") + "' alt='from canvas'/&gt;");  
+      var w = window.open('about:blank','image from canvas');
+
+      w.document.write("&lt;img src='" + this.canvas.toDataURL('image/png').replace("image/png", "image/octet-stream") + "' alt='from canvas'/&gt;");
    };
 
    render () {
@@ -157,6 +157,6 @@ export default class zjdgxCanvasUpload extends React.Component {
    }
 }</pre>
 	</div>
-	<script type='text/javascript' src='../../javascript/component/react/CanvasAvatar.js'></script>
+	<script type='text/javascript' src='../../javascript/react/CanvasAvatar.js'></script>
 </body>
 </html>
