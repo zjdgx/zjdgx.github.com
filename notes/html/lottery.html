@@ -74,7 +74,7 @@
 		//旋转角度
 		var angles;
 		//可抽奖次数
-		var clickNum = 5;
+		var clickNum = 100;
 		//旋转次数
 		var rotNum = 0;
 		//中奖公告
@@ -98,7 +98,7 @@
 				setTimeout(function(){
 					alert(notice);
 					$('#tupBtn').removeAttr("disabled", true);
-				},6000);
+				}, 6000);
 			}
 			else{
 				alert("亲，抽奖次数已用光！");
