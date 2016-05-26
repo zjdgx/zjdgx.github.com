@@ -52,7 +52,7 @@ webpackJsonp([0],{
 
 	var _navContent2 = _interopRequireDefault(_navContent);
 
-	var _OneNoteNav = __webpack_require__(176);
+	var _OneNoteNav = __webpack_require__(177);
 
 	var _OneNoteNav2 = _interopRequireDefault(_OneNoteNav);
 
@@ -185,15 +185,11 @@ webpackJsonp([0],{
 
 	var _webpack2 = _interopRequireDefault(_webpack);
 
+	var _tools = __webpack_require__(176);
+
+	var _tools2 = _interopRequireDefault(_tools);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// framework
-
-
-	// database
-
-
-	var database = [].concat(_mysql2.default, _mongodb2.default);
 
 	// tools
 
@@ -207,7 +203,15 @@ webpackJsonp([0],{
 
 	// frontend
 
-	var tools = [].concat(_gulp2.default, _grunt2.default, _webpack2.default);
+
+	var database = [].concat(_mysql2.default, _mongodb2.default);
+
+	// framework
+
+
+	// database
+
+	var tools = [].concat(_tools2.default, _gulp2.default, _grunt2.default, _webpack2.default);
 	var backend = [].concat(_java2.default, _android2.default, _nodejs2.default);
 	var frontend = [].concat(_css2.default, _html2.default, _mobile2.default, _javascript2.default);
 	var framework = [].concat(_backbone2.default, _react2.default, _redux2.default);
@@ -632,6 +636,27 @@ webpackJsonp([0],{
 /***/ },
 
 /***/ 176:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var tools = {
+		title: 'Tools',
+		contents: [{
+			title: 'Git命令行',
+			date: '2016-05-26',
+			url: 'dist/notes/tools/git.html'
+		}]
+	};
+
+	exports.default = tools;
+
+/***/ },
+
+/***/ 177:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -646,9 +671,9 @@ webpackJsonp([0],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Utils = __webpack_require__(177);
+	var _Utils = __webpack_require__(178);
 
-	var _PageStyle = __webpack_require__(178);
+	var _PageStyle = __webpack_require__(179);
 
 	var _PageStyle2 = _interopRequireDefault(_PageStyle);
 
@@ -664,7 +689,7 @@ webpackJsonp([0],{
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Description: react home page nav list content item
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-	__webpack_require__(183);
+	__webpack_require__(184);
 
 	var OneNoteNav = function (_React$Component) {
 	   _inherits(OneNoteNav, _React$Component);
@@ -773,7 +798,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 177:
+/***/ 178:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -809,7 +834,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 178:
+/***/ 179:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -836,7 +861,7 @@ webpackJsonp([0],{
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Description: change page style
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-	__webpack_require__(179);
+	__webpack_require__(180);
 
 	var PageStyle = function (_React$Component) {
 	   _inherits(PageStyle, _React$Component);
@@ -880,14 +905,14 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 179:
+/***/ 180:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 183:
+/***/ 184:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
