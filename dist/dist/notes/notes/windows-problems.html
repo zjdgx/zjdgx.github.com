@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2016/01/25" />
+    <title>windows问题及解决方法收集</title>
+    <link rel="stylesheet" type="text/css" href="../../css/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>windows问题及解决方法收集</h1>
+<div class="content">
+    <h2 class='style-border'>windows重装服务</h2>
+    <code>
+sc delete tomcat8
+E:
+cd E:/dest/apache-tomcat-8.0.20/bin
+service install tomcat8
+pause</code>
+    <h2 class='style-border'>windows删除深目录及文件</h2>
+	<code>DEL /F /A /Q \\?\%1RD /S /Q \\?\%1</code>
+</div>
+</body>
+</html>

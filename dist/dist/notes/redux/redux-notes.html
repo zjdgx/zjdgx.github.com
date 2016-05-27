@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2016/01/13" />
+    <title>Redux Notes</title>
+    <link rel="stylesheet" type="text/css" href="../../css/notes.css" />
+</head>
+<body class="red-style">
+    <h1 class='style-border'>Redux Notes</h1>
+    <ol class="content">
+		<li>
+            <h2 class='style-border'>(2016/01/14)redux action与props绑定:</h2>
+            <pre>
+const {dispatch} = this.props;
+
+&lt;Compnent {...bindActionCreators(ActionName, dispatch)} /&gt;
+</pre>
+			<p>在Component中可以直接遍历props属性查看action中定义的方法, 可以直接调用其中的方法发送请求</p>
+        </li>
+        <li>
+            <h2 class='style-border'>(2016/01/13)React.Component设置state:</h2>
+            <pre>
+constructor (props) {
+    super(props);
+    this.state = {
+        key: props.value
+    }
+}</pre>
+        </li>
+    </ol>
+</body>
+</html>

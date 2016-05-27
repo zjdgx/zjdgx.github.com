@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2016/01/19">
+    <title>页面布局</title>
+    <link rel="stylesheet" href="../../css/notes.css" />
+	<style>
+		.layout-left-fixed {
+			height: 80px;
+			overflow: hidden;
+		}
+		.layout-left-fixed .left {
+			float: left;
+			width: 200px;
+			height: 100%;
+			_margin-right: -3px;/*解决IE6 float margin 3像素BUG*/
+			background-color: #23c778;
+		}
+		.layout-left-fixed .right {
+			height: 100%;
+			margin-left: 200px;
+			_margin-left: 197px;/*解决IE6 float margin 3像素BUG*/
+			background-color: #464854;
+		}
+	</style>
+</head>
+<body class="red-style">
+    <h1 class='style-border'>页面布局</h1>
+    <ul class="content">
+        <li>
+			<h2 class='style-border'>1. (2016/01/19)左边固定，右边自适应:(兼容IE6) </h2>
+			<div class="demo layout-left-fixed">
+				<div class="left">固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px</div>
+				<div class="right">自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度</div>
+			</div>
+		</li>
+    </ul>
+</body>
+</html>
