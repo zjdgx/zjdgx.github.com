@@ -1,0 +1,48 @@
+@import '../../style/base.styl'
+
+html, body, .home, .content, .left-sidebar
+   height 100%
+.left-sidebar
+   max-width 160px
+   background-color #7FFFD4
+.profile
+   padding 10px 17px
+   text-align center
+   img
+     border-radius(50%)
+     transform(rotate(0deg))
+     transition(1s ease-in-out)
+     &:hover
+       transform(rotate(360deg))
+   p
+      text-align left
+.nav-list
+   bottom 0
+   top 161px
+   width 160px
+   position absolute
+   overflow-x hidden
+.nav-item
+   height 30px
+   cursor pointer
+   line-height 30px
+   padding-left 20px
+   &.cur
+      background-color #C1E4DD
+.nav-content
+   top 0
+   bottom 0
+   left 160px
+   width 160px
+   position absolute
+   background-color #C1E4DD
+   li
+      height 30px
+      cursor pointer
+      padding 0 20px
+      overflow hidden
+      line-height 30px
+      white-space nowrap
+      text-overflow ellipsis
+      &.cur
+         background-color #F0F8FF

@@ -1,0 +1,53 @@
+@import "~font-awesome/css/font-awesome.css"
+@import '~normalize.css/normalize.css'
+
+body
+   font 12px/1.5 'Courier New', 'Microsoft Yahei'
+
+html, body, p, h1, h2, h3, ul, ol
+   margin 0
+   padding 0
+h1, h2, h3
+   font-weight normal
+li
+   list-style none
+opacity(n)
+  -khtml-opacity n
+  -moz-opacity n
+  opacity n
+  if support-for-ie
+    -ms-filter unquote('"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')"')
+    filter unquote('alpha(opacity=' + round(n * 100) + ')')
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+iframe
+   top 0
+   left 320px
+   height 100%
+   position absolute
+   width calc(100% - 320px)
+
+transition(value)
+   -webkit-transition value
+   -moz-transition value
+   -ms-transition value
+   -o-transition value
+   transition value
+
+transform(value)
+   -webkit-transform value
+   -moz-transform value
+   -ms-transform value
+   -o-transform value
+   transform value
+border-radius()
+   -webkit-border-radius arguments
+   -moz-border-radius arguments
+   border-radius arguments

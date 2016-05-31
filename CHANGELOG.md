@@ -1,10 +1,31 @@
+##2016/05/31
+
+- 增加[tar打包多个目录](http://zjdgx.github.io/nodejs.html)
+- 将homepage的grunt+backbone版本与webpack+react版本整合
+
+##2016/05/26
+
+- 增加[Git命令行](http://zjdgx.github.io/gruntVersion/tools.20160524.html)
+
+##2016/05/21
+
+- 增加[react canvas头像上传](http://zjdgx.github.io/gruntVersion/react.20160524.html)
+
+##2016/05/08
+
+- 增加[localStorage](http://zjdgx.github.io/gruntVersion/javascript.20160524.html)
+
+##2016/04/14
+
+- 增加[react开发笔记](http://zjdgx.github.io/gruntVersion/react.20160524.html)
+
 ##2016/03/30
 
-- 增加[删除node_modules文件夹代码](http://zjdgx.github.io/nodejs.html)
+- 增加[删除node_modules文件夹代码](http://zjdgx.github.io/gruntVersion/nodejs.20160524.html)
 
 ##2016/03/24
 
-- 增加[node websocket](http://zjdgx.github.io/javascript.html)
+- 增加[node websocket](http://zjdgx.github.io/gruntVersion/javascript.20160524.html)
 
 ##2016/03/21
 
@@ -15,6 +36,7 @@
 - homepage增加皮肤设置
 
 ###problem
+
 - iframe里面的内容change事件没监听到, 导致内容iframe的皮肤不能同步更新
 
 解决方案: 在每个内容页面增加检测localStorage的脚本, 然后更新皮肤

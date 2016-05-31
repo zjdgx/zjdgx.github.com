@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/05/26"/>
+    <title>Git命令行</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>Git命令行</h1>
+<div class="content">
+   <h2 class='style-border'>(2016/05/26)命令行uninstall</h2>
+   <pre>
+for package in `ls node_modules`; do npm uninstall $package; done;
+</pre>
+	<h2 class='style-border'>(2016/05/24)命令行打包项目</h2>
+	<pre>
+tar -cvf xxx.tar.gz --exclude=node_modules xxx
+</pre>
+	<h2 class='style-border'>(2016/05/20)删除untracked files</h2>
+	<pre>
+git clean -df
+</pre>
+	<h2 class='style-border'>(2016/05/10)npm设置安装源</h2>
+	<pre>
+npm install --registry=https://registry.npm.taobao.org
+</pre>
+	<h2 class='style-border'>(2016/05/01)npm删除cache</h2>
+	<pre>
+npm cache clean
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@import '../../style/base.styl'
+
+.navList
+   color #fff
+   width 240px
+   background #2b3946
+   border-right 1px solid #ccc
+.logo
+   padding 10px 0
+   text-align center
+   img
+      width 120px
+      border-radius 50%
+
+/* sub nav item style
+----------------------------*/
+.item2
+   .fa-angle-right, .fa-angle-down
+      float right
+      line-height 1.5em
+   .content-item-container
+      height 0
+      overflow hidden
+      li
+         text-indent 30px
+         a
+            color #fff
+            text-decoration none 
+   .expanded
+      height auto
+      transition height 3s
+   h2
+      cursor pointer   
+      padding 0 10px
+      text-indent 10px
+      &:hover
+         text-indent 5px
+         background-color #3b4956
+         transition all 0.2s ease-in-out
+   &.active h2
+      text-indent 5px
+      background-color #3b4956
