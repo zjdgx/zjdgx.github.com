@@ -1,6 +1,11 @@
+##2016/06/02
+
+- 增加[css翻转动画](http://zjdgx.github.io/index.html)
+- 使用module.exports保存notes数据
+
 ##2016/05/31
 
-- 增加[tar打包多个目录](http://zjdgx.github.io/nodejs.html)
+- 增加[tar打包多个目录](http://zjdgx.github.io/nodejs.20160524.html)
 - 将homepage的grunt+backbone版本与webpack+react版本整合
 
 ##2016/05/26

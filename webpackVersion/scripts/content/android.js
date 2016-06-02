@@ -1,7 +1,5 @@
-const android = {
+module.exports = {
 	title: 'android',
 	contents: [
 	]
 };
-
-export default android;

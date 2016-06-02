@@ -1,4 +1,4 @@
-const webpack = {
+module.exports= {
 	title: 'Webpack',
 	contents: [
 		{
@@ -14,5 +14,3 @@ const webpack = {
 		}
 	]
 };
-
-export default webpack;

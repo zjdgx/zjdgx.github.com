@@ -5,7 +5,6 @@ var path = require('path'),
 		CopyWebpackPlugin = require('copy-webpack-plugin'),
 		HtmlWebpackPlugin = require('html-webpack-plugin'),
 		CleanWebpackPlugin = require('clean-webpack-plugin'),
-		CommonsChunkPlugin
 		ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -17,6 +16,8 @@ module.exports = {
 		path: './dist',
 		filename: 'javascript/[name].[chunkhash:8].js'
 	},
+	// 使用source-map，方便开发测试
+	devtool: 'source-map',
 	module: {
 		loaders: [
 			{

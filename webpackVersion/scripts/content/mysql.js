@@ -1,4 +1,4 @@
-const mysql = {
+module.exports = {
 	title: 'MySQL',
 	contents: [
 		{
@@ -9,5 +9,3 @@ const mysql = {
 		}
 	]
 };
-
-export default mysql;

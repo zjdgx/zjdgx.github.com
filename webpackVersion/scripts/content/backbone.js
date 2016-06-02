@@ -1,7 +1,5 @@
-const backbone = {
+module.exports = {
 	title: 'Backbone',
 	contents: [
 	]
 };
-
-export default backbone;

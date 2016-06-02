@@ -1,4 +1,4 @@
-const tools = {
+module.exports = {
 	title: 'Tools',
 	contents: [
 		{
@@ -18,5 +18,3 @@ const tools = {
 		}
 	]
 };
-
-export default tools;

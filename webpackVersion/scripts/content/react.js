@@ -1,4 +1,4 @@
-const react = {
+module.exports = {
 	title: 'React',
 	contents: [
 		{
@@ -15,5 +15,3 @@ const react = {
 		}
 	]
 };
-
-export default react;

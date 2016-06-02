@@ -1,6 +1,11 @@
-const css = {
+module.exports = {
 	title: 'CSS',
 	contents: [
+		{
+			title: 'CSS翻转动画',
+			date: '2016-06-02',
+			url: 'static/notes/css/animation-reverse.html'
+		},
 		{
 			title: '页面布局',
 			date: '2016-01-19',
@@ -23,5 +28,3 @@ const css = {
 		}
 	]
 };
-
-export default css;

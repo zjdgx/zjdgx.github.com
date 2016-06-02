@@ -1,7 +1,5 @@
-const java = {
+module.exports = {
 	title: 'java',
 	contents: [
 	]
 };
-
-export default java;

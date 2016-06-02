@@ -1,4 +1,4 @@
-const html = {
+module.exports = {
 	title: 'HTML',
 	contents: [
 		{
@@ -8,5 +8,3 @@ const html = {
 		}
 	]
 };
-
-export default html;

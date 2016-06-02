@@ -1,4 +1,4 @@
-const javascript = {
+module.exports = {
 	title: 'Javascript',
 	contents: [
 		{
@@ -68,5 +68,3 @@ const javascript = {
 		}
 	]
 };
-
-export default javascript;

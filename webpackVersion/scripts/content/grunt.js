@@ -1,4 +1,4 @@
-const grunt = {
+module.exports = {
 	title: 'Grunt',
 	contents: [
 		{
@@ -9,5 +9,3 @@ const grunt = {
 		}
 	]
 };
-
-export default grunt;

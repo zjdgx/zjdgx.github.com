@@ -1,4 +1,4 @@
-const nodejs = {
+module.exports = {
 	title: 'Nodejs',
 	contents: [
 		{
@@ -33,5 +33,3 @@ const nodejs = {
 		}
 	]
 };
-
-export default nodejs;

@@ -1,4 +1,4 @@
-const mongodb = {
+module.exports = {
 	title: 'MongoDB',
 	contents: [
 		{
@@ -9,5 +9,3 @@ const mongodb = {
 		}
 	]
 };
-
-export default mongodb;

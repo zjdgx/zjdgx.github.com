@@ -1,4 +1,4 @@
-const gulp = {
+module.exports = {
 	title: 'Gulp',
 	contents: [
 		{
@@ -9,5 +9,3 @@ const gulp = {
 		}
 	]
 };
-
-export default gulp;

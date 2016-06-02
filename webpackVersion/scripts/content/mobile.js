@@ -1,4 +1,4 @@
-const mobile = {
+module.exports = {
 	title: 'Mobile',
 	contents: [
 		{
@@ -8,5 +8,3 @@ const mobile = {
 		}
 	]
 };
-
-export default mobile;

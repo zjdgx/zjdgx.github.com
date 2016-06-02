@@ -1,4 +1,4 @@
-const redux = {
+module.exports = {
 	title: 'Redux',
 	contents: [
 		{
@@ -15,5 +15,3 @@ const redux = {
 		}
 	]
 };
-
-export default redux;
