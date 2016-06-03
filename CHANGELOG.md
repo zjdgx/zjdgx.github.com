@@ -1,3 +1,8 @@
+##2016/06/03
+
+- 增加[javascript删除数组中重复元素](http://zjdgx.github.io/index.html)
+- 增加eslint, 使用方法: `node ./node_modules/eslint/bin/eslint.js xxx/xxx.js`
+
 ##2016/06/02
 
 - 增加[css翻转动画](http://zjdgx.github.io/index.html)

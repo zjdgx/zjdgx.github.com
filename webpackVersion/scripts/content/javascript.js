@@ -2,6 +2,11 @@ module.exports = {
 	title: 'Javascript',
 	contents: [
 		{
+			title: '删除数组重复元素',
+			date: '2016-06-03',
+			url: 'static/notes/javascript/delete-repeat-value-in-array.html'
+		},
+		{
 			title: 'LocalStorage, SessionStorage',
 			date: '2016-05-08',
 			url: 'static/notes/javascript/storage.html',
@@ -37,9 +42,9 @@ module.exports = {
 			url: 'static/notes/javascript/number2moneyUppercase.html'
 		},
 		{
-			title: '删除数组重复元素',
+			title: '删除数组指定值元素',
 			date: '2014-07-02',
-			url: 'static/notes/javascript/deleteRepeatArr.html'
+			url: 'static/notes/javascript/delete-value-in-array.html'
 		},
 		{
 			title: 'JavaScript十进制转十六进制',

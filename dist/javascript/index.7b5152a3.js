@@ -267,10 +267,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var html = {
+	module.exports = {
 		title: 'HTML',
 		contents: [{
 			title: 'Canvas抽奖游戏',
@@ -278,8 +275,6 @@ webpackJsonp([0],{
 			url: 'static/notes/html/lottery.html'
 		}]
 	};
-	
-	exports.default = html;
 
 /***/ },
 
@@ -288,10 +283,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var mobile = {
+	module.exports = {
 		title: 'Mobile',
 		contents: [{
 			title: '移动开发中事件触发顺序',
@@ -299,8 +291,6 @@ webpackJsonp([0],{
 			url: 'static/notes/mobile/event-trigger-sequence-in-mobile.html'
 		}]
 	};
-	
-	exports.default = mobile;
 
 /***/ },
 
@@ -309,12 +299,13 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var javascript = {
+	module.exports = {
 		title: 'Javascript',
 		contents: [{
+			title: '删除数组重复元素',
+			date: '2016-06-03',
+			url: 'static/notes/javascript/delete-repeat-value-in-array.html'
+		}, {
 			title: 'LocalStorage, SessionStorage',
 			date: '2016-05-08',
 			url: 'static/notes/javascript/storage.html'
@@ -343,9 +334,9 @@ webpackJsonp([0],{
 			date: '2016-01-19',
 			url: 'static/notes/javascript/number2moneyUppercase.html'
 		}, {
-			title: '删除数组重复元素',
+			title: '删除数组指定值元素',
 			date: '2014-07-02',
-			url: 'static/notes/javascript/deleteRepeatArr.html'
+			url: 'static/notes/javascript/delete-value-in-array.html'
 		}, {
 			title: 'JavaScript十进制转十六进制',
 			date: '2014-03-27',
@@ -368,8 +359,6 @@ webpackJsonp([0],{
 			url: 'static/notes/javascript/array-functions.html'
 		}]
 	};
-	
-	exports.default = javascript;
 
 /***/ },
 
@@ -378,15 +367,10 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var java = {
+	module.exports = {
 		title: 'java',
 		contents: []
 	};
-	
-	exports.default = java;
 
 /***/ },
 
@@ -395,10 +379,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var nodejs = {
+	module.exports = {
 		title: 'Nodejs',
 		contents: [{
 			title: '删除node_modules文件夹',
@@ -427,8 +408,6 @@ webpackJsonp([0],{
 			des: '高性能Nodejs'
 		}]
 	};
-	
-	exports.default = nodejs;
 
 /***/ },
 
@@ -437,15 +416,10 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var android = {
+	module.exports = {
 		title: 'android',
 		contents: []
 	};
-	
-	exports.default = android;
 
 /***/ },
 
@@ -454,10 +428,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var mysql = {
+	module.exports = {
 		title: 'MySQL',
 		contents: [{
 			title: 'MySQL开发Note',
@@ -466,8 +437,6 @@ webpackJsonp([0],{
 			des: 'MySQL开发Note'
 		}]
 	};
-	
-	exports.default = mysql;
 
 /***/ },
 
@@ -476,10 +445,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var mongodb = {
+	module.exports = {
 		title: 'MongoDB',
 		contents: [{
 			title: 'MongoDB开发Note',
@@ -488,8 +454,6 @@ webpackJsonp([0],{
 			des: 'MongoDB开发Note'
 		}]
 	};
-	
-	exports.default = mongodb;
 
 /***/ },
 
@@ -498,10 +462,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var react = {
+	module.exports = {
 		title: 'React',
 		contents: [{
 			title: 'react canvas avatar',
@@ -515,8 +476,6 @@ webpackJsonp([0],{
 			des: 'react开发笔记'
 		}]
 	};
-	
-	exports.default = react;
 
 /***/ },
 
@@ -525,10 +484,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var redux = {
+	module.exports = {
 		title: 'Redux',
 		contents: [{
 			title: 'redux开发笔记',
@@ -542,8 +498,6 @@ webpackJsonp([0],{
 			des: 'redux-router'
 		}]
 	};
-	
-	exports.default = redux;
 
 /***/ },
 
@@ -552,15 +506,10 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var backbone = {
+	module.exports = {
 		title: 'Backbone',
 		contents: []
 	};
-	
-	exports.default = backbone;
 
 /***/ },
 
@@ -569,10 +518,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var gulp = {
+	module.exports = {
 		title: 'Gulp',
 		contents: [{
 			title: 'gulp、grunt对require配置比较',
@@ -581,8 +527,6 @@ webpackJsonp([0],{
 			des: 'gulp、grunt对require配置比较'
 		}]
 	};
-	
-	exports.default = gulp;
 
 /***/ },
 
@@ -591,10 +535,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var grunt = {
+	module.exports = {
 		title: 'Grunt',
 		contents: [{
 			title: 'gulp、grunt对require配置比较',
@@ -603,8 +544,6 @@ webpackJsonp([0],{
 			des: 'gulp、grunt对require配置比较'
 		}]
 	};
-	
-	exports.default = grunt;
 
 /***/ },
 
@@ -613,10 +552,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var webpack = {
+	module.exports = {
 		title: 'Webpack',
 		contents: [{
 			title: 'Webpack introduction',
@@ -629,8 +565,6 @@ webpackJsonp([0],{
 			des: 'Webpack概述'
 		}]
 	};
-	
-	exports.default = webpack;
 
 /***/ },
 
@@ -639,10 +573,7 @@ webpackJsonp([0],{
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var tools = {
+	module.exports = {
 		title: 'Tools',
 		contents: [{
 			title: '使用tar打包多个目录',
@@ -658,8 +589,6 @@ webpackJsonp([0],{
 			url: 'static/notes/tools/web-tool-2015.html'
 		}]
 	};
-	
-	exports.default = tools;
 
 /***/ },
 
@@ -706,6 +635,7 @@ webpackJsonp([0],{
 	
 	      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(OneNoteNav).call(this, props));
 	
+	      console.log('arguments: ' + JSON.stringify(arguments));
 	      _this.state = {
 	         curIndex: 0,
 	         contentIndex: 0,
@@ -927,4 +857,4 @@ webpackJsonp([0],{
 /***/ }
 
 });
-//# sourceMappingURL=index.3389547f.js.map
+//# sourceMappingURL=index.7b5152a3.js.map

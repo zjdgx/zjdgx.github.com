@@ -16,6 +16,10 @@ module.exports = {
 		path: './dist',
 		filename: 'javascript/[name].[chunkhash:8].js'
 	},
+	eslint: {
+     configFile: '.eslintrc',
+     emitWarnings: true
+   },
 	// 使用source-map，方便开发测试
 	devtool: 'source-map',
 	module: {
@@ -32,10 +36,12 @@ module.exports = {
 				test: /\.(css|styl)/,
 				loader: ExtractTextPlugin.extract('style', '!css!stylus')
 			},
+			/* eslint-disable */
 			{
 				test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
 				loader: 'url'
 			}
+			/* eslint-disable */
 		]
 	},
 	plugins: [

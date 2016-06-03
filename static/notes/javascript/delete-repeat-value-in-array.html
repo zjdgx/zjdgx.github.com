@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/06/03">
+    <title>删除数组重复元素 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body class="red-style">
+    <h1 class='style-border'>删除数组重复元素</h1>
+	<div class="content">
+	<pre class='prettyprint'>
+Array.prototype.unique = function () {
+	// 删除数组重复元素
+	for (var i = 0, len = this.length; i &lt; len; i++) {
+		if (this.indexOf(this[i], i + 1) &gt; 0) {
+			this.splice(this.indexOf(this[i], i + 1), 1);
+			i -= 1;
+			len -= 1;
+		}
+	}
+
+	return this;
+}
+
+[1,2,5,3,4,1,2,3,1,2,3].unique()// 1,2,5,3,4</pre>
+	</div>
+</body>
+</html>

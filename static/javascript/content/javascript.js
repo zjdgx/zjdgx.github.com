@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: '删除数组重复元素',
+				date: '2016-06-03',
+				url: '../static/notes/javascript/delete-repeat-value-in-array.html',
+				des: '删除数组重复元素'
+			},
+			{
 				title: 'LocalStorage, SessionStorage',
 				date: '2016-05-08',
 				url: '../static/notes/javascript/storage.html',
@@ -51,9 +57,9 @@ define(['Backbone'], function (Backbone) {
 				des: '用JavaScript将数字转换为大写金额'
 			},
 			{
-				title: '删除数组重复元素',
+				title: '删除数组指定值元素',
 				date: '2014-07-02',
-				url: '../static/notes/javascript/deleteRepeatArr.html',
+				url: '../static/notes/javascript/delete-value-in-array.html',
 				des: '删除数组中包含指定值的元素'
 			},
 			{
