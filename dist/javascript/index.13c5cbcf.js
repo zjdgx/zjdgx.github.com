@@ -302,6 +302,10 @@ webpackJsonp([0],{
 	module.exports = {
 		title: 'Javascript',
 		contents: [{
+			title: 'javascript闭包详解',
+			date: '2016-06-06',
+			url: 'static/notes/javascript/javascript-closure.html'
+		}, {
 			title: '删除数组重复元素',
 			date: '2016-06-03',
 			url: 'static/notes/javascript/delete-repeat-value-in-array.html'
@@ -635,7 +639,6 @@ webpackJsonp([0],{
 	
 	      var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(OneNoteNav).call(this, props));
 	
-	      console.log('arguments: ' + JSON.stringify(arguments));
 	      _this.state = {
 	         curIndex: 0,
 	         contentIndex: 0,
@@ -647,7 +650,7 @@ webpackJsonp([0],{
 	   _createClass(OneNoteNav, [{
 	      key: 'changeNavContent',
 	      value: function changeNavContent(type, index) {
-	         var cur = this.props.NavList.find(function (item, index) {
+	         var cur = this.props.NavList.find(function (item) {
 	            return item.title == type;
 	         });
 	
@@ -857,4 +860,4 @@ webpackJsonp([0],{
 /***/ }
 
 });
-//# sourceMappingURL=index.7b5152a3.js.map
+//# sourceMappingURL=index.13c5cbcf.js.map

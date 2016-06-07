@@ -25,7 +25,7 @@ export default class OneNoteNav extends React.Component {
    };
 
    changeNavContent (type, index) {
-      const cur = this.props.NavList.find((item, index) => {
+      const cur = this.props.NavList.find((item) => {
             return item.title == type
          });
 

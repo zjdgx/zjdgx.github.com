@@ -9,6 +9,12 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'javascript闭包详解',
+				date: '2016-06-06',
+				url: '../static/notes/javascript/javascript-closure.html',
+				des: 'javascript闭包详解'
+			},
+			{
 				title: '删除数组重复元素',
 				date: '2016-06-03',
 				url: '../static/notes/javascript/delete-repeat-value-in-array.html',
