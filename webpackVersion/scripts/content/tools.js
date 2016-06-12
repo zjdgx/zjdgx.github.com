@@ -2,6 +2,11 @@ module.exports = {
 	title: 'Tools',
 	contents: [
 		{
+			title: 'linux命令',
+			date: '2016-06-12',
+			url: 'static/notes/tools/linux.html'
+		},
+		{
 			title: '使用tar打包多个目录',
 			date: '2016-05-31',
 			url: 'static/notes/tools/tar.html'

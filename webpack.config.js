@@ -21,7 +21,7 @@ module.exports = {
      emitWarnings: true
    },
 	// 使用source-map，方便开发测试
-	devtool: 'source-map',
+	// devtool: 'source-map',
 	module: {
 		loaders: [
 			{
@@ -36,7 +36,7 @@ module.exports = {
 				test: /\.(css|styl)/,
 				loader: ExtractTextPlugin.extract('style', '!css!stylus')
 			},
-			/* eslint-disable */
+			/* eslint-disable
 			{
 				test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
 				loader: 'url'
@@ -46,12 +46,12 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.NoErrorsPlugin(),
-		/*new webpack.optimize.UglifyJsPlugin({
+		new webpack.optimize.UglifyJsPlugin({
 			// js压缩: 已经压缩过的文件是否还会被压缩？
 			compress: {
 				warnings: false
 			}
-		}),*/
+		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			// 提取公共模块
 			name: ['react'],

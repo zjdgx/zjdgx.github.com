@@ -1,3 +1,13 @@
+##2016/06/12
+
+- 增加[linx命令行](http://zjdgx.github.io/)
+- 在git命令中添加忽略mode, 使用方法: `git config core.filemode false`
+
+##2016/06/07
+
+- 在resume中添加统计代码
+- 在javascript中添加闭包
+
 ##2016/06/03
 
 - 增加[javascript删除数组中重复元素](http://zjdgx.github.io/index.html)
