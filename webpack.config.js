@@ -63,6 +63,9 @@ module.exports = {
 			verbose: true,
 			root: __dirname// webpack.config file path.
 		}),
+		new webpack.ProvidePlugin({
+			'notes.css': './static/style/common/notes.styl'
+		}),
 		new ExtractTextPlugin('css/[name].[chunkhash:8].css'),
 		new HtmlWebpackPlugin({
 			className: 'wrapper',
