@@ -1,10 +1,18 @@
+##2016/07/07
+
+- 增加[Java批量修改照片](http://zjdgx.github.io/static/notes/java/batch-rename-photo.html)
+
+##2016/07/05
+
+- 增加[webstorm破解](http://zjdgx.github.io/static/notes/tools/webstorm.2016.html)
+
 ##2016/06/13
 
 - 增加[tar加密解密](http://zjdgx.github.io/static/notes/tools/tar.html)
 
 ##2016/06/12
 
-- 增加[linx命令行](http://zjdgx.github.io/)
+- 增加[linux命令行](http://zjdgx.github.io/)
 - 在git命令中添加忽略mode, 使用方法: `git config core.filemode false`
 
 ##2016/06/07

@@ -18,9 +18,9 @@ export default class OneNoteNav extends React.Component {
    constructor (props) {
       super(props);
       this.state = {
-         curIndex: 0,
-         contentIndex: 0,
-         curContent: props.NavList[0]
+         curIndex: -1,
+         contentIndex: -1,
+         curContent: null
       };
    };
 
@@ -49,7 +49,7 @@ export default class OneNoteNav extends React.Component {
 
    render () {
       return (
-         <div className='left-sidebar style-bg'>
+         <div className={'left-sidebar style-bg' + (this.state.curContent ? '' : ' no-content')}>
             <div className='profile'>
                <img className='avatar' src='static/image/logo.png' width='100' height='100' />
                <p>&nbsp;&nbsp;&nbsp;QQ: 373687921</p>
@@ -64,16 +64,24 @@ export default class OneNoteNav extends React.Component {
                })
             }
             </ul>
-            <ul className='nav-content sub-nav-bg'>
-            {
-               this.state.curContent.contents.map((item, index) => {
-                  return <li key={index}
-                           title={item.title}
-                           className={this.state.contentIndex == index ? 'cur': ''}
-                           onClick={this.changeContent.bind(this, item.url, index)}>{item.title}</li>
-               })
-            }
-            </ul>
+			{
+				(function() {
+					if (this.state.curContent) {
+						return (
+							<ul className='nav-content sub-nav-bg'>
+							{
+							   this.state.curContent.contents.map((item, index) => {
+								  return <li key={index}
+										   title={item.title}
+										   className={this.state.contentIndex == index ? 'cur': ''}
+										   onClick={this.changeContent.bind(this, item.url, index)}>{item.title}</li>
+							   })
+							}
+							</ul>
+						)
+					}
+				}.bind(this))()
+			}
          </div>
       );
    };

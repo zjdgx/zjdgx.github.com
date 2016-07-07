@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2015/08/25" />
+    <title>批量修改照片名字 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css">
+</head>
+<body class="red-style">
+    <h1 class="title style-border">批量修改照片名字(<a href='../../source/javaPhotoUtil.zip'>下载地址</a>)</h1>
+    <div class="content">
+		<p>照片名字批量修改, 格式为: YYYY-MM-DD-HH-mm-SS.suffix<br/><br/>
+
+		先使用ImageMetadataReader读取照片的拍摄日期<br/><br/>
+
+		如果获取不到拍摄日期, 则使用BasicFileAttributeView, Files.getFileAttributeView获取属性信息<br/><br/>
+
+		然后用BasicFileAttributeView.readAttributes获取BasicFileAttributes<br/><br/>
+
+		最后使用BasicFileAttributes.creationTime()获取创建时间、lastAccessTime()获取最后访问时间、lastModifiedTime()获取最后修改时间<br/><br/>
+
+		然后返回三个时间中的最小值
+		</p>
+        <p>代码如下:</p>
+        <pre class="prettyprint">
+package zjdgx;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributeView;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.drew.imaging.ImageMetadataReader;
+import com.drew.imaging.ImageProcessingException;
+import com.drew.metadata.Directory;
+import com.drew.metadata.Metadata;
+import com.drew.metadata.Tag;
+
+/**
+ * 批量修改照片名字, 格式为: YYYY-MM-DD-HH-mm-SS.suffix
+ * @author ZJDGX
+ * @since 2016-07-07
+ * @contact QQ373687921
+ */
+public class BatchRenamePhoto {
+
+	public static void main(String[] args) throws Exception {
+		scanPhotoDir("E:\\zjdgx\\photo");
+	}
+
+	private static void scanPhotoDir(String dir) {
+		File path = new File(dir);
+		File[] files = path.listFiles();
+
+		for (File file : files) {
+			renameFile(file.getAbsolutePath());
+		}
+	}
+
+	private static void renameFile(String file) {
+		try {
+			String name = getDateTimeString(file);
+			Path source = Paths.get(file);
+
+			try {
+				Files.move(source, source.resolveSibling(name));
+			} catch (FileAlreadyExistsException e) {
+				int index = 1;
+				String replacement = (index > 9 ? "-" + index : "-0" + index) + ".";
+				String targetName = file.substring(0, file.lastIndexOf("\\") + 1) + name.replace(".", replacement);
+				File target = new File(targetName);
+				
+				while(target.exists()) {
+					index++;
+					replacement = (index > 9 ? "-" + index : "-0" + index) + ".";
+					targetName = file.substring(0, file.lastIndexOf("\\") + 1) + name.replace(".", replacement);
+					target = new File(targetName);
+				}
+				
+				Files.move(source, source.resolveSibling(name.replace(".", replacement)));
+			}
+
+			System.out.println(name);
+		} catch (ImageProcessingException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 获取照片的时间
+	 * 
+	 * @param file
+	 * @return YYYY-MM-dd-HH-mm-ss.后缀名
+	 * @throws ImageProcessingException
+	 * @throws Exception
+	 *             先获取照片的拍摄时间, 如果没获取到, 就获取照片的创建时间和修改时间, 然后返回两者中较小的一个
+	 */
+	private static String getDateTimeString(String file)
+			throws ImageProcessingException, Exception {
+
+		Path path = Paths.get(file);
+		String suffix = file.substring(file.lastIndexOf("."));
+		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd-HH-mm-ss");
+
+		String date = getPhotoOriginalTime(new File(file));
+
+		if (date.length() > 0) {
+			return date.replaceAll("\\D", "-") + suffix;
+		} else {
+			try {
+				BasicFileAttributeView bv = Files.getFileAttributeView(path,
+						BasicFileAttributeView.class);
+				BasicFileAttributes attr = bv.readAttributes();
+
+				Date created = new Date(attr.creationTime().toMillis());
+				Date access = new Date(attr.lastAccessTime().toMillis());
+				Date modify = new Date(attr.lastModifiedTime().toMillis());
+
+				if (created.before(modify)) {
+					if (created.before(access)) {
+						return sdf.format(created) + suffix;
+					} else {
+						return sdf.format(access) + suffix;
+					}
+				} else {
+					if (modify.before(access)) {
+						return sdf.format(modify) + suffix;
+					} else {
+						return sdf.format(access) + suffix;
+					}
+				}
+			} catch (IOException e) {
+				System.err.println(e);
+			}
+		}
+
+		return "";
+	}
+
+	/**
+	 * 获取照片的拍摄时间
+	 * 
+	 * @param file
+	 * @return
+	 * @throws ImageProcessingException
+	 * @throws Exception
+	 */
+	private static String getPhotoOriginalTime(File file)
+			throws ImageProcessingException, Exception {
+		Metadata metadata = ImageMetadataReader.readMetadata(file);
+		for (Directory directory : metadata.getDirectories()) {
+			for (Tag tag : directory.getTags()) {
+				String tagName = tag.getTagName(); // 标签名
+				String desc = tag.getDescription(); // 标签信息
+
+				if (tagName.equals("Date/Time Original")) {
+					return desc;
+				}
+			}
+		}
+
+		return "";
+	}
+
+}</pre>
+    </div>
+</body>
+</html>

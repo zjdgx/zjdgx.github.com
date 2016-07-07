@@ -13,7 +13,7 @@ export default class APPView extends React.Component {
    constructor () {
       super();
       this.state = {
-         contentUrl: Contents[0].contents[0].url
+         contentUrl: null
       };
    };
 
@@ -25,7 +25,17 @@ export default class APPView extends React.Component {
       return (
          <div className='content'>
       		<NavList setContentUrl={this.setContentUrl.bind(this)} NavList={Contents}/>
-            <iframe src={this.state.contentUrl} frameBorder="0" scrolling="0" marginHeight="0" marginWidth="0"></iframe>
+			{
+				(function () {
+					if (this.state.contentUrl) {
+						return <iframe src={this.state.contentUrl} frameBorder="0" scrolling="0" marginHeight="0" marginWidth="0"></iframe>
+					} else {
+						return <div className='layout-center'>
+							<img src='static/image/china-map.png' />
+						</div>
+					}
+				}.bind(this))()
+			}
       	</div>
       )
    };

@@ -31,11 +31,11 @@ do
     fi
 done
 </pre>
-</div>
 <h1 class='style-border'>(2016/06/13)使用tar打包加密文件</h1>
 <p>加密文件:</p>
 <pre>加密文件:tar -zcvf - pma|openssl des3 -salt -k password | dd of=pma.des3</pre>
 <p>解密文件:</p>
 <pre>dd if=pma.des3 |openssl des3 -d -k password|tar zxf -</pre>
+</div>
 </body>
 </html>
