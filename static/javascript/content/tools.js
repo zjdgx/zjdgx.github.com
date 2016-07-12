@@ -9,6 +9,11 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: '软件破解',
+				date: '2016-07-07',
+				url: '../static/notes/tools/software-activate.html'
+			},
+			{
 				title: 'linux命令',
 				date: '2016-06-12',
 				url: '../static/notes/tools/linux.html'
