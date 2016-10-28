@@ -29,9 +29,10 @@ import gulp from './gulp';
 import grunt from './grunt';
 import webpack from './webpack';
 import tool from './tools';
+import notes from './notes';
 
 const database = [].concat(mysql, mongodb);
-const tools = [].concat(tool, gulp, grunt, webpack);
+const tools = [].concat(tool, gulp, grunt, notes, webpack);
 const backend = [].concat(java, android, nodejs);
 const frontend = [].concat(css, html, mobile, javascript);
 const framework = [].concat(backbone, react, redux);

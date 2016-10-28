@@ -1,5 +1,5 @@
 module.exports = {
-	title: 'Nodejs',
+	title: 'Notes',
 	contents: [
 		{
 			title: 'windows问题及解决方法收集',

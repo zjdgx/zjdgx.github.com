@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" /> 
+	<meta name="date" content="2016/02/18">
+	<title>3种数组复制方法的性能对比 - ZJDGX</title> 
+	<meta name="description" content="数组复制, slice, concat" /> 
+	<meta name="keywords" content="数组复制, slice, concat" /> 
+	<link rel="stylesheet" href="../../style/notes.css" />
+</head> 
+<body class="red-style">
+	<h1 class='style-border'>3种数组复制方法的性能对比(<a href='http://www.jb51.net/article/21918.htm' target='_blank'>原文</a>)</h1>
+	<div class="content">
+		<p>我们以一个拥有500000个子项的数组, 作为测试对象(IE不会崩溃哦!).</p> 
+		<button id="J_CopyBySlice">copyBySlice</button> 
+		<button id="J_CopyByConcat">copyByConcat</button> 
+		<button id="J_CopyByLoop">copyByLoop</button> 
+	</div> 
+<script type="text/javascript"> 
+(function() { 
+    var arr = []; 
+    for (var i=0; i<500000; i++) { 
+        arr.push(i); 
+    } 
+    var get = function(id) { 
+        return document.getElementById(id); 
+    }; 
+    var bySlice = function() { 
+        return arr.slice(); 
+    }; 
+    var byConcat = function() { 
+        return arr.concat(); 
+    }; 
+    var byLoop = function() { 
+        var newArr = []; 
+        for (var i=0, j=arr.length; i<j; i++) { 
+            newArr.push(arr[i]); 
+        } 
+        return newArr; 
+    }; 
+    var showResult = function(way, el) { 
+        var st = +new Date(), 
+            oMsg, 
+            newArr;     
+        switch (way) { 
+            case 'slice': 
+                newArr = bySlice(); 
+                break; 
+            case 'concat': 
+                newArr = byConcat(); 
+                break; 
+            case 'split': 
+                newArr = bySplit(); 
+                break; 
+            case 'loop': 
+                newArr = byLoop(); 
+                break; 
+        } 
+        oMsg = document.createElement('p'); 
+        oMsg.innerHTML = 'copy by ' + way + ' use time: ' + (+new Date() - st) + 'ms'; 
+        el.parentNode.appendChild(oMsg); 
+    }; 
+    get('J_CopyBySlice').onclick = function() { 
+        showResult('slice', this);             
+    } 
+    get('J_CopyByConcat').onclick = function() { 
+        showResult('concat', this);             
+    } 
+    get('J_CopyByLoop').onclick = function() { 
+        showResult('loop', this);             
+    } 
+})(); 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <meta name="author" content="zjdgx"/>
+   <meta name="date" content="2016/07/18"/>
+   <title>webpack插件</title>
+   <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>webpack插件</h1>
+<div class="content">
+   <h2 class='style-border'>HTML插件</h2>
+   <pre>
+plugins: [
+   new HtmlWebpackPlugin({// 根据模板插入css/js等生成最终HTML
+      favicon: './src/img/favicon.ico',   // favicon路径
+      filename: '/view/index.html',       // 生成的html文件存放路径，相对于path
+      template: './src/view/index.html',  // html模板路径
+      inject: true,                       // 允许插件修改哪些内容，包括head与body
+      hash: true,                         // 为静态资源生成hash值
+      minify: {// 压缩html文件
+         removeComments: true,            // 移除HTML中的注释
+         collapseWhitespace: false        // 移除空白符与换行符
+      }
+   })
+]</pre>
+</div>
+</body>
+</html>

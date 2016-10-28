@@ -6,9 +6,30 @@
     <meta name="date" content="2016/05/31"/>
     <title>使用tar打包同一个目录下的多个目录</title>
     <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+	<style>
+	@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+	width: 410px;
+	margin: 0 auto;
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+	</style>
 </head>
 <body class="red-style">
-<h1 class='style-border'>使用tar打包同一个目录下的多个目录</h1>
+<h1 class='style-border slideInRight'>使用tar打包同一个目录下的多个目录</h1>
 <div class="content">
     <p>
         使用方法: 将sh文件拷贝到需要打包的目录, 然后在命令行执行sh sh文件名<br/>

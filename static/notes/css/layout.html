@@ -7,22 +7,90 @@
     <title>页面布局</title>
     <link rel="stylesheet" href="../../style/notes.css" />
 	<style>
-		.layout-left-fixed {
+		.demo {
 			height: 80px;
 			overflow: hidden;
+		}
+		.f-l {
+			float: left;
+		}
+		.f-r {
+			float: right;
+		}
+		.l-bg {
+			background-color: #23c778;
+		}
+		.r-bg {
+			background-color: #2db7f5;
+		}
+		.content-bg {
+			background-color: #d9534f;
+		}
+		.full-height {
+			height: 100%;
 		}
 		.layout-left-fixed .left {
 			float: left;
 			width: 200px;
 			height: 100%;
 			_margin-right: -3px;/*解决IE6 float margin 3像素BUG*/
-			background-color: #23c778;
 		}
 		.layout-left-fixed .right {
 			height: 100%;
 			margin-left: 200px;
 			_margin-left: 197px;/*解决IE6 float margin 3像素BUG*/
-			background-color: #464854;
+		}
+		
+		/*margin负值法*/
+		.layout-margin-negative-centered {
+			height: 80px;
+		}
+		.layout-margin-negative-centered .left,
+		.layout-margin-negative-centered .right,
+		.layout-margin-negative-centered .center-content {
+			height: 100%;
+		}
+		.layout-margin-negative-centered .left {
+			width: 200px;
+			margin-left: -100%;
+		}
+		.layout-margin-negative-centered .right {
+			width: 200px;
+			margin-left: -200px;/* 2016/08/26: 此处的值必须是左边的宽度值 */
+		}
+		.layout-margin-negative-centered .body {
+			margin: 0 201px;
+		}
+		
+		/*自身浮动法*/
+		.layout-self-float .center-content {
+			margin: 0 200px;
+		}
+		.layout-self-float .left,
+		.layout-self-float .right {
+			width: 200px;
+		}
+		
+		/*绝对定位法*/
+		.layout-position-absolute {
+			position: relative;
+		}
+		.layout-position-absolute .left,
+		.layout-position-absolute .right {
+			top: 0;
+			width: 200px;
+			position: absolute;
+		}
+		.layout-position-absolute .left {
+			left: 0;
+		}
+		.layout-position-absolute .right {
+			right: 0;
+		}
+		.layout-position-absolute .center-content {
+			height: 200px;
+			margin: 0 201px;
+			background-color: #115E92;
 		}
 	</style>
 </head>
@@ -31,9 +99,35 @@
     <ul class="content">
         <li>
 			<h2 class='style-border'>1. (2016/01/19)左边固定，右边自适应:(兼容IE6) </h2>
-			<div class="demo layout-left-fixed">
-				<div class="left">固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px</div>
-				<div class="right">自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度</div>
+			<div class="demo layout-left-fixed full-height">
+				<div class="left l-bg full-height">固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px固定宽度200px</div>
+				<div class="right r-bg full-height content-bg">自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度</div>
+			</div>
+		</li>
+		<li>
+			<h2 class='style-border'>2. (2016/08/26)margin负值法: 中间自适应，两边固定</h2>
+			<div class="demo layout-margin-negative-centered">
+				<div class="center-content f-l full-height content-bg">
+					<div class='body'>	自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度自适应宽度</div>
+				</div>
+				<div class="left f-l l-bg full-height">左右固定，中间自适应</div>
+				<div class="right f-l r-bg full-height">左右固定，中间自适应</div>
+			</div>
+		</li>
+		<li>
+			<h2 class='style-border'>3. (2016/08/26)自身浮动法: 中间自适应，两边固定</h2>
+			<div class="demo layout-self-float">
+				<div class="left f-l l-bg full-height">左右固定，中间自适应</div>
+				<div class="right f-r r-bg full-height">左右固定，中间自适应</div>
+				<div class="center-content full-height content-bg">左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；</div>
+			</div>
+		</li>
+		<li>
+			<h2 class='style-border'>4. (2016/08/26)绝对定位法: 中间自适应，两边固定</h2>
+			<div class="demo layout-position-absolute">
+				<div class="left f-l l-bg full-height">左右固定，中间自适应</div>
+				<div class="right f-r r-bg full-height">左右固定，中间自适应</div>
+				<div class="center-content full-height content-bg">左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；左边左浮动，右边右浮动，并设置宽度，中间采用margin两边的宽度实现宽度自适应；</div>
 			</div>
 		</li>
     </ul>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/07/18">
+	<meta name='author' content='ZJDGX'>
+    <title>判断元素是否是某个元素的子元素 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body class="red-style">
+	<h1 class='style-border'>判断元素是否是某个元素的子元素</h1>
+	<div class="content">
+		<pre class='prettyprint'>
+// 判断当前元素是否是某个元素的子元素
+function isChild (queue, target) {
+	var node, found = false;
+	
+	while(!found && queue.length) {
+		node = queue.shift();
+		
+		if (node === target) {
+			found = true;
+		} else if (node.childNodes.length) {
+			Array.prototype.push.apply(queue, node.childNodes);
+		}
+	}
+	
+	return found;
+}
+
+// 调用方法
+isChild([document.getElementById('id')], element);</pre>
+	</div>
+</body>
+</html>

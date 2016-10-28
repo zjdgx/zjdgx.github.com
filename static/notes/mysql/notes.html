@@ -15,7 +15,17 @@
     <h1 class='style-border'>MySQL开发Note</h1>
     <ul class="content">
         <li>
-            <h2 class='style-border'>1. MySQL CDATA</h2>
+			<h2 class='style-border'>(2016/07/22) MySQL修改外键</h2>
+            <pre>
+ALTER TABLE TableName DROP FOREIGN KEY key_name;
+ALTER TABLE TableName ADD CONSTRAINT key_name FOREIGN KEY (`column_name`) REFERENCES parentTableName(`column_name`) on delete cascade on update cascade;</pre>
+			<h2 class='style-border'>(2016/07/18) MySQL增加外键</h2>
+            <pre>
+set foreign_key_checks = 0;
+alter table tableName add constraint key_name foreign key(id) references parentTableName(id) on delete cascade on update cascade;
+set foreign_key_checks = 1;
+// 不设置foreign_key_checks会报错</pre>
+            <h2 class='style-border'>(2013/09/22) MySQL CDATA</h2>
             <p>CDATA标签中字符文本是不作为html被再次转义的。比如'& nbsp;'将不像其他地方那样被转换成空格。通常CDATA里面放一些‘一字不改的数据’，比如源代码，比如Javascript源码。</p>
         </li>
     </ul>

@@ -9,6 +9,24 @@ define(['Backbone'], function (Backbone) {
 	return Backbone.Collection.extend({
 		content: [
 			{
+				title: 'JavaScript 3种数组复制方法的性能对比',
+				date: '2016-08-16',
+				url: '../static/notes/javascript/javascript-copy-compare.html',
+				des: 'JavaScript 3种数组复制方法的性能对比'
+			},
+			{
+				title: 'JavaScript基础',
+				date: '2016-07-18',
+				url: '../static/notes/javascript/javascript base.html',
+				des: 'JavaScript基础'
+			},
+			{
+				title: '判断元素是否是某个元素的子元素',
+				date: '2016-07-18',
+				url: '../static/notes/javascript/isChild.html',
+				des: '判断元素是否是某个元素的子元素'
+			},
+			{
 				title: 'javascript闭包详解',
 				date: '2016-06-06',
 				url: '../static/notes/javascript/javascript-closure.html',

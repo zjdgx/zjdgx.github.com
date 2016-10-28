@@ -2,6 +2,21 @@ module.exports = {
 	title: 'Javascript',
 	contents: [
 		{
+			title: 'JavaScript 3种数组复制方法的性能对比',
+			date: '2016-08-16',
+			url: 'static/notes/javascript/javascript-copy-compare.html'
+		},
+		{
+			title: 'JavaScript基础',
+			date: '2016-07-28',
+			url: 'static/notes/javascript/javascript base.html'
+		},
+		{
+			title: '判断元素是否是某个元素的子元素',
+			date: '2016-07-18',
+			url: 'static/notes/javascript/isChild.html'
+		},
+		{
 			title: 'javascript闭包详解',
 			date: '2016-06-06',
 			url: 'static/notes/javascript/javascript-closure.html'

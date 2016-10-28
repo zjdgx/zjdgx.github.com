@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="date" content="2016/07/28">
+    <title>javascript基础 - ZJDGX</title>
+    <link rel="stylesheet" href="../../style/notes.css" />
+</head>
+<body class="red-style">
+	<h1 class='style-border'>JavaScript基础</h1>
+    <ul class="content">
+		<li>
+			<h2 class='style-border'>(2016/08/05)javascript<a href='http://www.ruanyifeng.com/blog/2012/11/require_js.html' target='_blank'>异步加载</a></h2>
+			<pre class='prettyprint'>&lt;script src="js/require.js" defer async="true" &gt;&lt;/script&gt;</pre>
+			<p>async属性表明这个文件需要异步加载，避免网页失去响应。IE不支持这个属性，只支持defer，所以把defer也写上。</p>
+		</li>
+		<li>
+			<h2 class='style-border'>(2016/07/28)javascript判断是否是object: 来自jQuery</h2>
+			<pre class='prettyprint'>
+function isPlainObject (obj) {
+   try {
+      if (obj.constructor
+            && !Object.prototype.hasOwnProperty.call(obj, 'constructor')
+            && !Object.prototype.hasOwnProperty.call(obj.constructor.prototype, 'isPrototypeOf')) {
+         return false;
+      }
+   } catch (e) {
+      // IE8,9 Will throw exceptions on certain host objects #9897
+      return false;
+   }
+
+   let key;
+   for (key in obj) {}
+
+   return key === undefined || Object.prototype.hasOwnProperty.call(obj, key);
+}</pre>
+	</li>
+   </ul>
+</body>
+</html>

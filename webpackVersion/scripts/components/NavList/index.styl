@@ -8,6 +8,7 @@
 .logo
    padding 10px 0
    text-align center
+   breath 6s linear infinite
    img
       width 120px
       border-radius 50%
@@ -40,3 +41,14 @@
    &.active h2
       text-indent 5px
       background-color #3b4956
+@keyframes breath {
+	from {
+		opacity 0.5
+		background-color rgba(0,0,0,0.3)
+	}
+
+	to {
+		opacity 1
+		background-color rgba(0,0,0,0.9)
+	}
+}

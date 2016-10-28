@@ -1,3 +1,22 @@
+##2016/08/16
+
+- 增加[3种数组复制方法的性能对比](http://zjdgx.github.io/static/notes/javascript/javascript-copy-compare.html)
+
+##2016/07/22
+
+- 增加[Android滑动导航菜单](http://zjdgx.github.io/static/notes/android/android-source.html)
+- 增加[javascript object判断](http://zjdgx.github.io/static/notes/javascript/javascript base.html)
+
+##2016/07/22
+
+- 增加[修改MySQL外键](http://zjdgx.github.io/static/notes/mysql/notes.html)
+
+##2016/07/18
+
+- 增加[MySQL外键](http://zjdgx.github.io/static/notes/mysql/notes.html)
+- 增加[webpack plugin](http://zjdgx.github.io/static/notes/tools/webpack-plugin.html)
+- 增加[判断元素是否是某个元素的子元素](http://zjdgx.github.io/static/notes/javascript/isChild.html)
+
 ##2016/07/07
 
 - 增加[Java批量修改照片](http://zjdgx.github.io/static/notes/java/batch-rename-photo.html)

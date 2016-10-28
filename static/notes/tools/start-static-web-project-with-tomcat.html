@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx" />
+    <meta name="date" content="2015/08/21" />
+    <title>使用tomcat和bat文件启动静态项目</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class="title style-border">使用tomcat和bat文件启动静态项目</h1>
+<div class="content">
+    <h2 class='style-border'>step 1: 安装tomcat service</h2>
+    <p>首先切换到tomcat目录, 如: <code>E:\apache-tomcat-8.0.20\bin</code>;</p>
+    <p>然后运行命令: <code>service install tomcat8</code>就可以把tomcat注册成系统服务了;</p>
+    <p>最后运行命令: <code>net start tomcat8</code>, 就可以看到<blockquote>Apache Tomcat 8.0 tomcat8 服务已经启动成功。</blockquote></p>
+    <h2 class='style-border'>step 2: 写批处理文件tomcatstart.bat</h2>
+        <pre class="prettyprint indent2">
+@echo off
+echo tomcat service stop....
+net stop tomcat8
+echo copy file %1 start:
+xcopy %1\* E:\apache-tomcat-8.0.20\webapps\%2\ /s /h /d /c /y
+echo start tomcat8
+net start tomcat8
+echo type localhost:8080/%2 to visit...
+pause</pre>
+    <p>注意：此处必须先停止tomcat服务;</p>
+    <p>xcopy语法请参考: <a href="http://www.cnblogs.com/glaivelee/archive/2009/10/07/1578737.html" target="_blank">(xcopy实现批处理拷贝文件或文件夹)</a></p>
+    <h2 class='style-border'>step 3: 运行批处理文件</h2>
+    <p>首先切换到批处理文件所在目录; </p>
+    <p>然后运行命令: <code class="prettyprint">tomcatstart 静态项目目录 目标项目名字</code></p>
+    <p>最后访问: localhost:8080/目标项目名字/xxx.html</p>
+</div>
+</body>
+</html>
