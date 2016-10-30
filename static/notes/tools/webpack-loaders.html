@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/10/30"/>
+    <title>webpack常用loader和plugin</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+    <style>
+      dd {
+        margin-left: 1em;
+      }
+    </style>
+</head>
+<body class="red-style">
+<h1 class='style-border'>Webpack常用loader和plugin(<a href="https://segmentfault.com/a/1190000005106383" target="_blank">原文</a>)</h1>
+<div class="content">
+  <h2 class='style-border'>常用Loaders</h2>
+  <dl>
+    <dt>less-loader, sass-loader</dt>
+    <dd>处理样式</dd>
+    <dt>url-loader, file-loader</dt>
+    <dd>两个都必须用上。否则超过大小限制的图片无法生成到目标文件夹中</dd>
+    <dt>babel-loader，babel-preset-es2015，babel-preset-react</dt>
+    <dd>js处理，转码</dd>
+    <dt>expose?*<br>
+    &nbsp;eg:<br>
+    &nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;test: require.resolve('react'),<br>
+        &nbsp;&nbsp;&nbsp;loader: 'expose?React'<br>
+    &nbsp;}</dt>
+    <dt>expose-loader</dt>
+    <dd>将js模块暴露到全局</dd>
+  </dl>
+  <h2 class='style-border'>常用plugin</h2>
+  <h3>config类</h3>
+  <dl>
+    <dt>NormalModuleReplacementPlugin</dt>
+    <dd>匹配resourceRegExp，替换为newResource</dd>
+    <dt>ContextReplacementPlugin</dt>
+    <dd>替换上下文的插件</dd>
+    <dt>IgnorePlugin</dt>
+    <dd>不打包匹配文件</dd>
+    <dt>PrefetchPlugin</dt>
+    <dd>预加载的插件，提高性能</dd>
+    <dt>ResolverPlugin</dt>
+    <dd>替换上下文的插件</dd>
+  </dl>
+  <h3>optimize</h3>
+  <dl>
+    <dt>DedupePlugin</dt>
+    <dd>打包的时候删除重复或者相似的文件</dd>
+    <dt>MinChunkSizePlugin</dt>
+    <dd>把多个小模块进行合并，以减少文件的大小</dd>
+    <dt>LimitChunkCountPlugin</dt>
+    <dd>限制打包文件的个数</dd>
+    <dt>OccurrenceOrderPlugin</dt>
+    <dd>根据模块调用次数，给模块分配ids，常被调用的ids分配更短的id，使得ids可预测，降低文件大小，该模块推荐使用</dd>
+    <dt>UglifyJsPlugin</dt>
+    <dd>压缩js</dd>
+    <dt>CommonsChunkPlugin</dt>
+    <dd>多个html共用一个js文件(chunk)</dd>
+  </dl>
+  <h3>dependency injection</h3>
+  <dt>
+    <dt>DefinePlugin</dt>
+    <dd>定义变量，一般用于开发环境log或者全局变量</dd>
+    <dt>ProvidePlugin</dt>
+    <dd>自动加载模块，当配置（$:'jquery'）例如当使用$时，自动加载jquery</dd>
+  </dt>
+  <h3>other</h3>
+  <dl>
+    <dt>HotModuleReplacementPlugin</dt>
+    <dd>模块热替换,如果不在dev-server模式下，需要记录数据，recordPath，生成每个模块的热更新模块</dd>
+    <dt>ProgressPlugin</dt>
+    <dd>编译进度</dd>
+    <dt>NoErrorsPlugin</dt>
+    <dd>报错但不退出webpack进程</dd>
+    <dt>HtmlWebpackPlugin</dt>
+    <dd>生成html</dd>
+  </dl>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Concentration</title>
+    <style type="text/css">
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        font: 16px/1.5 'Courier New', 'Microsoft Yahei';
+        background-color: #f6f6f6;
+      }
+      .i-b {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .hidden {
+        display: none;
+      }
+      .main {
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #fff;
+      }
+      .content {
+        float: left;
+        padding-top: 20px;
+        text-align: center;
+      }
+      #digit-table {
+        margin: 20px;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        height: 300px;
+        font-size: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid #ccc;
+      }
+      .start {
+        color: #fff;
+        height: 30px;
+        border: none;
+        outline: none;
+        padding: 0 20px;
+        line-height: 30px;
+        background-color: #00daff;
+      }
+      .time-elapse {
+        width: 100px;
+        height: 28px;
+        margin: 0 10px;
+        line-height: 28px;
+        border: 1px solid #00daff;
+      }
+      .mode-change {
+        color: #fff;
+        height: 30px;
+        line-height: 30px;
+        position: relative;
+        background-color: #00daff;
+      }
+      .item {
+        float: left;
+        width: 40px;
+        cursor: default;
+        text-align: center;
+      }
+      .mask {
+        top: 0;
+        bottom: 0;
+        left: 40px;
+        width: 40px;
+        cursor: pointer;
+        position: absolute;
+        transition: all 0.2s ease-in;
+        background-color: rgba(78, 78, 78, .8);
+      }
+      .mask.left {
+        left: 0;
+      }
+
+      .intro {
+        float: left;
+        width: 380px;
+        padding-top: 20px;
+      }
+      .note {
+        color: #f00;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      .references {
+        text-align: left;
+        margin-left: 20px;
+      }
+      .references h2 {
+        margin-bottom: 0;
+      }
+      .references ol {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body onload="onLoaded();">
+    <div class="main">
+      <div class="intro">
+        <div class="smt">
+          <h2>舒尔特方格测试说明:</h2>
+          <p>顺序找出24到0的数字.</p>
+          <h2>舒尔特方格评分标准:</h2>
+          <ul>
+            <li>5 ~ 7岁年龄组：达到30秒以下为优秀， 46秒属于中等水平，班级排名会在中游或偏下， 55秒则问题较大.</li>
+            <li>7 ~ 12岁年龄组：能达到20 秒以下为优秀，学习成绩应是名列前茅， 36秒属于中等水平，班级排名会在中游或偏下，45秒则问题较大，考试会出现不及格现象.</li>
+            <li>12 ~ 14 岁年龄组：能达到16秒以下为优秀，学习成绩应是名列前茅，26秒属于中等水平，班级排名会在中游或偏下，36秒则问题较大，考试会出现不及格现象.</li>
+            <li>18岁及以上成年人：最好可达到8秒的水平， 20秒为中等水平.</li>
+          </ul>
+          <p>顺便说一句，想买车的朋友，如果你的注意力水平达不到20秒，请您在学习和考取驾驶执照前，先把注意力练好，否则，上路之后，肯定是个“马路杀手”。因为所有的交通事故都与注意力水平因素相关，这就是北京老百姓俗话说的“眼睛不够使的”，其中以疲劳驾驶为最，因为疲劳状态下，是注意力最不集中的时段。为了您和他人的安全，请练注意力。为了轻松考取好成绩，获得终生的竞争力，请家长练练孩子的注意力。</p>  
+        </div>
+        <div class="handred hidden">
+          <h2>测试说明：</h2>
+          <p>下面的100个数字是打乱顺序后排列的，请你按照顺序在里面找出15个数字来，例如从1 ~ 15或从2 ~ 16或30 ~ 44等，记录下你找到这15个连续数字所花的时间</p>
+          <h2>测试结果：</h2>
+          <p>如果你在30 ~ 40秒内就找到了15个顺序数字，那你在集中注意力时的记忆程度就属于"优等"了，大约只有5%的人有这样的能力；如果你用了40 ~ 90秒，那只能算是"一般"；如果你在2 ~ 3分钟内才找到，那你就应该是个注意力不集中的人了。</p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="opts">
+          <button class="i-b start">开始</button>
+          <div class="i-b time-elapse">0</div>
+          <div class="i-b mode-change">
+            <span class="i-b item">25</span>
+            <span class="i-b item">100</span>
+            <span class="mask"></span>
+          </div>
+        </div>
+        <p>使用空格键开始/结束测试. <em class="note">注</em>: 每次开始都会将所有数字重新排列.</p>
+        <div id="digit-table"></div>
+        <div class="references">
+          <h2>参考文献</h2>
+          <ol class="references">
+            <li>舒马特方格：<a href="http://wenku.baidu.com/link?url=d1fhfsXAGJVVciF4T3hwTiRqdx6Rno6YERVIF3_s1qUOuJMTwQ0wvNA_hSOBqKURwFq6XHd4JYjeF-aX98aXTXdOCxnwh-O52Pfe0z5VtBm###" target="_blank">百度文库</a></li>
+            <li>100个数字: <a href="https://www.douban.com/group/topic/3708365/" target="_blank">豆瓣小组</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="concentration.js"></script>
+  </body>
+</html>

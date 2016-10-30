@@ -16,8 +16,7 @@ import nodejs from './nodejs';
 import android from './android';
 
 // database
-import mysql from './mysql';
-import mongodb from './mongodb';
+import database from './database';
 
 // framework
 import react from './react';
@@ -31,13 +30,14 @@ import webpack from './webpack';
 import tool from './tools';
 import notes from './notes';
 
-const database = [].concat(mysql, mongodb);
+import opus from './opus';
+
 const tools = [].concat(tool, gulp, grunt, notes, webpack);
 const backend = [].concat(java, android, nodejs);
 const frontend = [].concat(css, html, mobile, javascript);
 const framework = [].concat(backbone, react, redux);
 
-const navContent = [].concat(frontend, tools, framework, backend, database);
+const navContent = [].concat(frontend, opus, tools, framework, backend, database);
 
 for (var i = 0, len = navContent.length; i < len; i++) {
    if (navContent[i].contents.length == 0) {

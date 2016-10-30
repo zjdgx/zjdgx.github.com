@@ -1,3 +1,8 @@
+##2016/10/30
+
+- merge MongoDB and MySQL to database.
+- add opus module
+
 ##2016/08/16
 
 - 增加[3种数组复制方法的性能对比](http://zjdgx.github.io/static/notes/javascript/javascript-copy-compare.html)
