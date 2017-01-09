@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="date" content="2016/11/01">
+  <title>ES2015 RegExp - ZJDGX</title>
+  <link rel="stylesheet" href="../../style/notes.css" />
+  <style type='text/css'>
+    a.back {
+      float: right;
+      color: #30c67b;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body class="red-style">
+  <h1 class='style-border'><a class='back' href='es2015.html'>返回</a>正则的扩展</h1>
+  <div class='content'>
+    <h2 class='style-border'>1. RegExp构造函数</h2>
+    <p>RegExp构造函数的参数有两种情况</p>
+    <pre>
+var regex = new RegExp('xyz', 'i');// 等价于var regex = /xyz/i;
+var regex = new RegExp(/xyz/i); // 等价于var regex = /xyz/i;
+var regex = new RegExp(/xyz/, 'i');// es5报错
+new RegExp(/abc/ig, 'i').flags // 原有正则对象的修饰符是ig，它会被第二个参数i覆盖。</pre>
+    <h2 class='style-border'>2. 字符串的正则方法</h2>
+    <p>match()、replace()、search()、split()</p>
+    <h2 class="style-border">3. u修饰符</h2>
+    <p>ES6对正则表达式添加了u修饰符，含义为“Unicode模式”，用来正确处理大于\uFFFF的Unicode字符。</p>
+    <pre>
+/^\uD83D/u.test('\uD83D\uDC2A') // false
+/^\uD83D/.test('\uD83D\uDC2A') //true</pre>
+    <h3>（1）点字符</h3>
+    <p>点（.）字符在正则表达式中，含义是除了换行符以外的任意单个字符。对于码点大于0xFFFF的Unicode字符，点字符不能识别，必须加上u修饰符。</p>
+    <pre>
+var s = '𠮷';
+
+/^.$/.test(s) // false
+/^.$/u.test(s) // true</pre>
+    <h3>（2）Unicode字符表示法</h3>
+    <p>ES6新增了使用大括号表示Unicode字符，这种表示法在正则表达式中必须加上u修饰符，才能识别。</p>
+    <pre>
+/\u{61}/.test('a') // false
+/\u{61}/u.test('a') // true
+/\u{20BB7}/u.test('𠮷') // true</pre>
+    <h2 class="style-border">4. 字符串的遍历器接口</h2>
+    <p>javascript字符串可以用for...of遍历</p>
+    <pre>
+var text = String.fromCodePoint(0x20BB7);
+
+for (let i = 0; i < text.length; i++) {
+  console.log(text[i]);
+}
+// " "
+// " "
+
+for (let i of text) {
+  console.log(i);
+}
+// "𠮷"</pre>
+    <h2 class="style-border">5. at()</h2>
+    <p>用来替换charAt方法</p>
+    <h2 class="style-border">6. normalize()</h2>
+    <p>ES6提供字符串实例的normalize()方法，用来将字符的不同表示方法统一为同样的形式，这称为Unicode正规化。</p>
+    <h2 class="style-border">7. includes(), startsWith(), endsWith()</h2>
+    <h2 class="style-border">8. repeat()</h2>
+    <p>repeat方法返回一个新字符串，表示将原字符串重复n次。</p>
+    <h2 class="style-border">9. padStart(), padEnd()</h2>
+    <p>ES7推出了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart用于头部补全，padEnd用于尾部补全。</p>
+    <h2 class="style-border">10. 模板字符串</h2>
+    <h2 class="style-border">11. 实例：模板编译</h2>
+    <h2 class="style-border">12. 标签模板</h2>
+    <p>模板字符串前面有一个标识名tag，它是一个函数。整个表达式的返回值，就是tag函数处理模板字符串后的返回值。“标签模板”的一个重要应用，就是过滤HTML字符串，防止用户输入恶意内容。</p>
+    <pre>
+var sender = '&lt;script&gt;alert("abc")&lt;/script&gt;';
+var message = SaferHTML`&lt;p&gt;${sender} has sent you a message.&lt;/p&gt;`;
+
+function SaferHTML(templateData) {
+  var s = templateData[0];
+  for (var i = 1; i < arguments.length; i++) {
+    var arg = String(arguments[i]);
+
+    // Escape special characters in the substitution.
+    s += arg.replace(/&/g, "&amp;")
+            .replace(/&lt;/g, "&lt;")
+            .replace(/&gt;/g, "&gt;");
+
+    // Don't escape special characters in the template.
+    s += templateData[i];
+  }
+  return s;
+}</pre>
+    <h2 class="style-border">13. String.raw</h2>
+    <p>String.raw方法，往往用来充当模板字符串的处理函数，返回一个斜杠都被转义（即斜杠前面再加一个斜杠）的字符串，对应于替换变量后的模板字符串。</p>
+    <p>String.raw方法也可以作为正常的函数使用。这时，它的第一个参数，应该是一个具有raw属性的对象，且raw属性的值应该是一个数组。</p>
+    <pre>
+String.raw({ raw: 'test' }, 0, 1, 2);
+// 't0e1s2t'
+
+// 等同于
+String.raw({ raw: ['t','e','s','t'] }, 0, 1, 2);</pre>
+    <h2 class="style-border">14. 模板字符串的限制</h2>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/10/31"/>
+    <title>webpack</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>git修改提交记录的用户信息</h1>
+<div class="content">
+   <p>1. 切换到需要修改用户信息的分支</p>
+   <p>2. 执行下面的shell代码
+   <pre>
+#!/bin/sh
+
+git filter-branch --env-filter '
+OLD_EMAIL="your-old-email@example.com"
+CORRECT_NAME="Your Correct Name"
+CORRECT_EMAIL="your-correct-email@example.com"
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+  export GIT_COMMITTER_NAME="$CORRECT_NAME"
+  export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+  export GIT_AUTHOR_NAME="$CORRECT_NAME"
+  export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags</pre>
+   <p>3. 执行git push -f更新用户信息</p>
+</div>
+</body>
+</html>
