@@ -1,3 +1,13 @@
+##2017/01/09
+
+- 添加git镜像源
+- concentration
+- git修改提交用户名
+
+##2016/10/31
+
+- add the document for reset the user infomation in committed record of git.
+
 ##2016/10/30
 
 - merge MongoDB and MySQL to database.
