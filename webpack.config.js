@@ -79,6 +79,7 @@ module.exports = {
 		new CopyWebpackPlugin([
 			// 复制images目录
 			//{from: './static/images', to: 'image'},
+			{from: './static/javascript/lib/frame.js', to: 'javascript'},
 			//{from: './static/notes', to: 'notes'},
 			//{from: './static/style/notes.css', to: 'css/notes.css'}
 		])

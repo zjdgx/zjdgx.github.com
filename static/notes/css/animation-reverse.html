@@ -1,81 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="author" content="zjdgx" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
     <meta name="date" content="2016/06/02">
     <title>CSS翻转动画</title>
-    <link rel="stylesheet" href="../../style/notes.css" />
-	<style>
-   @keyframes front{
-      0%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg);}
-      100%{transform:rotateY(0); -webkit-transform:rotateY(0); -moz-transform:rotateY(0);}
-   }
-   @-webkit-keyframes front{
-      0%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg);}
-      100%{transform:rotateY(0); -webkit-transform:rotateY(0); -moz-transform:rotateY(0); opacity:1;}
-   }
-   @-moz-keyframes front{
-      0%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg);}
-      100%{transform:rotateY(0); -webkit-transform:rotateY(0); -moz-transform:rotateY(0);}
-   }
-   @keyframes back{
-      0%{transform:rotateY(0); -webkit-transform:rotateY(0); -moz-transform:rotateY(0);}
-      100%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg);}
-   }
-   @-webkit-keyframes back{
-      0%{transform:rotateY(0); -webkit-transform:rotateY(0);}
-      100%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg); }
-   }
-   @-moz-keyframes back{
-      0%{transform:rotateY(0); -webkit-transform:rotateY(0); -moz-transform:rotateY(0);}
-      100%{transform:rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg); }
-   }
-   .item {
-      width: 200px;
-      height: 120px;
-      position: relative;
-      text-align: center;
-      border: 1px solid #bdc6c4;
-   }
-   .item .item-content {
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-   }
+    <link rel="stylesheet" href="../../style/notes.css"/>
+    <style>
+        @keyframes front {
+            0% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+            }
+        }
 
-   .item .front {
-      opacity: 1;
-      background-color: #77D8FF;
-      animation: front 0.5s both;
-   }
+        @-webkit-keyframes front {
+            0% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+                opacity: 1;
+            }
+        }
 
-   .item .back {
-      opacity: 0;
-      background-color: #77F705;
-      animation: back 0.5s both;
-   }
+        @-moz-keyframes front {
+            0% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+            }
+        }
 
-   .item:hover .front {
-      opacity: 0;
-      animation: back 0.5s both;
-   }
+        @keyframes back {
+            0% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+        }
 
-   .item:hover .back {
-      opacity: 1;
-      animation: front 0.5s both;
-   }
-	</style>
+        @-webkit-keyframes back {
+            0% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+        }
+
+        @-moz-keyframes back {
+            0% {
+                transform: rotateY(0);
+                -webkit-transform: rotateY(0);
+                -moz-transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+            }
+        }
+
+        .item {
+            width: 200px;
+            height: 120px;
+            position: relative;
+            text-align: center;
+            border: 1px solid #bdc6c4;
+        }
+
+        .item .item-content {
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .item .front {
+            opacity: 1;
+            background-color: #77D8FF;
+            animation: front 0.5s both;
+        }
+
+        .item .back {
+            opacity: 0;
+            background-color: #77F705;
+            animation: back 0.5s both;
+        }
+
+        .item:hover .front {
+            opacity: 0;
+            animation: back 0.5s both;
+        }
+
+        .item:hover .back {
+            opacity: 1;
+            animation: front 0.5s both;
+        }
+    </style>
 </head>
 <body class="red-style">
-    <h1 class='style-border'>页面布局</h1>
-    <div class="content">
-      <div class='item'>
-			<div class='item-content front'>默认显示内容</div>
-			<div class='item-content back'>hover显示内容</div>
-		</div>
-   </div>
+<h1 class='style-border'>页面布局</h1>
+<div class="content">
+    <div class='item'>
+        <div class='item-content front'>默认显示内容</div>
+        <div class='item-content back'>hover显示内容</div>
+    </div>
+</div>
+<script type="text/javascript" src="/dist/javascript/frame.js"></script>
 </body>
 </html>

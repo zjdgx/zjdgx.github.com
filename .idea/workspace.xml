@@ -2,20 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="020a0768-f750-43c2-8a1d-7b8f8b780230" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/index.809904f3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/javascript/index.809904f3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/javascript/react.d1cde7a5.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/homepage.iml" afterPath="$PROJECT_DIR$/.idea/homepage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascript/content/tools.js" afterPath="$PROJECT_DIR$/static/javascript/content/tools.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/android/android-resource.html" afterPath="$PROJECT_DIR$/static/notes/android/android-resource.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/animation-reverse.html" afterPath="$PROJECT_DIR$/static/notes/css/animation-reverse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/clearDottedBox.html" afterPath="$PROJECT_DIR$/static/notes/css/clearDottedBox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/cssBasicKnowledge.html" afterPath="$PROJECT_DIR$/static/notes/css/cssBasicKnowledge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/layout.html" afterPath="$PROJECT_DIR$/static/notes/css/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/placeholder-color.html" afterPath="$PROJECT_DIR$/static/notes/css/placeholder-color.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/html/lottery.html" afterPath="$PROJECT_DIR$/static/notes/html/lottery.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/html/web-front-source.html" afterPath="$PROJECT_DIR$/static/notes/html/web-front-source.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/java/batch-rename-photo.html" afterPath="$PROJECT_DIR$/static/notes/java/batch-rename-photo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/ajax_jsonp.html" afterPath="$PROJECT_DIR$/static/notes/javascript/ajax_jsonp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/array-functions.html" afterPath="$PROJECT_DIR$/static/notes/javascript/array-functions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/cross-domain.html" afterPath="$PROJECT_DIR$/static/notes/javascript/cross-domain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/delete-repeat-value-in-array.html" afterPath="$PROJECT_DIR$/static/notes/javascript/delete-repeat-value-in-array.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html" afterPath="$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/drag_drop.html" afterPath="$PROJECT_DIR$/static/notes/javascript/drag_drop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_string.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_string.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/events-binding.html" afterPath="$PROJECT_DIR$/static/notes/javascript/events-binding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/isChild.html" afterPath="$PROJECT_DIR$/static/notes/javascript/isChild.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript base.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-closure.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-closure.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html" afterPath="$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/promise.html" afterPath="$PROJECT_DIR$/static/notes/javascript/promise.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/storage.html" afterPath="$PROJECT_DIR$/static/notes/javascript/storage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/tenToHex.html" afterPath="$PROJECT_DIR$/static/notes/javascript/tenToHex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/websocket_node.html" afterPath="$PROJECT_DIR$/static/notes/javascript/websocket_node.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html" afterPath="$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mongodb/notes.html" afterPath="$PROJECT_DIR$/static/notes/mongodb/notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mysql/notes.html" afterPath="$PROJECT_DIR$/static/notes/mysql/notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html" afterPath="$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html" afterPath="$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/windows-problems.html" afterPath="$PROJECT_DIR$/static/notes/notes/windows-problems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/php/notes.html" afterPath="$PROJECT_DIR$/static/notes/php/notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/react/canvasUpload.html" afterPath="$PROJECT_DIR$/static/notes/react/canvasUpload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/redux/redux-notes.html" afterPath="$PROJECT_DIR$/static/notes/redux/redux-notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/redux/redux-router.html" afterPath="$PROJECT_DIR$/static/notes/redux/redux-router.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html" afterPath="$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git-webhooks.html" afterPath="$PROJECT_DIR$/static/notes/tools/git-webhooks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git.html" afterPath="$PROJECT_DIR$/static/notes/tools/git.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html" afterPath="$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html" afterPath="$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/linux.html" afterPath="$PROJECT_DIR$/static/notes/tools/linux.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/react_notes.html" afterPath="$PROJECT_DIR$/static/notes/tools/react_notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html" afterPath="$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/tar.html" afterPath="$PROJECT_DIR$/static/notes/tools/tar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/web-tool-2015.html" afterPath="$PROJECT_DIR$/static/notes/tools/web-tool-2015.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-introduction.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-introduction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-loaders.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-loaders.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-plugin.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-plugin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/windows-problems.html" afterPath="$PROJECT_DIR$/static/notes/tools/windows-problems.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/web/test_tools.html" afterPath="$PROJECT_DIR$/static/notes/web/test_tools.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpackVersion/scripts/app.js" afterPath="$PROJECT_DIR$/webpackVersion/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpackVersion/scripts/components/NavList/index.js" afterPath="$PROJECT_DIR$/webpackVersion/scripts/components/NavList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpackVersion/scripts/components/OneNoteNav/index.js" afterPath="$PROJECT_DIR$/webpackVersion/scripts/components/OneNoteNav/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpackVersion/scripts/components/PageStyle/PageStyle.js" afterPath="$PROJECT_DIR$/webpackVersion/scripts/components/PageStyle/PageStyle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpackVersion/scripts/content/tools.js" afterPath="$PROJECT_DIR$/webpackVersion/scripts/content/tools.js" />
     </list>
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,112 +87,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="git-webhooks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/notes/tools/git-webhooks.html">
+      <file leaf-file-name="notes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/notes/php/notes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="137" column="34" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
-              <folding>
-                <marker date="1485220690000" expanded="true" signature="31:7007" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="345:6999" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="1632:1738" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="1930:2077" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="2842:2978" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="2904:2973" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="2986:3277" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="3118:3254" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="5384:5636" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="5432:5517" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="5550:5631" ph="..." />
-                <marker date="1485220690000" expanded="false" signature="5723:5728" ph="&amp;" />
-                <marker date="1485220690000" expanded="true" signature="5941:6143" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="6025:6138" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="6481:6683" ph="..." />
-                <marker date="1485220690000" expanded="true" signature="6691:6838" ph="..." />
-              </folding>
+            <state relative-caret-position="459">
+              <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/home.js">
+      <file leaf-file-name="redux-notes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/notes/redux/redux-notes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/index.js">
+      <file leaf-file-name="test_tools.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/notes/web/test_tools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#86#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contentItem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/contentItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageStyle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/PageStyle/PageStyle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CHANGELOG.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="51">
-                <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/OneNoteNav/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="580">
+              <caret line="175" column="74" selection-start-line="175" selection-start-column="74" selection-end-line="175" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -162,31 +133,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resume/resume.html" />
-        <option value="$PROJECT_DIR$/resume/css/page.css" />
-        <option value="$PROJECT_DIR$/blog/default.html" />
-        <option value="$PROJECT_DIR$/common/style/pages.css" />
-        <option value="$PROJECT_DIR$/blog/notes/start-static-web-project-with-tomcat.html" />
-        <option value="$PROJECT_DIR$/blog/tool/gulp-require.html" />
-        <option value="$PROJECT_DIR$/blog/notes/how-to-become-a-greate-front-end-engineer.html" />
-        <option value="$PROJECT_DIR$/common/script/content.js" />
-        <option value="$PROJECT_DIR$/blog/mobile/event-trigger-sequence-in-mobile.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/blog/css/blog.css" />
-        <option value="$PROJECT_DIR$/style/index.css" />
-        <option value="$PROJECT_DIR$/react/DynamicChildren.html" />
-        <option value="$PROJECT_DIR$/react/index.css" />
-        <option value="$PROJECT_DIR$/react/InteractiveDemo.html" />
-        <option value="$PROJECT_DIR$/react/index.html" />
-        <option value="$PROJECT_DIR$/static/javascript/content/tools.js" />
-        <option value="$PROJECT_DIR$/webpackVersion/scripts/content/tools.js" />
-        <option value="$PROJECT_DIR$/static/notes/tools/git-webhooks.html" />
-        <option value="$PROJECT_DIR$/webpackVersion/scripts/components/NavList/index.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/webpackVersion/scripts/app.js" />
-        <option value="$PROJECT_DIR$/webpackVersion/scripts/components/OneNoteNav/index.js" />
-        <option value="$PROJECT_DIR$/webpackVersion/scripts/components/PageStyle/PageStyle.js" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/delete-repeat-value-in-array.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/websocket_node.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/tenToHex.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/storage.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/promise.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/javascript-closure.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/javascript base.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/drag_drop.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/es2015.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/es2015_string.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/events-binding.html" />
+        <option value="$PROJECT_DIR$/static/notes/javascript/isChild.html" />
+        <option value="$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html" />
+        <option value="$PROJECT_DIR$/static/notes/mongodb/notes.html" />
+        <option value="$PROJECT_DIR$/static/notes/mysql/notes.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html" />
+        <option value="$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html" />
+        <option value="$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html" />
+        <option value="$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html" />
+        <option value="$PROJECT_DIR$/static/notes/notes/windows-problems.html" />
+        <option value="$PROJECT_DIR$/static/notes/php/notes.html" />
+        <option value="$PROJECT_DIR$/static/notes/react/canvasUpload.html" />
+        <option value="$PROJECT_DIR$/static/notes/redux/redux-notes.html" />
+        <option value="$PROJECT_DIR$/static/notes/redux/redux-router.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/git.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/linux.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/react_notes.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/tar.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/web-tool-2015.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/webpack.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/webpack-introduction.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/webpack-loaders.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/webpack-plugin.html" />
+        <option value="$PROJECT_DIR$/static/notes/tools/windows-problems.html" />
+        <option value="$PROJECT_DIR$/static/notes/web/test_tools.html" />
       </list>
     </option>
   </component>
@@ -255,7 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpackVersion" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,37 +266,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpackVersion" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage" />
+              <option name="myItemId" value="notes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpackVersion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PageStyle" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,15 +288,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpackVersion" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="notes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,19 +310,165 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webpackVersion" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="notes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="redux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NavList" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mongodb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homepage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,12 +585,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1438905877717</updated>
-      <workItem from="1485219222167" duration="3328000" />
+      <workItem from="1485219222167" duration="5984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3328000" />
+    <option name="totallyTimeSpent" value="5984000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -511,212 +632,411 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript.html" />
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/tenToHex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/index.css" />
-    <entry file="file://$PROJECT_DIR$/common/style/coolcode.css" />
-    <entry file="file://$PROJECT_DIR$/common/style/tbContent.css" />
-    <entry file="file://$PROJECT_DIR$/common/style/prettify.css" />
-    <entry file="file://$PROJECT_DIR$/source.html" />
-    <entry file="file://$PROJECT_DIR$/notes.html" />
-    <entry file="file://$PROJECT_DIR$/resume/css/page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resume/resume.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript.html" />
-    <entry file="file://$PROJECT_DIR$/mobile/index.html" />
-    <entry file="file://$PROJECT_DIR$/index.html.bak" />
-    <entry file="file://$PROJECT_DIR$/common/script/jquery-iframe-auto-height.js" />
-    <entry file="file://$PROJECT_DIR$/style/nodejs.css" />
-    <entry file="file://$PROJECT_DIR$/mobile/common/css/notes.css" />
-    <entry file="file://$PROJECT_DIR$/mobile/common/css/pages.css" />
-    <entry file="file://$PROJECT_DIR$/blog/default.html" />
-    <entry file="file://$PROJECT_DIR$/interview.html" />
-    <entry file="file://$PROJECT_DIR$/common/style/pages.css" />
-    <entry file="file://$PROJECT_DIR$/blog/tool/gulp-require.html" />
-    <entry file="file://$PROJECT_DIR$/blog/notes/how-to-become-a-greate-front-end-engineer.html" />
-    <entry file="file://$PROJECT_DIR$/common/script/content.js" />
-    <entry file="file://$PROJECT_DIR$/blog/mobile/event-trigger-sequence-in-mobile.html" />
-    <entry file="file://$PROJECT_DIR$/react/js/react.js" />
-    <entry file="file://$PROJECT_DIR$/android.html" />
-    <entry file="file://$PROJECT_DIR$/blog/notes/start-static-web-project-with-tomcat.html" />
-    <entry file="file://$PROJECT_DIR$/address.html" />
-    <entry file="file://$PROJECT_DIR$/blog/css/blog.css" />
-    <entry file="file://$PROJECT_DIR$/react/index.css" />
-    <entry file="file://$PROJECT_DIR$/react/InteractiveDemo.html" />
-    <entry file="file://$PROJECT_DIR$/react/DynamicChildren.html" />
-    <entry file="file://$PROJECT_DIR$/style/index.css" />
-    <entry file="file://$USER_HOME$/Desktop/zjdgxDemo/table.html" />
-    <entry file="file://$PROJECT_DIR$/react/js/JSXTransformer.js" />
-    <entry file="file://$PROJECT_DIR$/react/index.html" />
-    <entry file="file://$PROJECT_DIR$/webpackVersion/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/content/tools.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/storage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="580">
+          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/content/tools.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/promise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="175" column="72" selection-start-line="175" selection-start-column="72" selection-end-line="175" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="7" selection-start-line="10" selection-start-column="6" selection-end-line="14" selection-end-column="7" />
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/notes/tools/git-webhooks.html">
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="137" column="34" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
-          <folding>
-            <marker date="1485220690000" expanded="true" signature="31:7007" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="345:6999" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="1632:1738" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="1930:2077" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="2842:2978" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="2904:2973" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="2986:3277" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="3118:3254" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="5384:5636" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="5432:5517" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="5550:5631" ph="..." />
-            <marker date="1485220690000" expanded="false" signature="5723:5728" ph="&amp;" />
-            <marker date="1485220690000" expanded="true" signature="5941:6143" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="6025:6138" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="6481:6683" ph="..." />
-            <marker date="1485220690000" expanded="true" signature="6691:6838" ph="..." />
-          </folding>
+        <state relative-caret-position="580">
+          <caret line="73" column="72" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/home.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/javascript-closure.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="563">
+          <caret line="87" column="76" selection-start-line="87" selection-start-column="76" selection-end-line="87" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/javascript base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="76" selection-start-line="38" selection-start-column="76" selection-end-line="38" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/cross-domain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="77" column="76" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/drag_drop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/es2015.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="83" column="76" selection-start-line="83" selection-start-column="76" selection-end-line="83" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/es2015_string.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="102" column="74" selection-start-line="102" selection-start-column="74" selection-end-line="102" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/events-binding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="76" column="76" selection-start-line="76" selection-start-column="76" selection-end-line="76" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/javascript/isChild.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="76" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="53" column="76" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="379" column="72" selection-start-line="379" selection-start-column="72" selection-end-line="379" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="46" column="76" selection-start-line="46" selection-start-column="76" selection-end-line="46" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="44" column="76" selection-start-line="44" selection-start-column="76" selection-end-line="44" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="447" column="76" selection-start-line="447" selection-start-column="76" selection-end-line="447" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/notes/windows-problems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="50" column="72" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/mysql/notes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/mongodb/notes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="57" column="76" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/opus/concentration/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1613">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/navItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/navContent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/contentItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/NavList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#86#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/static/notes/react/canvasUpload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="563">
+          <caret line="160" column="76" selection-start-line="160" selection-start-column="76" selection-end-line="160" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/php/notes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/OneNoteNav/index.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/redux/redux-router.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpackVersion/scripts/components/PageStyle/PageStyle.js">
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/git.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="563">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/linux.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/react_notes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/tar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="60" column="72" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/web-tool-2015.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="428" column="72" selection-start-line="428" selection-start-column="72" selection-end-line="428" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/webpack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/webpack-introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/webpack-loaders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="82" column="72" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/webpack-plugin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/windows-problems.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/redux/redux-notes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/web/test_tools.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="175" column="74" selection-start-line="175" selection-start-column="74" selection-end-line="175" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
