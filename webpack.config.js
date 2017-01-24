@@ -21,7 +21,7 @@ module.exports = {
      emitWarnings: true
    },
 	// 使用source-map，方便开发测试
-	// devtool: 'source-map',
+	devtool: 'source-map',
 	module: {
 		loaders: [
 			{

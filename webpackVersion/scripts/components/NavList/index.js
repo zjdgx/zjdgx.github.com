@@ -35,8 +35,6 @@ export default class NavList extends React.Component {
 				<ul>
 				{
 					NavContent.map((item, index) => {
-						console.log('index: ' + index + ', cur: ' + (index == this.state.curNavIndex));
-
 						return <NavItem
 									key={index}
 									list={item.list}

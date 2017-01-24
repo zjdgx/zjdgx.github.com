@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2017/01/24"/>
+    <title>Git webhooks - ZJDGX</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'><a href="https://aotu.io/notes/2016/01/07/auto-deploy-website-by-webhooks-of-github/">使用Github的webhooks进行网站自动化部署</a>
+</h1>
+<div class="post-content content"><p>相信很多码农都玩过了<code>Git</code>，如果对<code>Git</code>只是一知半解，可以移步<code>LV</code>写的 <a
+        href="http://aotu.io/notes/2015/11/17/Git-Commands/">GIT常用操作总结</a>，下面介绍到的一些关于 <code>Git</code> 的概念就不再赘述。</p>
+    <p>为啥想写这篇文章？主要是因为部门服务器因为安全性原因不允许<code>SCP</code>上传文件进行应用部署，然后有一些应用是放在Github上的，然后部署应用的步骤就变成：</p>
+    <p>1.git clone github项目 本地目录<br>2.配置一下应用的pm2.json并reload<br>3.Nginx配置一下反向代理并restart</p>
+    <p>当然如果只是一次性部署上去就不再修改的话并没啥问题，但是要是项目持续性修改迭代的话，就比较麻烦了，我们就在不断的重复着上面的步骤。作为一个码农，怎么允许不断的重复同样的工作，于是<code>Github
+        webhooks</code>闪亮登场。</p><a id="more"></a>
+    <h2 id="关于Github-webhooks" class="post-heading">
+        <a href="#关于Github-webhooks" class="headerlink" title="关于Github webhooks"></a>
+        关于Github webhooks
+        <a class="post-anchor" href="#关于Github-webhooks" aria-hidden="true"></a>
+    </h2>
+    <p>让我们看看 <a href="https://developer.github.com/webhooks/" target="_blank" rel="external">官方</a> 关于Github webhooks的解释：</p>
+    <blockquote><p>Webhooks allow you to build or set up integrations which subscribe to certain events on
+        GitHub.com.</p></blockquote>
+    <p>提炼出来几个点：</p>
+    <ul>
+        <li>必须是Github上面的项目</li>
+        <li>订阅了确定的事件（包括push/pull等命令）</li>
+        <li>自动触发</li>
+    </ul>
+    <p>刚好符合了这几个条件，那接下来就看看如何进行<code>网站自动化部署</code>，主要会从下面几点来讲解：</p>
+    <p>1.自动化<code>shell</code>脚本<br>2.服务端实现<br>3.配置<code>github webhooks</code></p>
+    <h2 id="自动化脚本" class="post-heading">
+        <a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本
+        <a class="post-anchor" href="#自动化脚本" aria-hidden="true"></a>
+    </h2>
+    <p>我之前翻译过一篇文章 <a href="http://aotu.io/notes/2015/12/23/building-command-line-tools-with-node-js/">使用Node.JS创建命令行脚本工具</a>，但是我们现在的自动化脚本直接用<code>shell</code>实现，假设名称为<code>auto_build.sh</code>：</p>
+    <pre>
+#! /bin/bash
+SITE_PATH='/export/Data/aotu.jd.com/index/cnt1992.github.io'
+USER='admin'
+USERGROUP='admin'
+cd $SITE_PATH
+git reset --hard origin/master
+git clean -f
+git pull
+git checkout master
+chown -R $USER:$USERGROUP $SITE_PATH</pre>
+    <p><strong>Note:</strong> 在执行上面<code>shell</code>脚本之前我们必须第一次手动<code>git clone</code>项目进去，例如：</p>
+    <pre>
+git clone github远程项目 /export/Data/aotu.jd.com/index/cnt1992.github.io
+</pre>
+    <blockquote><p>shell脚本其实就跟直接在终端运行命令一样，类似于windows下面的BAT批处理命令，更多详细可以查阅资料。</p></blockquote>
+    <h2 id="服务端实现" class="post-heading"><a href="#服务端实现" class="headerlink" title="服务端实现"></a>服务端实现<a
+            class="post-anchor" href="#服务端实现" aria-hidden="true"></a></h2>
+    <p><code>Github webhooks</code>需要跟我们的服务器进行通信，确保是可以推送到我们的服务器，所以会发送一个带有<code>X-Hub-Signature</code>的<code>POST</code>请求，为了方便我们直接用第三方的库<a
+            href="https://github.com/rvagg/github-webhook-handler" target="_blank"
+            rel="external">github-webhook-handler</a>来接收参数并且做监听事件的处理等工作。</p>
+    <p>现在我们可以在<code>shell</code>脚本的同级目录下面执行下面命令初始化一个<code>package.json</code>:</p>
+    <pre>npm init -f</pre>
+    <p>然后执行下面命令安装上面提到的第三方库：</p>
+    <pre>npm i -S github-webhook-handler</pre>
+    <p>接下来创建我们的服务主入口文件<code>index.js</code>：</p>
+    <pre>touch index.js</pre>
+    <p>紧接着参考<code>github-webhook-handler</code>的<code>demo</code>编辑我们的<code>index.js</code>：</p>
+    <pre>var http = require('http');
+var spawn = require('child_process').spawn;
+var createHandler = require('github-webhook-handler');
+// 下面填写的myscrect跟github webhooks配置一样，下一步会说；path是我们访问的路径
+var handler = createHandler({ path: '/auto_build', secret: '' });
+http.createServer(function (req, res) {
+  handler(req, res, function (err) {
+    res.statusCode = 404;
+    res.end('no such location');
+  })
+}).listen(6666);
+handler.on('error', function (err) {
+  console.error('Error:', err.message)
+});
+// 监听到push事件的时候执行我们的自动化脚本
+handler.on('push', function (event) {
+  console.log('Received a push event for %s to %s',
+    event.payload.repository.name,
+    event.payload.ref);
+  runCommand('sh', ['./auto_build.sh'], function( txt ){
+    console.log(txt);
+  });
+});
+function rumCommand( cmd, args, callback ){
+    var child = spawn( cmd, args );
+    var response = '';
+    child.stdout.on('data', function( buffer ){ resp += buffer.toString(); });
+    child.stdout.on('end', function(){ callback( resp ) });
+}
+// 由于我们不需要监听issues，所以下面代码注释掉
+//  handler.on('issues', function (event) {
+//    console.log('Received an issue event for %s action=%s: #%d %s',
+//      event.payload.repository.name,
+//      event.payload.action,
+//      event.payload.issue.number,
+//      event.payload.issue.title)
+});</pre>
+    <p>然后利用node管理工具跑起来服务，这里使用了<code>pm2</code>：</p>
+    <pre>pm2 start index.js</pre>
+    <p>到这一步服务已经跑起来了，但是对外网并不能直接访问到，所以还需要配置一下<code>Nginx</code>做一下反向代理：</p>
+    <pre>···
+server {
+    listen 80;
+    server_name aotu.jd.com;
+    ···
+    location /auto_build {
+        proxy_pass http://127.0.0.1:6666;
+    }
+    ···
+}</pre>
+    <p>OK，到这里整个服务已经搭建完成，下一步就只需要配置<code>Github webhooks</code>。</p>
+    <h2 id="配置github-webhooks" class="post-heading"><a href="#配置github-webhooks" class="headerlink"
+                                                       title="配置github webhooks"></a>配置<code>github webhooks</code><a
+            class="post-anchor" href="#配置github-webhooks" aria-hidden="true"></a></h2>
+    <p>我们可以在我们的<code>Github</code>上面最右边有一个<code>Settings</code>的Tab，找到<code>Webhooks &amp; services</code>，如下图：</p>
+    <p><img src="//img.aotu.io/cnt1992/webhooks.png" alt="Github Webhooks"></p>
+    <p>然后点击新建，输入<code>Payload URL</code>跟<code>Secret</code>，确定即可。</p>
+    <h2 id="验证" class="post-heading"><a href="#验证" class="headerlink" title="验证"></a>验证<a class="post-anchor" href="#验证"
+                                                                                          aria-hidden="true"></a></h2>
+    <p>绑定成功之后，我们可以试试提交一下代码，然后来到<code>Github</code>看看是否自动触发了接口，如下图：</p>
+    <p><img src="//img.aotu.io/cnt1992/webhooks-show.png" alt="Github Webhooks接口触发"></p>
+    <p>然后随便选择一个点击一下，可以看到<code>200</code>的响应：</p>
+    <p><img src="//img.aotu.io/cnt1992/webhook-success.png" alt="Github Webhooks接口触发"></p>
+    <h2 id="小结" class="post-heading"><a href="#小结" class="headerlink" title="小结"></a>小结<a class="post-anchor" href="#小结"
+                                                                                          aria-hidden="true"></a></h2>
+    <p>上面就是利用<code>Github webhooks</code>进行网站自动化部署的全部内容了，不难发现其实这项技术还是有局限性的，那就是依赖于<code>github</code>，一般我们选择的都是免费github账号，所有项目都对外，一些敏感项目是不适合放置上去的。
+    </p>
+</div>
+<script>
+    window.onload = function () {
+        document.body.setAttribute('class', localStorage.getItem('style') + '-style');
+    }
+</script>
+</body>
+</html>

@@ -2,6 +2,11 @@ module.exports = {
   title: 'Tools',
   contents: [
     {
+      title: '使用Github的webhooks进行网站自动化部署',
+      date: '2017-01-23',
+      url: 'static/notes/tools/git-webhooks.html'
+    },
+    {
       title: '修改Git提交记录的用户信息',
       date: '2016-06-12',
       url: 'static/notes/tools/git-reset-user-info.html'
