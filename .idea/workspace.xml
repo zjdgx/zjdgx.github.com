@@ -3,71 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="020a0768-f750-43c2-8a1d-7b8f8b780230" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/android/android-resource.html" afterPath="$PROJECT_DIR$/static/notes/android/android-resource.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/animation-reverse.html" afterPath="$PROJECT_DIR$/static/notes/css/animation-reverse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/clearDottedBox.html" afterPath="$PROJECT_DIR$/static/notes/css/clearDottedBox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/cssBasicKnowledge.html" afterPath="$PROJECT_DIR$/static/notes/css/cssBasicKnowledge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/layout.html" afterPath="$PROJECT_DIR$/static/notes/css/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/css/placeholder-color.html" afterPath="$PROJECT_DIR$/static/notes/css/placeholder-color.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/html/lottery.html" afterPath="$PROJECT_DIR$/static/notes/html/lottery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/html/web-front-source.html" afterPath="$PROJECT_DIR$/static/notes/html/web-front-source.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/java/batch-rename-photo.html" afterPath="$PROJECT_DIR$/static/notes/java/batch-rename-photo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/ajax_jsonp.html" afterPath="$PROJECT_DIR$/static/notes/javascript/ajax_jsonp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/array-functions.html" afterPath="$PROJECT_DIR$/static/notes/javascript/array-functions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/cross-domain.html" afterPath="$PROJECT_DIR$/static/notes/javascript/cross-domain.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/delete-repeat-value-in-array.html" afterPath="$PROJECT_DIR$/static/notes/javascript/delete-repeat-value-in-array.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html" afterPath="$PROJECT_DIR$/static/notes/javascript/delete-value-in-array.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/drag_drop.html" afterPath="$PROJECT_DIR$/static/notes/javascript/drag_drop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_destructuring.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_let_const.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_regexp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/es2015_string.html" afterPath="$PROJECT_DIR$/static/notes/javascript/es2015_string.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/events-binding.html" afterPath="$PROJECT_DIR$/static/notes/javascript/events-binding.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/isChild.html" afterPath="$PROJECT_DIR$/static/notes/javascript/isChild.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript base.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-closure.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-closure.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-copy-compare.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript-event-module.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html" afterPath="$PROJECT_DIR$/static/notes/javascript/javascript年度调查报告(2015).html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html" afterPath="$PROJECT_DIR$/static/notes/javascript/number2moneyUppercase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/promise.html" afterPath="$PROJECT_DIR$/static/notes/javascript/promise.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/storage.html" afterPath="$PROJECT_DIR$/static/notes/javascript/storage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/tenToHex.html" afterPath="$PROJECT_DIR$/static/notes/javascript/tenToHex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/javascript/websocket_node.html" afterPath="$PROJECT_DIR$/static/notes/javascript/websocket_node.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html" afterPath="$PROJECT_DIR$/static/notes/mobile/event-trigger-sequence-in-mobile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mongodb/notes.html" afterPath="$PROJECT_DIR$/static/notes/mongodb/notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/mysql/notes.html" afterPath="$PROJECT_DIR$/static/notes/mysql/notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/deleteNodeModules.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/highPerformanceNode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeExpressRequirements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeFileBatchMove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeFileDownload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html" afterPath="$PROJECT_DIR$/static/notes/nodejs/nodeRedis.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html" afterPath="$PROJECT_DIR$/static/notes/notes/how-to-become-a-greate-front-end-engineer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html" afterPath="$PROJECT_DIR$/static/notes/notes/start-static-web-project-with-tomcat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/notes/windows-problems.html" afterPath="$PROJECT_DIR$/static/notes/notes/windows-problems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/php/notes.html" afterPath="$PROJECT_DIR$/static/notes/php/notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/react/canvasUpload.html" afterPath="$PROJECT_DIR$/static/notes/react/canvasUpload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/redux/redux-notes.html" afterPath="$PROJECT_DIR$/static/notes/redux/redux-notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/redux/redux-router.html" afterPath="$PROJECT_DIR$/static/notes/redux/redux-router.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html" afterPath="$PROJECT_DIR$/static/notes/tools/git-reset-user-info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git-webhooks.html" afterPath="$PROJECT_DIR$/static/notes/tools/git-webhooks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/git.html" afterPath="$PROJECT_DIR$/static/notes/tools/git.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html" afterPath="$PROJECT_DIR$/static/notes/tools/gulp-grunt-require.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html" afterPath="$PROJECT_DIR$/static/notes/tools/how-to-become-a-greate-front-end-engineer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/linux.html" afterPath="$PROJECT_DIR$/static/notes/tools/linux.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/react_notes.html" afterPath="$PROJECT_DIR$/static/notes/tools/react_notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html" afterPath="$PROJECT_DIR$/static/notes/tools/start-static-web-project-with-tomcat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/tar.html" afterPath="$PROJECT_DIR$/static/notes/tools/tar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/web-tool-2015.html" afterPath="$PROJECT_DIR$/static/notes/tools/web-tool-2015.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-introduction.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-loaders.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-loaders.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack-plugin.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack-plugin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/webpack.html" afterPath="$PROJECT_DIR$/static/notes/tools/webpack.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/tools/windows-problems.html" afterPath="$PROJECT_DIR$/static/notes/tools/windows-problems.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/notes/web/test_tools.html" afterPath="$PROJECT_DIR$/static/notes/web/test_tools.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <ignored path="homepage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,11 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_tools.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_tools.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/notes/web/test_tools.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="175" column="74" selection-start-line="175" selection-start-column="74" selection-end-line="175" selection-end-column="74" />
+            <state relative-caret-position="317">
+              <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="git.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/notes/tools/git.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -224,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -489,7 +435,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -498,7 +443,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -585,12 +530,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1438905877717</updated>
-      <workItem from="1485219222167" duration="5984000" />
+      <workItem from="1485219222167" duration="6441000" />
+      <workItem from="1485239946632" duration="345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5984000" />
+    <option name="totallyTimeSpent" value="6786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -599,21 +545,21 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -636,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="175" column="72" selection-start-line="175" selection-start-column="72" selection-end-line="175" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="73" column="72" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -692,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="87" column="76" selection-start-line="87" selection-start-column="76" selection-end-line="87" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="76" selection-start-line="38" selection-start-column="76" selection-end-line="38" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="77" column="76" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="76" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="69" column="76" selection-start-line="69" selection-start-column="76" selection-end-line="69" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -740,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="83" column="76" selection-start-line="83" selection-start-column="76" selection-end-line="83" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="102" column="74" selection-start-line="102" selection-start-column="74" selection-end-line="102" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="76" column="76" selection-start-line="76" selection-start-column="76" selection-end-line="76" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="76" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="53" column="76" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="379" column="72" selection-start-line="379" selection-start-column="72" selection-end-line="379" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="46" column="76" selection-start-line="46" selection-start-column="76" selection-end-line="46" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="44" column="76" selection-start-line="44" selection-start-column="76" selection-end-line="44" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="447" column="76" selection-start-line="447" selection-start-column="76" selection-end-line="447" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="50" column="72" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="66" column="76" selection-start-line="66" selection-start-column="76" selection-end-line="66" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="57" column="76" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1613">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="160" column="76" selection-start-line="160" selection-start-column="76" selection-end-line="160" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,15 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/notes/tools/git.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="60" column="72" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="428" column="72" selection-start-line="428" selection-start-column="72" selection-end-line="428" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="361" column="0" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="82" column="72" selection-start-line="82" selection-start-column="72" selection-end-line="82" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,8 +925,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/notes/web/test_tools.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="175" column="74" selection-start-line="175" selection-start-column="74" selection-end-line="175" selection-end-column="74" />
+        <state relative-caret-position="317">
+          <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/notes/tools/git.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
           <folding />
         </state>
       </provider>
