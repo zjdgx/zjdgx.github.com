@@ -38,5 +38,15 @@ module.exports = [
     url: 'https://github.com/qinjx/30min_guides/blob/master/shell.md',
     title: 'Shell脚本编程30分钟入门',
     date: '2017-02-04'
+  },
+  {
+    url: 'https://github.com/webpack-china/awesome-webpack-cn',
+    title: 'webpack文章集合',
+    date: '2017-07-14'
+  },
+  {
+    url: 'https://github.com/pigcan/blog/issues/1',
+    title: 'webpack性能优化',
+    date: '2017-07-14'
   }
 ];
