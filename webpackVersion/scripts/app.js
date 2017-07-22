@@ -6,6 +6,7 @@
 
 import React from 'react';
 import Contents from './content/navContent';
+import { Menu, Dropdown, Icon, Button } from 'antd';
 import NavList from './components/OneNoteNav';
 import Links from './links';
 
@@ -23,8 +24,8 @@ export default class APPView extends React.Component {
   };
 
   render() {
-    console.log(Links);
-    const linkHtml = Links.map((link, index) => {
+
+    const importantLinks = Links.Important.map((link, index) => {
       return <a key={index} href={link.url} target='_blank' title={link.title}>{link.title}</a>;
     });
 
@@ -38,7 +39,38 @@ export default class APPView extends React.Component {
                              marginWidth="0"></iframe>
             } else {
               return <div className='layout-center'>
-                <div className='useful-links'>{linkHtml}</div>
+                <div className='useful-links'>
+                  <div className='important-links'>
+                    {importantLinks}
+                  </div>
+                  <div className='group-links'>
+                  {
+                    (function () {
+                      let groups = [];
+                      for (let i in Links) {
+                        if (i != 'Important') {
+                          let menu = <Menu>
+                                {
+                                  Links[i].map( (link, index) => {
+                                    return <Menu.Item key={i+index}>
+                                            <a target="_blank" href={link.url}>{link.title}</a>
+                                          </Menu.Item>
+                                  })
+                                }
+                              </Menu>;
+
+                          groups.push(<Dropdown overlay={menu}>
+                            <Button style={i != 'CSS' ? { marginLeft: 8 } : {}}>
+                              {i}<Icon type="down" />
+                            </Button>
+                          </Dropdown>)
+                        }
+                      }
+                      return groups;
+                    })()
+                  }
+                  </div>
+                </div>
                 <img className='china-map' src='static/image/china-map.png'/>
               </div>
             }
