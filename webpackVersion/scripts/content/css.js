@@ -2,6 +2,11 @@ module.exports = {
 	title: 'CSS',
 	contents: [
 		{
+			title: 'transform实现环形路径平移动画',
+			date: '2017-07-27',
+			url: 'static/notes/css/animation-1.html'
+		},
+		{
 			title: 'CSS翻转动画',
 			date: '2016-06-02',
 			url: 'static/notes/css/animation-reverse.html'

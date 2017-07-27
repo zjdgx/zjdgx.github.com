@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="zjdgx"/>
+  <meta name="date" content="2017/07/27">
+  <title>Animate - 20170727</title>
+  <link rel="stylesheet" href="../../style/notes.css"/>
+  <style>
+    .container {
+      width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+    @keyframes spin {
+      from { 
+        transform: rotate(0turn) translateY(-150px) translateY(0%) rotate(1turn); 
+      }
+      to {
+        transform: rotate(1turn) translateY(0%) translateY(-150px) rotate(0turn); 
+      }
+    }
+    .avatar {
+      left: 350px;
+      bottom: 150px;
+      position: absolute;
+      animation: spin 10s infinite linear;
+    }
+    .avatar > img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    } 
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://mp.weixin.qq.com/s?__biz=MjM5OTkwOTA5Mw==&mid=2658412598&idx=1&sn=b8533d0cb333dd2c60ea8a1dcc824ca0&chksm=bcb4cbbc8bc342aabd11959c9e22a574368b3da26efd8ad9b315f9a6f36a546f9aba766c11f1&scene=0&key=c32c17d7706c6e262177f25a75fe1f3d6771de088d7b42371c2e7c8617707179b635ec3cc91c5bf0d595f3bfe2e9605826d70395aef961fc7f158557c3fdb0379280a06ef92d6a009e3c06316c744bd5&ascene=0&uin=MjMzNjc5MTk4MA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.6+build(15G31)&version=12010210&nettype=WIFI&fontScale=100&pass_ticket=Omm0RHlOLdBx5DX7dyGQ4zDBFr6lksxgFh6K2rM%2BlF1xG6fd8qNCKZl3EPBqcB4s" target="_blank">原文链接</a>
+    <div class="avatar">
+      <img src="../../image/logo.png" />
+    </div>
+  </div>
+</body>
+</html>
