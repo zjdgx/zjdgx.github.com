@@ -4,7 +4,7 @@ module.exports = {
 		{
 			title: 'transform实现环形路径平移动画',
 			date: '2017-07-27',
-			url: 'static/notes/css/animation-1.html'
+			url: 'static/notes/css/animate-1.html'
 		},
 		{
 			title: 'CSS翻转动画',
