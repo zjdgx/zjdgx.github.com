@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="zjdgx">
+    <meta name='date' content='2017-02-24'>
+    <title>Geolocation</title>
+    <link rel="stylesheet" href="../../style/notes.css">
+</head>
+<body class="red-style">
+  <div id="location"></div>
+  <script>
+    (function(){
+      window.onload = function () {
+        console.log('window loaded...');
+        navigator.geolocation.getCurrentPosition(function(position){
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            document.getElementById('location').innerHTML = 'latitute: ' + lat + ', longitude: ' + lon;
+        }, null);
+      };
+    })()
+  </script>
+</body>
+</html>
