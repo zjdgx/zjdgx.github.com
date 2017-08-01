@@ -1,5 +1,10 @@
 export const React = [
   {
+    url: 'http://redux.js.org/docs/introduction/Examples.html',
+    title: 'redux demo',
+    date: '2017-08-01'
+  },
+  {
     url: 'https://github.com/reactjs/redux',
     title: 'redux demo repository',
     date: '2017-07-17'

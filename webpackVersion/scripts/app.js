@@ -40,9 +40,6 @@ export default class APPView extends React.Component {
             } else {
               return <div className='layout-center'>
                 <div className='useful-links'>
-                  <div className='important-links'>
-                    {importantLinks}
-                  </div>
                   <div className='group-links'>
                   {
                     (function () {
@@ -69,6 +66,9 @@ export default class APPView extends React.Component {
                       return groups;
                     })()
                   }
+                  </div>
+                  <div className='important-links'>
+                    {importantLinks}
                   </div>
                 </div>
                 <img className='china-map' src='static/image/china-map.png'/>

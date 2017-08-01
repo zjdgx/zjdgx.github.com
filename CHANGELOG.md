@@ -1,3 +1,7 @@
+##2017/08/01
+
+- 添加redux demo地址
+
 ##2017/07/29
   
 - 添加geolocation到opus
