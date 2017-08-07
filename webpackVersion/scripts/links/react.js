@@ -1,5 +1,15 @@
 export const React = [
   {
+    url: 'http://react-guide.github.io/react-router-cn/index.html',
+    title: 'react router docs',
+    date: '2017-08-02'
+  },
+  {
+    url: 'http://cn.redux.js.org/index.html',
+    title: 'redux docs',
+    date: '2017-08-02'
+  },
+  {
     url: 'http://redux.js.org/docs/introduction/Examples.html',
     title: 'redux demo',
     date: '2017-08-01'
