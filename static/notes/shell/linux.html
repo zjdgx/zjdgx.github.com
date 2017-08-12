@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/06/12"/>
+    <title>Linux命令</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>Linux命令</h1>
+<div class="content">
+  <h2 class='style-border'>(2017/08/12)<a href='https://www.markandersononline.com/blog/better-way-showhide-hidden-files-mac-os-x/' target='_blank'>Mac隐藏显示文件:</h2>
+  <pre>chflags -R hidden/nohidden folder</pre>
+  <h2 class='style-border'>(2016/06/21)linux vi替换:</h2>
+  <pre>:%s/string-to-replace/replace-string/g(全局替换)</pre>
+  <h2 class='style-border'>(2016/06/12)windows与linux传输文件:</h2>
+  <p>
+	 <a href='http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html' target='_blank'>pscp</a>需要下载, 然后拷贝到windows/system32下
+  </p>
+  <p>从linux拷贝文件到windows:</p>
+  <pre>pscp -l (用户名) -pw (密码) linuxip:/path/to/move/to</pre>
+  <p>从windows拷贝文件到linux:</p>
+  <pre>pscp -l (用户名) -pw (密码) file.to.move linuxip:/path/to/move/to</pre>
+  <h2 class='style-border'>(2016/06/12)ll count:</h2>
+  <pre>ll | wc</pre>
+</div>
+<script type="text/javascript" src="/dist/javascript/frame.js"></script>
+</body>
+</html>

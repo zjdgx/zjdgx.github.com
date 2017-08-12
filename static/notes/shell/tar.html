@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2016/05/31"/>
+    <title>使用tar打包同一个目录下的多个目录</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+	<style>
+	@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+	width: 410px;
+	margin: 0 auto;
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+	</style>
+</head>
+<body class="red-style">
+<h1 class='style-border slideInRight'>使用tar打包同一个目录下的多个目录</h1>
+<div class="content">
+    <p>
+        使用方法: 将sh文件拷贝到需要打包的目录, 然后在命令行执行sh sh文件名<br/>
+        如果目录中有3个目录: a, b, c和一个文件: d.txt, 最后将生成[a|b|c].20160510123251.tar.gz三个文件
+    </p>
+    <pre>
+#!/bin/sh 
+# 使用ls命令将当前目录下所有目录和文件列出, 并保存到Dirs中, 可以在命令行指定处理目录
+Dirs=`ls`
+# 获取当前日期, 并保存到DATE中
+DATE=$(date +%Y%m%d%H%M%S)
+
+# 使用for in循环Dirs
+for i in $Dirs         
+do 
+    # 判断当前dir是不是目录
+    if [ -d "$i" ]; then
+        # 如果是目录就使用tar命令打包当前目录$i, 其中--exlude是需要排除当前目录下的文件或目录
+        tar -cvf $i.$DATE.tar.gz --exclude=node_modules --exclude=.idea --exclude=.git --exclude=bower_components $i;
+    fi
+done
+</pre>
+<h1 class='style-border'>(2016/06/13)使用tar打包加密文件</h1>
+<p>加密文件:</p>
+<pre>加密文件:tar -zcvf - pma|openssl des3 -salt -k password | dd of=pma.des3</pre>
+<p>解密文件:</p>
+<pre>dd if=pma.des3 |openssl des3 -d -k password|tar zxf -</pre>
+</div>
+<script type="text/javascript" src="/dist/javascript/frame.js"></script>
+</body>
+</html>

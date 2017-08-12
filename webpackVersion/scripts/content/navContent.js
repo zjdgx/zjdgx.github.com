@@ -29,10 +29,11 @@ import grunt from './grunt';
 import webpack from './webpack';
 import tool from './tools';
 import notes from './notes';
+import shell from './shell';
 
 import opus from './opus';
 
-const tools = [].concat(tool, gulp, grunt, notes, webpack);
+const tools = [].concat(tool, gulp, grunt, notes, webpack, shell);
 const backend = [].concat(java, android, nodejs);
 const frontend = [].concat(css, html, mobile, javascript);
 const framework = [].concat(backbone, react, redux);

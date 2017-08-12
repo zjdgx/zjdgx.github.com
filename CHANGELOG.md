@@ -1,3 +1,9 @@
+##2017/08/12
+
+- add shell module
+- add shell file to copy files exclude node_modules and etc.
+- add Linux chflags command which can show or hidden file or folder in Linux.
+
 ##2017/08/07
 
 - 添加redux资源

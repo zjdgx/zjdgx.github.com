@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="zjdgx"/>
+    <meta name="date" content="2017/08/12"/>
+    <title>静态文件服务器文件复制</title>
+    <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border'>静态文件服务器文件复制</h1>
+<div class="content">
+  <pre># 静态文件拷贝, 可用于nginx、Tomcat等服务器
+# 2017-08-12 17:24
+#!/bin/bash 
+
+function copyFiles()  
+{  
+  name=${1##*/}
+  path=${1%/*}
+
+  if [ -z $name ];then #如果路径格式为: /Volumes/myVolume/tools/
+    name=${1%*/} #结果为: /Volumes/myVolume/tools
+    path=${name%*/}
+    name=${name##*/} #结果为: tools
+  fi
+
+  #查询target目录是否已存在name目录, 如果存在就删除该目录下的文件; 否则创建name目录
+  if [[ -d $2'/'$name ]];then
+    rm -rf $2'/'$name"/*"
+  else
+    mkdir $2'/'$name
+  fi
+
+  for file in `ls $path`
+  do  
+    local path=$1"/"$file  
+    if [[ $file != 'node_modules' && $file != '.git' ]];then
+      cp -R $path $2'/'$name
+    fi  
+  done  
+} 
+
+read  -p 'source:' original #从键盘输入源目录 
+read  -p 'target:' destination #从键盘输入目标目录
+
+copyFiles $original $destination
+
+exit 0</pre>
+</div>
+<script type="text/javascript" src="/dist/javascript/frame.js"></script>
+</body>
+</html>
