@@ -1,3 +1,8 @@
+##2017/08/13
+
+- add webpack-hot-server for development
+- add canvas clock
+
 ##2017/08/12
 
 - add shell module

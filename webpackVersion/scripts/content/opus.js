@@ -2,6 +2,11 @@ module.exports = {
 	title: 'My Opus',
 	contents: [
     {
+      title: 'canvas clock',
+      date: '2017-08-13',
+      url: 'static/notes/opus/canvas-clock/index.html'
+    },
+    {
       title: 'H5 Geolocation',
       date: '2017-02-24',
       url: 'static/notes/opus/geolocation/index.html',

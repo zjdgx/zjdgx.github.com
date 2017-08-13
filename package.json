@@ -4,7 +4,7 @@
   "description": "zjdgx github home page developed with backbone and require",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --hot --inline --output-public-path=dist  --progress --colors --content-base . --quiet"
   },
   "keywords": [
     "zjdgx",
@@ -45,6 +45,7 @@
     "stylus-loader": "^2.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.8.4",
+    "webpack-dashboard": "^0.4.0",
     "webpack-dev-server": "^1.8.0"
   },
   "dependencies": {
