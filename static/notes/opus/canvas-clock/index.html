@@ -3,117 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="date" content="2017/08/13">
-    <meta name="link-url" content="http://www.qdfuns.com/notes/45040/48419ccafb8a4d12e72d021b1b8a48ca.html">
+    <meta name="link-url" content="https://github.com/tccpc/canvas-clock">
     <title>Canvas Clock</title>
 </head>
 <body>
-    <canvas id="canid" class='canid'>
-    </canvas>
+  <canvas id="canvas" width="600" height="600"></canvas>
 </body>
 <script>
-var canid=document.getElementById('canid');
-var ct=canid.getContext('2d');
-canid.width = 600;
-canid.height = 600;
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+var nowDate = new Date();
+var second = nowDate.getSeconds();
+var minute = nowDate.getMinutes();
+var hour = nowDate.getHours();
+draw()
 
-ct.beginPath();
-    setInterval(function () {
-    ct.clearRect(0, 0, canid.width, canid.height);
-    ct.beginPath();
-    ct.arc(250, 250, 200, 0 * (Math.PI / 180), 360 * (Math.PI / 180));
+function draw() {
+    nowDate = new Date();
+    second = nowDate.getSeconds();
+    minute = nowDate.getMinutes();
+    hour = nowDate.getHours();
+    ctx.clearRect(0, 0, 600, 600);
+    ctx.beginPath();
+    ctx.arc(300, 300, 260, 0, 360 * (Math.PI / 180));
     // 只有弧度
-    ct.strokeStyle='#aaa';
-    ct.stroke();
-
-    // ct.fillText(json[0].title,0,0);
-    ct.beginPath();
-    var tangleR = 0;
-    for(var i = 0; i < 360; i++) {
-        var x, y;
-
-        ct.beginPath();
-        ct.moveTo(250, 250);
-        x = 250 + Math.cos(tangleR * Math.PI / 180 ) * (200); 
-        y = 250 + Math.sin(tangleR * Math.PI / 180 ) * (200); 
-        tangleR++;
-        ct.strokeStyle = '#ccc';
-
-        // console.log(x,y);
-        ct.lineTo(x,y);
-        ct.stroke();
+    ctx.strokeStyle='#000';
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.lineCap = "round";
+    for (var i = 0; i < 60; i++) {
+        if ((i + 5) % 5 === 0) {
+            continue;
+        }
+        ctx.moveTo(Math.cos((i * 6) / 180 * Math.PI) * 250 + 300, Math.sin((i * 6) / 180 * Math.PI) * 250 + 300);
+        ctx.lineTo(Math.cos((i * 6) / 180 * Math.PI) * 235 + 300, Math.sin((i * 6) / 180 * Math.PI) * 235 + 300);
     }
-    ct.beginPath();
-    ct.arc(250, 250, 190, 0 * (Math.PI / 180), 360 * (Math.PI / 180));
-    ct.fillStyle='white';
-    ct.fill();
-    ct.beginPath();
-    var tangle=0;
-    for(var i = 0; i < 60; i++) {
-        var x, y;
-        ct.beginPath();
-        ct.moveTo(250,250);
+    ctx.save();
+    ctx.closePath();
+    // ctx.shadowOffsetX=-5;
+    // ctx.shadowOffsetY=2;
+    // ctx.shadowBlur = 20;
+    // ctx.shadowColor = "#000";
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = '#000';
+    ctx.stroke();
 
-        x = 250 + Math.cos(tangle * Math.PI / 180 ) * (200); 
-        y = 250 + Math.sin(tangle * Math.PI / 180 ) * (200); 
-        /*弧度上的x,y坐标*/
-        tangle+=6;
-        ct.strokeStyle='#aaa';
-        // console.log(x,y);
-        ct.lineTo(x,y);
-        ct.stroke();
+    ctx.beginPath();
+    ctx.lineCap = "round";
+    for (var i = 1; i < 13; i++) {
+        ctx.moveTo(Math.cos((i * 30) / 180 * Math.PI) * 250 + 300, -Math.sin((i * 30) / 180 * Math.PI) * 250 + 300);
+        ctx.lineTo(Math.cos((i * 30) / 180 * Math.PI) * 220 + 300, -Math.sin((i * 30) / 180 * Math.PI) * 220 + 300);
+        ctx.font = "50px Arial";
+        if (i > 9) {
+            ctx.fillText(i, Math.cos((i * 30 - 90) / 180 * Math.PI) * 180 + 300 - 25, Math.sin((i * 30 - 90) / 180 * Math.PI) * 180 + 300 + 25);
+        } else {
+            ctx.fillText(i, Math.cos((i * 30 - 90) / 180 * Math.PI) * 180 + 288, Math.sin((i * 30 - 90) / 180 * Math.PI) * 180 + 300 + 20);
+        }
     }
+    ctx.lineWidth = 11;
+    ctx.strokeStyle = '#000';
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
 
-    ct.beginPath();
-    ct.arc(250, 250, 180, 0 * (Math.PI / 180), 360 * (Math.PI / 180));
-    ct.fillStyle='white';
-    ct.fill();
-    var tangleRR=-60;
-    for(var i=0;i<12;i++){
-        var x, y;
+    ctx.beginPath();
+    ctx.font = "24px Arial";
+    ctx.fillText('ZJDGX LOVE', 233, 400)
+    ctx.font = "18px Arial";
+    ctx.fillText(['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()], 270, 430)
+    ctx.closePath();
 
-        ct.beginPath();
-        x = 250 + Math.cos(tangleRR * Math.PI / 180 ) * (200-50); 
-        y = 250 + Math.sin(tangleRR * Math.PI / 180 ) * (200-50); 
-        tangleRR+=30;
-        ct.fillStyle='#aaa'
-        ct.fillText("" + (i + 1), x, y);
-        ct.fill();
-        ct.textAlign='center';
-    }
+    // 时针
+    ctx.beginPath();
+    ctx.moveTo(Math.cos((hour * 30 + minute / 2 - 90) / 180 * Math.PI) * 120 + 300, Math.sin((hour * 30 + minute / 2 - 90) / 180 * Math.PI) * 120 + 300);
+    ctx.lineTo(300, 300);
+    ctx.save();
+    ctx.lineCap = "round";
+    ctx.closePath();
+    ctx.shadowOffsetX = -5;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "#000";
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#222';
+    ctx.stroke();
+    ctx.restore();
 
+    // 分针
+    ctx.beginPath();
+    ctx.moveTo(Math.cos((minute * 6 + second * 0.1 - 90) / 180 * Math.PI) * 200 + 300, Math.sin((minute * 6 + second * 0.1 - 90) / 180 * Math.PI) * 200 + 300);
+    ctx.lineTo(300, 300);
+    ctx.save();
+    ctx.closePath();
+    ctx.shadowOffsetX = -5;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "#000";
+    ctx.lineWidth = 8;
+    ctx.strokeStyle = '#222';
+    ctx.stroke();
+    ctx.restore();
 
-    ct.beginPath();
-    ct.arc(250, 250, 5, 0 * (Math.PI / 180), 360 * (Math.PI / 180));
-    ct.stroke();
-    ct.fill();
+    // 秒针
+    ctx.beginPath();
+    ctx.moveTo(Math.cos((second * 6 - 90) / 180 * Math.PI) * 245 + 300, Math.sin((second * 6 - 90) / 180 * Math.PI) * 245 + 300);
+    ctx.lineTo(300, 300);
+    ctx.save();
+    ctx.closePath();
+    ctx.shadowOffsetX = -5;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "#000";
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'rgb(213, 153, 0)';
+    ctx.stroke();
+    ctx.restore();
+    ctx.closePath();
 
-    var time=new Date();
-    var h=time.getHours();
-    var m=time.getMinutes();
-    var s=time.getSeconds();
-    var mj=m*6+(s/60)*6-90;
-    var sj=s*6-90;
-    var hj=h*30+(m/60)*30+(s/3600)*30-90;
-    x0 = 250 + Math.cos(hj * Math.PI / 180 ) * (200-120); 
-    x1 = 250 + Math.cos(mj * Math.PI / 180 ) * (200-100); 
-    x2 = 250 + Math.cos(sj * Math.PI / 180 ) * (200-60); 
-    y0 = 250 + Math.sin(hj * Math.PI / 180 ) * (200-120); 
-    y1 = 250 + Math.sin(mj * Math.PI / 180 ) * (200-100); 
-    y2 = 250 + Math.sin(sj * Math.PI / 180 ) * (200-60); 
-
-    ct.beginPath();
-    ct.moveTo(250,250);
-    ct.lineTo(x0,y0);
-    ct.stroke();
-    ct.beginPath();
-    ct.moveTo(250,250);
-    ct.lineTo(x1,y1);
-    ct.stroke();
-
-    ct.beginPath();
-    ct.moveTo(250,250);
-    ct.lineTo(x2,y2);
-    ct.stroke();
-} , 1000)
+    ctx.save();
+    ctx.arc(300, 300, 20, 0, Math.PI * 2);
+    ctx.shadowOffsetX = -5;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "#000";
+    ctx.fillStyle = 'rgb(213, 153, 0)';
+    ctx.fill();
+    ctx.restore();
+}
+setInterval(function() {
+    draw();
+}, 1000);
 </script>
 </html>

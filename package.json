@@ -4,7 +4,8 @@
   "description": "zjdgx github home page developed with backbone and require",
   "main": "Gruntfile.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --output-public-path=dist  --progress --colors --content-base . --quiet"
+    "start": "webpack-dev-server --hot --inline --output-public-path=dist  --progress --colors --content-base . --quiet",
+    "build": "webpack --progress --colors --config webpack.prod.config.js"
   },
   "keywords": [
     "zjdgx",
