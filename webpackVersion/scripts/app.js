@@ -36,7 +36,11 @@ export default class APPView extends React.Component {
   };
 
   drawClock (ctx) {
-    var nowDate = new Date();
+    var nowDate = new Date(),
+          year = nowDate.getFullYear(),
+          month = nowDate.getMonth() + 1,
+          date = nowDate.getDate();
+
     var second = nowDate.getSeconds();
     var minute = nowDate.getMinutes();
     var hour = nowDate.getHours();
@@ -85,10 +89,13 @@ export default class APPView extends React.Component {
     ctx.restore();
 
     ctx.beginPath();
-    ctx.font = "24px Arial";
-    ctx.fillText('ZJDGX LOVE', 233, 400)
-    ctx.font = "18px Arial";
-    ctx.fillText(['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()], 270, 430)
+    ctx.font = "28px Arial";
+    ctx.fillText('ZJDGX LOVE', 223, 380);
+    ctx.font = "20px Arial";
+    ctx.fillText(year + '年' + month + '月' + date + '日', 233, 405);
+    ctx.font = "16px Arial";
+    ctx.fillText(['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()], 270, 427);
+    
     ctx.closePath();
 
     // 时针

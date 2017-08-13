@@ -1,5 +1,6 @@
 ##2017/08/13
 
+- show date on canvas clock
 - add canvas clock to home page.
 - add web source links on home page.
 - add webpack-hot-server for development
