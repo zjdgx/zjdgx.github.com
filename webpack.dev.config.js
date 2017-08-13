@@ -8,6 +8,7 @@ var path = require('path'),
 		Dashboard = require('webpack-dashboard'),
     DashboardPlugin = require('webpack-dashboard/plugin'),
     dashboard = new Dashboard(),
+    HappyPack = require('happypack'),
 		ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -55,6 +56,11 @@ module.exports = {
 				warnings: false
 			}
 		}),
+		new HappyPack({
+      // loaders is the only required parameter:
+      loaders: ['babel-loader'],
+      threads: 2
+    }),
 		new webpack.optimize.CommonsChunkPlugin({
 			// 提取公共模块
 			name: ['react'],

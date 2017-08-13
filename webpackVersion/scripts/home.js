@@ -11,6 +11,6 @@ import ReactDOM from 'react-dom';
 //require('./style/home.styl');
 
 ReactDOM.render(
-	<AppView />,
-	document.querySelector('div.wrapper')
+  <AppView />,
+  document.querySelector('div.wrapper')
 );

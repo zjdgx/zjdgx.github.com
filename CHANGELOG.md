@@ -1,5 +1,6 @@
 ##2017/08/13
 
+- add web source links on home page.
 - add webpack-hot-server for development
 - add canvas clock
 

@@ -9,6 +9,7 @@ import Contents from './content/navContent';
 import { Menu, Dropdown, Icon, Button } from 'antd';
 import NavList from './components/OneNoteNav';
 import Links from './links';
+import SourceLinks from './links/web-source';
 
 export default class APPView extends React.Component {
   constructor() {
@@ -69,6 +70,13 @@ export default class APPView extends React.Component {
                   </div>
                   <div className='important-links'>
                     {importantLinks}
+                  </div>
+                  <div className="blog-links">
+                  {
+                    SourceLinks.contents.map( (link, index) => {
+                      return <a href={link.url} target="_blank">{link.title}</a>
+                    })
+                  }
                   </div>
                 </div>
                 <img className='china-map' src='static/image/china-map.png'/>
