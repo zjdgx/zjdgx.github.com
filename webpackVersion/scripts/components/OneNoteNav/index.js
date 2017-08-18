@@ -50,11 +50,20 @@ export default class OneNoteNav extends React.Component {
     this.props.updateStyle();
   };
 
+  showHomePage () {
+    this.setState({
+      curIndex: -1,
+      contentIndex: -1,
+      curContent: null
+    });
+    this.props.showHomePage();
+  }
+
   render() {
     return (
       <div className={'left-sidebar style-bg' + (this.state.curContent ? '' : ' no-content')}>
         <div className='profile'>
-          <img className='avatar' src='static/image/logo.png' width='100' height='100'/>
+          <img className='avatar' src='static/image/logo.png' width='100' height='100' onClick={this.showHomePage.bind(this)}/>
           <p>&nbsp;&nbsp;&nbsp;QQ: 373687921</p>
           <p>Phone: 13540273364</p>
         </div>

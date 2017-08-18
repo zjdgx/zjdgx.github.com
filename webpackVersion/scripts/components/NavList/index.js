@@ -13,8 +13,8 @@ import NavContent from './navContent';
 require('./index.styl');
 
 export default class NavList extends React.Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state = {
 			curNavIndex: 0
 		};
@@ -24,12 +24,16 @@ export default class NavList extends React.Component {
 		this.setState({curNavIndex: index});
 	};
 
+	showHomePage () {
+		console.log('showHomePage');
+	}
+
 	render () {
 		return (
 			<div className='navList'>
 				<div className='logo'>
 					<img src='../dist/images/logo.png' />
-					<p>ZJDGX</p>
+					<p>ZJDGXx</p>
 					<span>373687921@qq.com</span>
 				</div>
 				<ul>

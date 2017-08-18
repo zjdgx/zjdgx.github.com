@@ -15,6 +15,7 @@ export default class APPView extends React.Component {
   constructor() {
     super();
     this.state = {
+      showClock: true,
       contentUrl: null,
       update: false
     };
@@ -90,11 +91,11 @@ export default class APPView extends React.Component {
 
     ctx.beginPath();
     ctx.font = "28px Arial";
-    ctx.fillText('ZJDGX LOVE', 223, 380);
+    ctx.fillText('ZJDGX LOVE', 213, 380);
     ctx.font = "20px Arial";
     ctx.fillText(year + '年' + month + '月' + date + '日', 233, 405);
     ctx.font = "16px Arial";
-    ctx.fillText(['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()], 270, 427);
+    ctx.fillText(['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][new Date().getDay()], 275, 427);
     
     ctx.closePath();
 
@@ -150,17 +151,24 @@ export default class APPView extends React.Component {
     ctx.fillStyle = 'rgb(213, 153, 0)';
     ctx.fill();
     ctx.restore();
-  }
+  };
+
+  showHomePage () {
+    this.setState({contentUrl: null}, () => {
+      if (this.state.showClock) {
+        this.drawClock(this.refs['canvas-clock'].getContext('2d'));
+      }
+    });
+  };
 
   render() {
-    const showClock = Math.random() > 0.5;
     const importantLinks = Links.Important.map((link, index) => {
       return <a key={index} href={link.url} target='_blank' title={link.title}>{link.title}</a>;
     });
 
     return (
       <div className='content'>
-        <NavList setContentUrl={this.setContentUrl.bind(this)} updateStyle={() => this.setState({update: new Date().getTime()})} NavList={Contents}/>
+        <NavList setContentUrl={this.setContentUrl.bind(this)} updateStyle={() => this.setState({update: new Date().getTime()})} NavList={Contents} showHomePage={this.showHomePage.bind(this)}/>
         {
           (function () {
             if (this.state.contentUrl) {
@@ -207,8 +215,7 @@ export default class APPView extends React.Component {
                   }
                   </div>
                 </div>
-                {!showClock ? <img className='china-map' src='static/image/china-map.png'/> : <canvas className="canvas-clock" ref="canvas-clock" width="600" height="600"></canvas>}
-                
+                {!this.state.showClock ? <img className='china-map' src='static/image/china-map.png'/> : <canvas className="canvas-clock" ref="canvas-clock" width="600" height="600"></canvas>}
               </div>
             }
           }.bind(this))()
