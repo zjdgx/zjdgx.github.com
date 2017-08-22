@@ -1,6 +1,10 @@
+##2017/08/22
+
+- add code to set the page style randomly.
+
 ##2017/08/18
 
-- add code to return home page on click the logo icon.
+- add code to return home page when click the logo icon.
 
 ##2017/08/13
 

@@ -21,6 +21,11 @@ export default class APPView extends React.Component {
     };
   };
 
+  static defaultProps = {
+    styleList: ['gray', 'deep-green', 'deep-blue', 'red', 'sky-blue', 'magenta', 'yellow', 'purple', 'pink', 'light-green'],
+    styleIndex: Math.floor(Math.random() * 10)
+  }
+
   setContentUrl(url) {
     this.setState({contentUrl: url});
   };
@@ -165,10 +170,11 @@ export default class APPView extends React.Component {
     const importantLinks = Links.Important.map((link, index) => {
       return <a key={index} href={link.url} target='_blank' title={link.title}>{link.title}</a>;
     });
+    console.log('style index: ' + this.props.styleIndex);
 
     return (
-      <div className='content'>
-        <NavList setContentUrl={this.setContentUrl.bind(this)} updateStyle={() => this.setState({update: new Date().getTime()})} NavList={Contents} showHomePage={this.showHomePage.bind(this)}/>
+      <div className={'content ' + this.props.styleList[this.props.styleIndex] + '-style'}>
+        <NavList setContentUrl={this.setContentUrl.bind(this)} styleIndex={this.props.styleIndex} updateStyle={() => this.setState({update: new Date().getTime()})} NavList={Contents} showHomePage={this.showHomePage.bind(this)}/>
         {
           (function () {
             if (this.state.contentUrl) {

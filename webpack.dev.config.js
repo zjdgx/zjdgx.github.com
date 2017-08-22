@@ -79,7 +79,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			path: path.resolve(__dirname, './dist'),
 			className: 'wrapper',
-			style: 'sky-blue-style',
 			date: '2016/04/01',
 			title: 'ZJDGX',
 			filename: path.resolve(__dirname, './index.html'),

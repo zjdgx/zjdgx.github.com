@@ -73,7 +73,6 @@ module.exports = {
 		new ExtractTextPlugin('css/[name].[chunkhash:8].css'),
 		new HtmlWebpackPlugin({
 			className: 'wrapper',
-			style: 'sky-blue-style',
 			date: '2016/04/01',
 			title: 'ZJDGX',
 			filename: __dirname + '/index.html',

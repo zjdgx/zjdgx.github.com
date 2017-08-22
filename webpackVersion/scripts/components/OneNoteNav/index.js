@@ -45,7 +45,7 @@ export default class OneNoteNav extends React.Component {
   };
 
   changePageStyle(style) {
-    document.querySelector('body').className = style + '-style';
+    document.querySelector('.content').className = 'content ' + style + '-style';
     localStorage.setItem('style', style);
     this.props.updateStyle();
   };
@@ -67,7 +67,7 @@ export default class OneNoteNav extends React.Component {
           <p>&nbsp;&nbsp;&nbsp;QQ: 373687921</p>
           <p>Phone: 13540273364</p>
         </div>
-        <PageStyle styles={this.props.styles} styleIndex={4} changePageStyle={this.changePageStyle.bind(this)}/>
+        <PageStyle styles={this.props.styles} styleIndex={this.props.styleIndex} changePageStyle={this.changePageStyle.bind(this)}/>
         <ul className='nav-list style-bg'>
           {
             this.props.NavList.map((item, index) => {
