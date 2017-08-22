@@ -1,5 +1,6 @@
 ##2017/08/22
 
+- add meta for author, keywords and description
 - add code to set the page style randomly.
 
 ##2017/08/18
