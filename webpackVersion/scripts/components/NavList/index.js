@@ -24,16 +24,12 @@ export default class NavList extends React.Component {
 		this.setState({curNavIndex: index});
 	};
 
-	showHomePage () {
-		console.log('showHomePage');
-	}
-
 	render () {
 		return (
 			<div className='navList'>
 				<div className='logo'>
 					<img src='../dist/images/logo.png' />
-					<p>ZJDGXx</p>
+					<p>ZJDGX</p>
 					<span>373687921@qq.com</span>
 				</div>
 				<ul>

@@ -2,6 +2,11 @@ module.exports = {
   title: 'web source',
   contents: [
     {
+      title: '觉唯设计',
+      date: '2016-08-22',
+      url: 'http://www.jiawin.com/topics/ued/web-developer'
+    },
+    {
       title: '知乎',
       date: '2016-08-13',
       url: 'https://www.zhihu.com/people/zjdgx-george/activities'

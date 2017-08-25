@@ -169,7 +169,6 @@ export default class APPView extends React.Component {
     const importantLinks = Links.Important.map((link, index) => {
       return <a key={index} href={link.url} target='_blank' title={link.title}>{link.title}</a>;
     });
-    console.log('style index: ' + this.props.styleIndex);
 
     return (
       <div className={'content ' + this.props.styleList[this.props.styleIndex] + '-style'}>
