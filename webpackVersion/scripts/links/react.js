@@ -1,5 +1,15 @@
 export const React = [
   {
+    url: 'http://www.alloyteam.com/2016/01/some-methods-of-reactjs-communication-between-components/',
+    title: 'ReactJS组件间沟通的一些方法',
+    date: '2017-09-08'
+  },
+  {
+    url: 'http://www.alloyteam.com/2015/09/react-redux/',
+    title: 'React 数据流管理架构之 Redux 介绍',
+    date: '2017-09-08'
+  },
+  {
     url: 'http://react-guide.github.io/react-router-cn/index.html',
     title: 'react router docs',
     date: '2017-08-02'

@@ -2,6 +2,11 @@ module.exports = {
   title: 'Shell',
   contents: [
     {
+      title: 'Git: Mac环境安装Gitbook，并导出PDF教程',
+      date: '2017-09-18',
+      url: 'static/notes/shell/gitbook-4-mac.html'
+    },
+    {
       title: 'Git: 使用Github的webhooks进行网站自动化部署',
       date: '2017-01-23',
       url: 'static/notes/shell/git-webhooks.html'
@@ -15,6 +20,11 @@ module.exports = {
       title: 'Git: Git命令行',
       date: '2016-05-26',
       url: 'static/notes/shell/git.html'
+    },
+    {
+      title: 'Linux: shell脚本的字符串截取',
+      date: '2016-09-03',
+      url: 'static/notes/shell/string-cut.html'
     },
     {
       title: 'Linux: 静态文件服务器文件复制',

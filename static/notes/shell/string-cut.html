@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="author" content="zjdgx"/>
+  <meta name="date" content="2017/09/03"/>
+  <title>Linux shell脚本的字符串截取</title>
+  <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+</head>
+<body class="red-style">
+<h1 class='style-border slideInRight'><a href='http://www.cnblogs.com/wangbin/archive/2011/10/11/2207179.html' target='_blank'>Linux shell脚本的字符串截取</a></h1>
+<div class="content">
+  <p>假设有变量<code>var=http://www.google.com/test.htm</code></p>
+  <ul>
+    <li>
+      <h3>1. #号截取，删除左边字符，保留右边字符。</h3>
+      <code>echo ${var#*//}</code>
+      <p class="desc">其中 var 是变量名，# 号是运算符，*// 表示从左边开始删除第一个 // 号及左边的所有字符即删除 http://</p>
+      <p class="result">结果是: www.google.com/test.htm</p>
+    </li>
+    <li>
+      <h3>2. ##号截取，删除左边字符，保留右边字符。</h3>
+      <code>echo ${var##*/}</code>
+      <p class="desc">##*/ 表示从左边开始删除最后（最右边）一个 / 号及左边的所有字符即删除 http://www.google.com/</p>
+      <p class="result">结果是: test.htm</p>
+    </li>
+    <li>
+      <h3>3. %号截取，删除右边字符，保留左边字符</h3>
+      <code>echo ${var%/*}</code>
+      <p class="desc">%/* 表示从右边开始，删除第一个 / 号及右边的字符</p>
+      <p class="result">结果是: http://www.google.com</p>
+    </li>
+    <li>
+      <h3>4. %%号截取，删除右边字符，保留左边字符</h3>
+      <code>echo ${var%%/*}</code>
+      <p class="desc">%%/* 表示从右边开始，删除最后（最左边）一个 / 号及右边的字符</p>
+      <p class="result">结果是: http:</p>
+    </li>
+    <li>
+      <h3>5. 从左边第几个字符开始，及字符的个数</h3>
+      <code>echo ${var:0:5}</code>
+      <p class="desc">其中的 0 表示左边第一个字符开始，5 表示字符的总个数。</p>
+      <p class="result">结果是: http:</p>
+    </li>
+    <li>
+      <h3>6. 从左边第几个字符开始，一直到结束。</h3>
+      <code>echo ${var:7}</code>
+      <p class="desc">其中的 7 表示左边第8个字符开始，一直到结束。</p>
+      <p class="result">结果是: www.google.com/test.htm</p>
+    </li>
+    <li>
+      <h3>7. 从右边第几个字符开始，及字符的个数</h3>
+      <code>echo ${var:0-8:4}</code>
+      <p class="desc">其中的 0-8 表示右边算起第八个字符开始，4 表示字符的个数。</p>
+      <p class="result">结果是: test</p>
+    </li>
+    <li>
+      <h3>8. 从右边第几个字符开始，一直到结束。</h3>
+      <code>echo ${var:0-8}</code>
+      <p class="desc">表示从右边第八个字符开始，一直到结束。</p>
+      <p class="result">结果是: test.htm</p>
+    </li>
+  </ul>
+  <p class="note">注: 左边的第一个字符是用 0 表示，右边的第一个字符用 0-1 表示</p>
+</div>
+<script type="text/javascript" src="/dist/javascript/frame.js"></script>
+</body>
+</html>

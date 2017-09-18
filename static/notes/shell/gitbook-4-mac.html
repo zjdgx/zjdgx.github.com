@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="author" content="zjdgx"/>
+  <meta name="date" content="2017/09/18"/>
+  <title>Mac环境安装Gitbook，并导出PDF教程</title>
+  <link rel="stylesheet" type="text/css" href="../../style/notes.css"/>
+  <style>
+    blockquote {
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body class="red-style">
+  <h1 class='style-border'>
+    <a href="http://www.jianshu.com/p/4824d216ad10" target="_blank">Mac环境安装Gitbook，并导出PDF教程</a>
+  </h1>
+  <div class="content">
+    <p>文章摘自: <a href='http://www.jianshu.com/p/4824d216ad10' target="_blank">http://www.jianshu.com/p/4824d216ad10</a></p>
+    <p>在经过了长时间的折腾之后，终于在Mac环境成功的安装了Gitbook。</p>
+    <p>安装Gitbook的主要流程如下：</p>
+    <p>安装node.js&gt;安装Gitbook&gt;安装Gitbook编辑器&gt;安装calibre&gt;导出PDF。</p>
+    <h3>1. 安装node.js</h3>
+    <p>安装node.js，在node.js官网下载，直接安装。</p>
+    <p>下载地址：<a href="https://nodejs.org/en/%E3%80%82" target="_blank">https://nodejs.org/en/。</a></p>
+    <blockquote><p>这里需要注意的是，node.js有两个版本，一个是大多数人使用的，也就是稳定版；另一个是最新版，拥有最新的特性。在这里，我们下载稳定版即可。</p></blockquote>
+    <p>安装成功之后输入<code>node -v</code>，显示node.js版本代表安装成功。</p>
+    <pre class="hljs undefined"><code>huixingdeMacBook-Air:~ huixing$ node -v
+    v6.10.2</code></pre>
+    <h3>2. 安装Gitbook</h3>
+    <p>这个点是最坑的。尤其是在Mac环境下，我先后尝试了以下代码：</p>
+    <pre class="hljs undefined"><code>npm install gitbook -g
+    npm install -g gitbook-cli</code></pre>
+    <p>还有好几个，先说明下，以上代码都是错误的，不是卡主了就是不能动。原来，Mac环境下需要用到<code>sudo</code>这个指令。</p>
+    <pre class="hljs undefined"><code>sudo npm install gitbook-cli -g</code></pre>
+    <blockquote><p>一定要用到<code>-g</code>，这个代表全局安装，我去掉<code>-g</code>安装了一次，也成功了，但是在终端使用<code>gitbook -V</code>查看的时候发现根本没安装，这是我遇到的坑最多的地方。</p></blockquote>
+    <p>在终端输入<code>gitbook -V</code>之后即可查看当前Gitbook版本，代表安装成功。需要注意的是“V”一定要大写。</p>
+    <pre class="hljs undefined"><code>huixingdeMacBook-Air:~ huixing$ gitbook -V
+    CLI version: 2.3.0
+    GitBook version: 3.2.2</code></pre>
+    <h3>3. 安装Gitbook编辑器</h3>
+    <p>接下来就是安装Gitbook桌面编辑器了。有的人可能会问，你都已经安装了终端环境下的Gitbook了，为什么还要安装桌面端呢？</p>
+    <p>下载地址：<a href="https://www.gitbook.com/editor/" target="_blank">https://www.gitbook.com/editor/</a></p>
+    <p>其实，使用Gitbook桌面编辑器能够很方便的进行文章书写，终端环境下的Gitbook只是为了生成HTML文档与PDF文档而使用的。</p>
+    <p>安装了Gitbook桌面端之后，你可以在客户端中新建一本书籍。然后用终端生成HTML。</p>
+    <blockquote><p>使用<code>gitbook build</code>命令。</p></blockquote>
+    <pre class="hljs undefined"><code>huixingdeMacBook-Air:import huixing$ cd jianli
+    huixingdeMacBook-Air:jianli huixing$ gitbook build
+    info: 7 plugins are installed 
+    info: 6 explicitly listed 
+    info: loading plugin "highlight"... OK 
+    info: loading plugin "search"... OK 
+    info: loading plugin "lunr"... OK 
+    info: loading plugin "sharing"... OK 
+    info: loading plugin "fontsettings"... OK 
+    info: loading plugin "theme-default"... OK 
+    info: found 1 pages 
+    info: found 7 asset files 
+    info: &gt;&gt; generation finished with success in 1.0s ! 
+    huixingdeMacBook-Air:jianli huixing$</code></pre>
+    <p>看到success的提示没，这个时候系统文件根目录下就生成了一个<code>_book</code>的文件夹。打开就是该书籍的HTML格式了。</p>
+    <p>你也可以直接将该书籍在本地预览。</p>
+    <blockquote><p>使用<code>gitbook serve</code>命令</p></blockquote>
+    <pre class="hljs undefined"><code>huixingdeMacBook-Air:jianli huixing$ gitbook serve
+    Live reload server started on port: 35729
+    Press CTRL+C to quit ...
+
+    info: 7 plugins are installed 
+    info: loading plugin "livereload"... OK 
+    info: loading plugin "highlight"... OK 
+    info: loading plugin "search"... OK 
+    info: loading plugin "lunr"... OK 
+    info: loading plugin "sharing"... OK 
+    info: loading plugin "fontsettings"... OK 
+    info: loading plugin "theme-default"... OK 
+    info: found 1 pages 
+    info: found 7 asset files 
+    info: &gt;&gt; generation finished with success in 1.2s ! 
+
+    Starting server ...
+    Serving book on http://localhost:4000</code></pre>
+    <blockquote><p>Gitbook编辑器需要同终端里安装的Gitbook配合，完美实现在线HTML的生成，PDF的生成。当然，如果愿意将文档公开到gitbook或者gitbub仓库的看到这里就可以了，因为Gitbook网站上可以直接导出PDF，MOBI，EBUP等电子书格式。如果不想将书籍公开，那么可以往下面继续看了！</p></blockquote>
+    <h3>4. 安装calibre插件</h3>
+    <p>玩过kindle的都知道，calibre是一款非常方便的开源电子书转换软件。在这里，我们也是用到ebook-convert这个插件。</p>
+    <p>首先在calibre官网下载插件，下载链接：<a href="https://calibre-ebook.com/download%E3%80%82%E4%B8%8B%E8%BD%BD%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%88%E6%9C%AC%E3%80%82" target="_blank">https://calibre-ebook.com/download。下载适合自己系统的版本。</a></p>
+    <p>下载到电脑之后我做了很多尝试，刚下载之后我兴冲冲的去使用<code>gitbook pdf . mypdf.pdf</code>指令，结果发现提示ebook-convert未安装。</p>
+    <p>这里我通过咨询了一些大神，在这个过程中他们给了我很大的帮助。也查看了很多教程，所有教程中都说了两个问题。</p>
+    <ul>
+    <li>
+    <p>将安装的calibre放在系统应用中，然后将app添加到path中。</p>
+    <blockquote><p>这个说实话我也没怎么看懂，但是下面我会详细的说这一步如何操作。</p></blockquote>
+    </li>
+    <li>
+    <p>执行一个命令<code>sudo ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin</code>。</p>
+    </li>
+    </ul>
+    <p>以上两部我都做了，最终也成功的将Gitbook导出了PDF，但具体是哪一步起了作用，我估计是第二步，不过在教程中我优先推荐使用第二步。第二步遇到的坑是，在网上我们找到的教程只是输入<code>ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin</code>，但是执行多次都没有结果，WIN系统执行这步可能已经正确了。因为Mac环境权限的原因，这里加入sudo重新执行即可。</p>
+    <p>执行完成之后，重新进入书籍目录。</p>
+    <pre class="hljs undefined"><code>huixingdeMacBook-Air:import huixing$ cd jianli
+    huixingdeMacBook-Air:jianli huixing$ gitbook pdf . jianli.pdf
+    info: 7 plugins are installed 
+    info: 6 explicitly listed 
+    info: loading plugin "highlight"... OK 
+    info: loading plugin "search"... OK 
+    info: loading plugin "lunr"... OK 
+    info: loading plugin "sharing"... OK 
+    info: loading plugin "fontsettings"... OK 
+    info: loading plugin "theme-default"... OK 
+    info: found 1 pages 
+    info: found 7 asset files 
+    info: &gt;&gt; generation finished with success in 7.5s ! 
+    info: &gt;&gt; 1 file(s) generated</code></pre>
+    <p>执行完以上代码，进入书籍目录，即可看到已经转换完成的PDF了。大功告成！</p>
+    <p>特别感谢：Dandy，烟头γ两位大神的指导。</p>
+  </div>
+  <script type="text/javascript" src="/dist/javascript/frame.js"></script>
+</body>
+</html>

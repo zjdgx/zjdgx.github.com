@@ -1,3 +1,12 @@
+##2017/09/18
+
+- add gitbook.
+- add build status.
+
+##2017/09/15
+
+- add git command which can see the content of committed files.
+
 ##2017/08/22
 
 - add meta for author, keywords and description
