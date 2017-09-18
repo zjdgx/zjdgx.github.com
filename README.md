@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zjdgx/zjdgx.github.com.png)](https://travis-ci.org/zjdgx/zjdgx.github.com)
 
-use `[webpack](https://webpack.js.org/)` `[react](https://github.com/facebook/react)` to build ZJDGX home page.
+use [`webpack`](https://webpack.js.org/) [`react`](https://github.com/facebook/react) to build ZJDGX home page.
 
 ## 2017/09/18
 
